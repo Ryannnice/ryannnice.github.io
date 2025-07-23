@@ -13,22 +13,24 @@ author_profile: true
 - **[Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**  
 <br>
 <br>
+<br>
 
 
 # Conference 
 
-### Poster  
+**Poster**  
 - **[Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf)**
-### Oral Presentation  
+**Oral Presentation**
 - **[Living Machines 2025(Pictures Onsite)](../assets/LivingMachines.pdf)**
-### Online Presentation Video  
+**Online Presentation Video**  
 - **[IJCNN 2025](https://www.bilibili.com/video/BV15F7HzyEy1/)**  
+<br>
 <br>
 <br>
 
 
 # Visitor Map  
-<br>
+
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
