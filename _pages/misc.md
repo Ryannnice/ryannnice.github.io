@@ -13,27 +13,24 @@ author_profile: true
 
 - **[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)**
 
-- **[Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
+- **[Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**  
 
 
 
 # Conference 
 
 ## Poster  
-
 - **[Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf)**
 
 ## Oral Presentation  
-
-- **[Living Machines 2025(Pictures Onsite)](../assets/LivingMachines.pdf)**  
+- **[Living Machines 2025(Pictures Onsite)](../assets/LivingMachines.pdf)**
 
 ## Online Presentation Video  
-
 - **[IJCNN 2025](https://www.bilibili.com/video/BV15F7HzyEy1/)**  
 
 
 
-# Visitor Map
+# Visitor Map  
 
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
