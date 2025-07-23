@@ -9,7 +9,7 @@ redirect_from:
 
 Welcome to my homepage! I'm a third-year undergraduate student at the School of Mathematics and Information Science, [Guangzhou University](https://english.gzhu.edu.cn/). I am fortunate to be advised by [Prof. Qinbing Fu](https://scholar.google.com/citations?hl=zh-CN&user=YIte1M8AAAAJ) at the Machine Life and Intelligence Research Centre, Guangzhou University.
 
-I am actively looking for research or graduate positions for ***<font color = '#CC0000'>Fall 2026</font>***, and would be grateful for any opportunity to contribute and learn 😀. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf)***<font color = '#CC0000'>（2025.07.23 Updated）</font>***.
+I am actively looking for research or graduate positions for ***<font color = '#CC0000'>Fall 2026</font>***, and would be grateful for any opportunity to contribute and learn 😀. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf)***（2025.07.23 Updated）***.
 
 
 ## <font color = '#000000'>News</font>
@@ -28,7 +28,7 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>Research Interests</font>
 
-### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning machine intelligence, robotics and autonomous systems</font>***<font color = '#CC0000'>（2025.07.01 Updated）</font>***
+### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning machine intelligence, robotics and autonomous systems</font>***（2025.07.01 Updated）***
 
 I am currently conducting research at the **University of York**, working with the **TurtleBot 3** and the **Franka Emika Panda** robotic platforms. My work focuses on understanding and abstracting the design principles found in biological systems, with the aim of advancing autonomous motion learning and control.
 
