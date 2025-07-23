@@ -33,6 +33,7 @@ author_profile: true
 
 # Visitor Map  
 
+***How delightful it is to have friends visit from afar!*** 😀
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
