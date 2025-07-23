@@ -21,8 +21,8 @@ author_profile: true
 **Poster**  
 - [Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf), **TAROS 2025**  
 
-**Oral Presentation**  
-- [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](../assets/LivingMachines.pdf), **Living Machines 2025 (Pictures Onsite)**  
+**Oral Presentation** (Pictures Onsite)  
+- [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](../assets/LivingMachines.pdf), **Living Machines 2025**  
 
 **Online Presentation Video**  
 - [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://www.bilibili.com/video/BV15F7HzyEy1/), **IJCNN 2025**  
@@ -33,7 +33,7 @@ author_profile: true
 
 # Visitor Map  
 
-***<font color = '#CC0000'>How delightful it is to have friends visit from afar😀 !</font>***   
+***<font color = '#000066'>How delightful it is to have friends visit from afar😀 !</font>***   
 
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
