@@ -33,7 +33,7 @@ author_profile: true
 
 # Visitor Map  
 
-***<font color = '#CC0000'>How delightful it is to have friends visit from afar!</font>*** 😀  
+***<font color = '#CC0000'>How delightful it is to have friends visit from afar😀 !</font>***   
 
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
