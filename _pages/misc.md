@@ -22,7 +22,7 @@ author_profile: true
 - **[Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf)**  
 
 **Oral Presentation**  
-- **[Living Machines 2025(Pictures Onsite)](../assets/LivingMachines.pdf)**  
+- **[Living Machines 2025 (Pictures Onsite)](../assets/LivingMachines.pdf)**  
 
 **Online Presentation Video**  
 - **[IJCNN 2025](https://www.bilibili.com/video/BV15F7HzyEy1/)**  
