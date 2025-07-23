@@ -40,9 +40,9 @@ redirect_from:
 ---
 ## Manuscripts Under Review
 
-- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A neuronal assembly model with elevated time derivative boosts loom-selectivity](https://ryannnice.github.io/assets/peerj-reviewing-120521-v0.pdf). *Submitted to PeerJ Computer Science (JCR Q1).*
+- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/peerj-reviewing-120521-v0.pdf). *Submitted to PeerJ Computer Science (JCR Q1).*
 
-- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A bio-plausible neural network integrating motion and disparity pathways for looming perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Submitted to Acta Electronica Sinica (CCF-A, in Chinese).*
+- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Submitted to Acta Electronica Sinica (CCF-A, in Chinese).*
 
 
 ---
