@@ -12,7 +12,7 @@ Welcome to my homepage! I'm a third-year undergraduate student at the School of 
 I am actively looking for research or graduate positions for ***<font color = '#CC0000'>Fall 2026</font>***, and would be grateful for any opportunity to contribute and learn 😀. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf)***<font color = '#CC0000'>（2025.07.23 Updated）</font>***.
 
 
-## <font color = '#CC0000'>News</font>
+## <font color = '#FFFFFF'>News</font>
 
 * **[Jul 22nd, 2025]** Paper accepted at ***Neurocomputing*** **[JCR Q1, SCI-2, IF = 6.5]**!
   
@@ -26,7 +26,7 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 
 
-## Research Interests
+## <font color = '#FFFFFF'>Research Interests</font>
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning machine intelligence, robotics and autonomous systems</font>***<font color = '#CC0000'>（2025.07.01 Updated）</font>***
 
