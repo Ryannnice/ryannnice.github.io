@@ -12,7 +12,7 @@ author_profile: true
 - **[Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
 
 
-# Conference
+# Conference 
 ## Poster  
 - **[Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf)**  
 ## Oral Presentation  
@@ -26,7 +26,7 @@ author_profile: true
 
 # Visitor Map
 
-<div style="width:200px; margin:0 auto;">
+<div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
   </script>
