@@ -30,9 +30,11 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning machine intelligence, robotics and autonomous systems</font>***（2025.07.01 Updated）***
 
-I am currently conducting research at the **University of York**, working with the **TurtleBot 3** and the **Franka Emika Panda** robotic platforms. My work focuses on understanding and abstracting the design principles found in biological systems, with the aim of advancing autonomous motion learning and control.
+I am currently conducting research at the **University of York**, working with the **TurtleBot 3** and the **Franka Emika Panda** robotic platforms under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN). 
+My work focuses on understanding and abstracting the design principles found in biological systems, with the aim of advancing autonomous motion learning and control.
 
-This summer, I am particularly focused on deepening our understanding of the biological foundations of **lifelong learning** — including the adaptability, autonomy, and resilience seen in animals. My goal is to translate these insights into novel approaches for machine intelligence, robotic control systems, and bio-inspired actuators, with an emphasis on energy efficiency, generalization, and long-term adaptability.
+This summer, I am particularly focused on deepening our understanding of the biological foundations of **lifelong learning** — including the adaptability, autonomy, and resilience seen in animals. 
+My goal is to translate these insights into novel approaches for machine intelligence, robotic control systems, and bio-inspired actuators, with an emphasis on energy efficiency, generalization, and long-term adaptability.
 
 
 ### <font color = '#000066'>Neuro-Embodied Micro-Robots</font>
