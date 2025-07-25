@@ -16,7 +16,7 @@ author_profile: true
 <br>
 
 
-# Conference 
+# Conference Attendance
 
 ***<font color = '#000066'>TAROS 2025</font>***   
 - [Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf), **Poster**. 
