@@ -35,18 +35,18 @@ redirect_from:
 
 - C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *<font color = '#CC0000'>Accepted at Neurocomputing (JCR Q1, IF = 6.5).</font>*
 
-- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). Accepted at *the 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
+- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *Accepted at the 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
+
+- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Accepted at Acta Electronica Sinica (CCF-A, in Chinese).*
+
 
 ---
 ## Manuscripts Under Review
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/peerj-reviewing-120521-v0.pdf). *Submitted to PeerJ Computer Science (JCR Q1).*
 
-- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Submitted to Acta Electronica Sinica (CCF-A, in Chinese).*
-
 
 ---
-
 ## Honors and Awards
 
 - **Provincial First Prize**, Chinese Collegiate Computing Competition (4C)  
