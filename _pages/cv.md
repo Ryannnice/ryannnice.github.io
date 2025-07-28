@@ -29,15 +29,15 @@ redirect_from:
 
 ## Publications
 
-- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://arxiv.org/abs/2504.04477). *Accepted at International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%)*.
+- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://arxiv.org/abs/2504.04477). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%)*.
 
 - G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024 (JCR Q1, IF = 3.4).*
 
 - C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *<font color = '#CC0000'>Accepted at Neurocomputing (JCR Q1, IF = 6.5).</font>*
 
-- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *Accepted at the 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
-
 - H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Accepted at Acta Electronica Sinica (CCF-A, in Chinese).*
+
+- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *The 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
 
 
 ---
