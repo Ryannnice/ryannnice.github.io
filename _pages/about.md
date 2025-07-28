@@ -14,6 +14,8 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>News</font>
 
+* **[Jul 28th, 2025]** Paper accepted at ***Acta Electronica Sinica*** **[CCF-A, in Chinese Catogory]**.
+
 * **[Jul 22nd, 2025]** Paper accepted at ***Neurocomputing*** **[JCR Q1, SCI-2, IF = 6.5]**!
   
 * **[Jul 18th, 2025]** I delivered my **first oral presentation** at the *Living Machines 2025* conference, held at the University of Sheffield! [Here are some photos from the conference.](https://ryannnice.github.io/assets/LivingMachines.pdf).
