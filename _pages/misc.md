@@ -5,19 +5,6 @@ permalink: /misc/
 author_profile: true
 ---
 
-# Inspiring Articles 
-
-- **[How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)**
-- **[How to Do Great Work](https://www.paulgraham.com/greatwork.html)**
-- **[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)**  
-<br>
-
-- **[NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)**
-- **[NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)**
-- **[NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
-<br>
-<br>
-<br>
 
 
 # Conference 
@@ -39,6 +26,19 @@ author_profile: true
 <br>
 <br>
 
+# Inspiring Articles 
+
+- **[How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)**
+- **[How to Do Great Work](https://www.paulgraham.com/greatwork.html)**
+- **[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)**  
+<br>
+
+- **[NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)**
+- **[NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)**
+- **[NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
+<br>
+<br>
+<br>
 
 # Visitor Map  
 
