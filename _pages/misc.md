@@ -20,7 +20,7 @@ author_profile: true
 - [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://www.bilibili.com/video/BV15F7HzyEy1/), **Online Presentation Video**.
 
 ***<font color = '#000066'>ICMPSO 2024</font>***, *Guangzhou, China*   
-- *2024 International Conference on Motion Perception and Sparse Optimization — my first introduction to the broader academic community.
+- The *2024 International Conference on Motion Perception and Sparse Optimization (ICMPSO)* was my first step into the broader academic community.
 - I was honored to meet and learn from *Prof. Pengcheng* during this event!
 <br>
 <br>
