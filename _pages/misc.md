@@ -12,9 +12,10 @@ author_profile: true
 - **[How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)**  
 <br>
 
-- **[NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
-- **[NG Aug. 2021](https://www.nationalgeographic.com/magazine/issue/august-2021)**
+- **[NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)**
+- **[NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)**
 - **[NG Pictures of the Year 2024](https://www.nationalgeographic.com/magazine/issue/august-2021)**
+- **[NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
 <br>
 <br>
 <br>
@@ -33,7 +34,7 @@ author_profile: true
 - [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://www.bilibili.com/video/BV15F7HzyEy1/), **Online Presentation Video**.
 
 ***<font color = '#000066'>ICMPSO 2024</font>***   
-- *2024 International Conference on Motion Perception and Sparse Optimization (ICMPSO)* was the first academic conference I attended, marking my introduction to the broader academic community.
+- *2024 International Conference on Motion Perception and Sparse Optimization — my first introduction to the broader academic community.
 - I was honored to meet and learn from *Prof. Pengcheng* during this event!
 <br>
 <br>
