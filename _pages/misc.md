@@ -14,7 +14,6 @@ author_profile: true
 
 - **[NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)**
 - **[NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)**
-- **[NG Pictures of the Year 2024](https://www.nationalgeographic.com/magazine/issue/august-2021)**
 - **[NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)**
 <br>
 <br>
