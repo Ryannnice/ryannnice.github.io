@@ -90,8 +90,8 @@ School of Mathematics and Information Science, Guangzhou University, Guangzhou, 
   - Deployed visual neural network models inspired by insect neurons onto the [STM32-based micro-robot *Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17), achieving real-time collision perception and avoidance. Optimized model memory usage to fit within the **62 KByte** SRAM capacity of [*Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17); developed and refined algorithms to enable real-time execution under extreme computational constraints (processing time **< 33 ms** on the STM32F427 chip); performed debugging, tuning, and conducted both offline and online experiments.
   - [**A poster** illustrating the fly-inspired closed-loop visual-perception and motion-control system](https://ryannnice.github.io/assets/TAROS_2025_Poster_100.pdf) for the micro robot [*Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is accepted at *the 26th Towards Autonomous Robotic Systems (TAROS 2025)*.
   - Selected code can be accessed below:  
-  [Fly Visuomotor-Inspired Attention-LPLC2 Model **(independently, 2k lines of code in C)**](https://github.com/Ryannnice/neuro-life-project);  
-  [Locust Vision-Inspired Optimized-LGMD Model **(independently, 1k lines of code in C)**](https://github.com/Ryannnice/Optimized-LGMD).
+  [Fly Visuomotor-Inspired Attention-LPLC2 Model **(independently, 2k lines of code in C)**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c);  
+  [Locust Vision-Inspired Optimized-LGMD Model **(independently, 1k lines of code in C)**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c).
 		
 		
 		
@@ -99,7 +99,7 @@ School of Mathematics and Information Science, Guangzhou University, Guangzhou, 
   Jul. 2024 - Nov. 2024  
   - Conducted full-cycle research on modeling the lobula plate/lobula columnar type 2 (LPLC2) neural ensemble in the fruit fly *Drosophila*, known for its ultra-selectivity to looming stimuli.
   - Developed the multi-attention LPLC2 (mLPLC2) neural network model inspired by the visual system of the fly by leveraging a bottom-up attention mechanism driven by motion-sensitive neural pathways
-([**independently, 3k lines of code in C/C++**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model)).
+([**independently, 3k lines of code in C/C++**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)).
 
 - **A Computationally Efficient Neuronal Model for Collision Detection with Contrast Polarity-Specific Feed-Forward Inhibition**, article published at *Biomimetics*, *second author*.  
   Mar. 2024 - Jul. 2024  
