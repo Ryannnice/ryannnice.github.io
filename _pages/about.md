@@ -30,18 +30,27 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>Research Interests</font>
 
-### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning machine intelligence, robotics and autonomous systems</font>***（2025.07.01 Updated）***
+My research interest focuses on the convergence of **robotics** and **biology**.
 
-I am currently conducting research at the **University of York**, working with the **TurtleBot 3** and the **Franka Emika Panda** robotic platforms under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN). 
-My work focuses on understanding and abstracting the design principles found in biological systems, with the aim of advancing autonomous motion learning and control.
+### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>***（2025.07.01 Updated）***
 
-This summer, I am particularly focused on deepening our understanding of the biological foundations of **lifelong learning** — including the adaptability, autonomy, and resilience seen in animals. 
-My goal is to translate these insights into novel approaches for machine intelligence, robotic control systems, and bio-inspired actuators, with an emphasis on energy efficiency, generalization, and long-term adaptability.
+I am currently conducting research at the **University of York**, working with the **Franka Emika Panda** and the **TurtleBot 3** robotic platforms under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN). 
+
+This summer, I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals. By drawing on these principles, I aim to develop novel methods for machine intelligence and robotic control that prioritize energy efficiency, generalization, and long-term adaptability.
 
 
 ### <font color = '#000066'>Neuro-Embodied Micro-Robots</font>
 
-I am transfixed by **computational neuroscience**, particularly the intersection of **bio-inspired algorithms** and **robotic systems**. I am trying to understand and model biological systems — especially insect visual circuits — that exhibit robust and efficient real-time perception, and applying these principles to real-world artificial systems.
+I am transfixed by **computational neuroscience**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems.
+
+Selected Code:  
+
+[**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
+
+[**Multi-Attention LPLC2 (mLPLC2) Neural Network Model**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (**independently, 3k lines of code in C/C++)**;  
+
+[**Locust Vision-Inspired Optimized-LGMD Model**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) **(independently, 1k lines of code in C)**.  
+
 
 Currently, my work focuses on:
 - **Biologically-Plausible Visual Algorithms**: Developing neural models inspired by insect vision for motion perception, particularly looming detection.
