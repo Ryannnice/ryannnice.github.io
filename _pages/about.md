@@ -41,10 +41,12 @@ This summer, I am dedicating my efforts to exploring the biological foundations 
 ### <font color = '#000066'>Neuro-Embodied Micro-Robots</font>
 
 I am transfixed by **computational neuroscience**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems.  
+
 Selected Code:  
 [**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
 [**Multi-Attention LPLC2 (mLPLC2) Neural Network Model**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (**independently, 3k lines of code in C/C++)**;  
 [**Locust Vision-Inspired Optimized-LGMD Model**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) **(independently, 1k lines of code in C)**.  
+
 Currently, my work focuses on:
 - **Biologically-Plausible Visual Algorithms**: Developing neural models inspired by insect vision for motion perception, particularly looming detection.
 - **Collision Detection in Robotic Systems**: Creating effective and efficient solutions for collision avoidance in complex and dynamic natural environments.
