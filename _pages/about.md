@@ -29,9 +29,7 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 
 ## <font color = '#000000'>Research Interests</font>
-
 My research interest focuses on the convergence of **robotics** and **biology**.
-
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
 
 I am currently conducting research at the **University of York**, working with the **Franka Emika Panda** and the **TurtleBot 3** robotic platforms under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
