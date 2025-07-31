@@ -33,7 +33,7 @@ redirect_from:
 
 - G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024 (JCR Q1, IF = 3.4).*
 
-- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *<font color = '#CC0000'>Accepted at Neurocomputing (JCR Q1, IF = 6.5).</font>*
+- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *Accepted at Neurocomputing (JCR Q1, IF = 6.5).*
 
 - H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Accepted at Acta Electronica Sinica (CCF-A, in Chinese).*
 
