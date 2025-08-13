@@ -14,7 +14,7 @@ author_profile: true
 
 
 ***<font color = '#000066'>Living Machines 2025</font>***, *Sheffield, United Kingdom*
-- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [Oral](../assets/LivingMachines.pdf).
+- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [30-min Oral](../assets/LivingMachines.pdf).
 
 ***<font color = '#000066'>IJCNN 2025</font>***, *Rome, Italy*
 - Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
