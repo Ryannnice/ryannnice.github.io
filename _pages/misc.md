@@ -14,13 +14,12 @@ author_profile: true
 
 
 ***<font color = '#000066'>Living Machines 2025</font>***, *Sheffield, United Kingdom*
-- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [Oral Presentation](../assets/LivingMachines.pdf).
+- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [Oral](../assets/LivingMachines.pdf).
 
 ***<font color = '#000066'>IJCNN 2025</font>***, *Rome, Italy*
-- Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Online Presentation Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
+- Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
 
 ***<font color = '#000066'>ICMPSO 2024</font>***, *Guangzhou, China*   
-- This is my first step into the broader academic community.
 - I was honored to meet and learn from *Prof. Pengcheng* during this event!
 <br>
 <br>
