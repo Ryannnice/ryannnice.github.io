@@ -18,7 +18,7 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 
 
-## <font color = '#000000'>My research interest focuses on the convergence of robotics and biology</font>
+# <font color = '#000000'>My research interest focuses on the convergence of robotics and biology</font>
 
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
@@ -39,7 +39,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## <font color = '#000000'>News</font>
+# <font color = '#000000'>News</font>
 
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
 
