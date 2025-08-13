@@ -15,17 +15,17 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>News</font>
 
-* **[Jul 28th, 2025]** Paper accepted at ***Acta Electronica Sinica*** **[CCF-A, in Chinese Catogory]**.
+* **[Jul 28th, 2025]** Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
 
-* **[Jul 22nd, 2025]** Paper accepted at ***Neurocomputing*** **[JCR Q1, SCI-2, IF = 6.5]**!
+* **[Jul 22nd, 2025]** Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
   
 * **[July 18th, 2025]** [First 30‑min oral presentation](https://ryannnice.github.io/assets/LivingMachines.pdf) at *Living Machines 2025*, University of Sheffield.
 
-* **[Jul 11th, 2025]** Poster accepted at ***TAROS 2025***.
+* **[Jul 11th, 2025]** Poster accepted at *TAROS 2025*.
 
-* **[Jun 9th, 2025]** Paper accepted at ***Living Machines 2025***.
+* **[Jun 9th, 2025]** Paper accepted at *Living Machines 2025***.
   
-* **[May 1st, 2025]** Paper accepted at ***IJCNN 2025*** **[CCF-C, AR = 38%]**.
+* **[May 1st, 2025]** Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
 
