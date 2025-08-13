@@ -10,17 +10,17 @@ author_profile: true
 # Conference 
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
-- [Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](../assets/TAROS_2025_Poster_100.pdf), **Poster**. 
+- Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](../assets/TAROS_2025_Poster_100.pdf). 
 
 
 ***<font color = '#000066'>Living Machines 2025</font>***, *Sheffield, United Kingdom*
-- [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](../assets/LivingMachines.pdf), **Oral Presentation** (Pictures Onsite).
+- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [Oral Presentation](../assets/LivingMachines.pdf).
 
 ***<font color = '#000066'>IJCNN 2025</font>***, *Rome, Italy*
-- [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://www.bilibili.com/video/BV15F7HzyEy1/), **Online Presentation Video**.
+- Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Online Presentation Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
 
 ***<font color = '#000066'>ICMPSO 2024</font>***, *Guangzhou, China*   
-- The *2024 International Conference on Motion Perception and Sparse Optimization (ICMPSO)* was my first step into the broader academic community.
+- This is my first step into the broader academic community.
 - I was honored to meet and learn from *Prof. Pengcheng* during this event!
 <br>
 <br>
