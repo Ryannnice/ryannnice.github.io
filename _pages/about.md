@@ -27,7 +27,8 @@ I am dedicating my efforts to exploring the biological foundations of **life-lon
 
 ### <font color = '#000066'>Bio-Vision-Inspired Motion Perception</font>
 
-I am transfixed by **computational neuroscience**, for **collision detection**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
+I am transfixed by **computational neuroscience**, for **collision detection**.  
+I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
 
 Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):  
 * [**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
