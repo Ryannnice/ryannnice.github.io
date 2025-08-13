@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Renyuan Liu (刘稔远)"
+title: "Renyuan LIU"
 author_profile: true
 redirect_from: 
   - /about/
