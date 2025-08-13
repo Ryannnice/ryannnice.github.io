@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---  
 
-## Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
+# <font color = '#000000'>Renyuan LIU</font> (刘<ruby>稔<rt>rěn</rt></ruby>远)
 
 Nice to Meet U Here!  
 
