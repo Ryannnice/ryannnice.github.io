@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-## <font color = '#000000'>Renyuan LIU (<ruby>刘 稔远<rt>rěn</rt></ruby>)</font>
+## <font color = '#000000'>Renyuan LIU (<ruby>刘稔远<rt>rěn</rt></ruby>)</font>
 
 
 Nice to Meet U Here! My Chinese name and its pronunciation are <ruby>刘<rt>liú</rt> 稔<rt>rěn</rt> 远<rt>yuǎn</rt></ruby>.  
