@@ -40,21 +40,23 @@ I am currently conducting research at the University of York, under the supervis
 This summer, I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** and ***TurtleBot 3 with OpenManipulator-X*** robotic platforms.
 
 
-### <font color = '#000066'>Neuro-Embodied Micro-Robots</font>
+### <font color = '#000066'>Bio-Vision-Inspired Motion Perception</font>
 
-I am transfixed by **computational neuroscience**, for **bio-vision-inspired collision detection**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the micro ground robot [***Colias IV***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) and [***TurtleBot*** 4](https://clearpathrobotics.com/turtlebot-4/) equipped with an RGB-D camera.  
+I am transfixed by **computational neuroscience**, for **collision detection**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the micro ground robot [***Colias IV***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) and [***TurtleBot*** 4](https://clearpathrobotics.com/turtlebot-4/) equipped with an RGB-D camera.  
 
-Selected Code:  
+Selected Code for neuro-embodied micro-robot **Colias**:  
 [**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
 [**Multi-Attention LPLC2 (mLPLC2) Neural Network Model**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (**independently, 3k lines of code in C/C++)**;  
 [**Locust Vision-Inspired Optimized-LGMD Model**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) **(independently, 1k lines of code in C)**.  
 
+
+<!--
 Currently, my work focuses on:
 - **Biologically-Plausible Visual Algorithms**: Developing neural models inspired by insect vision for motion perception, particularly looming detection.
 - **Collision Detection in Robotic Systems**: Creating effective and efficient solutions for collision avoidance in complex and dynamic natural environments.
 - **Embedded and Real-Time Implementation**: Designing neural algorithms that are efficient enough to run on extremely resource-constrained embedded platforms, supporting real-time interaction and safety in micro mobile robots.
 
 Ultimately, I aim to advance the development of **machine life** endowed with embodied intelligence, robustness, and energy efficiency, by drawing inspiration from the compact, adaptive, and efficient nature of insect brains.
-
+-->
 
 [GitHub](https://github.com/Ryannnice) / [WeChat](../images/WeChat.png) / [Instagram](https://www.instagram.com/ren_yvan/)
