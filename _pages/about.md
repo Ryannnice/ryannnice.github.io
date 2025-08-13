@@ -14,7 +14,7 @@ I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/
 I am actively looking for research position for **<font color = '#CC0000'>Fall 2026</font>**, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf) *(2025.07.28 Updated)*.
 
 
-## <font color = '#000000'>My research interest focuses on the convergence of **robotics** and **biology**</font>
+## <font color = '#000000'>My research interest focuses on the convergence of robotics and biology</font>
 
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
