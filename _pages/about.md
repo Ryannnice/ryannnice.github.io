@@ -7,8 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my homepage! I'm a third-year undergraduate student at the School of Mathematics and Information Science, [Guangzhou University](https://english.gzhu.edu.cn/). I am fortunate to be advised by [Prof. Qinbing Fu](https://scholar.google.com/citations?hl=zh-CN&user=YIte1M8AAAAJ) at the Machine Life and Intelligence Research Centre, Guangzhou University.
-
+***Nice to Meet U Here!***
+My Chinese name and its pronunciation are <ruby>刘<rt>liú</rt> 稔<rt>rěn</rt> 远<rt>yuǎn</rt></ruby>.  
+I am fortunate to be advised by [Prof. Qinbing Fu](https://scholar.google.com/citations?hl=zh-CN&user=YIte1M8AAAAJ) at the Machine Life and Intelligence Research Centre, Guangzhou University and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Computational Autonomous Learning Systems Lab, University of York.  
 I am actively looking for research or graduate positions for ***<font color = '#CC0000'>Fall 2026</font>***, and would be grateful for any opportunity to contribute and learn😀. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf)***（2025.07.28 Updated）***.
 
 
@@ -30,6 +31,8 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>Research Interests</font>
 My research interest focuses on the convergence of **robotics** and **biology**.
+
+
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
 
 I am currently conducting research at the **University of York**, under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
