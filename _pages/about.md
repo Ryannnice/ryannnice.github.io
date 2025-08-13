@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-*Nice to Meet U Here!* My Chinese name and its pronunciation are <ruby>刘<rt>liú</rt> 稔<rt>rěn</rt> 远<rt>yuǎn</rt></ruby>.  
+Nice to Meet U Here! My Chinese name and its pronunciation are <ruby>刘<rt>liú</rt> 稔<rt>rěn</rt> 远<rt>yuǎn</rt></ruby>.  
 
 I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Computational Autonomous Learning Systems Lab, University of York.  
 
-I am actively looking for research position for ***<font color = '#CC0000'>Fall 2026</font>***, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf) *(2025.07.28 Updated)*.
+I am actively looking for research position for **<font color = '#CC0000'>Fall 2026</font>**, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf) *(2025.07.28 Updated)*.
 
 
 ## <font color = '#000000'>Research Interests</font>
@@ -22,7 +22,7 @@ My research interest focuses on the convergence of **robotics** and **biology**.
 
 I am currently conducting research at the University of York, under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
 
-This summer, I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** robotic arm and the ***TurtleBot 3*** equipped with the *OpenManipulator-X*.
+I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** robotic arm and the ***TurtleBot 3*** equipped with the *OpenManipulator-X*.
 
 
 ### <font color = '#000066'>Bio-Vision-Inspired Motion Perception</font>
