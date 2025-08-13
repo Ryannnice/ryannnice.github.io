@@ -6,7 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 <br>
 
 Nice to Meet U Here!  
