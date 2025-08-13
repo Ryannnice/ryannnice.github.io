@@ -11,7 +11,6 @@ redirect_from:
 <br>
 
 Nice to Meet U Here!
-
 I am a third-year undergraduate student, fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Computational Autonomous Learning Systems Lab, University of York.
 
 I am actively looking for research position for **<font color = '#CC0000'>Fall 2026</font>**, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf) *(2025.07.28 Updated)*.
@@ -30,7 +29,6 @@ I am dedicating my efforts to exploring the biological foundations of **life-lon
 ### <font color = '#000066'>Bio-Vision-Inspired Motion Perception</font>
 
 I am transfixed by **computational neuroscience**, for **collision detection**.  
-
 I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
 
 Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):  
