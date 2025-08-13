@@ -20,7 +20,7 @@ author_profile: true
 - Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
 
 ***<font color = '#000066'>ICMPSO 2024</font>***, *Guangzhou, China*   
-- I was honored to meet and learn from *Prof. Pengcheng* during this event!
+- *I was honored to meet and learn from* Prof. Pengcheng *during this event!*
 <br>
 <br>
 <br>
