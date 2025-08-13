@@ -19,7 +19,7 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 * **[Jul 22nd, 2025]** Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
   
-* **[July 18th, 2025]** [First 30‑min oral presentation](https://ryannnice.github.io/assets/LivingMachines.pdf) at *Living Machines 2025*, University of Sheffield.
+* **[July 18th, 2025]** My [first 30‑min oral presentation](https://ryannnice.github.io/assets/LivingMachines.pdf) at *Living Machines 2025*, University of Sheffield.
 
 * **[Jul 11th, 2025]** Poster accepted at *TAROS 2025*.
 
