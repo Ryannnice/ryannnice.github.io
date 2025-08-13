@@ -20,8 +20,6 @@ My research interest focuses on the convergence of **robotics** and **biology**.
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
 
-I am currently conducting research at the University of York, under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
-
 I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** robotic arm and the ***TurtleBot 3*** equipped with the *OpenManipulator-X*.
 
 
