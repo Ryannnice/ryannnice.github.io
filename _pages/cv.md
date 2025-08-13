@@ -121,4 +121,4 @@ School of Mathematics and Information Science, Guangzhou University, Guangzhou, 
 - **Programming Skills:** C/C++, Python, Matlab
 - **Others:** ROS (Noetic), LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
 
-Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking.
+Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking.
