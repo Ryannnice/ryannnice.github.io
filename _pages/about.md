@@ -1,14 +1,12 @@
 ---
 permalink: /
-title: "Renyuan LIU"
+title: "Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-
-## <font color = '#000000'>Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)</font>
 
 
 Nice to Meet U Here!
