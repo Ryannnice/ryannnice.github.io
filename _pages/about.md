@@ -15,17 +15,17 @@ I am actively looking for research or graduate positions for ***<font color = '#
 
 ## <font color = '#000000'>News</font>
 
-* **[Jul 28th, 2025]** Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
+* [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
 
-* **[Jul 22nd, 2025]** Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
+* [Jul 22nd, 2025] Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
   
-* **[July 18th, 2025]** My [first 30‑min oral presentation](https://ryannnice.github.io/assets/LivingMachines.pdf) at *Living Machines 2025*, University of Sheffield.
+* [July 18th, 2025] My [first 30‑min oral presentation](https://ryannnice.github.io/assets/LivingMachines.pdf) at *Living Machines 2025*, University of Sheffield.
 
-* **[Jul 11th, 2025]** Poster accepted at *TAROS 2025*.
+* [Jul 11th, 2025] Poster accepted at *TAROS 2025*.
 
-* **[Jun 9th, 2025]** Paper accepted at *Living Machines 2025***.
+* [Jun 9th, 2025] Paper accepted at *Living Machines 2025***.
   
-* **[May 1st, 2025]** Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
+* [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
 
@@ -35,14 +35,14 @@ My research interest focuses on the convergence of **robotics** and **biology**.
 
 ### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
 
-I am currently conducting research at the **University of York**, under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
+I am currently conducting research at the University of York, under the supervision of [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN).  
 
-This summer, I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** and ***TurtleBot 3*** robotic platforms.
+This summer, I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** and ***TurtleBot 3 with OpenManipulator-X*** robotic platforms.
 
 
 ### <font color = '#000066'>Neuro-Embodied Micro-Robots</font>
 
-I am transfixed by **computational neuroscience**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems.  
+I am transfixed by **computational neuroscience**, for **bio-vision-inspired collision detection**. I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the micro ground robot [***Colias IV***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) and [***TurtleBot*** 4](https://clearpathrobotics.com/turtlebot-4/) equipped with an RGB-D camera.  
 
 Selected Code:  
 [**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
