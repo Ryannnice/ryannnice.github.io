@@ -54,15 +54,4 @@ Selected Code for neuro-embodied micro-robot **Colias**:
 
 
 
-
-
-<!--
-Currently, my work focuses on:
-- **Biologically-Plausible Visual Algorithms**: Developing neural models inspired by insect vision for motion perception, particularly looming detection.
-- **Collision Detection in Robotic Systems**: Creating effective and efficient solutions for collision avoidance in complex and dynamic natural environments.
-- **Embedded and Real-Time Implementation**: Designing neural algorithms that are efficient enough to run on extremely resource-constrained embedded platforms, supporting real-time interaction and safety in micro mobile robots.
-
-Ultimately, I aim to advance the development of **machine life** endowed with embodied intelligence, robustness, and energy efficiency, by drawing inspiration from the compact, adaptive, and efficient nature of insect brains.
--->
-
 [GitHub](https://github.com/Ryannnice) / [WeChat](../images/WeChat.png) / [Instagram](https://www.instagram.com/ren_yvan/)
