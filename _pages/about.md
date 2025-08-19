@@ -33,9 +33,9 @@ I am transfixed by **computational neuroscience**, for **collision detection**.
 I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
 
 Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):  
-* [**Fly Visuomotor-Inspired Attention-LPLC2 Model**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
-* [**Multi-Attention LPLC2 (mLPLC2) Neural Network Model**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (**independently, 3k lines of code in C/C++)**;  
-* [**Locust Vision-Inspired Optimized-LGMD Model**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) **(independently, 1k lines of code in C)**.  
+* [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) **(independently, 2k lines of code in C)**;  
+* [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (**independently, 3k lines of code in C/C++)**;  
+* [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) **(independently, 1k lines of code in C)**.  
 
 
 
