@@ -49,23 +49,26 @@ redirect_from:
 ---
 ## Honors and Awards
 
-- **Provincial First Prize**, Chinese Collegiate Computing Competition (4C)  
+- **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
+  Sept. 2025
+
+- **First Prize (Provincial)**, Chinese Collegiate Computing Competition (4C)  
   May 2025
   
-- **Honorable Mention**, Mathematical Contest in Modeling (MCM)  
+- **Honorable Mention (International)**, Mathematical Contest in Modeling (MCM)  
   Jan. 2025
 
-- **National First Prize (Top 5%)**, Asia and Pacific Mathematical Contest in Modeling (APMCM)  
+- **First Prize (National; Top 5%)**, Asia and Pacific Mathematical Contest in Modeling (APMCM)  
   Nov. 2024
 
-- **Provincial First Prize & Innovation Silver Award (Top 2 out of 1,167 Teams)**,  
+- **First Prize & Innovation Silver Award (Provincial; Top 2 out of 1,167 Teams)**,  
   "Greater Bay Area Cup" Guangdong-Hong Kong-Macao Financial Mathematics Modeling Competition  
   Nov. 2024
 
-- **The Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
+- **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
   Nov. 2024
 
-- **The First-Class Scholarship (Top 5%)**, *Guangzhou University*  
+- **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
   Nov. 2023
 
 ---
@@ -119,6 +122,6 @@ School of Mathematics and Information Science, Guangzhou University, Guangzhou, 
 
 - **Language:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5), **CET-6 564** (242/248.5 in the reading section)
 - **Programming Skills:** C/C++, Python, Matlab
-- **Others:** ROS (Noetic), LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
+- **Others:** ROS, LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
 
 Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking.
