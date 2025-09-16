@@ -43,7 +43,7 @@ redirect_from:
 ---
 ## Manuscripts Under Review
 
-- R. Liu, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA, CCF-B).*
+- **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA, CCF-B).*
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/peerj-reviewing-120521-v0.pdf). *Submitted to PeerJ Computer Science (JCR Q1).*
 
