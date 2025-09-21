@@ -51,8 +51,6 @@ redirect_from:
 ---
 ## Honors and Awards
 
-- **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
-  Sept. 2025
 
 - **First Prize (Provincial)**, Chinese Collegiate Computing Competition (4C)  
   May 2025
