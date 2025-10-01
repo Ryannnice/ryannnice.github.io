@@ -25,19 +25,6 @@ redirect_from:
   **GPA: 97.50/100.00** (Interdisciplinary Programme)  
   **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
 
----
-
-## Publications
-
-- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://arxiv.org/abs/2504.04477). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%)*.
-
-- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024 (JCR Q1, IF = 3.4).*
-
-- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *Accepted at Neurocomputing (JCR Q1, IF = 6.5).*
-
-- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Accepted at Acta Electronica Sinica (CCF-A, in Chinese).*
-
-- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *The 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
 
 
 ---
@@ -46,6 +33,22 @@ redirect_from:
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA, CCF-B).*
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/peerj-reviewing-120521-v0.pdf). *Submitted to PeerJ Computer Science (JCR Q1).*
+
+
+
+---
+## Publications
+
+- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://arxiv.org/abs/2504.04477). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%)*.
+
+- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024 (JCR Q1, IF = 3.4).*
+
+- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992). *Neurocomputing, 131660. (JCR Q1, IF = 6.5).*
+
+- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://ryannnice.github.io/assets/A Bio-plausible Neural Network Integrating Motion and Disparity.pdf). *Accepted at Acta Electronica Sinica (CCF-A, in Chinese).*
+
+- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *The 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)*.
+
 
 
 ---
