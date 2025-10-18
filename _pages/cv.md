@@ -55,7 +55,7 @@ redirect_from:
 ## Honors and Awards
 
 
-- **First Prize (Provincial)**, Chinese Collegiate Computing Competition (4C)  
+- **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
   May 2025
   
 - **Honorable Mention (International)**, Mathematical Contest in Modeling (MCM)  
