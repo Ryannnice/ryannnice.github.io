@@ -21,12 +21,6 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 ## My research interest focuses on the convergence of robotics and biology
 
-
-### <font color = '#000066'>Bio-inspired models and biologically-plausible mechanisms for life-long learning</font>
-
-I am dedicating my efforts to exploring the biological foundations of **life-long learning** observed in animals, and applying these principles to the ***Franka Emika Panda*** robotic arm and the ***TurtleBot 3*** equipped with the *OpenManipulator-X*.
-
-
 ### <font color = '#000066'>Bio-Vision-Inspired Motion Perception</font>
 
 I am transfixed by **computational neuroscience**, for **collision detection**.  
