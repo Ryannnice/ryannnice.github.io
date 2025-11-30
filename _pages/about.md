@@ -162,11 +162,10 @@ School of Mathematics and Information Science, Guangzhou University, Guangzhou, 
 Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking.
 
 
-
-
----
-
-## Conference {#misc}
+<br>
+<br>
+<br>
+## Conference
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
 - Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](../assets/TAROS_2025_Poster_100.pdf). 
@@ -185,7 +184,7 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 <br>
 
 
-## Inspiring Articles 
+## Inspiring Articles  {#misc}
 
 - [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
 - [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
