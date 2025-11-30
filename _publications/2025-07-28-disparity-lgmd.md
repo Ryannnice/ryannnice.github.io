@@ -6,7 +6,7 @@ permalink: /publication/2025-07-22-disparity-lgmd
 excerpt: 'This paper proposes a bio‑plausible neural network that integrates motion and disparity pathways to achieve robust looming perception and real‑time collision detection, significantly improving depth feature extraction and adaptability in complex environments.'
 date: 2025-07-28
 venue: 'Acta Electronica Sinica'
-paperurl: 'https://github.com/Ryannnice/ryannnice.github.io/blob/master/assets/A%20Bio-plausible%20Neural%20Network%20Integrating%20Motion%20and%20Disparity.pdf'
+paperurl: 'https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20250337&lang=en'
 ---
 
 ## Abstract
