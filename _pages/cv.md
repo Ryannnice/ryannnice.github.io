@@ -28,7 +28,7 @@ redirect_from:
 
 
 ---
-## Manuscripts Under Review
+## Manuscripts Under Review {#manuscripts-under-review}
 
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA)(CCF-B).*
 
