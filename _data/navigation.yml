@@ -10,7 +10,7 @@
 main:
     
   - title: "Renyuan's CV"
-    url: /about/#cv-of-renyuanliu
+    url: "#-cv-of-renyuanliu"
     
   - title: "Publications"
     url: "#-manuscripts-under-review"
