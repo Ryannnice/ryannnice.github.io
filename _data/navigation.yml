@@ -12,8 +12,8 @@ main:
   - title: "Renyuan's CV"
     url: "#education-renyuan"
     
-  - title: "Publications"
-    url: "#publications-renyuan"
+#  - title: "Publications"
+#   url: "#publications-renyuan"
 #   url: /publications/
 
   - title: "Awards"
