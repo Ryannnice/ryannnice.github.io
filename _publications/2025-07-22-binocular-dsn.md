@@ -6,7 +6,7 @@ permalink: /publication/2025-07-22-binocular-dsn
 excerpt: 'Inspired by insect directionally selective neurons, this study proposes and optimizes a binocular neuromorphic vision model that integrates depth-disparity processing to enhance looming detection and collision prediction.'
 date: 2025-07-22
 venue: 'Neurocomputing'
-paperurl: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5245992'
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S092523122502332X'
 ---
 
 ## Abstract
