@@ -13,7 +13,7 @@ main:
     url: "#education-renyuan"
     
   - title: "Publications"
-   url: "#publications-renyuan"
+    url: "#publications-renyuan"
 #   url: /publications/
 
   - title: "Awards"
