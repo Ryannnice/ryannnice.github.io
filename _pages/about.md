@@ -48,10 +48,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 * [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
-# CV {#cv-of-renyuanliu}
-
-
-## Education
+## Education {#cv-of-renyuanliu}
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**  
   Sept. 2022 - Jun. 2026 (Expected)  
@@ -169,7 +166,7 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 
 ---
 
-# Conference {#misc}
+## Conference {#misc}
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
 - Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](../assets/TAROS_2025_Poster_100.pdf). 
@@ -188,7 +185,7 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 <br>
 
 
-# Inspiring Articles 
+## Inspiring Articles 
 
 - [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
 - [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
@@ -201,7 +198,7 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 <br>
 
 
-# Visitor Map   
+## Visitor Map   
   
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
