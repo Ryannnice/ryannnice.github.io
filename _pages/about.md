@@ -21,7 +21,7 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 ## Research Interest
 
-### <font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>
+### <font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>  
 
 During my undergraduate stage, my research interest focuses on the convergence of robotics and biology.
 
