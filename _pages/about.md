@@ -62,7 +62,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Manuscripts Under Review {#manuscripts-under-review}
+## Manuscripts Under Review {#publications-renyuan}
 
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA)(CCF-B).*
 
@@ -70,7 +70,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Publications {#publications-renyuan}
+## Publications 
 
 - **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%).*
 
