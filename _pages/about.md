@@ -23,8 +23,7 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 ### <font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>  
 
-During my undergraduate stage, my research interest focuses on the convergence of robotics and biology.
-
+During my undergraduate stage, my research interest focuses on the convergence of **robotics** and **biology**.  
 Specifically, I am transfixed by **computational neuroscience**, for **collision detection**.  
 I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
 
