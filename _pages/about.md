@@ -48,7 +48,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 * [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
-## Education {#cv-of-renyuanliu}
+## Education {#education-renyuan}
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**  
   Sept. 2022 - Jun. 2026 (Expected)  
@@ -70,7 +70,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Publications
+## Publications {#publications-renyuan}
 
 - **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%).*
 
@@ -84,7 +84,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Honors and Awards
+## Honors and Awards {#awards-renyuan}
 
 
 - **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
@@ -184,7 +184,7 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 <br>
 
 
-## Inspiring Articles  {#misc}
+## Inspiring Articles  {#misc-renyuan}
 
 - [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
 - [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
