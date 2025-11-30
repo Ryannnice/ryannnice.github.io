@@ -10,14 +10,17 @@
 main:
     
   - title: "Renyuan's CV"
-    url: "#cv-of-renyuanliu"
+    url: "#education"
     
   - title: "Publications"
     url: "#manuscripts-under-review"
 #   url: /publications/
 
+  - title: "Awards"
+    url: "#honors-and-awards"
+
   - title: "Misc."
-    url: "#misc"
+    url: "#conference"
     
 #  - title: "Blog Posts"
 #    url: /year-archive/
