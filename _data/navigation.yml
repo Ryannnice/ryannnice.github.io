@@ -9,11 +9,11 @@
 
 main:
     
-  - title: "Renyuan's CV"
+  - title: "Education"
     url: "#education-renyuan"
     
-#  - title: "Publications"
-#   url: "#publications-renyuan"
+  - title: "Publications"
+   url: "#publications-renyuan"
 #   url: /publications/
 
   - title: "Awards"
