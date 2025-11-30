@@ -13,11 +13,11 @@ main:
     url: /about/#cv-of-renyuanliu
     
   - title: "Publications"
-    url: /about/#manuscripts-under-review
+    url: "#-manuscripts-under-review"
 #   url: /publications/
 
   - title: "Misc."
-    url: /about/#misc
+    url: "#-misc"
     
 #  - title: "Blog Posts"
 #    url: /year-archive/
