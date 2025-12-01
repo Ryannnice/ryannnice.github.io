@@ -74,7 +74,9 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
-  wechat           : "https://ryannnice.github.io/images/WeChat.png"
+  wechat           : true
+
+  
 
 # Publication Category - The following the list of publication categories and their headings
 
