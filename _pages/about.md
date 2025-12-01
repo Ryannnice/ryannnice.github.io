@@ -191,4 +191,4 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-[GitHub](https://github.com/Ryannnice) / [WeChat](../images/WeChat.png) / [Instagram](https://www.instagram.com/ren_yvan/)
+[WeChat](https://ryannnice.github.io/images/WeChat.png)
