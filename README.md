@@ -12,11 +12,10 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 ## Research Interest
 
-### <font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>  
+**<font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>**  
 
 During my undergraduate stage, my research interest focuses on the convergence of **robotics** and **biology**.  
 Specifically, I am transfixed by **computational neuroscience**, for **collision detection**.  
-
 I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
 Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):
 * [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
@@ -26,9 +25,9 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
-* [Oct 20th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* (Top 8%).
+* [Oct 20th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
-* [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
+* [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in Chinese Catogory].
 
 * [Jul 22nd, 2025] Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
   
@@ -41,17 +40,30 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 * [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
-## Education {#education-renyuan}
+## Experience {#experience-renyuan}
 
-- **[Guangzhou University](https://english.gzhu.edu.cn/)**  
+- **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
   Sept. 2022 - Jun. 2026 (Expected)  
-  B.Eng. in Computer Science (Information Security); **GPA: 89.81/100.00; Ranking: Top 8%**  
-  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics (\*: rank 1st in all students of the course).
+  B.Eng. in Computer Science (Information Security);  
+  **GPA: 89.81/100.00; Ranking: Top 8%**  
+  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics  
+  (\*: rank 1st in all students of the course).  
+  **Lab:** Machine Life and Intelligence Research Center  
+  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
+  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*.  
 
-- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)** (Summer Camp)  
+
+- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023  
   **GPA: 97.50/100.00** (Interdisciplinary Programme)  
-  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
+  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
+
+
+- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
+  **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
+  Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
+
+
 
 
 
@@ -101,6 +113,10 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
   Dec. 2023
+
+- **Commendation Letter for Outstanding Performance in the Winning Team**,  
+  Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
+  Nov. 2023
 
 
 ## Research Experience
