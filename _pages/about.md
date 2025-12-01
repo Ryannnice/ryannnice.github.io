@@ -128,64 +128,8 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Nov. 2023
 
 
-## Research Experience
-
-**Computational Autonomous Learning Systems Lab**&emsp;&emsp;Advisor: [Prof. Pengcheng Liu](https://scholar.google.com/citations?user=VxmFgc0AAAAJ&hl=zh-CN)  
-[Department of Computer Science, University of York](https://www.york.ac.uk/computer-science/research/), York, UK **(On-Site)**  
-
-- **Bio-inspired models and biologically-plausible mechanisms for life-long learning**  
-  Jun. 2025 -- Sept. 2025
-  - **Robotic arm motion planning:** Learned expert-guided trajectory optimization via Learning from Demonstration **(LfD)** and applied biologically inspired probabilistic movement primitives **(ProMPs)** for push–grasping with the [*Franka Emika Panda*](https://franka.de/).
-		
-  - **Navigation and manipulation:** Working on developing a **lifelong learning** navigation–manipulation system on [*TurtleBot 3*](https://www.turtlebot.com/turtlebot3/) with [*OpenMANIPULATOR-X*](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/) that adapts to new environments while **retaining** performance in previously learned ones.
-
-&nbsp;
-
-**Machine Life and Intelligence Research Centre**&emsp;&emsp;Advisor: [Prof. Qinbing Fu](https://scholar.google.com/citations?user=YIte1M8AAAAJ&hl=zh-CN)  
-School of Mathematics and Information Science, Guangzhou University, Guangzhou, China  
-
-- **Real-time Visual Processing Systems Development of Micro-Mobile Robot**  
-  Mar. 2023- Present
-  - Reading and giving reports of research articles during research seminars on a weekly basis.
-  - Deployed visual neural network models inspired by insect neurons onto the [STM32-based micro-robot *Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17), achieving real-time collision perception and avoidance. Optimized model memory usage to fit within the **256 KByte** SRAM capacity of [*Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17); developed and refined algorithms to enable real-time execution under extreme computational constraints (processing time **< 33 ms** on the STM32F427 chip); performed debugging, tuning, and conducted both offline and online experiments.
-  - [Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots](https://ryannnice.github.io/assets/TAROS_2025_Poster_100.pdf), poster presentation at *the 26th Towards Autonomous Robotic Systems (TAROS 2025)*.
-  - Selected code can be accessed below:  
-  [Fly Visuomotor-Inspired Attention-LPLC2 Model **(independently, 2k lines of code in C)**](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c);  
-  [Locust Vision-Inspired Optimized-LGMD Model **(independently, 1k lines of code in C)**](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c).
-		
-		
-		
-- **Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization**, paper accepted at *IJCNN 2025*, *first author*.  
-  Jul. 2024 - Nov. 2024  
-  - Conducted full-cycle research on modeling the lobula plate/lobula columnar type 2 (LPLC2) neural ensemble in the fruit fly *Drosophila*, known for its ultra-selectivity to looming stimuli.
-  - Developed the multi-attention LPLC2 (mLPLC2) neural network model inspired by the visual system of the fly by leveraging a bottom-up attention mechanism driven by motion-sensitive neural pathways
-([**independently, 3k lines of code in C/C++**](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)).
-
-- **A Computationally Efficient Neuronal Model for Collision Detection with Contrast Polarity-Specific Feed-Forward Inhibition**, article published at *Biomimetics*, *second author*.  
-  Mar. 2024 - Jul. 2024  
-  - Participated in the entire research on modeling the optimized locust lobula giant movement detector neuron with detailed feed-forward inhibition (oLGMD) to enhance processing speed and the robustness towards translating movement.
-  - Implemented oLGMD model into the embedded system of [*Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17), and conducted closed-loop arena comparative experiments to evaluate performance of oLGMD, achieving the highest success ratio of collision avoidance at 97.51% while nearly halving the processing time compared with previous LGMD models; conducted all online experiments of this paper, analyzing the results using real-world data collected by the [*Colias*](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) robot; designed criteria to assess time efficiency and collision selectivity.
-   - Led the initial writing of the introduction and experimentation sections; participated in revising the submitted paper.
-
-- **Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, *Provincial Key*** *College Students’ Innovative Entrepreneurial Training Plan Program*.  
-  Mar. 2023 - Present  
-  - Developed neuromorphic binocular models for collision prediction which combines directional and depth motion cues; optimized directional-selective neuron parameters using a genetic algorithm; collected a stereo RGB-D dataset capturing diverse indoor-outdoor collision scenarios to support model training and evaluation; conducted online robotic experiments with the [*TurtleBot* 4](https://clearpathrobotics.com/turtlebot-4/) robot.
-  - Designed detailed figures illustrating the models and experiments; drafted manuscript introductions, and contributed to manuscript revisions.
 
 
-
-## Skills / ***<font color = '#000066'>Learning is the one of the happniest thing in the world</font>***
-
-- **Language:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5), **CET-6 564** (242/248.5 in the reading section)
-- **Programming Skills:** C/C++, Python, Matlab
-- **Others:** ROS, LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
-
-Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking.
-
-
-<br>
-<br>
-<br>
 ## Conference {#conference-renyuan}
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
@@ -199,10 +143,31 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 - Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
 
 ***<font color = '#000066'>ICMPSO 2024</font>***, *Guangzhou, China*   
-- *I was honored to meet and learn from* Prof. Pengcheng *during this event!*
+- *A Broader Academic World.*  
 <br>
 <br>
 <br>
+
+
+
+## Skills / ***<font color = '#000066'>Learning is the one of the happniest thing in the world</font>***
+
+- **Language:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5), **CET-6 564** (242/248.5 in the reading section)
+- **Programming Skills:** C/C++, Python, Matlab
+- **Others:** ROS, LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
+<br>
+<br>
+<br>
+
+
+
+
+## Hobbies  {#misc-renyuan}
+*Enjoy Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking ...*  
+<br>
+<br>
+<br>
+
 
 
 ## Inspiring Articles  {#misc-renyuan}
@@ -212,10 +177,11 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
 - [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
 - [NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)
 - [NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)
-- [NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)
+- [NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)  
 <br>
 <br>
 <br>
+
 
 
 ## Visitor Map   
@@ -224,10 +190,11 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
   <script type="text/javascript" id="clustrmaps"
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
   </script>
-</div>
+</div>  
 <br>
 <br>
 <br>
+
 
 
 [GitHub](https://github.com/Ryannnice) / [WeChat](../images/WeChat.png) / [Instagram](https://www.instagram.com/ren_yvan/)
