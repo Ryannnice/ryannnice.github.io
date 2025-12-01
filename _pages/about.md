@@ -49,12 +49,19 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 * [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
-## Education {#education-renyuan}
+## Experience {#experience-renyuan}
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**  
   Sept. 2022 - Jun. 2026 (Expected)  
-  B.Eng. in Computer Science (Information Security); **GPA: 89.81/100.00; Ranking: Top 8%**  
-  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics (\*: rank 1st in all students of the course).
+  B.Eng. in Computer Science (Information Security);  
+  **GPA: 89.81/100.00; Ranking: Top 8%**  
+  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*,  
+  Operating System 98\* (Course Project 95\*), Programming Practice 98\*,  
+  Data Structure and Algorithm 97\*, Programming Laboratory I 95\*,  
+  Computer Network (Course Project 95\*), Principles of Computer Composition,  
+  Higher Mathematics, Discrete Mathematics,  
+  Linear Algebra, Probability and Mathematical Statistics  
+  (\*: rank 1st in all students of the course).
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)** (Summer Camp)  
   Nov. 2023  
@@ -109,6 +116,10 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
   Dec. 2023
+
+- **Commendation Letter for Outstanding Performance in the Winning Team**,  
+  Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
+  Nov. 2023
 
 
 ## Research Experience
