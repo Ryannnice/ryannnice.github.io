@@ -57,7 +57,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : # Username
+  instagram        : "ren_yvan"
   lastfm           : # Username
   linkedin         : # Username
   mastodon         : # URL
@@ -74,6 +74,7 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+  wechat           : "https://ryannnice.github.io/images/WeChat.png"
 
 # Publication Category - The following the list of publication categories and their headings
 
