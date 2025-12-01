@@ -136,8 +136,8 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **Programming Skills:** C/C++, Python, Matlab
 - **Others:** ROS, LaTeX, Keil, Webots, Linux, Git, Markdown, MS Office/Visio, Adobe Photoshop/Premiere Pro
   
-  *<font color = '#000066'>Learning is the one of the happniest thing in the world.</font>*
-  *<font color = '#000066'>Enjoy Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking ...</font>*
+  *<font color = '#000066'>Learning is the one of the happniest thing in the world.</font>*  
+  *<font color = '#000066'>Enjoy Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cooking ...</font>*  
   
 
 
