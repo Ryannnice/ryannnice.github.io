@@ -190,6 +190,3 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 <br>
 <br>
 
-
-
-[WeChat](https://ryannnice.github.io/images/WeChat.png)
