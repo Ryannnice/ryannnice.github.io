@@ -55,29 +55,24 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Sept. 2022 - Jun. 2026 (Expected)  
   B.Eng. in Computer Science (Information Security);  
   **GPA: 89.81/100.00; Ranking: Top 8%**  
-  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*,  
-  Operating System 98\* (Course Project 95\*), Programming Practice 98\*,  
-  Data Structure and Algorithm 97\*, Programming Laboratory I 95\*,  
-  Computer Network (Course Project 95\*), Principles of Computer Composition,  
-  Higher Mathematics, Discrete Mathematics,  
-  Linear Algebra, Probability and Mathematical Statistics  
+  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics  
   (\*: rank 1st in all students of the course).  
-  **Lab:** Machine Life and Intelligence Research Center
-  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)
+  **Lab:** Machine Life and Intelligence Research Center  
+  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
   **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization.  
   ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*.  
 
 
-- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China
+- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023  
   **GPA: 97.50/100.00** (Interdisciplinary Programme)  
-  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
+  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
 
 
-- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK **(On-Site)**
-  **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science
-  Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)
-  **Project:** Bio-Inspired Models and Biologically-Plausible Mechanisms for Life-Long Learning
+- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK **(On-Site)**  
+  **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
+  Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
+  **Project:** Bio-Inspired Models and Biologically-Plausible Mechanisms for Life-Long Learning  
 
 
 
