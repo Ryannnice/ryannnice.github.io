@@ -72,7 +72,6 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK **(On-Site)**  
   **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
-  **Project:** Bio-Inspired Models and Biologically-Plausible Mechanisms for Life-Long Learning  
 
 
 
