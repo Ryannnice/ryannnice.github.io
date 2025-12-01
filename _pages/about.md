@@ -59,8 +59,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   (\*: rank 1st in all students of the course).  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization.  
-  ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*.  
+  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*.  
 
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
