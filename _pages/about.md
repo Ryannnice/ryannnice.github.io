@@ -26,8 +26,7 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 During my undergraduate stage, my research interest focuses on the convergence of **robotics** and **biology**.  
 Specifically, I am transfixed by **computational neuroscience**, for **collision detection**.  
 I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
-
-Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):  
+Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):
 * [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
 * [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
 * [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) (independently, 1k lines of code in C).  
@@ -52,7 +51,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**  
   Sept. 2022 - Jun. 2026 (Expected)  
-  B.Eng. in Computer Science (Information Security); **GPA: 89.81/100.00; Ranking: Top 10%**  
+  B.Eng. in Computer Science (Information Security); **GPA: 89.81/100.00; Ranking: Top 8%**  
   **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics (\*: rank 1st in all students of the course).
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)** (Summer Camp)  
