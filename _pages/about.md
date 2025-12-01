@@ -68,7 +68,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
 
 
-- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK **(On-Site)**  
+- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
   **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
 
