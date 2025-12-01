@@ -204,9 +204,9 @@ Hobbies: Movie, Music, Photography, Basketball, Jogging, Badminton, Hiking, Cook
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
   </script>
 </div>
-
-
-
+<br>
+<br>
+<br>
 
 
 [GitHub](https://github.com/Ryannnice) / [WeChat](../images/WeChat.png) / [Instagram](https://www.instagram.com/ren_yvan/)
