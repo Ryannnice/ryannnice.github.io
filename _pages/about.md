@@ -99,6 +99,9 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **First Prize & Innovation Silver Award (Provincial; Top 2 out of 1,167 Teams)**,  
   "Greater Bay Area Cup" Guangdong-Hong Kong-Macao Financial Mathematics Modeling Competition  
   Nov. 2024
+  
+- **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
+  Nov. 2025
 
 - **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
   Nov. 2024
