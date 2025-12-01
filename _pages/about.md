@@ -35,6 +35,8 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
+* [Oct 20th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* (Top 8%).
+
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A, in Chinese Catogory].
 
 * [Jul 22nd, 2025] Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
@@ -101,13 +103,13 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Nov. 2024
   
 - **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
-  Nov. 2025
+  Oct. 2025
 
 - **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
   Nov. 2024
 
 - **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
-  Nov. 2023
+  Dec. 2023
 
 
 ## Research Experience
