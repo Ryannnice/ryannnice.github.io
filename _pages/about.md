@@ -46,7 +46,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 * [Jun 9th, 2025] Paper accepted at *Living Machines 2025*.
   
-* [May 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
+* [Apr 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
 ## Experience {#experience-renyuan}
