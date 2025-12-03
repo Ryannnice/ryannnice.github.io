@@ -78,9 +78,9 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Manuscripts Under Review {#publications-renyuan}
 
-- **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Submitted to International Conference on Robotics and Automation (ICRA)(CCF-B).*
+- **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Under review in The 2026 International Conference on Robotics and Automation (ICRA)(CCF-B).*
 
-- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/A neuronal assembly model with elevated time derivative processing boosts loom-selectivity.pdf). *Submitted to PeerJ Computer Science (JCR Q2).*
+- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/A neuronal assembly model with elevated time derivative processing boosts loom-selectivity.pdf). *Under 3rd review in PeerJ Computer Science (JCR Q2).*
 
 
 
