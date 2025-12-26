@@ -34,7 +34,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
-* [Oct 20th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
+* [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in Chinese Catogory].
 
@@ -80,7 +80,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Under review in The 2026 International Conference on Robotics and Automation (ICRA)(CCF-B).*
 
-- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, W. He, and Q. Fu, [A Neuronal Assembly Model with Elevated Time Derivative Boosts Loom-Selectivity](https://ryannnice.github.io/assets/A neuronal assembly model with elevated time derivative processing boosts loom-selectivity.pdf). *Under 3rd review in PeerJ Computer Science (JCR Q2).*
+- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, [Enhancing Collision-Selectivity in Autonomous Micro-Robots by Elevated Temporal Derivatives in Neuronal Assembly Framework](https://ryannnice.github.io/assets/TCDS-2025-0806_Proof_hi.pdf). *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
 
 
 
@@ -115,7 +115,7 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Nov. 2024
   
 - **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
-  Oct. 2025
+  Dec. 2025
 
 - **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
   Nov. 2024
