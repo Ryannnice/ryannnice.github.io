@@ -78,9 +78,9 @@ Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Manuscripts Under Review {#publications-renyuan}
 
-- **R. Liu**, H. Zhou, C. Fang and Q. Fu, Manuscript under double-blind review. *Under review in The 2026 International Conference on Robotics and Automation (ICRA)(CCF-B).*
+- **R. Liu**, H. Zhou, C. Fang and Q. Fu, \[Manuscript under double-blind review.\] *Under review in The 2026 International Conference on Robotics and Automation (ICRA)(CCF-B).*
 
-- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, Manuscript under double-blind review. *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
+- M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, \[Manuscript under double-blind review.\] *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
 
 
 
