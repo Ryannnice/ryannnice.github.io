@@ -23,9 +23,8 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 **<font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>**  
 
-During my undergraduate stage, my research interest focuses on the convergence of **robotics** and **biology**.  
-Specifically, I am transfixed by **computational neuroscience**, for **collision detection**.  
-I am working to understand and model **insect visual circuits**, which exhibit robust and efficient real-time perception, and to apply these principles to real-world artificial systems, e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV*** .  
+I am particularly fascinated by **bio-inspired neural networks** and **machine vision**.  
+My work seeks to model insect visual circuits that support efficient real-time motion perception and to deploy these biologically inspired principles on real-world **robotic systems** (e.g. the ***TurtleBot 4*** equipped with an RGB-D camera and the micro ground robot ***Colias IV***), to tackle **collision detection** in **navigation**.  
 Selected Code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17):
 * [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
 * [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
