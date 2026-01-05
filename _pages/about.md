@@ -10,8 +10,7 @@ redirect_from:
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
 ---
 
-Nice to meet U here! I am a forth-year undergraduate student, fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University.
-
+Nice to meet U here! I am a forth-year undergraduate student, fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University.  
 I am actively looking for research position for **<font color = '#CC0000'>Fall 2026</font>**, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).  
 
 
