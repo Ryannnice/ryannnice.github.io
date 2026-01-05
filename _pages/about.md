@@ -24,7 +24,7 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 During my undergraduate studies, my research interests have focused on **bio-inspired neural networks** and **machine vision**.  
 My work aims to model insect visual circuits that enable robust, real-time motion perception, and to translate these biologically inspired principles into **machine intelligence** for addressing a core challenge in robotic **navigation**: **collision detection**.  
 
-My experimental platforms include the *TurtleBot 4* equipped with a binocular camera and the micro ground robot *Colias IV*.  
+My experimental platforms include the *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.  
 **I enjoy hands-on coding and system implementation**, and selected code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is available at:  
 * [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
 * [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
