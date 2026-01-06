@@ -3,7 +3,7 @@
 
 
 
-## Inspiring Articles  {#misc-renyuan}
+## Inspiring Articles
 
 - [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
 - [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
