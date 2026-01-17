@@ -18,8 +18,8 @@ I am actively looking for research position for **<font color = '#CC0000'>Fall 2
 
 ## Research Interest
 
-**<font color = '#000066'>I maintain an open and inquisitive mindset toward any computer-related research that benefits human society.</font>**  
-During my undergraduate studies, my research interests have focused on **bio-inspired neural networks** and **machine vision**.  
+**<font color = '#000066'>I maintain an open and inquisitive mindset toward any **<font color = '#CC0000'>Artificial Intelligence</font>** research that benefits human society.</font>**  
+During my undergraduate studies, my research interests focus on bio-inspired AI and its application: **brain-inspired neural networks** and **machine vision**.  
 My work aims to model insect visual circuits that enable robust, real-time motion perception, and to translate these biologically inspired principles into **machine intelligence** for addressing a core challenge in robotic **navigation**: **collision detection**.  
 
 **<font color = '#000066'>I enjoy hands-on coding/debugging and system implementation</font>**  
