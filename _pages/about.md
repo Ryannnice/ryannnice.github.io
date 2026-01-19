@@ -22,7 +22,7 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
 
 
 Open for collaborations in computer science.
-Happy to chat and you can find my CV here: [**RENYUAN LIU**](../assets/CV_RenyuanLiu.pdf).
+Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_RenyuanLiu.pdf).
 
 
 
