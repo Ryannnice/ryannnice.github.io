@@ -87,7 +87,7 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
   **GPA: 89.81/100.00; Ranking: Top 8%**  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*  
+  
 
 
 ## Manuscripts Under Review {#publications-renyuan}
@@ -140,6 +140,8 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
 - **Commendation Letter for Outstanding Performance in the Winning Team**,  
   Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
   Nov. 2023
+
+- **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*  
 
 
 
