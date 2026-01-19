@@ -146,7 +146,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
   Nov. 2023
 
-- **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*  
+- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization,   
 
 
 
