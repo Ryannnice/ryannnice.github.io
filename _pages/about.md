@@ -8,7 +8,7 @@ redirect_from:
 ---  
 
 <p align="center">
-  <img src="../images/CUHK-SAI-Logo-01_1.png" width="700">
+  <img src="../images/CUHK-SAI-Logo-01_1.png" width="800">
 </p>
 
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
