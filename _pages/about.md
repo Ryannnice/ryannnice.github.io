@@ -43,7 +43,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
-* <font color = '#CC0000'>[Jan 20th, 2026] Admitted to the MPhil program at *CUHK (Shenzhen), School of Artificial Intelligence* !</font>
+* <font color = '#CC0000'>[Jan 20th, 2026] Admitted to the MPhil program at CUHK (Shenzhen), School of Artificial Intelligence!</font>
 
 * [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
