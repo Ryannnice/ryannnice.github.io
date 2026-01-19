@@ -64,7 +64,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Experience {#experience-renyuan}
 
-- **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China
+- **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China  
   Sept. 2026 - Jun. 2028 (Expected)  
   MPhil in Artificial Intelligence  
   Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
