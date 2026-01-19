@@ -66,14 +66,14 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China  
   Sept. 2026 - Jun. 2028 (Expected)  
-  MPhil in Artificial Intelligence  
+  **MPhil Student in Artificial Intelligence**  
   Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
 
 
 
 - **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
   Jun. 2025 - Sept. 2025  
-  Visiting Student  
+  **Visiting Student**  
   **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
 
@@ -81,14 +81,14 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023
-  Interdisciplinary Programme
+  **Interdisciplinary Programme Leader**  
   **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
 
   
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
   Sept. 2022 - Jun. 2026 (Expected)  
-  B.Eng. in Information Security  
+  **Undergraduate Student in Information Security**  
   **GPA: 89.81/100.00; Ranking: Top 8%**  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
