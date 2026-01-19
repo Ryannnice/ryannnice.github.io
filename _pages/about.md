@@ -7,12 +7,13 @@ redirect_from:
   - /about.html
 ---  
 
-# Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
----
-
 <p align="center">
   <img src="../images/CUHK-SAI-Logo-01_1.png" width="700">
 </p>
+
+# Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
+---
+
 Nice to meet you here!
 I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).  
 
