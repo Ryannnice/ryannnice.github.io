@@ -10,11 +10,11 @@ redirect_from:
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
 ---
 
+<p align="center">
+  <img src="../images/CUHK-SAI-Logo-01_1.png" width="700">
+</p>
 Nice to meet you here!
 I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).
-<p align="center">
-  <img src="../images/CUHK-SAI-Logo-01_1.png" width="500">
-</p>
 
 Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).
@@ -38,7 +38,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
-* <font color = '#CC0000'>[Jan 20th, 2026] Admitted to the MPhil program at </font>*<font color = '#CC0000'>CUHK (Shenzhen), School of Artificial Intelligence</font>*<font color = '#CC0000'> !</font>
+* <font color = '#CC0000'>[Jan 20th, 2026] Admitted to the MPhil program at *CUHK (Shenzhen), School of Artificial Intelligence* !</font>
 
 * [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
