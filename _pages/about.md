@@ -10,8 +10,12 @@ redirect_from:
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
 ---
 
-Nice to meet U here! I am a forth-year undergraduate student, fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University.  
-I am actively looking for research position for **<font color = '#CC0000'>Fall 2026</font>**, and would be grateful for any opportunity to contribute and learn. You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).  
+Nice to meet you here!
+I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).
+
+During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, the University of York, UK.
+
+Open for collaborations in computer science. Happy to chat and You can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).
 
 
 
@@ -32,7 +36,11 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
+* [Jan 20th, 2026] <font color = '#CC0000'>Admitted to the MPhil program at *CUHK (Shenzhen)*, *School of Artificial Intelligence*! </font>
+
 * [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
+
+* [Nov 27th, 2025] Admitted to the PhD program at *the University of York*, *Department of Computer Science*.
 
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in Chinese Catogory].
 
@@ -49,21 +57,11 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Experience {#experience-renyuan}
 
-- **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
-  Sept. 2022 - Jun. 2026 (Expected)  
-  B.Eng. in Computer Science (Information Security);  
-  **GPA: 89.81/100.00; Ranking: Top 8%**  
-  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics  
-  (\*: rank 1st in all students of the course).  
-  **Lab:** Machine Life and Intelligence Research Center  
-  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*.  
-
-
-- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
-  Nov. 2023  
-  **GPA: 97.50/100.00** (Interdisciplinary Programme)  
-  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
+- **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China
+  Sept. 2026 - Jun. 2028 (Expected)  
+  MPhil in Artificial Intelligence  
+  Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
+  
 
 
 - **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
@@ -72,6 +70,22 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
+- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
+  Nov. 2023  
+  **GPA: 97.50/100.00** (Interdisciplinary Programme)  
+  **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
+
+  
+
+- **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
+  Sept. 2022 - Jun. 2026 (Expected)  
+  B.Eng. in Information Security  
+  **GPA: 89.81/100.00; Ranking: Top 8%**  
+  **Curriculum:** Machine Learning 100\*, Data Structure and Algorithm Laboratory 99\*, Operating System 98\* (Course Project 95\*), Programming Practice 98\*, Data Structure and Algorithm 97\*, Programming Laboratory I 95\*, Computer Network (Course Project 95\*), Principles of Computer Composition, Higher Mathematics, Discrete Mathematics, Linear Algebra, Probability and Mathematical Statistics  
+  (\*: rank 1st in all students of the course)  
+  **Lab:** Machine Life and Intelligence Research Center  
+  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
+  **Project:** Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization, ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program (S202411078014)*  
 
 
 ## Manuscripts Under Review {#publications-renyuan}
