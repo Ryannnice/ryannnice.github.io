@@ -13,8 +13,6 @@ redirect_from:
 Nice to meet you here!
 I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).
 
-During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, the University of York, UK.
-
 Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).
 
@@ -63,6 +61,9 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   MPhil in Artificial Intelligence  
   Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
   
+
+During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, the University of York, UK.
+
 
 
 - **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)
