@@ -12,6 +12,9 @@ redirect_from:
 
 Nice to meet you here!
 I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).
+<p align="center">
+  <img src="../images/CUHK-SAI-Logo-01_1.png" width="500">
+</p>
 
 Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**<font color = '#000066'>RENYUAN LIU</font>**](../assets/CV_RenyuanLiu.pdf).
