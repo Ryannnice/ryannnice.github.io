@@ -24,6 +24,17 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
 Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_RenyuanLiu.pdf).
 
+## Slides about Me & My Undergraduate Research Training: 
+<iframe 
+    src="../assets/Introduction_Undergraduate.pdf" 
+    width="100%" 
+    height="600px" 
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    allow="fullscreen">
+    This browser does not support inline PDFs. Please view the document here: 
+    <a href="../assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
+</iframe>
+
 
 
 
