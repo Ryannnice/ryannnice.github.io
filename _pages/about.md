@@ -105,7 +105,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   [\[Evidence\]](../assets/Evidence_Transcript.pdf)  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  [\[Evidence\]](../assets/Evidence_York.pdf)  
+  [\[Evidence\]](../assets/Evidence_GZHU_Lab.pdf.pdf)  
 
 ## Manuscripts Under Review {#publications-renyuan}
 
