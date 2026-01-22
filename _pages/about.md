@@ -133,7 +133,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 - **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
-  May 2025  [\[Evidence\]](../assets/Evidence_Computer_Design.pdf)  Evidence_APMCM.pdf
+  May 2025  [\[Evidence\]](../assets/Evidence_Computer_Design.pdf)  
   
 - **Honorable Mention (International)**, Mathematical Contest in Modeling (MCM)  
   Jan. 2025  [\[Evidence\]](../assets/Evidence_MCM.pdf)  
