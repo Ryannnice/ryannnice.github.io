@@ -94,7 +94,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023  
   **Interdisciplinary Programme Leader**  
-  **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
+  **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
   [\[Evidence\]](../assets/Evidence_Macao.pdf)
   
 
