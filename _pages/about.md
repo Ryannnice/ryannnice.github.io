@@ -95,7 +95,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Nov. 2023  
   **Interdisciplinary Programme Leader**  
   **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
-  [\[Evidence\]](../assets/Evidence_Macao.pdf)
+  [\[Evidence\]](../assets/Evidence_HKU.pdf)
   
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
@@ -105,7 +105,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   [\[Evidence\]](../assets/Evidence_Transcript.pdf)  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  [\[Evidence\]](../assets/Evidence_GZHU_Lab.pdf.pdf)  
+  [\[Evidence\]](../assets/Evidence_GZHU_Lab.pdf)  
 
 ## Manuscripts Under Review {#publications-renyuan}
 
