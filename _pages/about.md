@@ -88,24 +88,24 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   **Visiting Student**  
   **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
-  
+  [\[Evidence\]](../assets/Evidence_York.pdf)
 
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023  
   **Interdisciplinary Programme Leader**  
   **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team
-
+  [\[Evidence\]](../assets/Evidence_Macao.pdf)
   
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
   Sept. 2022 - Jun. 2026 (Expected)  
   **Undergraduate Student in Information Security**  
   **GPA: 89.81/100.00; Ranking: Top 8%**  
+  [\[Evidence\]](../assets/Evidence_Transcript.pdf)  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  [\[Transcript\]](../assets/Evidence_Transcript.pdf)
-
+  [\[Evidence\]](../assets/Evidence_York.pdf)  
 
 ## Manuscripts Under Review {#publications-renyuan}
 
@@ -133,32 +133,32 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 - **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
-  May 2025
+  May 2025  [\[Evidence\]](../assets/Evidence_Computer_Design.pdf)  Evidence_APMCM.pdf
   
 - **Honorable Mention (International)**, Mathematical Contest in Modeling (MCM)  
-  Jan. 2025
+  Jan. 2025  [\[Evidence\]](../assets/Evidence_MCM.pdf)  
 
 - **First Prize (National; Top 5%)**, Asia and Pacific Mathematical Contest in Modeling (APMCM)  
-  Nov. 2024
+  Nov. 2024  [\[Evidence\]](../assets/Evidence_APMCM.pdf)  
 
 - **First Prize & Innovation Silver Award (Provincial; Top 2 out of 1,167 Teams)**,  
   "Greater Bay Area Cup" Guangdong-Hong Kong-Macao Financial Mathematics Modeling Competition  
-  Nov. 2024
+  Nov. 2024  [\[Evidence\]](../assets/Evidence_GBA_Cup.pdf)  
   
 - **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
-  Dec. 2025
+  Dec. 2025  [\[Evidence\]](../assets/Evidence_Scholarship_2025.pdf)  
 
 - **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
-  Nov. 2024
+  Nov. 2024  [\[Evidence\]](../assets/Evidence_Scholarship_2024.pdf)  
 
 - **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
-  Dec. 2023
+  Dec. 2023  [\[Evidence\]](../assets/Evidence_Scholarship_2023.pdf)  
 
 - **Commendation Letter for Outstanding Performance in the Winning Team**,  
   Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
-  Nov. 2023
+  Nov. 2023  [\[Evidence\]](../assets/Evidence_Macao.pdf)  
 
-- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*  
+- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*  [\[Evidence\]](../assets/Evidence_College_Student_Training.pdf)  
 
 
 
