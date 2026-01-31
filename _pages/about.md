@@ -15,7 +15,7 @@ redirect_from:
 ---
 
 Nice to meet you here!
-I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie).  
+I am an incoming MPhil student at the School of Artificial Intelligence, The Chinese University of Hong-Kong (Shenzhen) at 2026 Fall, under the supervision of [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153).  
 
 
 During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, the University of York, UK.  
