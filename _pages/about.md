@@ -54,13 +54,13 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## News
 
-* [Feb 27th, 2026] Admitted to the *MSc in Data-Centirc Artificial Intelligence* program at *The Hong-Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
+* [Feb 27th, 2026] Admitted to the *MSc program in Data-Centirc Artificial Intelligence* at *The Hong-Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
   
-* [Jan 19th, 2026] Admitted to the *MPhil in Artificial Intelligence* program at *The Chinese University of Hong-Kong (Shenzhen), School of Artificial Intelligence*!
+* [Jan 19th, 2026] Admitted to the *MPhil program in Artificial Intelligence* at *The Chinese University of Hong-Kong (Shenzhen), School of Artificial Intelligence*!
 
 * [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
-* [Nov 27th, 2025] Admitted to the *PhD Computer Science* program at *the University of York, Department of Computer Science*.
+* [Nov 27th, 2025] Admitted to the *PhD program in Computer Science* at *the University of York, Department of Computer Science*.
 
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in Chinese Catogory].
 
