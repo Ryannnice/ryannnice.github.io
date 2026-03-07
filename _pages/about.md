@@ -25,32 +25,6 @@ Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_RenyuanLiu.pdf).
 
 
-<iframe 
-    src="../assets/Introduction_Undergraduate.pdf" 
-    width="100%" 
-    height="600px" 
-    style="border: 1px solid #ddd; border-radius: 8px;"
-    allow="fullscreen">
-    This browser does not support inline PDFs. Please view the document here: 
-    <a href="../assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
-</iframe>
-
-
-
-
-## Research Interest
-
-**<font color = '#000066'>I am eager to explore any area within Artificial Intelligence applications that contributes to the well-being of society. </font>**  
-During my undergraduate studies, my research interests focus on bio-inspired AI and its application: **brain-inspired neural networks** and **machine vision**.  
-My work aims to model insect visual circuits that enable robust, real-time motion perception, and to translate these biologically inspired principles into **machine intelligence** for addressing a core challenge in robotic **navigation**: **collision detection**.  
-
-**<font color = '#000066'>I enjoy hands-on coding/debugging and system implementation</font>**  
-My experimental platforms include the *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.  
-Selected code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is available at:  
-* [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
-* [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
-* [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) (independently, 1k lines of code in C).  
-
 
 ## News
 
@@ -77,7 +51,34 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 * [Apr 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
+## Research Interest
+
+**<font color = '#000066'>I am eager to explore any area within Artificial Intelligence applications that contributes to the well-being of society. </font>**  
+During my undergraduate studies, my research interests focus on bio-inspired AI and its application: **brain-inspired neural networks** and **machine vision**.  
+My work aims to model insect visual circuits that enable robust, real-time motion perception, and to translate these biologically inspired principles into **machine intelligence** for addressing a core challenge in robotic **navigation**: **collision detection**.  
+
+**<font color = '#000066'>I enjoy hands-on coding/debugging and system implementation</font>**  
+My experimental platforms include the *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.  
+Selected code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is available at:  
+* [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
+* [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
+* [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) (independently, 1k lines of code in C).  
+
+
 ## Experience {#experience-renyuan}
+
+
+<iframe 
+    src="../assets/Introduction_Undergraduate.pdf" 
+    width="100%" 
+    height="600px" 
+    style="border: 1px solid #ddd; border-radius: 8px;"
+    allow="fullscreen">
+    This browser does not support inline PDFs. Please view the document here: 
+    <a href="../assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
+</iframe>
+
+
 
 - **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China  
   Sept. 2026 - Jun. 2028 (Expected)  
