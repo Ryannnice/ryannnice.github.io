@@ -217,7 +217,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   
 <div style="width:200px;">
   <script type="text/javascript" id="clustrmaps"
-    src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400">
+    src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400&t=tt">
   </script>
 </div> 
 
