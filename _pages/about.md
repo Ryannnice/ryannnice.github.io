@@ -28,6 +28,8 @@ Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_
 
 ## News
 
+* [Mar 19th, 2026] Joined [*Shenzhen Research Institute of Big Data (SRIBD)*](https://www.sribd.cn/en) as an *Intern*, working on AI agent development and large language model algorithms.
+
 * [Feb 27th, 2026] [Admitted to the *MSc program in Data-Centirc Artificial Intelligence*](../assets/Offer_HKUSTGZ_MSc_DCAI.pdf) at *The Hong-Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
 
 * [Feb 26th, 2026] [Scored the highest and nominated for the *CSC Joint Funded PhD Scholarship by the University of York*](../assets/York_CSC.png), in collaboration with the *China Scholarship Council*! 
