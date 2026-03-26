@@ -90,6 +90,12 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
+- **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China  
+  Mar. 2026 - Current  
+  **Intern**  
+  Working on AI agent development and large language model(LLM) algorithms  
+  
+
 - **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
   Jun. 2025 - Sept. 2025  
   **Visiting Student**  
