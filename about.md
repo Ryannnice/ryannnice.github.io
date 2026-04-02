@@ -8,7 +8,7 @@ redirect_from:
 ---  
 
 <p align="center">
-  <img src="../images/CUHK-SAI-Logo-01_1.png" width="800">
+  <img src="/images/CUHK-SAI-Logo-01_1.png" width="800">
 </p>
 
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
@@ -22,7 +22,7 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
 
 
 Open for collaborations in computer science.
-Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_RenyuanLiu.pdf).
+Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](/assets/CV_RenyuanLiu.pdf).
 
 
 
@@ -30,15 +30,15 @@ Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](../assets/CV_
 
 * [Mar 19th, 2026] Joined [*Shenzhen Research Institute of Big Data (SRIBD)*](https://www.sribd.cn/en) as an *Intern*, working on AI agent development and large language model algorithms.
 
-* [Feb 27th, 2026] [Admitted to the *MSc program in Data-Centirc Artificial Intelligence*](../assets/Offer_HKUSTGZ_MSc_DCAI.pdf) at *The Hong-Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
+* [Feb 27th, 2026] [Admitted to the *MSc program in Data-Centirc Artificial Intelligence*](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf) at *The Hong-Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
 
-* [Feb 26th, 2026] [Scored the highest and nominated for the *CSC Joint Funded PhD Scholarship by the University of York*](../assets/York_CSC.png), in collaboration with the *China Scholarship Council*! 
+* [Feb 26th, 2026] [Scored the highest and nominated for the *CSC Joint Funded PhD Scholarship by the University of York*](/assets/York_CSC.png), in collaboration with the *China Scholarship Council*! 
   
-* [Jan 19th, 2026] [Admitted to the *MPhil program in Artificial Intelligence*](../assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong-Kong (Shenzhen), School of Artificial Intelligence*!
+* [Jan 19th, 2026] [Admitted to the *MPhil program in Artificial Intelligence*](/assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong-Kong (Shenzhen), School of Artificial Intelligence*!
 
 * [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
 
-* [Nov 27th, 2025] [Admitted to the *PhD program in Computer Science*](../assets/Offer_UoY_PhD_CS.pdf) at *the University of York, Department of Computer Science*.
+* [Nov 27th, 2025] [Admitted to the *PhD program in Computer Science*](/assets/Offer_UoY_PhD_CS.pdf) at *the University of York, Department of Computer Science*.
 
 * [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in Chinese Catogory].
 
@@ -71,13 +71,13 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 <iframe 
-    src="../assets/Introduction_Undergraduate.pdf" 
+    src="/assets/Introduction_Undergraduate.pdf" 
     width="100%" 
     height="600px" 
     style="border: 1px solid #ddd; border-radius: 8px;"
     allow="fullscreen">
     This browser does not support inline PDFs. Please view the document here: 
-    <a href="../assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
+    <a href="/assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
 </iframe>
 
 
@@ -101,24 +101,24 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   **Visiting Student**  
   **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
-  [\[Evidence\]](../assets/Evidence_York.pdf)
+  [\[Evidence\]](/assets/Evidence_York.pdf)
 
 
 - **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
   Nov. 2023  
   **Interdisciplinary Programme Leader**  
   **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
-  [\[Evidence\]](../assets/Evidence_HKU.pdf)
+  [\[Evidence\]](/assets/Evidence_HKU.pdf)
   
 
 - **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
   Sept. 2022 - Jun. 2026 (Expected)  
   **Undergraduate Student in Information Security**  
   **GPA: 89.81/100.00; Ranking: Top 8%**  
-  [\[Evidence\]](../assets/Evidence_Transcript.pdf)  
+  [\[Evidence\]](/assets/Evidence_Transcript.pdf)  
   **Lab:** Machine Life and Intelligence Research Center  
   Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  [\[Evidence\]](../assets/Evidence_GZHU_Lab.pdf)  
+  [\[Evidence\]](/assets/Evidence_GZHU_Lab.pdf)  
 
 ## Manuscripts Under Review {#publications-renyuan}
 
@@ -146,32 +146,32 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 - **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
-  May 2025  [\[Evidence\]](../assets/Evidence_Computer_Design.pdf)  
+  May 2025  [\[Evidence\]](/assets/Evidence_Computer_Design.pdf)  
   
 - **Honorable Mention (International)**, Mathematical Contest in Modeling (MCM)  
-  Jan. 2025  [\[Evidence\]](../assets/Evidence_MCM.pdf)  
+  Jan. 2025  [\[Evidence\]](/assets/Evidence_MCM.pdf)  
 
 - **First Prize (National; Top 5%)**, Asia and Pacific Mathematical Contest in Modeling (APMCM)  
-  Nov. 2024  [\[Evidence\]](../assets/Evidence_APMCM.pdf)  
+  Nov. 2024  [\[Evidence\]](/assets/Evidence_APMCM.pdf)  
 
 - **First Prize & Innovation Silver Award (Provincial; Top 2 out of 1,167 Teams)**,  
   "Greater Bay Area Cup" Guangdong-Hong Kong-Macao Financial Mathematics Modeling Competition  
-  Nov. 2024  [\[Evidence\]](../assets/Evidence_GBA_Cup.pdf)  
+  Nov. 2024  [\[Evidence\]](/assets/Evidence_GBA_Cup.pdf)  
   
 - **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
-  Dec. 2025  [\[Evidence\]](../assets/Evidence_Scholarship_2025.pdf)  
+  Dec. 2025  [\[Evidence\]](/assets/Evidence_Scholarship_2025.pdf)  
 
 - **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
-  Nov. 2024  [\[Evidence\]](../assets/Evidence_Scholarship_2024.pdf)  
+  Nov. 2024  [\[Evidence\]](/assets/Evidence_Scholarship_2024.pdf)  
 
 - **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
-  Dec. 2023  [\[Evidence\]](../assets/Evidence_Scholarship_2023.pdf)  
+  Dec. 2023  [\[Evidence\]](/assets/Evidence_Scholarship_2023.pdf)  
 
 - **Commendation Letter for Outstanding Performance in the Winning Team**,  
   Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
-  Nov. 2023  [\[Evidence\]](../assets/Evidence_Macao.pdf)  
+  Nov. 2023  [\[Evidence\]](/assets/Evidence_Macao.pdf)  
 
-- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*  [\[Evidence\]](../assets/Evidence_College_Student_Training.pdf)  
+- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*  [\[Evidence\]](/assets/Evidence_College_Student_Training.pdf)  
 
 
 
@@ -193,11 +193,11 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 ## Conference {#conference-renyuan}
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
-- Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](../assets/TAROS_2025_Poster_100.pdf). 
+- Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](/assets/TAROS_2025_Poster_100.pdf). 
 
 
 ***<font color = '#000066'>Living Machines 2025</font>***, *Sheffield, United Kingdom*
-- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [30-min Oral](../assets/LivingMachines.pdf).
+- A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions, [30-min Oral](/assets/LivingMachines.pdf).
 
 ***<font color = '#000066'>IJCNN 2025</font>***, *Rome, Italy*
 - Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization, [Video](https://www.bilibili.com/video/BV15F7HzyEy1/).
@@ -231,5 +231,4 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
     src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400&t=tt">
   </script>
 </div> 
-
 

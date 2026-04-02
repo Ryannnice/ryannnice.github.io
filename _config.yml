@@ -1,136 +1,148 @@
-# Welcome to Jekyll!
+# 欢迎使用 Jekyll！
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# 这个配置文件用于存放会影响整个站点的设置。
+# 这些值通常只需要在初始化时配置一次，之后很少改动。
+# 由于技术原因，执行 `jekyll serve -l -H localhost` 时，
+# 这个文件的修改不会被自动重新加载。
+# 如果你改了这里，请手动重启服务进程。
 
-# Basic Site Settings
+# 站点基础设置
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "HOME"
 title_separator          : "-"
 name                     : &name "Renyuan LIU"
 description              : &description "personal description"
-url                      : https://ryannnice.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+url                      : https://ryannnice.github.io/ # 站点主域名与协议，例如 "https://[你的 GitHub 用户名].github.io"
+baseurl                  : "" # 站点子路径，例如 "/blog"
 repository               : "Ryannnice/ryannnice.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+navigation:
+  main:
+    - title: "Experience"
+      url: "#experience-renyuan"
+    - title: "Publications"
+      url: "#publications-renyuan"
+    - title: "Awards"
+      url: "#awards-renyuan"
+    - title: "Conference"
+      url: "#conference-renyuan"
+    - title: "Misc."
+      url: "#misc-renyuan"
+
+# 站点作者信息：以下字段控制侧边栏作者区域显示的内容。
+# 如果某个字段留空，对应图标和链接就不会显示。
+# 如需进一步定制，可编辑 /_includes/author-profile.html
 author:
-  # Biographic information
+  # 个人基础信息
   avatar           : "me11.png"
   name             : "Renyuan LIU"
-  pronouns         : # example: "she/her"  
+  pronouns         : # 示例："she/her"
   bio              : "Incoming MPhil student at CUHK(SZ)"
   location         : "Zhengzhou, China"
   employer         : "CUHK(Shenzhen)"
-  uri              : # URL
+  uri              : # 网址
   email            : "rliu@e.gzhu.edu.cn" 
 
-  # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
+  # 学术网站
+  arxiv            : # 网址，更新为你自己的主页链接
   googlescholar    : "https://scholar.google.com/citations?user=CQxCxiQAAAAJ"
-  impactstory      : # URL
+  impactstory      : # 网址
   orcid            : #"http://orcid.org/yourorcidurl"
-  semantic         : # URL
+  semantic         : # 网址
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
-  scopus           : # URL
+  researchgate     : # 网址
+  scopus           : # 网址
 
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
+  # 代码仓库与开发平台
+  bitbucket        : # 用户名，更新为你在该平台上的用户名
+  codepen          : # 用户名
+  dribbble         : # 用户名
   github           : "Ryannnice"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  kaggle           : # 用户名
+  stackoverflow    : # 用户编号，或“编号/用户名”形式（例如 "1" 或 "1/jeff-atwood"）
 
-  # Social media
-  bluesky          : #"bsky.app" # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
+  # 社交媒体
+  bluesky          : #"bsky.app" # 替换为你的 Bluesky 用户名
+  facebook         : # 用户名
+  flickr           : # 用户名
+  foursquare       : # 用户名
+  goodreads        : # 用户名
+  google_plus      : # 用户名
+  keybase          : # 用户名
   instagram        : "ren_yvan"
-  lastfm           : # Username
-  linkedin         : # Username
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
+  lastfm           : # 用户名
+  linkedin         : # 用户名
+  mastodon         : # 网址
+  medium           : # 网址
+  pinterest        : # 用户名
+  soundcloud       : # 用户名
+  steam            : # 用户名
+  telegram         : # 网址
+  tumblr           : # 用户名
+  twitter          : # X / Twitter 用户名
+  vine             : # 用户名
+  weibo            : # 用户名
+  wikipedia        : # 用户名
+  xing             : # 用户名
+  youtube          : # 用户名
+  zhihu            : # 用户名
   wechat           : true
 
-# Site Settings
+# 站点设置
 teaser                   :
-breadcrumbs              : false # true, false (default)
+breadcrumbs              : false # true，false（默认）
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "disabled" # 启用后会在摘要后显示 “Read more” 链接
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : # false（默认）或 "disqus"、"discourse"、"facebook"、"google-plus"、"staticman"、"custom"
   disqus:
     shortname            :
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               : # 参考：https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963，例如：meta.discourse.org
   facebook:
     appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    num_posts            : # 5（默认）
+    colorscheme          : # "light"（默认）或 "dark"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+  hide                   : false     # 改为 true 可隐藏页脚中的 RSS 链接
+  path                   : # 留空时（默认）使用 feed.xml
 
 
-# SEO Related
+# SEO 相关
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
 
-# Social Sharing
+# 社交分享
 twitter:
   username               : &twitter
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+og_image                 :  # Open Graph / Twitter 默认站点图片
+# 用于指定社交资料链接
+# 参考：https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : # Person 或 Organization（默认是 Person）
+  name                   : # 如果用户或组织名称与站点名称不同，可在此填写
+  links: # 社交资料链接数组
 
 
-# Analytics
+# 统计分析
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : false # false（默认）或 "google"、"google-universal"、"google-analytics-4"、"custom"
   google:
     tracking_id          :
 
 
-# Reading Files
+# 文件读取
 include:
   - .htaccess
-  - _pages
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -139,9 +151,6 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
   - CHANGELOG
   - Capfile
   - config
@@ -153,7 +162,6 @@ exclude:
   - local
   - log
   - node_modules
-  - package.json*
   - Rakefile
   - README
   - tmp
@@ -164,8 +172,7 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
-# Conversion
+# 转换设置
 markdown: kramdown
 highlighter: rouge
 lsi: false
@@ -173,7 +180,7 @@ excerpt_separator: "\n\n"
 incremental: false
 
 
-# Markdown Processing
+# Markdown 处理
 kramdown:
   input: GFM
   hard_wrap: false
@@ -192,21 +199,20 @@ defaults:
       layout: single
       author_profile: true
 
-
-# Sass/SCSS
+# Sass / SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # 参考：http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
-# Outputting
+# 输出设置
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
+# paginate: 5 # 每页显示的文章数量
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC # 参考：http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins
+# 插件
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -215,7 +221,7 @@ plugins:
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
+# 在 --safe 模式下模拟 GitHub Pages
 whitelist:
   - jekyll-feed
   - jekyll-gist
@@ -224,14 +230,13 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
+# 归档设置
+#  类型
+#  - 与 GitHub Pages 兼容、使用 Liquid 生成归档页：type: liquid（默认）
+#  - 使用 Jekyll Archives 插件生成归档页：type: jekyll-archives
+#  路径（示例）
+#  - 使用 Liquid 方式时，对应归档页路径必须实际存在，
+#    否则会出现坏链接（尤其是在启用面包屑时）
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
@@ -241,7 +246,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
+# 参考：https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
 #     - categories
@@ -254,8 +259,8 @@ tag_archive:
 #     tag: /tags/:name/
 
 
-# HTML Compression
-# - http://jch.penibelst.de/
+# HTML 压缩
+# - 参考：http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
