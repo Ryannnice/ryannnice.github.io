@@ -1,20 +1,9 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
-
 main:
-    
   - title: "Experience"
     url: "#experience-renyuan"
-    
+
   - title: "Publications"
     url: "#publications-renyuan"
-#   url: /publications/
 
   - title: "Awards"
     url: "#awards-renyuan"
@@ -24,21 +13,3 @@ main:
 
   - title: "Misc."
     url: "#misc-renyuan"
-    
-#  - title: "Blog Posts"
-#    url: /year-archive/
-
-#  - title: "Talks"
-#    url: /talks/    
-
-#  - title: "Teaching"
-#    url: /teaching/    
-
-#  - title: "Portfolio"
-#    url: /portfolio/
-
-  # - title: "CV"
-  #   url: /cv-json/
-    
-#  - title: "Guide"
-#    url: /markdown/
