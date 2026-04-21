@@ -3,15 +3,20 @@
   "latex-workshop.kpsewhich.class.enabled": false,
   "latex-workshop.kpsewhich.bibtex.enabled": false,
   "latex-workshop.latex.option.maxPrintLine.enabled": false,
+  "latex-workshop.synctex.path": "synctex.exe",
   "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.latex.auxDir": "%DIR%",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+  "latex-workshop.view.pdf.invert": 0,
+  "latex-workshop.view.pdf.invertMode.enabled": "never",
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk-miktex-wslpath",
       "command": "/bin/bash",
       "args": [
         "-lc",
-        "latexmk.exe -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=\"$(wslpath -w '%OUTDIR%')\" -auxdir=\"$(wslpath -w '%AUXDIR%')\" \"$(wslpath -w '%DOC_EXT%')\""
+        "latexmk.exe -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=\"$(wslpath -w '%OUTDIR%')\" -auxdir=\"$(wslpath -w '%AUXDIR%')\" \"$(wslpath -w '%DOC_EXT%')\" && bash \"%WORKSPACE_FOLDER%/scripts/fix_synctex_wsl_paths.sh\" \"%OUTDIR%/%DOCFILE%.synctex.gz\""
       ],
       "env": {}
     }
