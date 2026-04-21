@@ -1,9 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.13)  23 FEB 2026 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.13)  21 APR 2026 17:11
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./CV_RenyuanLiu.tex
-(CV_RenyuanLiu.tex
+**//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_Renyu
+anLiu.tex
+
+(//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_Renyua
+nLiu.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
 (resume.cls
@@ -394,13 +398,13 @@ Package rerunfilecheck Info: File `CV_RenyuanLiu.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9930 strings out of 473899
- 154604 string characters out of 5733066
+ 9932 strings out of 473899
+ 155175 string characters out of 5733066
  1945960 words of memory out of 5000000
  32700 multiletter control sequences out of 15000+600000
  563031 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,5n,79p,587b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,5n,79p,654b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\renyv\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1095.pk><C:/A_Apps/texstudio_kit/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.p
 fb><C:/A_Apps/texstudio_kit/MikTex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C

@@ -1,0 +1,28 @@
+{
+  "latex-workshop.kpsewhich.path": "kpsewhich.exe",
+  "latex-workshop.kpsewhich.class.enabled": false,
+  "latex-workshop.kpsewhich.bibtex.enabled": false,
+  "latex-workshop.latex.option.maxPrintLine.enabled": false,
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.auxDir": "%DIR%",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-miktex-wslpath",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "latexmk.exe -synctex=1 -interaction=nonstopmode -file-line-error -pdf -outdir=\"$(wslpath -w '%OUTDIR%')\" -auxdir=\"$(wslpath -w '%AUXDIR%')\" \"$(wslpath -w '%DOC_EXT%')\""
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (MiKTeX via wslpath)",
+      "tools": [
+        "latexmk-miktex-wslpath"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first"
+}
