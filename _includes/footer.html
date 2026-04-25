@@ -13,3 +13,39 @@
     <source src="{{ base_path }}/assets/uv202409.mp4" type="video/mp4">
   </video>
 </div>
+
+<script>
+  (function() {
+    const media = document.querySelector('.page__footer-media');
+    const video = document.querySelector('.page__footer-video');
+
+    if (!media || !video) {
+      return;
+    }
+
+    function syncFooterVideo() {
+      if (!video.videoWidth || !video.videoHeight) {
+        return;
+      }
+
+      const width = media.clientWidth;
+      const fullHeight = width * video.videoHeight / video.videoWidth;
+      const visibleHeight = fullHeight * 0.6;
+
+      media.style.height = visibleHeight + 'px';
+      video.style.marginTop = -(fullHeight * 0.2) + 'px';
+      video.playbackRate = 0.5;
+      video.defaultPlaybackRate = 0.5;
+    }
+
+    video.addEventListener('loadedmetadata', syncFooterVideo);
+    window.addEventListener('resize', syncFooterVideo);
+    video.addEventListener('play', function() {
+      video.playbackRate = 0.5;
+    });
+
+    if (video.readyState >= 1) {
+      syncFooterVideo();
+    }
+  })();
+</script>

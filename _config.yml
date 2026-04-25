@@ -42,11 +42,11 @@ author:
   location         : "Zhengzhou, China"
   employer         : "CUHK(Shenzhen)"
   uri              : # 网址
-  email            : "rliu@e.gzhu.edu.cn" 
+  email            :
 
   # 学术网站
   arxiv            : # 网址，更新为你自己的主页链接
-  googlescholar    : "https://scholar.google.com/citations?user=CQxCxiQAAAAJ"
+  googlescholar    :
   impactstory      : # 网址
   orcid            : #"http://orcid.org/yourorcidurl"
   semantic         : # 网址
@@ -70,7 +70,7 @@ author:
   goodreads        : # 用户名
   google_plus      : # 用户名
   keybase          : # 用户名
-  instagram        : "ren_yvan"
+  instagram        :
   lastfm           : # 用户名
   linkedin         : # 用户名
   mastodon         : # 网址
