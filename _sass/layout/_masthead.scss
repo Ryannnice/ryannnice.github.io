@@ -64,16 +64,26 @@
     padding-right: 2em;
     font-weight: 700;
   }
+
+  &--logo {
+    padding-right: 0.75rem;
+  }
 }
 
-.masthead__brand {
+.masthead__logo-link {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
 }
 
-.masthead__brand-logo {
+.masthead__logo {
   display: block;
-  height: 2rem;
+  height: 100%;
   width: auto;
+}
+
+.masthead__logo-link::before {
+  display: none;
 }

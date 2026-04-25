@@ -6,16 +6,16 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist">
-            <a class="masthead__brand" href="{{ base_path }}/">
+          <li class="masthead__menu-item masthead__menu-item--logo persist">
+            <a class="masthead__logo-link" href="{{ base_path }}/" aria-label="Home">
               <img
-                class="masthead__brand-logo"
+                class="masthead__logo"
                 src="{{ '/images/CUHK-SAI-Logo-01_1.png' | prepend: base_path }}"
                 alt="CUHK SAI logo"
               >
-              <span>{{ site.title }}</span>
             </a>
           </li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
