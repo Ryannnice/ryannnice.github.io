@@ -65,3 +65,15 @@
     font-weight: 700;
   }
 }
+
+.masthead__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.masthead__brand-logo {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
