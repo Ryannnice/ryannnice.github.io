@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1776762682.35182 "//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_RenyuanLiu.tex" "CV_RenyuanLiu.pdf" "CV_RenyuanLiu" 1776762685.00869 0
-  "//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_RenyuanLiu.tex" 1776762680.73166 19550 8f4c68272bd538bf09ad9b3d0e9aaa0d ""
+["pdflatex"] 1776777181.15918 "//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_RenyuanLiu.tex" "CV_RenyuanLiu.pdf" "CV_RenyuanLiu" 1776777183.84093 0
+  "//wsl.localhost/Ubuntu/home/ryan/CUHKSZ/ryannnice.github.io/CV_Latex/CV_RenyuanLiu.tex" 1776777178.27454 14195 109a98aca9b12404ab66368a96bc7a91 ""
   "C:/A_Apps/texstudio_kit/MikTex/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
   "C:/A_Apps/texstudio_kit/MikTex/fonts/tfm/jknappen/ec/tcrm1095.tfm" 993062508 1460 8005ce585ff351dff78998923504da5e ""
   "C:/A_Apps/texstudio_kit/MikTex/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -78,9 +78,9 @@
   "C:/Users/renyv/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760434218.92171 317292 afd8850de5ac565b5b5d176a51b96c15 ""
   "C:/Users/renyv/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1729956757.06235 12668 72a6e7c576fb88e5d6fe8d5900d270c5 ""
   "C:/Users/renyv/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723514917.87199 24258767 fad06dd4881c23d0bd5b0933523fa34c ""
-  "CV_RenyuanLiu.aux" 1776762683.64665 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "CV_RenyuanLiu.out" 1776762683.55378 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "CV_RenyuanLiu.tex" 1776762680.73166 19550 8f4c68272bd538bf09ad9b3d0e9aaa0d ""
+  "CV_RenyuanLiu.aux" 1776777182.0842 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "CV_RenyuanLiu.out" 1776777182.0182 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "CV_RenyuanLiu.tex" 1776777178.27454 14195 109a98aca9b12404ab66368a96bc7a91 ""
   "resume.cls" 1776761486.96172 4800 7d0890dd8b770ce0426136049ebec6c1 ""
   (generated)
   "CV_RenyuanLiu.aux"

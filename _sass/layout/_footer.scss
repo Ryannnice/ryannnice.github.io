@@ -94,3 +94,15 @@
     }
   }
 }
+
+.page__footer-media {
+  display: flex;
+  justify-content: center;
+}
+
+.page__footer-video {
+  display: block;
+  width: min(100%, 960px);
+  height: auto;
+  margin: 0 auto;
+}
