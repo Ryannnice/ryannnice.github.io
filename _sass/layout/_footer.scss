@@ -6,6 +6,7 @@
   @include clearfix;
   background-color: var(--global-footer-bg-color);
   color: var(--global-text-color-light);
+  overflow: hidden;
 
   float: left;
   margin-left: 0;
@@ -97,14 +98,16 @@
 
 .page__footer-media {
   display: flex;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  line-height: 0;
 }
 
 .page__footer-video {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
+  max-width: none;
   height: auto;
-  margin: 0 auto;
-  object-fit: contain;
+  margin: 0;
 }
