@@ -97,7 +97,7 @@
 }
 
 .page__footer-media {
-  display: flex;
+  position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -111,4 +111,5 @@
   max-width: none;
   height: auto;
   margin: 0;
+  transform-origin: top center;
 }
