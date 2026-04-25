@@ -66,7 +66,6 @@
   }
 
   &--logo {
-    width: clamp(16rem, 28vw, 24rem);
     padding-right: 1rem;
   }
 }
@@ -75,14 +74,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  width: auto;
   padding: 0;
   margin: 0;
 }
 
 .masthead__logo {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
