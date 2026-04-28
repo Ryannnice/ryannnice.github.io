@@ -2391,7 +2391,7 @@ __global__ void vector_add(const float* A, const float* B, float* C, int N) {
 
 
 
-# 2026-04-27  
+# 2026-04-27
 
 ## 远方 faraway
 
@@ -2408,51 +2408,62 @@ __global__ void vector_add(const float* A, const float* B, float* C, int N) {
 
 
 
-# 2026-04-28  
+# 2026-04-28
 
 ## CUDA 编程
 
-### 内存分配  
+### 内存分配
 
-#### cudaMemcpy
+#### 今日要点
 
-cudaMemcpy(devA, A, vectorLength*sizeof(float), cudaMemcpyDefault);
+- `cudaMemcpyDefault` 的核心是让 CUDA 驱动自动判断搬运方向。
+- `cudaMallocManaged` 的核心不是复制两份数据，而是统一地址空间下的按需页迁移。
+- `cudaMemcpy` 更像“复制 + 粘贴”，`cudaMallocManaged` 更像“同一份逻辑数据在 CPU / GPU 之间迁移”。
 
-cudaMemcpyDefault 就是让 CUDA 驱动开启“自动驾驶”模式
+#### `cudaMemcpy`
 
-```搬运位置：
-源地址 (Source)目的地址 (Destination)驱动实际执行的操作CPU (A)GPU (devA)执行 HtoD（上传到显卡）GPU (devA)CPU (A)执行 DtoH（下载到内存）GPU1 (devA)GPU2 (devB)执行 Peer-to-Peer（显卡间直接对传）GPU1 (devA)GPU1 (devB)执行 Device Copy（显存内部搬运）
+示例：
+
+```cpp
+cudaMemcpy(devA, A, vectorLength * sizeof(float), cudaMemcpyDefault);
 ```
 
-“CUDA 驱动会通过 PCIe 总线自动把数据从内存搬到显存。”
+理解：
 
+- `cudaMemcpyDefault` 就是让 CUDA 驱动开启“自动驾驶”模式。
+- CUDA 驱动会通过 PCIe 总线自动把数据从内存搬到显存。
 
+常见搬运方向：
 
-#### cudaMallocManaged 原来位于cpu的数据还在吗？
+| 源地址（Source） | 目的地址（Destination） | 驱动实际执行的操作 |
+| --- | --- | --- |
+| CPU（`A`） | GPU（`devA`） | `HtoD`（上传到显卡） |
+| GPU（`devA`） | CPU（`A`） | `DtoH`（下载到内存） |
+| GPU1（`devA`） | GPU2（`devB`） | `Peer-to-Peer`（显卡间直接对传） |
+| GPU1（`devA`） | GPU1（`devB`） | `Device Copy`（显存内部搬运） |
+
+#### `cudaMallocManaged`：原来位于 CPU 的数据还在吗？
 
 这是一个非常深刻的问题，涉及到操作系统的虚拟内存管理和 CUDA 驱动的数据一致性策略。
 
-简单来说：数据依然“存在”，但在物理上它可能已经从 CPU 内存中“搬”走了。
+简单来说：
 
-为了理解这一点，我们需要把“数据”拆分为逻辑地址和物理位置来看：
+- 数据依然“存在”，但在物理上它可能已经从 CPU 内存中“搬”走了。
 
-1. 逻辑上：它一直都在
-对于你的程序代码来说，变量 A 指向的地址（比如 0x7f8000）始终有效。无论数据当前是在显存里还是在主存里，你都可以通过这个指针访问它。
+为了理解这一点，需要把“数据”拆分为逻辑地址和物理位置来看：
 
-2. 物理上：它是“按需移动”的
-统一内存（Unified Memory）的核心机制是 页迁移（Page Migration）。它的行为非常像操作系统里的“交换文件（Swap）”：
+1. 逻辑上：它一直都在  
+   对于你的程序代码来说，变量 `A` 指向的地址（比如 `0x7f8000`）始终有效。无论数据当前是在显存里还是在主存里，都可以通过这个指针访问它。
 
-GPU 访问时：如果数据在 CPU 内存中，驱动会产生一个“页错误”（Page Fault）。此时，驱动会将这一页数据（通常是 4KB 或 2MB）通过 PCIe 总线拷贝到显存，并更新 GPU 的页表。
+2. 物理上：它是“按需移动”的  
+   统一内存（Unified Memory）的核心机制是页迁移（Page Migration）。它的行为非常像操作系统里的“交换文件（Swap）”：
+   - GPU 访问时：如果数据在 CPU 内存中，驱动会产生一个“页错误”（Page Fault）。此时，驱动会将这一页数据（通常是 `4KB` 或 `2MB`）通过 PCIe 总线拷贝到显存，并更新 GPU 的页表。
+   - 原来在 CPU 的副本：在大多数现代系统（如 Pascal 架构及之后的 GPU）上，为了保证数据一致性，CPU 端的这一页内存会被标记为“无效”或直接被物理释放。
 
-原来在 CPU 的副本：在大多数现代系统（如 Pascal 架构及之后的 GPU）上，为了保证数据一致性，CPU 端的这一页内存会被标记为“无效”或直接被物理释放。
+#### `cudaMemcpy` 和 `cudaMallocManaged` 的本质区别
 
+使用 `cudaMemcpy` 时，数据是“复制 + 粘贴”：
 
-#### cudaMemcpy 和 cudaMallocManaged 的本质区别：
-
-使用 cudaMemcpy 时，数据是 “复制 + 粘贴”：
-
-物理存在：拷贝完成后，CPU 内存（地址 A）和 GPU 显存（地址 devA）中各有一份完整的数据副本。
-
-独立性：如果你随后在 CPU 上修改了 A[0]，GPU 上的 devA[0] 不会跟着变。它们是两个完全独立的物理实体。
-
-LLM 场景应用：在加载大模型权重时，我们通常把权重从主存（RAM）拷贝到显存
+- 物理存在：拷贝完成后，CPU 内存（地址 `A`）和 GPU 显存（地址 `devA`）中各有一份完整的数据副本。
+- 独立性：如果随后在 CPU 上修改了 `A[0]`，GPU 上的 `devA[0]` 不会跟着变。它们是两个完全独立的物理实体。
+- LLM 场景应用：在加载大模型权重时，通常把权重从主存（RAM）拷贝到显存。
