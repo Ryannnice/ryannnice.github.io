@@ -2391,7 +2391,7 @@ __global__ void vector_add(const float* A, const float* B, float* C, int N) {
 
 
 
-# 2026-04-27  
+# 2026-04-27
 
 ## 远方 faraway
 
@@ -2408,51 +2408,927 @@ __global__ void vector_add(const float* A, const float* B, float* C, int N) {
 
 
 
-# 2026-04-28  
+# 2026-04-28
 
 ## CUDA 编程
 
-### 内存分配  
+### 内存分配
 
-#### cudaMemcpy
+#### 今日要点
 
-cudaMemcpy(devA, A, vectorLength*sizeof(float), cudaMemcpyDefault);
+- `cudaMemcpyDefault` 的核心是让 CUDA 驱动自动判断搬运方向。
+- `cudaMallocManaged` 的核心不是复制两份数据，而是统一地址空间下的按需页迁移。
+- `cudaMemcpy` 更像“复制 + 粘贴”，`cudaMallocManaged` 更像“同一份逻辑数据在 CPU / GPU 之间迁移”。
 
-cudaMemcpyDefault 就是让 CUDA 驱动开启“自动驾驶”模式
+#### `cudaMemcpy` 第一个参数永远是目标地址（Destination）
 
-```搬运位置：
-源地址 (Source)目的地址 (Destination)驱动实际执行的操作CPU (A)GPU (devA)执行 HtoD（上传到显卡）GPU (devA)CPU (A)执行 DtoH（下载到内存）GPU1 (devA)GPU2 (devB)执行 Peer-to-Peer（显卡间直接对传）GPU1 (devA)GPU1 (devB)执行 Device Copy（显存内部搬运）
+示例：
+
+```cpp
+cudaMemcpy(devA, A, vectorLength * sizeof(float), cudaMemcpyDefault);
 ```
 
-“CUDA 驱动会通过 PCIe 总线自动把数据从内存搬到显存。”
+理解：
 
+- `cudaMemcpyDefault` 就是让 CUDA 驱动开启“自动驾驶”模式。
+- CUDA 驱动会通过 PCIe 总线自动把数据从内存搬到显存。
 
+常见搬运方向：
 
-#### cudaMallocManaged 原来位于cpu的数据还在吗？
+| 源地址（Source） | 目的地址（Destination） | 驱动实际执行的操作 |
+| --- | --- | --- |
+| CPU（`A`） | GPU（`devA`） | `HtoD`（上传到显卡） |
+| GPU（`devA`） | CPU（`A`） | `DtoH`（下载到内存） |
+| GPU1（`devA`） | GPU2（`devB`） | `Peer-to-Peer`（显卡间直接对传） |
+| GPU1（`devA`） | GPU1（`devB`） | `Device Copy`（显存内部搬运） |
+
+#### `cudaMallocManaged`：原来位于 CPU 的数据还在吗？
 
 这是一个非常深刻的问题，涉及到操作系统的虚拟内存管理和 CUDA 驱动的数据一致性策略。
 
-简单来说：数据依然“存在”，但在物理上它可能已经从 CPU 内存中“搬”走了。
+简单来说：
 
-为了理解这一点，我们需要把“数据”拆分为逻辑地址和物理位置来看：
+- 数据依然“存在”，但在物理上它可能已经从 CPU 内存中“搬”走了。
 
-1. 逻辑上：它一直都在
-对于你的程序代码来说，变量 A 指向的地址（比如 0x7f8000）始终有效。无论数据当前是在显存里还是在主存里，你都可以通过这个指针访问它。
+为了理解这一点，需要把“数据”拆分为逻辑地址和物理位置来看：
 
-2. 物理上：它是“按需移动”的
-统一内存（Unified Memory）的核心机制是 页迁移（Page Migration）。它的行为非常像操作系统里的“交换文件（Swap）”：
+1. 逻辑上：它一直都在  
+   对于你的程序代码来说，变量 `A` 指向的地址（比如 `0x7f8000`）始终有效。无论数据当前是在显存里还是在主存里，都可以通过这个指针访问它。
 
-GPU 访问时：如果数据在 CPU 内存中，驱动会产生一个“页错误”（Page Fault）。此时，驱动会将这一页数据（通常是 4KB 或 2MB）通过 PCIe 总线拷贝到显存，并更新 GPU 的页表。
+2. 物理上：它是“按需移动”的  
+   统一内存（Unified Memory）的核心机制是页迁移（Page Migration）。它的行为非常像操作系统里的“交换文件（Swap）”：
+   - GPU 访问时：如果数据在 CPU 内存中，驱动会产生一个“页错误”（Pa
+  ge Fault）。此时，驱动会将这一页数据（通常是 `4KB` 或 `2MB`）通过 PCIe 总线拷贝到显存，并更新 GPU 的页表。
+   - 原来在 CPU 的副本：在大多数现代系统（如 Pascal 架构及之后的 GPU）上，为了保证数据一致性，CPU 端的这一页内存会被标记为“无效”或直接被物理释放。
 
-原来在 CPU 的副本：在大多数现代系统（如 Pascal 架构及之后的 GPU）上，为了保证数据一致性，CPU 端的这一页内存会被标记为“无效”或直接被物理释放。
+#### `cudaMemcpy` 和 `cudaMallocManaged` 的本质区别
+
+使用 `cudaMemcpy` 时，数据是“复制 + 粘贴”：
+
+- 物理存在：拷贝完成后，CPU 内存（地址 `A`）和 GPU 显存（地址 `devA`）中各有一份完整的数据副本。
+- 独立性：如果随后在 CPU 上修改了 `A[0]`，GPU 上的 `devA[0]` 不会跟着变。它们是两个完全独立的物理实体。
+- LLM 场景应用：在加载大模型权重时，通常把权重从主存（RAM）拷贝到显存。
 
 
-#### cudaMemcpy 和 cudaMallocManaged 的本质区别：
 
-使用 cudaMemcpy 时，数据是 “复制 + 粘贴”：
 
-物理存在：拷贝完成后，CPU 内存（地址 A）和 GPU 显存（地址 devA）中各有一份完整的数据副本。
+# 2026-04-29
 
-独立性：如果你随后在 CPU 上修改了 A[0]，GPU 上的 devA[0] 不会跟着变。它们是两个完全独立的物理实体。
+## RoPE
 
-LLM 场景应用：在加载大模型权重时，我们通常把权重从主存（RAM）拷贝到显存
+$n$ 是动力源： 随着 $n$ 的增加（即 Token 越来越靠后），旋转的角度 $n\theta_i$ 就会越来越大。
+
+
+
+刚才不是说越大，频率越低，角度越小吗
+
+这是个非常棒的观察！这里其实涉及两个不同的变量在“赛跑”，你的直觉敏锐地捕捉到了它们的矛盾点。
+
+我们要区分 位置 n 和 频率 θ 
+i
+​
+  对最终角度的贡献：
+
+1. 核心公式：角度 = 位置 × 频率
+旋转的角度公式是：
+
+Angle=n×θ 
+i
+​
+ 
+这里有两个变量：
+
+n (位置索引)：指 Token 是第几个（0,1,2,…）。
+
+θ 
+i
+​
+  (频率)：指某个维度旋转的“步长”（由 inv_freq 决定）。
+
+2. 回答你的疑问：为什么你觉得“矛盾”？
+你说的“越大越小”是指维度 i 越大，频率 θ 
+i
+​
+  越小：
+
+在 高维度（i 很大时），频率 θ 
+i
+​
+  极其微小（比如 0.0001）。
+
+这意味着在这个维度上，位置 n 每增加 1，角度只增加一点点。
+
+但我说的“越大越大”是指位置 n 增加时，角度会变大：
+
+即使频率 θ 
+i
+​
+  很小（比如 0.0001），当位置 n 从 1 变成 10000 时，角度也会从 0.0001 变成 1.0。
+
+3. 用“时钟”类比（解决你的困惑）
+想象一个时钟，里面有秒针、分针和时针。它们代表了不同的维度 i。
+
+频率 θ 
+i
+​
+ （由维度决定）：
+
+秒针：频率最高（转得最快）。
+
+时针：频率最低（转得最慢，也就是你说的“维度越大，频率越低”）。
+
+位置 n（动力源）：
+
+n 就是流逝的时间。
+
+随着时间 n 的流逝，所有的针都在往前转，角度都在变大。
+
+重点来了：
+
+当 n 增加时（时间流逝），秒针转得飞快，很快就转满一圈回到原点（容易产生你之前担心的“碰撞”）。
+
+当 n 增加时，时针转得极慢。虽然它的角度也在变大，但它转得很稳，能区分非常遥远的时间点。
+
+4. 总结：到底谁大谁小？
+变量增加	对频率的影响	对角度 (nθ 
+i
+​
+ ) 的影响	物理意义
+维度 i 变大	变小	变小	旋转步长变短（从秒针变成时针）
+位置 n 变大	无关	变大	随着 Token 靠后，总旋转量累积
+你的困惑点在于： 你把“维度带来的频率衰减”和“位置带来的角度累加”搞混了。
+
+维度决定了这根针转得有多快。
+
+位置决定了这根针转了多久。
+
+所以，在同一个维度下，Token 越靠后（n 越大），角度肯定越大；但在同一个位置下，维度越高，旋转的角度反而越小。
+
+
+你现在能理解为什么 NTK-aware Scaling 很有用了：
+当我们想把上下文从 2k 扩展到 8k 时，如果我们直接把所有维度都“调慢”（位置内插），那么原本就很快的高频维度变慢了，会导致模型在短距离内的分辨精度下降（模型变糊了）。
+
+所以聪明的做法是：保持高频维度不动，只把那些本来就很慢的低频维度变得更慢。 这样既保住了“近视”的清晰度，又获得了“远视”的广度。
+
+现在的逻辑是不是彻底闭环了？低频维度在短距离确实“废”，但它们是为长跑而生的。
+
+
+
+
+# 2026-04-30
+
+## 关于推理框架
+
+我们两个小时的组会讨论了各个主流的推理框架  
+我们排除了OmniInfer、ChiTu  
+最终，决定在vLLM、vLLM-Ascend、SGLang-Ascend、xLLM中选取  
+
+
+## 港中深新生见面会
+
+七八个新的志同道合者  
+受益！  
+
+
+
+
+# 2026-05-01
+
+## GPU操作
+
+Gather  
+All-Gather  
+Reduce  
+All-Reduce  
+Reduce-Scatter  
+All-to-All  
+
+
+# 2026-05-04
+
+## vLLM 工程边界与目录地图
+
+理解 vLLM，先不要盯住某个 kernel；先看它把 serving runtime 切成了哪些稳定边界。
+
+| 层次 | 关键文件 | 主要契约 | 为什么关键 |
+| --- | --- | --- | --- |
+| 用户入口 | [`v1/engine/llm_engine.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/engine/llm_engine.py) | 请求规范化、输出回组装 | 把 API 面和 runtime 面隔开 |
+| EngineCore | [`v1/engine/core.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/engine/core.py) | `add_request()` / `step()` 主循环 | 是 V1 runtime 总装点 |
+| Scheduler | [`v1/core/sched/scheduler.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/sched/scheduler.py) | 本轮谁前进、前进多少、是否抢占 | continuous batching 的真正核心 |
+| KV 系统 | [`v1/core/kv_cache_manager.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/kv_cache_manager.py)、[`v1/core/block_pool.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/block_pool.py) | prefix hit、slot 分配、block 生命周期 | PagedAttention 的系统收益都在这里释放 |
+| 协议对象 | [`v1/request.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/request.py)、[`v1/core/sched/output.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/sched/output.py) | Request、SchedulerOutput、status 字段 | feature 越多，越要靠协议对象稳住边界 |
+| Worker / ModelRunner | [`v1/worker/gpu/model_runner.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/worker/gpu/model_runner.py)、[`v1/worker/gpu/input_batch.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/worker/gpu/input_batch.py) | 把 scheduler output 变成设备输入批次 | 调度和算子之间的翻译层 |
+| Attention backend | [`v1/attention/backend.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/attention/backend.py)、[`v1/attention/selector.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/attention/selector.py) | backend 选择、metadata 协议 | attention 不是单函数而是一套派发体系 |
+| Paged Attention 执行 | [`v1/attention/ops/paged_attn.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/attention/ops/paged_attn.py)、[`v1/worker/gpu/block_table.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/worker/gpu/block_table.py) | block table、slot mapping、decode 访存路径 | 把 block 化 KV 变成真实执行 |
+| 编译与图执行 | [`compilation/cuda_graph.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/compilation/cuda_graph.py)、[`compilation/passes/pass_manager.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/compilation/passes/pass_manager.py) | capture/replay、pass 重写、runtime wrapper | 压低 decode 高频小步固定开销 |
+| 执行器与分布式 | [`v1/executor/abstract.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/executor/abstract.py)、[`distributed/parallel_state.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/distributed/parallel_state.py) | 单进程/多进程/Ray、TP/EP/CP 进程组 | 把单卡 runtime 拉成服务系统 |
+| Connector / 外部缓存 | [`distributed/kv_transfer/kv_connector/base.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/distributed/kv_transfer/kv_connector/base.py)、[`distributed/ec_transfer/ec_transfer_state.py`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/distributed/ec_transfer/ec_transfer_state.py) | KV/encoder cache 搬运协议 | disaggregated serving 的关键拼图 |
+
+
+
+## 一次请求在 vLLM 里如何被推进
+
+把一条请求主链拉直之后，很多“为什么快”都会落回同一条控制流。
+
+1. 用户请求经 [`LLMEngine`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/engine/llm_engine.py) 标准化，形成 engine request。
+2. [`EngineCore.add_request()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/engine/core.py) 把请求交给 runtime，进入 waiting queue。
+3. [`EngineCore.step()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/engine/core.py) 驱动一轮 scheduler + executor 主循环。
+4. [`Scheduler.schedule()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/sched/scheduler.py) 计算该请求本轮还能前进多少 token。
+5. [`KVCacheManager.get_computed_blocks()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/kv_cache_manager.py) 查 prefix hit，再由 [`allocate_slots()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/kv_cache_manager.py) 申请 block。
+6. Scheduler 产出 [`SchedulerOutput`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/core/sched/output.py)，executor 把它下发到 worker。
+7. [`GPUModelRunner.prepare_inputs()`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/worker/gpu/model_runner.py) 构造 [`InputBatch`](https://github.com/vllm-project/vllm/blob/92a7c121b62a1484b68c0a27d1ecefd1a84f78fc/vllm/v1/worker/gpu/input_batch.py)，再由 `prepare_attn()` 拼出 block tables 和 slot mappings。
+8. `model_state.prepare_attn()` 与 attention backend 生成 metadata，按 full graph / piecewise / eager 路径执行模型。
+9. `sample()` 或 rejection sampler 产出 token，`postprocess()` 更新 host/device 两侧状态镜像。
+10. output processor 把底层 token 流整理成用户侧可见结果。
+
+
+
+
+# 2026-05-05  
+
+分层 AllReduce + SHARP合在一起的真实执行路径讲清楚，并给一个具体数值例子。重点关注：哪一步在节点内做、哪一步跨节点、谁在算、谁在发。
+
+场景设定（例子）
+2 个节点（Node A / Node B）
+每个节点 4 张 GPU（共 8 张）
+每张 GPU 有数据大小 B = 8 MB
+网络：
+节点内：NVLink / NVSwitch（很快）
+节点间：InfiniBand + SHARP（较慢但可做网络内归约）
+总体流程（一句话）
+
+先在节点内“压缩”（AllReduce），再把“压缩结果”交给交换机做全局归约，最后再分发回节点内。
+
+Step 1️⃣ 节点内 AllReduce（intra-node）⚡
+
+在 Node A 内（4 张 GPU）：
+
+用 NCCL 做一次 AllReduce
+Node B 同样做一遍
+
+结果：
+
+Node A 的每张 GPU 都拿到：A 节点的归约结果（8 MB）
+Node B 同理
+
+👉 这里通信量确实是 B×N = 8MB × 4 = 32MB（节点内）
+但因为 NVLink 很快，这一步不是瓶颈
+
+Step 2️⃣ 选“代表”参与跨节点 🌐
+
+每个节点选一个“代表”（通常是一个 GPU 或 NIC）：
+
+Node A：选 GPU0
+Node B：选 GPU0
+
+👉 注意：
+不再是 4 张 GPU 都出去通信，而是每个节点只出 1 份数据
+
+Step 3️⃣ GPU → 交换机（上行）⬆️
+Node A 的代表发送 8 MB
+Node B 的代表发送 8 MB
+
+👉 跨节点总发送：
+
+每节点只发 B = 8MB
+而不是 B×N = 32MB
+Step 4️⃣ 交换机内做 Reduce（SHARP 核心）🧠
+
+在支持 SHARP 的交换机里（由 NVIDIA 网络实现）：
+
+收到来自 Node A / B 的数据
+直接在交换机 ASIC 里做：
+result = A + B
+
+👉 这一步原本是在 GPU 上做的，现在搬到网络里
+
+Step 5️⃣ 交换机 → GPU（下行，多播）⬇️
+交换机把结果（8 MB）广播回：
+Node A 的代表
+Node B 的代表
+Step 6️⃣ 节点内广播（intra-node broadcast）🔁
+
+在每个节点内部：
+
+代表 GPU 把结果发给本节点其他 GPU（NVLink）
+
+最终：
+
+所有 8 张 GPU 都拿到全局 AllReduce 结果（8 MB）
+📊 对比数据量（关键）
+❌ 不用分层 + 不用 SHARP
+
+跨节点：
+
+4 张 GPU × 8MB = 32MB / 节点
+✅ 分层 + SHARP
+
+跨节点：
+
+每节点只发 8MB
+
+👉 直接减少 4 倍（= N）
+
+🧠 直觉总结
+
+把整个过程想成“三段式”：
+
+① 节点内（快）
+
+“我们自己先算好一个结果”
+
+② 网络（SHARP）
+
+“交换机帮我们把各节点结果再合并”
+
+③ 节点内（快）
+
+“把最终答案发给自己人”
+
+🔥 为什么这是大模型训练的标配
+
+在：
+
+Megatron-LM
+DeepSpeed
+大规模 DDP
+
+中都会这样做，因为：
+
+NVLink 带宽 ≫ IB 带宽
+跨节点才是瓶颈
+SHARP 能进一步减少 GPU 参与通信
+一句话总结
+
+分层 AllReduce 负责减少“谁跨节点通信”，SHARP 负责减少“通信时谁做归约 + 几轮通信”，两者结合把跨节点流量从 B×N 降到 B，并减少一轮计算/通信。
+
+
+
+4️⃣ 总体时间模型（关键）
+
+可以写成：
+
+不分层：
+T = T_slow(BN)
+
+分层 + SHARP：
+T = T_fast(BN) + T_slow(B)
+
+
+
+## 不同的并行方式
+
+### ColumnParallelLinear: 
+**按照列维度分开。 某个GPU计算完后，结果的*某个维度*是*最终结果*，但是某GPU只有这些局部维度的信息。所以最后通过通讯来收集别的GPU结果**
+
+### RowParallelLinear:
+**按照行维度分开。 某个GPU计算完后，有*每个*维度的信息，但是完整的维度上，都不是最终结果。所以最后*每个维度都*要再与来自其他GPU的中间信息进行计算，得到最终结果**
+
+
+  ┌────────────────────────────┬─────────────┬──────────┬──────────────────────────┬────────────┬────────────────────┐
+  │             类             │  切哪一维   │ 输入状态 │         输出状态         │    通信    │      放在哪里      │
+  ├────────────────────────────┼─────────────┼──────────┼──────────────────────────┼────────────┼────────────────────┤
+  │ ReplicatedLinear           │ 不切        │ 完整     │ 完整                     │ 无         │ 非并行场景或小矩阵 │
+  ├────────────────────────────┼─────────────┼──────────┼──────────────────────────┼────────────┼────────────────────┤
+  │ ColumnParallelLinear       │ out (dim 0) │ 完整     │ 切开                     │ 无         │ 一段计算的入口     │
+  ├────────────────────────────┼─────────────┼──────────┼──────────────────────────┼────────────┼────────────────────┤
+  │ RowParallelLinear          │ in (dim 1)  │ 切开     │ 完整（需 all-reduce）    │ all-reduce │ 一段计算的出口     │
+  ├────────────────────────────┼─────────────┼──────────┼──────────────────────────┼────────────┼────────────────────┤
+  │ MergedColumnParallelLinear │ out (dim 0) │ 完整     │ 切开（由多个子矩阵拼成） │ 无         │ gate+up 合并       │
+  ├────────────────────────────┼─────────────┼──────────┼──────────────────────────┼────────────┼────────────────────┤
+  │ QKVColumnParallelLinear    │ out (dim 0) │ 完整     │ 切开（Q/K/V 三段）       │ 无         │ attention 的 QKV   │
+  └────────────────────────────┴─────────────┴──────────┴──────────────────────────┴────────────┴────────────────────┘
+```
+
+```在 Megatron-LM / vLLM 中典型结构：
+X
+ │
+ ├── ColumnParallel + Merged (QKV / MLP expand)
+ │
+ ▼
+ attention / activation
+ │
+ ├── RowParallel
+ ▼
+ Y
+```
+
+
+
+
+# 2026-05-07
+I can do this all day ...   
+# 2026-05-08  
+赶路到广州    
+# 2026-05-09  
+毕业照  
+# 2026-05-10  
+赶路到深圳  
+
+
+
+
+# 2026-05-11
+
+## FSDP / ZeRO-3 和张量并行 TP 的区别
+
+  FSDP：切“模型状态”，主要为了省显存
+  TP：切“单层计算”，主要为了让多卡一起算一个大矩阵
+
+  更具体地说：
+
+  | 对比点 | FSDP / ZeRO-3 | 张量并行 TP |
+  |---|---|---|
+  | 切什么 | 参数、梯度、优化器状态 | 线性层/注意力层里的大矩阵 |
+  | 激活怎么切 | 通常按 batch/token 切 | 通常按 hidden dim / intermediate dim 切 |
+  | 每张卡算什么 | 每张卡处理不同 batch 数据 | 多张卡一起算同一个 token 的同一层 |
+  | 主要目的 | 降低显存占用 | 降低单卡计算量，并让超大层能并行计算 |
+  | 通信内容 | 主要通信权重/梯度 | 主要通信激活/中间结果 |
+  | 常见通信 | AllGather 参数，ReduceScatter 梯度 | AllGather 激活，ReduceScatter 或 AllReduce 输出 |
+  | 对模型结构的侵入 | 相对低 | 较高，需要改 Linear/Attention 的实现 |
+
+  举个线性层例子：
+
+  Y = X @ W
+
+  假设：
+
+  X: [B, D]
+  W: [D, F]
+  Y: [B, F]
+
+  FSDP 的思路
+
+  每张卡存一部分 W，但真正算这一层时，会先把完整 W 收集回来：
+
+  平时：
+  GPU0: W 第 0 片
+  GPU1: W 第 1 片
+  GPU2: W 第 2 片
+  GPU3: W 第 3 片
+
+  计算前：
+  AllGather -> 每张卡临时拿到完整 W
+
+  计算时：
+  GPU0 算 batch 第 0 份
+  GPU1 算 batch 第 1 份
+  GPU2 算 batch 第 2 份
+  GPU3 算 batch 第 3 份
+
+  所以 FSDP 本质上还是偏 数据并行：每张卡处理不同数据，只是参数平时不完整保存。
+
+  TP 的思路
+
+  每张卡不收集完整 W，而是真的只用自己那片 W 参与计算：
+
+  GPU0: W[:, 0:F/4]      -> 算 Y[:, 0:F/4]
+  GPU1: W[:, F/4:F/2]    -> 算 Y[:, F/4:F/2]
+  GPU2: W[:, F/2:3F/4]   -> 算 Y[:, F/2:3F/4]
+  GPU3: W[:, 3F/4:F]     -> 算 Y[:, 3F/4:F]
+
+  最后再通过通信把结果拼起来或规约。
+
+  所以 TP 是真正把 一个矩阵乘法拆开计算。
+
+  一个简单类比：
+
+  FSDP：
+  书太大，每个人平时只背几章。
+  要读某一页时，大家临时把整本书凑出来，各自读自己的题。
+
+  TP：
+  一道题太大，一个人算不完。
+  大家每人算这道题的一部分，最后合并答案。
+
+
+## narrow
+
+narrow 是 PyTorch 里用来沿某一个维度取连续切片的方法。
+
+  你的代码：
+
+  sliced_weight = loaded_weights.narrow(0, start_index, shard_size)
+
+  意思是：
+
+  从 loaded_weights 的第 0 维开始切
+  起点是 start_index
+  长度是 shard_size
+
+  等价于常见切片：
+
+  sliced_weight = loaded_weights[start_index : start_index + shard_size]
+
+  如果写完整一点：
+
+  loaded_weights.narrow(dim, start, length)
+
+  参数含义是：
+
+  dim: 沿哪个维度切
+  start: 从这个维度的哪个下标开始
+  length: 取多少个元素
+
+
+## slided_weight = loaded_weights.narrow(0, start_index, shard_size)
+
+slided_weight 不是“纯指针”，而是一个 Tensor 视图（view）对象。
+
+  可以粗略理解成：
+
+  slided_weight = 指向原始数据的一张“切片窗口”
+
+  它本身是个 Tensor，带着：
+
+  - 数据在哪
+  - 形状是多少
+  - 从原始 loaded_weights 的哪一段开始看
+  - 步长怎么走
+
+  但它通常不拷贝底层数据。
+
+  例如：
+
+  slided_weight = loaded_weights.narrow(0, start_index, shard_size)
+
+  这里 slided_weight 和 loaded_weights 共享同一块底层存储，只是 slided_weight 只看其中一部分。
+
+  所以你可以把它理解成：
+
+  - 不是新开一份完整内存
+  - 也不是 C 语言里那种裸指针
+  - 更像“带形状信息的视图引用”
+
+  真正把数据写进本地参数的是：
+
+  param_data.copy_(slided_weight)
+
+  这一步才发生拷贝。
+
+  一句话：
+
+  slided_weight 不是数据副本，而是原 tensor 上的一个切片视图。
+
+
+## offset：
+
+offset = sum(self.output_sizes[:loaded_weight_id]) // self.tp_size ，// self.tp_size是什么作用
+
+// self.tp_size 的作用是：
+
+  把“完整大矩阵里的偏移量”换算成“当前 rank 本地分片里的偏移量”。
+
+  ———
+
+  假设：
+
+  output_sizes = [4096, 4096, 4096]
+  tp_size = 4
+
+  完整合并矩阵是：
+
+  [ q: 4096 行 ][ k: 4096 行 ][ v: 4096 行 ]
+
+  如果现在加载 k，也就是：
+
+  loaded_weight_id = 1
+
+  完整矩阵里的偏移是：
+
+  sum(output_sizes[:1]) = 4096
+
+  也就是 k 在完整大矩阵里从第 4096 行开始。
+
+  但是当前 rank 本地只保存每个子矩阵的 1/4：
+
+  rank 本地矩阵:
+  [ q shard: 1024 行 ][ k shard: 1024 行 ][ v shard: 1024 行 ]
+
+  所以 k 在本地矩阵里的起点不是 4096，而是：
+
+  4096 // 4 = 1024
+
+
+
+
+  
+# 2026-05-12
+
+## mini-vllm 源码完结！
+
+前海湾公园的海与落日很美 ...
+
+
+# 2026-05-13
+
+## 尝试启动 DeepSeek V4 Flash 的推理服务
+
+
+## 1. 可用模型与硬件资源
+
+### 可用模型版本（/models/share/）
+
+| 模型 | 路径 | 量化/精度 | 架构 | 推理框架 | 最低 NPU 需求 | 能否直接跑 |
+|------|------|----------|------|---------|-------------|-----------|
+| **DeepSeek-V4-Flash (W8A8)** | `DeepSeek-V4-Flash-w8a8-mtp/` | W8A8 Ascend 量化 | 43层/4096d/256专家 | vLLM-Ascend | 32 NPU (2节点x16) | 有现成 yaml，直接跑 |
+| **DeepSeek-V4-Flash (compressed-tensors)** | `deepseek-v4-flash-mtp/` | W8A8 compressed-tensors | 同上 | vLLM-Ascend | 32 NPU (2节点x16) | 改 MODEL_PATH + quantization 参数即可 |
+| DeepSeek-V4-Flash (BF16) | `DeepSeek-V4-Flash-bf16/` | BF16 原始精度 | 同上 | 自研 NPU 推理脚本 | 1 NPU（单卡验证） | adaption_test/ 下有 quick_verify.py |
+| **DeepSeek-V4-Pro** | `DeepSeek-V4-Pro-w4a8-mtp/` | W4A8 Ascend 量化 | 61层/7168d/384专家 | vLLM-Ascend | 32 NPU (2节点x16) | 有现成 yaml，直接跑 |
+| DeepSeek-R1-Distill-Qwen-1.5B | `DeepSeek-R1-Distill-Qwen-1.5B/` | BF16 | Qwen2 28层/1536d | vLLM-Ascend | 1 NPU | 有现成 yaml，直接跑 |
+| DeepSeek-V4-Flash-Base (BF16) | `DeepSeek-V4-Flash-Base-bf16/` | BF16 | 同 Flash | 无推理脚本 | — | 不适合评测（base 模型，无 instruct 对齐） |
+
+所有 V4 模型均为 MoE 架构，支持最大 1M token 上下文（max_position_embeddings=1048576），使用 YaRN RoPE 扩展。
+
+### 可用 NPU 资源
+
+| 队列 | 类型 | 配额 (NPU) | 物理规格 | 状态 |
+|------|------|-----------|---------|------|
+| user-1-wangakang-compute | 个人 | 8 | 8卡 x 2chip = 16 Ascend910 chip | ok |
+| project-ascend-fit-wangakang | 项目 | 52 | 52卡 x 2chip = 104 Ascend910 chip | ok |
+
+硬件说明：每张 Ascend910 物理卡包含 2 个 AI 处理器（chip），每 chip 64GB HBM。ktp 调度以"NPU"（物理卡）为单位。vLLM 的 `--tensor-parallel-size` 等参数也以 NPU（卡）为单位。
+
+总计可用：**60 NPU**（个人 8 + 项目 52）。
+
+尝试使用镜像启动：镜像拉取失败。  
+尝试手动配置。
+
+## 河套学院晟腾课程
+
+### 关于 Linux 命令操作 ...
+
+在我们的个人 docker 运行实验
+
+### Kerminal 自动适配部署大模型 
+
+跑了90分钟，最后还是成功了！ 
+
+
+
+# 2026-05-14
+
+## 手动配置一天的 DeepSeek V4 环境
+
+各种包依赖、环境冲突、未更新问题  
+最棘手的是环境不支持  
+
+## 结束所有 LeetGPU Easy 题目！
+
+感觉还行。  
+但是 Medium 题目一下就难起来了。  
+
+
+
+# 2026-05-15
+
+## 河套学院晟腾课程
+
+使用 Kerminal 写算子。  
+讨论了关于文件目录。  
+
+### 讨论了部署需求
+
+- **Flash (W8A8)**: 2 节点 x 16 NPU = 32 NPU（TP=8, DP=2, Expert Parallel）— **最低要求，不可降低**
+- **Pro (W4A8)**: 2 节点 x 16 NPU = 32 NPU（TP=16, DP=2, Expert Parallel）
+- **R1-Distill-1.5B**: 1 NPU 即可
+- **Flash BF16 单卡验证**: 1 NPU（adaption_test，max_seq_len=2048）
+
+注意：经实测验证，Flash W8A8 模型在单节点 16 NPU 上无论 TP=8+DP=2 还是 TP=16 均会 OOM。必须使用双节点 32 NPU 部署。当集群只有一个 16-NPU 节点空闲时无法启动。
+
+项目队列 52 NPU 足够同时部署 Flash + 留余量做其他实验。
+
+
+## 尝试使用现有配置启动 DS v4
+
+### 当前阻塞问题（2026-05-16）
+
+经过多轮实测，发现以下问题：
+
+1. **镜像兼容性**：`qwen3_5-v0-a3` 镜像的 transformers 不认识 `deepseek_v4` 架构，必须用 `deepseekv4-a3` 镜像
+2. **单节点 OOM**：16 NPU 单节点无论 TP=8+DP=2 还是 TP=16 均 OOM，必须双节点
+3. **vLLM-Ascend bug**：双节点 DP=2 跨节点部署时，worker 在 KV cache 初始化阶段报 `AttributeError: 'list' object has no attribute 'merge'`（kv_cache_spec_values 类型错误）
+
+
+
+# 2026-05-16
+
+# DeepSeek V4 Flash W8A8 部署下一步方案与这两天的困难总结
+
+# 后续任务、优化方向：
+
+## 后续学习任务：
+
+1. 关于服务器 NPU 资源调度：*管理员解释：目前提交任务后会由调度系统分配空闲的节点（每个节点16张910显卡）.每个节点的已有镜像缓存不同（这决定了是否重新拉镜像）。* 我们要进一步调研服务器节点的运行方式（可能涉及到节点间通讯，可以简单参考“文档的“网络”这一章节了解基本原理：https://lqhl.github.io/scaling-book/gpus/#%E7%BD%91%E7%BB%9C”）。配合配置文件，我们才能自由配置各种并行方式（参考/models/share/task/cdy/start_dsv4.sh）、使用不同显卡组合。NPU集群现有调度方案参考本文档【附录】
+
+2. 关于问题“8. 镜像拉取慢”：我们要学习使用服务器集群的镜像系统（https://luoss.nilpo.app/guide/image-storage）。先上传镜像到公开镜像池，上传完成后，服务器内部拉取镜像、模型权重都会很快（拉镜像只用10秒，否则要十分钟）。
+
+
+## 后续优化方向：
+
+1. 管理员提到自己曾跑通过 SGLang。
+
+2. 管理员提到开源项目“[DFlash: Block Diffusion for Flash Speculative Decoding](https://github.com/z-lab/dflash)”。这个项目能极大提高解码速度，效果非常好。但目前似乎只能本机运行，似乎不能在对外界提供推理服务的时候使用。我们后续可考虑基于此开发改进 vLLM / SGLang 框架。
+
+
+### 立即可做
+
+任务 1058 已成功启动，`http://10.250.193.147:8005`，可直接按照 `deepseek-v4-reasoning-eval.md` 中的测试矩阵开始 DeepSeek V4 Flash 的性能测试 （正在进行中）。
+
+
+
+# 对于这几天的困难总结
+
+## 最终成功配置
+
+**任务 1058**：使用 cdy 的原版配置成功启动。
+
+| 项目 | 值 |
+|------|-----|
+| yaml | `/models/share/task/cdy/deepseek-v4-flash.yaml` |
+| 镜像 | `quay.io/ascend/vllm-ascend:v0.13.0rc3-a3` |
+| 节点 | atlas-19（单节点 16 NPU） |
+| 配置 | DP=2, TP=8, Expert Parallel |
+| 端口 | 8005 |
+| 模型名 | deepseek-v4-flash |
+| max_model_len | 524288 |
+| 关键步骤 | 启动前先 `git apply` patch 到 `/vllm-workspace/vllm` |
+
+
+## 这两天遇到的问题（按时间顺序）
+
+### 1. 镜像不支持 deepseek_v4 架构
+
+**现象**：`The checkpoint has model type deepseek_v4 but Transformers does not recognize this architecture`
+
+**原因**：`qwen3_5-v0-a3` 和 `deepseekv4-a3` 镜像中的 transformers 库版本不包含 `deepseek_v4` 模型类型注册。
+
+**解决方案**：使用 `v0.13.0rc3-a3` 镜像 + cdy 脚本中的 `git apply` patch。patch 位于 `/models/share/DeepSeek-V4-Flash/deepseek-v4-agentic-support.patch`，它修改 vLLM 代码注册 deepseek_v4 相关组件。该镜像中的 vLLM 版本（v0.13）对 model_type 的检查逻辑与新版不同，patch 后即可通过。
+
+### 2. tool-call-parser deepseek_v4 不支持
+
+**现象**：`invalid tool call parser: deepseek_v4`
+
+**原因**：`qwen3_5-v0-a3` 镜像的 vLLM 版本（v0.16.0rc2）不包含 deepseek_v4 tool parser。
+
+**解决方案**：
+- 方案 A：使用 `v0.13.0rc3-a3` 镜像 + patch（cdy 方案，已验证）
+- 方案 B：去掉 `--tool-call-parser` 和 `--reasoning-parser` 参数（性能测试不需要）
+
+### 3. speculative-config deepseek_mtp 不支持
+
+**现象**：`Unsupported speculative method: 'mtp'`
+
+**原因**：`deepseekv4-a3` 镜像的 vLLM 版本不支持 MTP 投机解码。
+
+**解决方案**：去掉 `--speculative-config` 参数，或使用 `v0.13.0rc3-a3` 镜像（支持 MTP）。
+
+### 4. 单节点 16 NPU DP=2 TP=8 OOM（deepseekv4-a3 镜像）
+
+**现象**：Worker 进程被 terminated，`WorkerProc was terminated`
+
+**原因**：`deepseekv4-a3` 镜像的 vLLM 版本内存管理效率较低，DP=2 在单节点上 OOM。
+
+**解决方案**：使用 `v0.13.0rc3-a3` 镜像（vLLM v0.13 内存管理更高效），且分配 1000Gi CPU 内存。cdy 配置证明同样 DP=2 TP=8 单节点 16 NPU 可以跑通。
+
+### 5. 双节点调度失败
+
+**现象**：Worker pod 一直 Pending，无法分配第二个 16-NPU 节点。
+
+**原因**：集群中空闲的 16-NPU 节点不足两个。
+
+**解决方案**：使用单节点配置（cdy 方案证明可行）。
+
+### 6. deepseekv4-a3 镜像双节点 KV cache bug
+
+**现象**：`AttributeError: 'list' object has no attribute 'merge'`
+
+**原因**：`deepseekv4-a3` 镜像中 vLLM-Ascend 的 KV cache 初始化代码在跨节点 DP 模式下有 bug。
+
+**解决方案**：不使用该镜像。使用 `v0.13.0rc3-a3` 镜像。**“跨节点 DP 模式” 之类的配置还需进一步学习。具体举例：参考/models/share/task/cdy/start_dsv4pro-worker.sh，里面的配置参数需系统性学习。**
+
+### 7. cd vllm-ascend 路径问题
+
+**现象**：`cd: vllm-ascend: No such file or directory`
+
+**原因**：不同镜像的工作目录不同。
+
+**解决方案**：cdy 的脚本直接 `cd "$VLLM_REPO"`（即 `/vllm-workspace/vllm`），不需要 cd 到 vllm-ascend。
+
+### 8. 镜像拉取慢
+
+**现象**：Pod 长时间 Pending（10-20 分钟）。
+
+**原因**：`deepseekv4-a3` 和 `v0.13.0rc3-a3` 镜像在部分节点上没有缓存。
+
+**解决方案**：等待拉取完成，或多次提交等调度到有缓存的节点。
+
+***管理员解决方案***：先上传镜像到公开镜像池，参考 https://luoss.nilpo.app/guide/image-storage。
+上传完成后，服务器内部拉取镜像、模型权重都会很快（拉镜像只用10秒，否则要十分钟）。
+
+
+## 关键经验
+
+1. **正确的镜像是 `quay.io/ascend/vllm-ascend:v0.13.0rc3-a3`**
+2. **必须先打 patch**：`/models/share/DeepSeek-V4-Flash/deepseek-v4-agentic-support.patch`
+3. **单节点 16 NPU 可以跑**（DP=2 TP=8），不需要双节点
+4. **CPU 内存需要 1000Gi**，200Gi/800Gi 不够 （*参考管理员的方案，位于/models/share/task/cdy/deepseek-v4-flash.yaml，第17、18行*）
+5. **CPU 需要 500 核**
+6. ***cdy 的脚本（管理员方案）是唯一验证过的可用配置***。后续所有版本以此为基础参考！
+
+<br><br><br>
+
+
+
+
+
+
+
+
+# 附录
+
+## NPU集群现有调度方案：
+
+本集群使用 **Kubernetes + Volcano 调度器** 管理 NPU 资源，通过 `ktp` CLI 工具操作。核心概念如下：
+
+**层级结构**：
+
+```
+集群 (K8s Cluster)
+ └── 节点 (Node): atlas-1, atlas-18, atlas-19, atlas-39, atlas-40, atlas-41 ...
+      └── 每个节点有 16 NPU（8 张物理卡 x 2 chip）
+           └── 每张卡 64GB HBM
+
+用户通过 Queue（队列）获得 NPU 配额：
+ ├── 个人队列: user-1-wangakang-compute (8 NPU)
+ └── 项目队列: project-ascend-fit-wangakang (52 NPU)
+```
+
+**调度流程**：
+
+1. **提交任务** (`ktp submit -f job.yaml`)
+   - yaml 中指定 queue、npu 数量、镜像、启动命令
+   - 任务类型为 `acjob`（Ascend Computing Job）
+
+2. **调度器分配节点**
+   - Volcano 调度器根据队列配额和节点空闲情况分配
+   - **无法指定节点**——调度器自动选择
+   - 如果请求 16 NPU，会分配一整个节点（一个节点恰好 16 NPU）
+   - 如果请求 32 NPU（双节点），需要两个空闲节点同时可用
+
+3. **Pod 创建**
+   - 每个 task 对应一个 Pod（容器实例）
+   - Pod 运行在分配的节点上，挂载 `/models/` 共享存储
+   - 平台自动生成 `hccl.json`（分布式通信配置），Pod 内的 `init_env.sh` 等待该文件就绪后设置 MASTER_IP 等环境变量
+
+4. **分布式通信初始化**
+   - 单节点：Pod 内所有 NPU 通过 HCCL（华为集合通信库）直接通信
+   - 多节点：通过 `data-parallel-address`（MASTER_IP）跨节点 RPC 通信
+   - `init_env.sh` 从 `hccl.json` 中解析出 MASTER_IP、TOTAL_NODES、CURRENT_NODE_RANK 等
+
+5. **任务生命周期**
+   - Pending → Running → Succeeded/Failed
+   - `resumable_training.enabled: true` 时，失败会自动重试（最多 `fault_retry_times` 次）
+   - `max_runtime_minutes` 到期后自动终止
+
+**yaml 配置与调度的关系**：
+
+```yaml
+tasks:
+  - name: master        # Pod 名称后缀
+    replicas: 1         # 该角色的 Pod 数量
+    cpu: "500"          # CPU 核数（影响调度，节点需有足够 CPU）
+    memory: "1000Gi"    # 内存（影响调度，节点需有足够内存）
+    npu: 16             # NPU 数量（决定分配几张卡/几个节点）
+    command: "..."      # Pod 启动后执行的命令
+  - name: worker        # 第二个 Pod（可选，用于多节点）
+    replicas: 1
+    npu: 16             # 又一个 16 NPU = 又一个完整节点
+```
+
+**常用操作**：
+
+| 命令 | 作用 |
+|------|------|
+| `ktp queues` | 查看队列配额和使用情况 |
+| `ktp submit -f job.yaml` | 提交任务 |
+| `ktp list` | 列出所有任务 |
+| `ktp pods <ID>` | 查看任务的 Pod 状态和所在节点 |
+| `ktp logs <ID>` | 查看日志（默认最新 100 行） |
+| `ktp logs <ID> --follow` | 实时跟踪日志 |
+| `ktp stop <ID>` | 停止任务 |
+| `ktp restart <ID>` | 重启已停止的任务 |
+| `ktp watch <ID>` | 实时监控任务状态 |
+
+**注意事项**：
+- 不能指定调度到哪个节点，只能靠调度器自动分配
+- 不同节点上可能缓存了不同版本的同名镜像（tag 相同但内容不同）
+- 请求的 NPU 数量决定了需要几个节点：8 NPU = 半个节点，16 NPU = 一个节点，32 NPU = 两个节点
+- 如果集群没有足够空闲节点，Pod 会一直 Pending
+- `/models/` 是所有节点共享的 NFS 存储，脚本和权重文件对所有 Pod 可见
+
+
+## CUDA 编程实践: 共享内存
+
+核心概念：每个 Block 都有自己“独立”的共享内存在 CUDA 中，extern __shared__ float sdata[]; 声明的共享内存是块内私有的。也就是说，Block 0、Block 1 和 Block 2 各自有一份完全独立的 sdata 数组，它们互不干扰。因为 blockDim.x = 4，所以每个 Block 的 sdata 长度都是 4，索引为 [0, 1, 2, 3]。数据映射全景图当程序运行到这一行时：代码段sdata[tid] = (i < N) ? input[i] : 0.0f;
+每个线程会根据自己的局部 ID（tid）和全局 ID（i），把全局内存的数据搬到自己 Block 的共享内存中。对应关系如下：【Block 0】 (blockIdx.x = 0)Thread 0: tid = 0, 全局 i = 0 < 12 $\rightarrow$ 执行 sdata[0] = input[0] (1.0)Thread 1: tid = 1, 全局 i = 1 < 12 $\rightarrow$ 执行 sdata[1] = input[1] (2.0)Thread 2: tid = 2, 全局 i = 2 < 12 $\rightarrow$ 执行 sdata[2] = input[2] (3.0)Thread 3: tid = 3, 全局 i = 3 < 12 $\rightarrow$ 执行 sdata[3] = input[3] (4.0)此时 Block 0 的 sdata 里放的是： [1.0, 2.0, 3.0, 4.0]【Block 1】 (blockIdx.x = 1)Thread 0: tid = 0, 全局 i = 4 < 12 $\rightarrow$ 执行 sdata[0] = input[4] (5.0)Thread 1: tid = 1, 全局 i = 5 < 12 $\rightarrow$ 执行 sdata[1] = input[5] (6.0)Thread 2: tid = 2, 全局 i = 6 < 12 $\rightarrow$ 执行 sdata[2] = input[6] (7.0)Thread 3: tid = 3, 全局 i = 7 < 12 $\rightarrow$ 执行 sdata[3] = input[7] (8.0)此时 Block 1 的 sdata 里放的是： [5.0, 6.0, 7.0, 8.0]【Block 2】 (blockIdx.x = 2)Thread 0: tid = 0, 全局 i = 8 < 12 $\rightarrow$ 执行 sdata[0] = input[8] (9.0)Thread 1: tid = 1, 全局 i = 9 < 12 $\rightarrow$ 执行 sdata[1] = input[9] (10.0)Thread 2: tid = 2, 全局 i = 10 < 12 $\rightarrow$ 执行 sdata[2] = input[10] (11.0)Thread 3: tid = 3, 全局 i = 11 < 12 $\rightarrow$ 执行 sdata[3] = input[11] (12.0)此时 Block 2 的 sdata 里放的是： [9.0, 10.0, 11.0, 12.0]
