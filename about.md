@@ -192,7 +192,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Conference {#conference-renyuan}
+## Conference {#misc-renyuan}
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
 - Fly-Inspired Ultra-selective Looming Perception and Avoidance on Resource-Constrained Micro-Robots, [Poster](/assets/TAROS_2025_Poster_100.pdf). 
@@ -212,7 +212,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Inspiring Articles  {#misc-renyuan}
+## Inspiring Articles  
 
 - [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
 - [How to Do Great Work](https://www.paulgraham.com/greatwork.html)

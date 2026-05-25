@@ -25,10 +25,12 @@ navigation:
       url: "#publications-renyuan"
     - title: "Awards"
       url: "#awards-renyuan"
-    - title: "Conference"
-      url: "#conference-renyuan"
+    # - title: "Conference"
+    #   url "#conference-renyuan"
     - title: "Misc."
       url: "#misc-renyuan"
+    - title: "Tech Blog"
+      url: "/tech-blog/"
 
 # 站点作者信息：以下字段控制侧边栏作者区域显示的内容。
 # 如果某个字段留空，对应图标和链接就不会显示。
