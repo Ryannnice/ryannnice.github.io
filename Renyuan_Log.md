@@ -3381,3 +3381,216 @@ sdata[tid] = (i < N) ? input[i] : 0.0f;
 ```text
 [9.0, 10.0, 11.0, 12.0]
 ```
+
+
+# 2026-05-17
+
+## CUDA kernel 与 device function
+
+### 问题
+
+为什么到了 `reduce_max_kernel` 才说 “kernel 1”？前面的几个函数不是 kernel 吗？
+
+前面的函数包括：
+
+- `warpReduceMax`
+- `warpReduceSum`
+- `blockReduceMax`
+- `blockReduceSum`
+
+### 结论
+
+这些函数都不是 CUDA kernel，而是 device function（设备函数）。
+
+在 CUDA 中，**kernel = GPU 并行执行入口**，也就是能被 CPU 端用 `<<<blocks, threads>>>` 启动的函数。
+
+### CUDA 中三类关键函数
+
+| 类型 | 示例 | 运行位置 | 是否 kernel | 是否能用 `<<<>>>` 启动 |
+| --- | --- | --- | --- | --- |
+| `__global__` | `__global__ void reduce_max_kernel(...)` | GPU | 是 | 是 |
+| `__device__` | `__device__ float warpReduceMax(float val)` | GPU | 否 | 否 |
+| 普通 CPU 函数 | `extern "C" void solve(...)` | CPU | 否 | 否 |
+
+`__global__` 函数是真正的 GPU 启动入口，例如：
+
+```cpp
+__global__ void reduce_max_kernel(...) {
+  // GPU kernel body
+}
+
+reduce_max_kernel<<<blocks, threads>>>(...);
+```
+
+`__device__` 函数只能被 GPU 代码调用，它是 GPU 内部的辅助函数，不是执行入口。
+
+## Reduction 规约操作
+
+### 执行层级
+
+CUDA 的执行层级是：
+
+```text
+Grid -> Block -> Warp -> Thread
+```
+
+关键限制：
+
+- 一个 warp 固定 32 个线程。
+- 一个 block 最多 1024 个线程。
+- 因此一个 block 最多只有 32 个 warp。
+
+### Warp-level reduction
+
+Warp 内通信主要使用 `__shfl_down_sync`。它允许线程直接读取其他 lane 的寄存器数据，比 shared memory 更快。
+
+Warp reduction 的本质是：**信息向低 lane 聚合**。最终只有 `lane 0` 一定保存整个 warp 的规约结果。
+
+### Block-level reduction
+
+Block reduction 通常采用两级结构：
+
+1. 每个 warp 内部先做 reduction。
+2. 每个 warp 把自己的结果写入 `shared[32]`。
+3. 第一个 warp 继续对这些 partial results 做 reduction。
+
+`shared[32]` 足够的原因是：一个 block 最多只有 32 个 warp，而第一个 warp 正好有 32 个 lane，可以覆盖全部 warp partial results。
+
+## Grid-Stride Loop
+
+Grid-Stride Loop 是 CUDA 中处理超大数据的经典模式：
+
+```cpp
+for (int i = idx; i < N; i += stride) {
+  // process input[i]
+}
+```
+
+其中：
+
+- `idx` 是当前线程的全局编号。
+- `stride = blockDim.x * gridDim.x`，表示整个 grid 的线程总数。
+- 一个线程会循环处理多个元素。
+
+### `local_max` 的含义
+
+`local_max` 不是全局最大值，而是当前线程负责的数据分片中的局部最大值（thread-local max）。
+
+完整规约路径是：
+
+```text
+thread-local max -> warpReduceMax -> blockReduceMax -> global reduction -> final max
+```
+
+### CUDA reduction 优化直觉
+
+优先级通常是：
+
+```text
+register > shuffle > shared memory > global memory
+```
+
+因此优化方向是：
+
+- warp 内尽量使用 shuffle。
+- warp 间使用 shared memory。
+- 尽可能减少 global memory 访问。
+
+
+
+# 2026-05-20
+
+Chapter2：简单融合算子与激活函数 (softmax, relu, silu, sigmoid)	"录制: Wang Akang (SRIBD)预定的会议
+日期: 2026-05-20 13:57:08
+录制文件：https://meeting.tencent.com/crm/2BYebVgo61
+密码：JAIW"	算子学习第二节课复盘_融合算子与FusedSoftmax_整理与补充版.pdf	session5(20min)：基本融合算子：softmax	朱子为	以 fused-softmax为例，讲一下融合算子（fused softmax，不是 softmax）
+			session6：融合的“模型”	杨明哲	把 fused softmax 的数据流动画出来，讲讲为什么要融合，数学本质是什么（函数复合，一次加载多次计算）
+			session7（20min）：融合算子练习	占贺深	relu、gelu、x*sigmoid(x)融合与不融合的版本、x + sigmoid(x) + silu(x)（如何加载一次 x 就算 3 个值）
+
+
+
+# 2026-05-21
+
+## 算子学习 Chapter 3：数值处理与规约
+
+### 课程主题
+
+- `log softmax`
+- `relu softmax`
+- `softmax dropout`
+- softmax 与 element-wise 操作的融合
+- block 划分与规约
+
+### Session 安排
+
+| Session | 负责人 | 主题 | 重点 |
+| --- | --- | --- | --- |
+| session8 | 刘欣 | 简单的算子优化方法 | 以 `log-softmax` 为例，展示简单算子优化方法 |
+| session9（20min） | 付谕书 | softmax 与 element-wise 的组合 | 以 `log-softmax + nll_loss`、`softmax + dropout` 为例，理解 softmax 与 element-wise 的融合方式 |
+| session10 | 崔诺拉 | 融合算子中的 block 划分与规约 | 实现 softmax 分块版本（不 fused） |
+| session11 | 刘稔远 | 实现 `relu(softmax(x))` | 讲解 Triton 实现代码，涉及 block 内部 program 计算和 block 之间的规约 |
+
+### 今日关注
+
+- softmax 相关算子不仅要理解数学形式，也要理解内存读写路径。
+- softmax 与 element-wise 操作融合时，关键问题是哪些中间结果不需要写回 global memory。
+- block 划分会直接影响规约方式，需要同时考虑 block 内 program 计算和 block 间结果合并。
+
+# 2026-05-22
+
+## LayerNorm 和 RMSNorm 的几何理解
+
+### 今日结论
+
+- RMSNorm 后的数据分布在完整的 $M$ 维超球面上，自由度为 $M-1$。
+- LayerNorm 后的数据分布在被超平面切开的“大圆”上，自由度为 $M-2$。
+- RMSNorm 只去掉向量长度信息；LayerNorm 同时去掉向量长度信息和平移基准（直流分量）。
+- 从 Triton 算子角度看，RMSNorm 计算开销更低，因为它只需要维护平方和累加器；LayerNorm 需要同时维护均值和方差。
+
+### 几何直觉
+
+当一个超平面去切割一个超球面，并且这个平面正好穿过球心时，切出来的交集是一个大圆（Great Circle）。
+
+在 $M$ 维空间里，这个交集可以理解为一个 $M-2$ 维的子超球面。
+
+因此：
+
+- RMSNorm：只把数据投影到完整超球面上。
+- LayerNorm：先要求数据落在超球面上，又要求数据落在过球心的超平面上。
+
+### 三维空间例子（$M=3$）
+
+假设特征维度为 3，一行数据为 $[x, y, z]$。
+
+RMSNorm 的约束是：
+
+```text
+x^2 + y^2 + z^2 = 3
+```
+
+这对应一个普通的三维球面。
+
+LayerNorm 的约束是：
+
+```text
+x^2 + y^2 + z^2 = 3
+x + y + z = 0
+```
+
+也就是说，LayerNorm 不仅要求数据落在球面上，还要求数据落在过球心的平面上。最终数据只能落在球面和平面的交线上，也就是一条圆形轨道。
+
+### 对大模型和 Triton 算子的意义
+
+| 归一化方式 | 几何形态 | 损失的信息 | Triton 计算开销 |
+| --- | --- | --- | --- |
+| RMSNorm | 完整的超球面 | 向量的绝对长度 | 低，只需维护 1 个平方和累加器 |
+| LayerNorm | 超球面上的“平切圆” | 向量的绝对长度 + 平移基准（直流分量） | 高，需要维护均值和方差 2 个累加器 |
+
+### 物理本质
+
+从几何上看：
+
+- RMSNorm 是“只缩放长度”，保留方向和平移基准。
+- LayerNorm 是“去均值 + 缩放长度”，同时去掉平移基准和长度尺度。
+
+这也是为什么在大模型推理和 Triton kernel 实现中，RMSNorm 往往比 LayerNorm 更轻量。
