@@ -4,169 +4,95 @@ title: "Tech Blog"
 author_profile: true
 ---
 
-<div class="tech-blog">
-  <section class="tech-blog__intro">
-    <p class="tech-blog__lead">
-      Engineering notes on coding agents, LLM routing, serving systems, and GPU/NPU kernels.
-      The posts are reorganized from Renyuan's learning log into durable technical themes.
+<div class="tech-blog tech-blog--xhs">
+  <section class="tech-hero">
+    <p class="tech-hero__eyebrow">Renyuan's Engineering Field Notes</p>
+    <p class="tech-hero__lead">
+      A card-based map of coding agents, LLM routing, serving systems, CUDA/Triton kernels,
+      and transformer foundations. Every date in <code>Renyuan_Log.md</code> is represented below.
     </p>
+    <div class="tech-stats" aria-label="Tech blog coverage statistics">
+      <span><strong>53</strong> log days</span>
+      <span><strong>20</strong> deep dives</span>
+      <span><strong>20</strong> concepts</span>
+      <span><strong>5</strong> series</span>
+    </div>
     <nav class="tech-blog__nav" aria-label="Tech blog topics">
-      <a href="#agent-engineering">Agent Engineering</a>
-      <a href="#llm-routing">LLM Routing</a>
-      <a href="#serving-deployment">Serving &amp; Deployment</a>
-      <a href="#kernel-notes">CUDA / Triton / NPU</a>
-      <a href="#transformer-foundations">Transformer Foundations</a>
-      <a href="#timeline">Timeline</a>
+      <a href="#deep-dives">Deep Dives</a>
+      <a href="#concept-map">Concept Map</a>
+      <a href="#log-map">Full Log Map</a>
     </nav>
   </section>
 
-  <section class="tech-blog__section" id="featured">
-    <h2 class="tech-blog__section-heading">Featured Posts</h2>
-    <div class="tech-blog__grid">
+  <section class="tech-blog__section" id="deep-dives">
+    <div class="tech-section-head">
+      <p class="tech-section-head__eyebrow">Curated Posts</p>
+      <h2>Deep Dives</h2>
+      <p>Longer articles distilled from multiple related log dates.</p>
+    </div>
+    <div class="xhs-masonry">
       {% for post in site.posts %}
         {% if post.categories contains "tech-blog" %}
-          {% if post.featured %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ post.series }}</p>
-              <h3 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
+          <article class="xhs-card xhs-card--post">
+            <a class="xhs-card__cover" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+              <span>{{ post.series }}</span>
+            </a>
+            <div class="xhs-card__body">
+              <p class="xhs-card__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ post.priority }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p>{{ post.excerpt | strip_html }}</p>
               <div class="tech-tags">
                 {% for tag in post.tags limit: 4 %}
                   <span class="tech-tag">{{ tag }}</span>
                 {% endfor %}
               </div>
-            </article>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="tech-blog__section">
-    <h2 class="tech-blog__section-heading">Series</h2>
-
-    <section class="tech-series" id="agent-engineering">
-      <h3>Agent Engineering</h3>
-      <div class="tech-blog__list">
-        {% for post in site.posts %}
-          {% if post.series == "Agent Engineering" %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · Priority {{ post.priority }}</p>
-              <h4 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
-              <div class="tech-tags">
-                {% for tag in post.tags limit: 5 %}
-                  <span class="tech-tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tech-series" id="llm-routing">
-      <h3>LLM Routing</h3>
-      <div class="tech-blog__list">
-        {% for post in site.posts %}
-          {% if post.series == "LLM Routing" %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · Priority {{ post.priority }}</p>
-              <h4 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
-              <div class="tech-tags">
-                {% for tag in post.tags limit: 5 %}
-                  <span class="tech-tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tech-series" id="serving-deployment">
-      <h3>Serving &amp; Deployment</h3>
-      <div class="tech-blog__list">
-        {% for post in site.posts %}
-          {% if post.series == "Serving & Deployment" %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · Priority {{ post.priority }}</p>
-              <h4 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
-              <div class="tech-tags">
-                {% for tag in post.tags limit: 5 %}
-                  <span class="tech-tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tech-series" id="kernel-notes">
-      <h3>CUDA / Triton / Kernel Notes</h3>
-      <div class="tech-blog__list">
-        {% for post in site.posts %}
-          {% if post.series == "CUDA / Triton / Kernel Notes" %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · Priority {{ post.priority }}</p>
-              <h4 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
-              <div class="tech-tags">
-                {% for tag in post.tags limit: 5 %}
-                  <span class="tech-tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="tech-series" id="transformer-foundations">
-      <h3>Transformer Foundations</h3>
-      <div class="tech-blog__list">
-        {% for post in site.posts %}
-          {% if post.series == "Transformer Foundations" %}
-            <article class="tech-card">
-              <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · Priority {{ post.priority }}</p>
-              <h4 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-              <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
-              <div class="tech-tags">
-                {% for tag in post.tags limit: 5 %}
-                  <span class="tech-tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            </article>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-  </section>
-
-  <section class="tech-blog__section" id="all-posts">
-    <h2 class="tech-blog__section-heading">All Posts</h2>
-    <div class="tech-blog__list">
-      {% for post in site.posts %}
-        {% if post.categories contains "tech-blog" %}
-          <article class="tech-card">
-            <p class="tech-card__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ post.series }} · Priority {{ post.priority }}</p>
-            <h3 class="tech-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="tech-card__excerpt">{{ post.excerpt | strip_html }}</p>
+            </div>
           </article>
         {% endif %}
       {% endfor %}
     </div>
   </section>
 
-  <section class="tech-blog__section" id="timeline">
-    <h2 class="tech-blog__section-heading">Timeline</h2>
-    <ul class="tech-timeline">
-      <li><strong>2025-03 to 2026-04:</strong> Workshop and Coding Agent experiments evolved from FastAPI wrappers to streaming Agent UX and an MVP rewrite.</li>
-      <li><strong>2026-04:</strong> LLM routing work moved from survey notes to RouteLLM reproduction, semantic-router experiments, and vLLM Semantic Router architecture analysis.</li>
-      <li><strong>2026-05:</strong> Serving and systems notes focused on vLLM, tensor parallelism, DeepSeek V4 Flash on Ascend, CUDA reduction, and normalization kernels.</li>
-    </ul>
+  <section class="tech-blog__section" id="concept-map">
+    <div class="tech-section-head">
+      <p class="tech-section-head__eyebrow">Supplement</p>
+      <h2>Concept Map</h2>
+      <p>Short explanations added to fill gaps where the raw log only had keywords, links, or partial notes.</p>
+    </div>
+    <div class="xhs-masonry xhs-masonry--compact">
+      {% for item in site.data.tech_concepts %}
+        <article class="xhs-card xhs-card--concept">
+          <div class="xhs-card__body">
+            <p class="xhs-card__meta">{{ item.area }}</p>
+            <h3>{{ item.concept }}</h3>
+            <p>{{ item.summary }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="tech-blog__section" id="log-map">
+    <div class="tech-section-head">
+      <p class="tech-section-head__eyebrow">Complete Coverage</p>
+      <h2>Full Log Map</h2>
+      <p>Each card corresponds to one dated section in <code>Renyuan_Log.md</code>. Timeline-only cards preserve context without forcing weak notes into articles.</p>
+    </div>
+    <div class="xhs-masonry xhs-masonry--log">
+      {% for item in site.data.tech_log %}
+        <article class="xhs-card xhs-card--log xhs-card--{{ item.slug }}" id="log-{{ item.date }}">
+          <div class="xhs-card__body">
+            <p class="xhs-card__meta">{{ item.date }} · {{ item.series }} · {{ item.status }}</p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.summary }}</p>
+            <div class="tech-tags">
+              {% for concept in item.concepts %}
+                <span class="tech-tag">{{ concept }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
   </section>
 </div>
