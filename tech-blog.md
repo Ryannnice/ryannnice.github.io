@@ -21,6 +21,7 @@ author_profile: true
       <a href="#deep-dives">Deep Dives</a>
       <a href="#concept-map">Concept Map</a>
       <a href="#log-map">Full Log Map</a>
+      <a href="{{ '/tech-blog/full-log/' | relative_url }}">Original Archive</a>
     </nav>
   </section>
 
@@ -90,6 +91,9 @@ author_profile: true
                 <span class="tech-tag">{{ concept }}</span>
               {% endfor %}
             </div>
+            <p class="xhs-card__source">
+              <a href="{{ '/tech-blog/full-log/' | relative_url }}#log-{{ item.date }}">Open original section</a>
+            </p>
           </div>
         </article>
       {% endfor %}
