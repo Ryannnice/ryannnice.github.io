@@ -52,3 +52,35 @@ default strong model + semantic override to smaller model
 semantic-router 的收益不是来自“用了 embedding”这个事实，而是来自更合适的路由任务定义。
 
 相比五路 tiered，override 让问题变得更简单：不是判断所有模型谁最好，而是判断某些请求是否可以安全用低一级模型处理。
+
+## 知识补全：为什么 override 更稳
+
+五路分类的难点在于类别边界复杂。一个样本到底应该走 14B 还是 7B，可能取决于题型、难度、候选模型能力和数据分布。embedding 相似并不必然等于能力需求相同。
+
+Override 把问题改写成二元判断：
+
+```text
+默认强模型是否可以安全降级？
+```
+
+这个问题更容易通过 threshold 控制风险。阈值高一点，降级更保守；阈值低一点，成本更低但风险更高。它把复杂多分类变成了可解释的风险控制问题。
+
+## Metadata 的作用
+
+只用 query embedding 时，router 看到的是文本语义。加入 `dataset`、`subject`、`difficulty` 等 metadata 后，router 能获得任务背景。
+
+这很像人类做题：同一句话如果来自数学竞赛、日常问答或代码调试，所需模型能力并不一样。metadata 可以给 embedding 补上上下文。
+
+## 实验检查清单
+
+继续做 semantic-router 实验时，应记录：
+
+1. route 形态：tiered 还是 override。
+2. encoder：MiniLM、MPNet、BGE 等。
+3. 是否包含 metadata。
+4. threshold 如何调。
+5. routing distribution 是否失衡。
+6. cost constraint 是多少。
+7. 相比 Always 14B / 32B 的真实收益。
+
+这能让实验结论从“某个方案有效”变成“为什么有效”。

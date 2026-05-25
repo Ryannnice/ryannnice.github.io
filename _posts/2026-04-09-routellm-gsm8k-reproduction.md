@@ -54,3 +54,36 @@ GSM8K 上的对比包括：
 5. 最后执行 evaluate 和可视化。
 
 这篇复现的结论是：RouteLLM 的价值不只在算法，而在于它提供了一条能比较 cost-performance tradeoff 的实验路径。
+
+## 知识补全：为什么 GSM8K 适合 smoke test
+
+GSM8K 是小学数学应用题数据集，答案通常有明确数值。这让它很适合做 router 的第一轮验证：评测标准清楚，强弱模型差距明显，错误容易归因。
+
+但 GSM8K 也有局限。它主要测数学推理，不能代表代码、长文本、事实问答、多轮对话或安全场景。一个在 GSM8K 上有效的 router，不一定能迁移到真实混合流量。
+
+因此，GSM8K 更适合作为 smoke test 和方法调通，而不是最终证明。
+
+## 结果如何解读
+
+看 router 结果时，不应只看准确率。更有意义的是画出三角关系：
+
+```text
+Weak:   low cost, lower ceiling
+Strong: high cost, high ceiling
+Router: between them, seeking better tradeoff
+```
+
+如果 router 的准确率接近 strong，但成本明显更低，它就有价值。如果 router 的成本接近 strong，准确率却没有提升，那它只是增加复杂度。
+
+## 复现检查清单
+
+复现 RouteLLM 类项目时，应保留这些产物：
+
+1. 原始响应文件。
+2. 每个样本的 strong/weak 正误。
+3. router 选择结果。
+4. 统一评测脚本。
+5. 成本计算口径。
+6. 可视化图表。
+
+这些产物能支持后续换模型、换数据、换 router，而不是只留下一次运行截图。

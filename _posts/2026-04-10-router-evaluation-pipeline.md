@@ -58,3 +58,38 @@ benchmark 阶段真实调用候选模型，保存每个样本在每个模型上�
 缺点是它不自动覆盖真实系统开销，例如 embedding 计算、网络、batching、服务排队和 router runtime。
 
 因此 pipeline 的定位应明确：它是策略筛选器，不是最终上线验证。
+
+## 知识补全：Oracle 为什么重要
+
+Router 评测里常见一个特殊基线：Oracle。Oracle 假设我们提前知道每个样本在哪个模型上答对，然后选择最便宜的正确模型。
+
+Oracle 在真实系统中不可用，但它给出了当前模型池的理论上限。如果 Oracle 准确率很高且成本很低，说明模型之间存在互补性，router 有发挥空间。如果 Oracle 本身也不理想，继续调 router 的收益就有限。
+
+另一个重要基线是 Always Strong 和 Always Weak。前者提供质量上限和成本上限，后者提供成本下限和质量下限。router 必须解释自己相对这两个基线的价值。
+
+## 数据泄漏风险
+
+离线 pipeline 最容易出现数据泄漏。比如用 test 集结果调 threshold，或让 router 训练时见到评测标签，都会让结果虚高。
+
+一个更稳的切分是：
+
+```text
+train: 训练 classifier / routes
+dev:   调 threshold / hyperparameter
+test:  最终只评一次
+```
+
+如果数据量不大，也要明确哪些实验是探索，哪些结果可以作为最终报告。
+
+## 学习检查清单
+
+一个 router evaluation pipeline 至少应回答：
+
+1. 每个模型的原始结果是否被保存。
+2. 训练、调参、测试是否分离。
+3. cost 是否按同一 token 价格表计算。
+4. latency 是否来自真实调用还是离线估计。
+5. Oracle、Always Strong、Always Weak 是否都存在。
+6. 每个策略是否复用同一个评测函数。
+
+缺少这些约束，router 实验很容易变成不可复现的手工调参。

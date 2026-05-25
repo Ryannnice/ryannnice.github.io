@@ -80,3 +80,26 @@ register > shuffle > shared memory > global memory
 ```
 
 这也是 CUDA 如何接上 LLM 优化的入口：许多 kernel 优化本质上都在减少 global memory 读写，并尽可能在寄存器、warp 和 shared memory 层完成计算。
+
+## 知识补全：带宽瓶颈和算力瓶颈
+
+写 CUDA kernel 时，首先要判断瓶颈在哪里。
+
+如果一个 kernel 做的计算很少，但需要读写大量数据，它通常是 memory-bound。优化方向是减少 global memory 访问、合并访问、复用 shared memory、融合算子。
+
+如果一个 kernel 做大量矩阵乘法或复杂计算，可能是 compute-bound。优化方向是提升 tensor core 利用率、选择合适 tile、减少控制分支。
+
+LLM 推理中两类都存在。GEMM 更偏算力，LayerNorm、RMSNorm、softmax、sampling 等更容易受带宽和规约影响。
+
+## 学习检查清单
+
+写一个 kernel 前，可以先问：
+
+1. 每个线程负责哪些元素。
+2. global memory 读写次数是多少。
+3. 是否有重复读取可以放进 shared memory。
+4. warp 内是否能用 shuffle 代替 shared memory。
+5. block 大小是否匹配数据规模。
+6. 最终瓶颈更可能是带宽还是算力。
+
+这组问题能把 CUDA 从语法学习推进到性能推理。

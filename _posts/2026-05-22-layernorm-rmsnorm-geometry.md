@@ -55,3 +55,37 @@ RMSNorm 只需要维护平方和累加器。LayerNorm 需要维护均值和方�
 ## 结论
 
 RMSNorm 是“只缩放长度”。LayerNorm 是“去均值 + 缩放长度”。在大模型推理里，这种少一个统计量的差异会变成真实的 kernel 成本差异。
+
+## 知识补全：为什么 RMSNorm 常见于大模型
+
+大模型中 RMSNorm 常见，不只是因为它计算少一点，还因为它保留了均值方向的信息。LayerNorm 会去掉每个 token 表示的均值分量，RMSNorm 则只按均方根缩放。
+
+从实现上看，RMSNorm 通常只需要：
+
+```text
+rms = sqrt(mean(x^2) + eps)
+y = x / rms * weight
+```
+
+LayerNorm 需要：
+
+```text
+mean = mean(x)
+var = mean((x - mean)^2)
+y = (x - mean) / sqrt(var + eps) * weight + bias
+```
+
+多出来的均值和方差会增加 reduction 和中间计算。
+
+## 学习检查清单
+
+比较两个归一化层时，可以看：
+
+1. 它去掉了哪些信息。
+2. 它需要几个 reduction。
+3. 是否有 bias。
+4. 是否适合 fused residual add。
+5. 推理时瓶颈是计算还是访存。
+6. Triton kernel 里需要维护几个 accumulator。
+
+这样看归一化，就能从数学定义走到实际 kernel 成本。

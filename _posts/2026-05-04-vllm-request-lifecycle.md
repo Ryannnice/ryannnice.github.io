@@ -53,3 +53,24 @@ LLM serving 的难点不是单个请求，而是大量请求共享 GPU。continu
 3. 最后看 attention backend 和 CUDA graph。
 
 这样更容易把 kernel 级优化放回系统上下文里。
+
+## 知识补全：prefill 和 decode
+
+LLM serving 里一个请求通常分成两个阶段。Prefill 阶段处理用户输入的 prompt，一次性计算上下文的 K/V。Decode 阶段每次生成一个或少量新 token，不断复用历史 KV cache。
+
+这两个阶段的性能瓶颈不同。Prefill 更像大矩阵计算，吞吐和算力利用率重要。Decode 则更容易受 KV cache 读取、batch 调度和尾延迟影响。
+
+Scheduler 要同时处理长 prompt、短 prompt、已经进入 decode 的请求和新来的请求。Continuous batching 的本质就是让这些请求在每一步动态组合，尽量不让 GPU 空等。
+
+## 学习检查清单
+
+读 vLLM 或其他 serving 框架时，可以按这条线检查：
+
+1. 请求在哪里进入队列。
+2. prefill 和 decode 是否分开调度。
+3. KV cache block 如何分配和释放。
+4. scheduler 如何决定本轮执行哪些 sequence。
+5. attention backend 接收的张量形状是什么。
+6. streaming response 如何把 token 送回客户端。
+
+如果这些问题能串起来，就能从系统层理解 vLLM，而不是只记住 PagedAttention 这个名词。
