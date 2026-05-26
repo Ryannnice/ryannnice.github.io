@@ -67,3 +67,38 @@ KV cache:       运行时加速结构
 5. 它是否可以预先计算。
 
 这样能避免把所有 K/V 都混成同一种缓存。
+
+<!-- source-log-coverage:start -->
+
+## Source Log Coverage
+
+The excerpts below are generated from `Renyuan_Log.md` and preserve the original tables, code fences, ASCII diagrams, commands, links, and explanations with source line numbers.
+
+| Source | Lines | Title |
+| --- | ---: | --- |
+| [2026-04-20](#source-log-2026-04-20) | 2256-2270 | Encoder 输出 Z 到 K/V |
+
+<a id="source-log-2026-04-20"></a>
+### Source Log: 2026-04-20
+
+Source lines: `Renyuan_Log.md:2256-2270`
+
+<pre class="tech-log-source"><code>
+2256 |# 2026-04-20
+2257 |
+2258 |## Encoder 输出Z矩阵的归宿：KV
+2259 |&#32;
+2260 |内部循环：Z 矩阵是“中间产物”，负责特征的层层叠加。&#32;&#32;
+2261 |对外接口：Encoder 整体的最终输出被视作一个 Memory（记忆库）。&#32;&#32;
+2262 |
+2263 |KV 的功能分工：&#32;&#32;
+2264 |Key (K)：相当于 Encoder 给每个词打的“索引标签”，供 Decoder 查找。&#32;&#32;&#32;&#32;
+2265 |Value (V)：相当于 Encoder 给每个词提取的“语义精华”，供 Decoder 提取。&#32;&#32;&#32;
+2266 |总结：Encoder 最后的 Z 矩阵就是 KV 的母体。在翻译模型中，我们常说 Encoder 将输入序列“编码成了一个 KV 缓存（KV Cache）”。&#32;&#32;
+2267 |
+2268 |
+2269 |
+2270 |
+</code></pre>
+
+<!-- source-log-coverage:end -->

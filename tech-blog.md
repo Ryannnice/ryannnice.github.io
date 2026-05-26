@@ -81,6 +81,14 @@ author_profile: true
     </div>
     <div class="xhs-masonry xhs-masonry--log">
       {% for item in site.data.tech_log %}
+        {% assign post_coverage_url = "" %}
+        {% for coverage in site.data.post_source_coverage %}
+          {% for entry in coverage.entries %}
+            {% if entry.source == item.date and post_coverage_url == "" %}
+              {% assign post_coverage_url = entry.url %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
         <article class="xhs-card xhs-card--log xhs-card--{{ item.slug }}" id="log-{{ item.date }}">
           <div class="xhs-card__body">
             <p class="xhs-card__meta">{{ item.date }} · {{ item.series }} · {{ item.status }}</p>
@@ -93,6 +101,10 @@ author_profile: true
             </div>
             <p class="xhs-card__source">
               <a href="{{ '/tech-blog/full-log/' | relative_url }}#log-{{ item.date }}">Open original section</a>
+              {% if post_coverage_url != "" %}
+                <span aria-hidden="true"> · </span>
+                <a href="{{ post_coverage_url | relative_url }}">Open covered post section</a>
+              {% endif %}
             </p>
           </div>
         </article>

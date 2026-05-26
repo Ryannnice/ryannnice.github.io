@@ -87,3 +87,43 @@ Router: between them, seeking better tradeoff
 6. 可视化图表。
 
 这些产物能支持后续换模型、换数据、换 router，而不是只留下一次运行截图。
+
+<!-- source-log-coverage:start -->
+
+## Source Log Coverage
+
+The excerpts below are generated from `Renyuan_Log.md` and preserve the original tables, code fences, ASCII diagrams, commands, links, and explanations with source line numbers.
+
+| Source | Lines | Title |
+| --- | ---: | --- |
+| [2026-04-09](#source-log-2026-04-09) | 1691-1710 | RouteLLM GSM8K 复现 |
+
+<a id="source-log-2026-04-09"></a>
+### Source Log: 2026-04-09
+
+Source lines: `Renyuan_Log.md:1691-1710`
+
+<pre class="tech-log-source"><code>
+1691 |# 2026-04-09
+1692 |
+1693 |## 尝试更多的开源策略
+1694 |
+1695 |#### [RouteLLM](https://github.com/aurelio-labs/semantic-router)
+1696 |
+1697 |准确率（Accuracy）:
+1698 |
+1699 |在 GSM8K 数据集上，不同策略的表现如下：
+1700 |策略              准确率 (Accuracy)    相比 Random 的提升                     评价
+1701 |Random (随机)        88.93%                  -                     基准线：无脑混合强弱模型的结果。
+1702 |Causal_LLM         0.52%+1.59%           显著胜出：                成功识别了模型专长，捕获了互补性 。
+1703 |MF (矩阵分解)      90.30%+1.37%           优于随机：                即使只有部分数据，也展现了预判能力。
+1704 |BERT/SW_Ranking     ~88.7%             -0.2%(负优化)           低于随机：说明这些路由器在数学逻辑上出现了误判。
+1705 |
+1706 |策略,               准确率 (Accuracy),   成本 (CNY),性能/成本效率评价
+1707 |Weak (7B),          85.90%,0.58,        成本极低，但存在能力天花板
+1708 |Strong (72B),       92.87%,1.77,        准确率最高，但成本是 7B 的 3.06 倍
+1709 |Causal_LLM (Router),90.52%,1.20,        最优解：用 67% 的成本换取了 97.5% 的最强性能
+1710 |
+</code></pre>
+
+<!-- source-log-coverage:end -->

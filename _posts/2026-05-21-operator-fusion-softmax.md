@@ -74,3 +74,71 @@ element-wise 操作天然好融合，因为每个输出只依赖对应输入元�
 6. 数值稳定性是否仍然使用减最大值。
 
 融合不是目的，减少内存流量并保持正确性才是目的。
+
+<!-- source-log-coverage:start -->
+
+## Source Log Coverage
+
+The excerpts below are generated from `Renyuan_Log.md` and preserve the original tables, code fences, ASCII diagrams, commands, links, and explanations with source line numbers.
+
+| Source | Lines | Title |
+| --- | ---: | --- |
+| [2026-05-20](#source-log-2026-05-20) | 3501-3511 | 融合算子与 fused softmax |
+| [2026-05-21](#source-log-2026-05-21) | 3512-3538 | 数值处理、softmax 融合与 block 规约 |
+
+<a id="source-log-2026-05-20"></a>
+### Source Log: 2026-05-20
+
+Source lines: `Renyuan_Log.md:3501-3511`
+
+<pre class="tech-log-source"><code>
+3501 |# 2026-05-20
+3502 |
+3503 |Chapter2：简单融合算子与激活函数 (softmax, relu, silu, sigmoid)	&quot;录制: Wang Akang (SRIBD)预定的会议
+3504 |日期: 2026-05-20 13:57:08
+3505 |录制文件：https://meeting.tencent.com/crm/2BYebVgo61
+3506 |密码：JAIW&quot;	算子学习第二节课复盘_融合算子与FusedSoftmax_整理与补充版.pdf	session5(20min)：基本融合算子：softmax	朱子为	以 fused-softmax为例，讲一下融合算子（fused softmax，不是 softmax）
+3507 |			session6：融合的“模型”	杨明哲	把 fused softmax 的数据流动画出来，讲讲为什么要融合，数学本质是什么（函数复合，一次加载多次计算）
+3508 |			session7（20min）：融合算子练习	占贺深	relu、gelu、x*sigmoid(x)融合与不融合的版本、x + sigmoid(x) + silu(x)（如何加载一次 x 就算 3 个值）
+3509 |
+3510 |
+3511 |
+</code></pre>
+
+
+<a id="source-log-2026-05-21"></a>
+### Source Log: 2026-05-21
+
+Source lines: `Renyuan_Log.md:3512-3538`
+
+<pre class="tech-log-source"><code>
+3512 |# 2026-05-21
+3513 |
+3514 |## 算子学习 Chapter 3：数值处理与规约
+3515 |
+3516 |### 课程主题
+3517 |
+3518 |- `log softmax`
+3519 |- `relu softmax`
+3520 |- `softmax dropout`
+3521 |- softmax 与 element-wise 操作的融合
+3522 |- block 划分与规约
+3523 |
+3524 |### Session 安排
+3525 |
+3526 || Session | 负责人 | 主题 | 重点 |
+3527 || --- | --- | --- | --- |
+3528 || session8 | 刘欣 | 简单的算子优化方法 | 以 `log-softmax` 为例，展示简单算子优化方法 |
+3529 || session9（20min） | 付谕书 | softmax 与 element-wise 的组合 | 以 `log-softmax + nll_loss`、`softmax + dropout` 为例，理解 softmax 与 element-wise 的融合方式 |
+3530 || session10 | 崔诺拉 | 融合算子中的 block 划分与规约 | 实现 softmax 分块版本（不 fused） |
+3531 || session11 | 刘稔远 | 实现 `relu(softmax(x))` | 讲解 Triton 实现代码，涉及 block 内部 program 计算和 block 之间的规约 |
+3532 |
+3533 |### 今日关注
+3534 |
+3535 |- softmax 相关算子不仅要理解数学形式，也要理解内存读写路径。
+3536 |- softmax 与 element-wise 操作融合时，关键问题是哪些中间结果不需要写回 global memory。
+3537 |- block 划分会直接影响规约方式，需要同时考虑 block 内 program 计算和 block 间结果合并。
+3538 |
+</code></pre>
+
+<!-- source-log-coverage:end -->

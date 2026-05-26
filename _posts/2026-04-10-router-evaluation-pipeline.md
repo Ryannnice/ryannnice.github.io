@@ -93,3 +93,86 @@ test:  最终只评一次
 6. 每个策略是否复用同一个评测函数。
 
 缺少这些约束，router 实验很容易变成不可复现的手工调参。
+
+<!-- source-log-coverage:start -->
+
+## Source Log Coverage
+
+The excerpts below are generated from `Renyuan_Log.md` and preserve the original tables, code fences, ASCII diagrams, commands, links, and explanations with source line numbers.
+
+| Source | Lines | Title |
+| --- | ---: | --- |
+| [2026-04-10](#source-log-2026-04-10) | 1711-1773 | Semantic Router 接入与延迟口径 |
+
+<a id="source-log-2026-04-10"></a>
+### Source Log: 2026-04-10
+
+Source lines: `Renyuan_Log.md:1711-1773`
+
+<pre class="tech-log-source"><code>
+1711 |# 2026-04-10
+1712 |
+1713 |## 尝试更多的开源策略
+1714 |
+1715 |#### 现有Pipeline
+1716 |
+1717 |- `llmrouter` 当前主链路是：
+1718 |  数据合并与切分 -&gt; 全模型 benchmark -&gt; 自动打 tier 标签 -&gt; 训练 classifier / 调 cascade 阈值 -&gt; test 集统一评测 -&gt; 出图。
+1719 |- benchmark 阶段才会真实调用各模型；训练和评测阶段主要基于已保存结果做监督训练或离线模拟。
+1720 |- 因此当前 accuracy / cost 基本可直接比较，但 flat router 自身的 routing latency 并没有被完整计入。
+1721 |- 当前主评测策略包括：
+1722 |  `baseline-32b / 14b / 7b / 3b / 1.5b`、
+1723 |  `random`、
+1724 |  `oracle`、
+1725 |  `cascade-default`、
+1726 |  `cascade-optimized`、
+1727 |  `classifier`、
+1728 |  `binary-gate-logprobs`
+1729 |
+1730 |#### [Semantic-router](https://github.com/aurelio-labs/semantic-router)
+1731 |- 我把 `semantic-router` 理解成“检索式分类器”，它更适合先以 `query -&gt; predicted_label` 的形式接入 Phase 3 evaluation，而不是直接改 benchmark 主干。
+1732 |- 接入思路被收敛为：
+1733 |  - 用 `unified/train` + `routing_labels` 构建 5 路 semantic routes
+1734 |  - 对 `unified/test` 做 semantic routing
+1735 |  - 输出 `predicted_label`
+1736 |  - 复用现有 `simulate_strategy` 和 metrics
+1737 |- 需要提前注意的风险：
+1738 |  - 路径硬编码较多
+1739 |  - 需要可用的 encoder backend
+1740 |  - Python 3.13 对部分本地 encoder 兼容性一般
+1741 |  - 当前延迟口径仍不是端到端 latency
+1742 |- 已完成远程单独评测：
+1743 |  - Accuracy: 68.18%
+1744 |  - Cost Ratio: 25.9%
+1745 |  - Avg Latency: 857ms
+1746 |  - P99 Latency: 8308ms
+1747 |- 相对位置：
+1748 |  - 比 `classifier` 更准，但成本更高
+1749 |  - 略低于 `cascade-optimized` 的准确率，但延迟明显更好
+1750 |- 远程结果和对比文件都已经单独保存，后续可以直接回看 summary / comparison 产物。
+1751 |
+1752 |#### Router Latency
+1753 |
+1754 |- 我专门确认了一个问题：论文和综述通常会提到 latency / overhead，但很少把 `router decision latency` 单独定义为最终实验指标。
+1755 |- 更常见的口径仍然是端到端响应时间，因此 router 本身的额外决策开销在很多对比里其实是模糊的。
+1756 |
+1757 |- 当前诊断已经比较明确：
+1758 |  - route 分布严重不平衡，32B route 太小
+1759 |  - hardest 样本识别不足
+1760 |  - 排除 `all_wrong` 样本会进一步削弱 hardest route
+1761 |- 后续调参顺序也已经确定：
+1762 |  1. 先加 `all_wrong`
+1763 |  2. 再做 per-route cap，处理类不平衡
+1764 |  3. 最后再调 `top-k` 和 aggregation
+1765 |- 已跑出的关键实验结果：
+1766 |  - `semantic_router_gpu`: 68.18% / 25.9%
+1767 |  - `include_all_wrong`: 68.91% / 33.2%
+1768 |  - `include_all_wrong + cap2000`: 70.29% / 36.7%
+1769 |  - `include_all_wrong + top5 + max`: 62.94% / 20.6%
+1770 |  - `bge-m3 + include_all_wrong`: 68.72% / 31.8%
+1771 |  - `bge-m3 + include_all_wrong + cap2000`: 69.34% / 33.7%
+1772 |- 这一轮最重要的结论是：真正决定效果的不是“semantic-router”这个名字，而是 route 形态、数据分布和 threshold 策略。
+1773 |
+</code></pre>
+
+<!-- source-log-coverage:end -->
