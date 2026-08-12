@@ -26,6 +26,7 @@ During my undergraduate stage, I am fortunate to be advised by [Prof. Qinbing Fu
 Open for collaborations in computer science.
 Happy to chat and you can find my CV here: [**CV_RenyuanLiu.pdf**](/assets/CV_RenyuanLiu.pdf).
 
+{% include github-activity.html %}
 
 
 ## News
@@ -72,23 +73,15 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 ## Experience {#experience-renyuan}
 
 
-<iframe 
-    src="/assets/Introduction_Undergraduate.pdf" 
-    width="100%" 
-    height="600px" 
-    style="border: 1px solid #ddd; border-radius: 8px;"
-    allow="fullscreen">
-    This browser does not support inline PDFs. Please view the document here: 
-    <a href="/assets/Introduction_Undergraduate.pdf">Download Introduction_Undergraduate.pdf</a>
-</iframe>
-
-
-
 - **[The Chinese University of Hong-Kong (Shenzhen)](https://cuhk.edu.cn/en)**, Shenzhen, China  
   Sept. 2026 - Jun. 2028 (Expected)  
   **MPhil Student in Artificial Intelligence**  
   Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
   
+
+- **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China (On-Site)<br>
+  Jul. 2026 - Aug. 2026<br>
+  **Summer School Student**
 
 
 
@@ -112,15 +105,6 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
   [\[Evidence\]](/assets/Evidence_HKU.pdf)
   
-
-- **[Guangzhou University](https://english.gzhu.edu.cn/)**, Guangzhou, China  
-  Sept. 2022 - Jun. 2026 (Expected)  
-  **Undergraduate Student in Information Security**  
-  **GPA: 89.81/100.00; Ranking: Top 8%**  
-  [\[Evidence\]](/assets/Evidence_Transcript.pdf)  
-  **Lab:** Machine Life and Intelligence Research Center  
-  Supervisor: [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2)  
-  [\[Evidence\]](/assets/Evidence_GZHU_Lab.pdf)  
 
 ## Manuscripts Under Review {#publications-renyuan}
 
@@ -226,16 +210,18 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Visitor Map   
-  
-<div style="width:200px;">
-  <script type="text/javascript" id="clustrmaps"
-    src="//clustrmaps.com/map_v2.js?d=R_2TMeV4TN1Nitsn3hgcEnVsmLH99NQ7JY0ZKoqNhho&cl=ffffff&w=400&t=tt">
-  </script>
-</div> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## Visitor Map
+
+<figure class="visitor-map">
+  <a href="https://info.flagcounter.com/mUi7" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://s01.flagcounter.com/map/mUi7/size_m/txt_000000/border_CCCCCC/pageviews_0/viewers_0/flags_0/"
+      alt="Map of visitor countries"
+      width="600"
+      height="291"
+      decoding="async">
+  </a>
+  <figcaption>
+    If a privacy extension hides the map, <a href="https://info.flagcounter.com/mUi7" target="_blank" rel="noopener noreferrer">open the visitor map directly</a>.
+  </figcaption>
+</figure>

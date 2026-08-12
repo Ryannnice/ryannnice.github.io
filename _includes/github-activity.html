@@ -1,0 +1,38 @@
+{% assign github_username = site.author.github | default: "Ryannnice" %}
+{% assign github_activity = site.data.github_contributions %}
+<section class="github-activity" aria-labelledby="github-activity-title">
+  <header class="github-activity__header">
+    <div>
+      <span class="github-activity__eyebrow">Open source</span>
+      <h2 class="github-activity__title" id="github-activity-title">
+        <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer">GitHub Activity</a>
+      </h2>
+      <p class="github-activity__subtitle">Contribution calendar · last 8 months</p>
+    </div>
+    <a class="github-activity__mark" href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ github_username }} on GitHub">
+      <i class="fab fa-github" aria-hidden="true"></i>
+    </a>
+  </header>
+
+  <div class="github-activity__chart">
+    <img
+      src="{{ '/images/github-contributions.svg' | relative_url }}"
+      alt="GitHub contribution calendar for {{ github_username }} from {{ github_activity.period_start }} to {{ github_activity.period_end }}"
+      width="{{ github_activity.chart_width }}"
+      height="{{ github_activity.chart_height }}"
+      decoding="async">
+  </div>
+
+  <footer class="github-activity__footer">
+    <span><strong>{{ github_activity.year_total }}</strong> contributions in the last year · Updated {{ github_activity.updated_label }}</span>
+    <span class="github-activity__legend" aria-label="Contribution intensity from less to more">
+      <span>Less</span>
+      <i class="github-activity__level github-activity__level--0" aria-hidden="true"></i>
+      <i class="github-activity__level github-activity__level--1" aria-hidden="true"></i>
+      <i class="github-activity__level github-activity__level--2" aria-hidden="true"></i>
+      <i class="github-activity__level github-activity__level--3" aria-hidden="true"></i>
+      <i class="github-activity__level github-activity__level--4" aria-hidden="true"></i>
+      <span>More</span>
+    </span>
+  </footer>
+</section>

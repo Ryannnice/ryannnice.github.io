@@ -1,0 +1,35 @@
+name: Update GitHub contribution chart
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-github-contributions
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Generate contribution chart
+        run: python3 scripts/update_github_contributions.py --username Ryannnice
+
+      - name: Commit changes
+        run: |
+          git add images/github-contributions.svg _data/github_contributions.json
+          if git diff --cached --quiet; then
+            echo "Contribution chart is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update GitHub contribution chart"
+          git push
