@@ -6,9 +6,9 @@ This repository is a Jekyll/GitHub Pages personal academic site. Keep changes sm
 
 - `about.md` is the homepage (`/`).
 - `_config.yml` owns site metadata, author details, navigation, plugins, and global defaults.
-- `tech-blog.md` is the tech-blog index; `_posts/` contains its long-form posts.
+- `_posts/` contains archived long-form tech posts; the site currently has no public tech-blog index or navigation entry.
 - `_layouts/` and `_includes/` contain Liquid templates. Shared styling enters through `assets/css/main.scss`; local overrides live in `_sass/layout/` and theme variables in `_sass/theme/`.
-- `_data/tech_log.yml` and `_data/tech_concepts.yml` feed the cards on the tech-blog index.
+- `_data/tech_log.yml` and `_data/tech_concepts.yml` retain curated tech-log data.
 - `images/` contains site images. `assets/` contains public PDFs, video, fonts, and the published CV. `CV_Latex/` contains CV source and build artifacts.
 - `blog.md` is a planning document without Jekyll front matter; it is not the published blog index.
 
@@ -42,7 +42,7 @@ git diff --check
 python3 scripts/verify_post_source_coverage.py
 ```
 
-The repository currently has no `Gemfile` and does not pin a Jekyll toolchain. Do not claim a successful full-site build unless a working Jekyll environment has been added or supplied. Once one exists, also run the repository's Jekyll build command and inspect `/`, `/tech-blog/`, a post page, and `/404.html` at desktop and mobile widths.
+The repository currently has no `Gemfile` and does not pin a Jekyll toolchain. Do not claim a successful full-site build unless a working Jekyll environment has been added or supplied. Once one exists, also run the repository's Jekyll build command and inspect `/`, a post page, and `/404.html` at desktop and mobile widths.
 
 ## Editing conventions
 

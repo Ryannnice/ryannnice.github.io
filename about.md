@@ -213,15 +213,12 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 ## Visitor Map
 
 <figure class="visitor-map">
-  <a href="https://info.flagcounter.com/mUi7" target="_blank" rel="noopener noreferrer">
+  <a href="https://info.flagcounter.com/mUi7" target="_blank" rel="noopener noreferrer" aria-label="View visitor statistics">
     <img
-      src="https://s01.flagcounter.com/map/mUi7/size_m/txt_000000/border_CCCCCC/pageviews_0/viewers_0/flags_0/"
+      src="https://s01.flagcounter.com/map/mUi7/size_s/txt_6B7280/border_FFFFFF/pageviews_0/viewers_3/flags_0/"
       alt="Map of visitor countries"
-      width="600"
-      height="291"
+      width="400"
+      height="205"
       decoding="async">
   </a>
-  <figcaption>
-    If a privacy extension hides the map, <a href="https://info.flagcounter.com/mUi7" target="_blank" rel="noopener noreferrer">open the visitor map directly</a>.
-  </figcaption>
 </figure>

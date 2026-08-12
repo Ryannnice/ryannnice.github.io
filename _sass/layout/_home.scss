@@ -111,27 +111,28 @@
   border-radius: 2px;
 }
 
-.github-activity__level--0 { background: #eef2f7; }
-.github-activity__level--1 { background: #dcecff; }
-.github-activity__level--2 { background: #9fc5f1; }
-.github-activity__level--3 { background: #5b96da; }
-.github-activity__level--4 { background: #1468b7; }
+.github-activity__level--0 { background: #eff2f5; }
+.github-activity__level--1 { background: #aceebb; }
+.github-activity__level--2 { background: #4ac26b; }
+.github-activity__level--3 { background: #2da44e; }
+.github-activity__level--4 { background: #116329; }
 
 .visitor-map {
   margin: 0;
 
+  a:hover img {
+    box-shadow: none;
+  }
+
   img {
     display: block;
-    width: 600px;
+    width: 300px;
     max-width: 100%;
     height: auto;
     border: 0;
-  }
-
-  figcaption {
-    margin-top: 0.5rem;
-    color: var(--global-text-color-light);
-    font-size: 0.75rem;
+    border-radius: 4px;
+    filter: grayscale(0.85) saturate(0.35) contrast(0.88);
+    opacity: 0.88;
   }
 }
 

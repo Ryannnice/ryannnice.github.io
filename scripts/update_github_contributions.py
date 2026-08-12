@@ -11,6 +11,7 @@ import time
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
+from http.client import RemoteDisconnected
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -21,7 +22,7 @@ CELL_STEP = 12
 LEFT_MARGIN = 28
 TOP_MARGIN = 20
 CHART_HEIGHT = 104
-COLORS = ("#eef2f7", "#dcecff", "#9fc5f1", "#5b96da", "#1468b7")
+COLORS = ("#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329")
 COUNT_PATTERN = re.compile(r"([\d,]+)\s+contributions?", re.IGNORECASE)
 
 
@@ -78,14 +79,14 @@ def fetch_contributions(username: str) -> str:
         headers={
             "Accept": "text/html",
             "Accept-Language": "en-US,en;q=0.9",
-            "User-Agent": "ryannnice.github.io contribution chart updater",
+            "User-Agent": "Mozilla/5.0",
         },
     )
     for attempt in range(3):
         try:
             with urlopen(request, timeout=30) as response:
                 return response.read().decode("utf-8")
-        except (HTTPError, URLError, TimeoutError) as error:
+        except (HTTPError, URLError, RemoteDisconnected, TimeoutError) as error:
             if attempt == 2:
                 raise RuntimeError(f"Could not fetch {url}: {error}") from error
             time.sleep(2**attempt)
