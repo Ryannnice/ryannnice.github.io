@@ -95,21 +95,3 @@
     }
   }
 }
-
-.page__footer-media {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  line-height: 0;
-  overflow: hidden;
-}
-
-.page__footer-video {
-  display: block;
-  width: 100vw;
-  max-width: none;
-  height: auto;
-  margin: 0;
-  transform-origin: top center;
-}
