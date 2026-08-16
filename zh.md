@@ -11,8 +11,6 @@ language_switch_aria_label: Switch to English
 author_profile: true
 ---
 
-{% include language-switch.html %}
-
 # Renyuan LIU（刘<ruby>稔<rt>rěn</rt></ruby>远）
 ---
 
@@ -23,19 +21,16 @@ author_profile: true
 
 本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
 
-欢迎计算机科学各方向的交流与合作。2026 年 6 月，我创立了 [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)——一个连接 AI Agent、AI 基础设施、泛在系统与大模型规模化训练学习者的 AI 学习与研究组织。
+欢迎计算机科学各方向的交流与合作。
 
-<div class="profile-actions">
-  <a class="btn btn--primary" href="{{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}">查看个人简历</a>
-  <a class="btn btn--inverse" href="https://ryannnice.github.io/nexus/">访问 TEAM NEXUS</a>
-</div>
+[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 {% include github-activity.html %}
 
 
 ## 最新动态 {#news}
 
-* [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)——聚焦 AI 基础设施、Agent、泛在系统与大语言模型后训练的 AI 学习与研究组织。
+* [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)，一个学习小组。
 
 * [2026 年 6 月] 本科毕业设计获广州大学*创新奖*，排名全校第 3。
 
@@ -71,7 +66,7 @@ author_profile: true
 * **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
 * **AI Agent：**工具检索与规划、多轮上下文编排、记忆、评测和具身决策；
 * **大语言模型后训练：**监督微调、偏好优化、参数高效微调和以数据为中心的评测；
-* **仿生感知：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
+* **机器视觉（本科阶段）：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
 
 我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
 
@@ -89,8 +84,8 @@ author_profile: true
   **人工智能研究型硕士生（MPhil）**<br>
   导师：[胡君杰教授](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
 
-- **[香港大学](https://www.hku.hk/)**，中国香港（线下）<br>
-  2026 年 7 月 – 2026 年 8 月<br>
+- **[香港大学](https://www.hku.hk/)**，中国香港<br>
+  2026 年 7 月<br>
   **暑期学校学员**
 
 - **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
@@ -114,25 +109,82 @@ author_profile: true
 
 ## 精选 AI 系统项目 {#projects-renyuan}
 
-<div class="project-grid">
-  <article class="project-card project-card--featured">
-    <h3 class="project-card__title">100 工具电商智能导购与多轮工具规划 Agent</h3>
-    <p class="project-card__meta">2026 年 7 月 – 至今 · 核心研发</p>
-    <p>构建覆盖 100 个工具、8 大业务域的 Agent 系统，整合 LoRA 微调的 Qwen3 意图路由、BM25/向量混合检索与 Cross-Encoder 精排、经偏好优化的工具规划模型，以及处理多轮请求的模型外上下文编排器。</p>
-    <p class="project-card__metrics">意图准确率 <strong>100.0%</strong> · Top-10 工具全召回率 <strong>97.4%</strong> · 端到端准确率 <strong>92.6%</strong> · 版本校验缓存减少规划模型调用 <strong>60.3%</strong></p>
+<div class="project-list">
+  <article class="project-card">
+    <header class="project-card__header">
+      <h3 class="project-card__title">100 工具电商智能导购与多轮工具规划 Agent 系统</h3>
+      <p class="project-card__meta">2026 年 7 月 – 至今</p>
+    </header>
+    <div class="project-media-grid">
+      <figure class="project-media">
+        <a href="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" width="2200" height="1320" loading="lazy" decoding="async" alt="9,000 条请求上工具规划全链路准确率由 19.29% 提升至 92.62% 的折线图">
+        </a>
+        <figcaption>固定 9K 测试集上的全链路决策增益</figcaption>
+      </figure>
+      <figure class="project-media">
+        <a href="{{ '/assets/projects/ecommerce-agent/agent-multiturn-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ '/assets/projects/ecommerce-agent/agent-multiturn-trace-progress.svg' | relative_url }}" width="2200" height="1360" loading="lazy" decoding="async" alt="多轮 Agent 在独立测试集上准确率提升至 94.56% 的折线图">
+        </a>
+        <figcaption>独立测试集上的多轮 Agent 消融</figcaption>
+      </figure>
+    </div>
+    <p class="project-card__source"><a href="https://ryannnice.github.io/nexus/ecommerce-agent/">查看完整项目主页</a></p>
+    <details class="project-details">
+      <summary>展开项目详情</summary>
+      <div class="project-details__content">
+        <p><strong>项目背景：</strong>作为核心研发，负责 100 工具、8 大业务域电商导购 Agent 研发，解决全量工具开销、同类工具混淆、多需求顺序错误与跨轮历史污染。</p>
+        <ul>
+          <li><strong>意图分流（分类准确率 100.0%）：</strong>构建 4.8 万条电商/闲聊数据，LoRA 微调 Qwen3-0.6B，9,000 条隔离测试准确率 84.8%→100.0%；较 Qwen3-1.7B，推理中位延迟降低 34.3%、吞吐提升 52.0%。</li>
+          <li><strong>高效工具检索（Top-10 工具全召回率 97.4%）：</strong>构建 7 万正对与 9.6 万类型化负例，采用多负例对比学习微调 bge-large，并以 1:7 正负难例组训练 bge-reranker-v2-m3；实现 BM25/向量双路召回、两级 RRF 融合与 Cross-Encoder 精排，采用“召回 40→精排 20→规划 10”的分层筛选，Top-10 全召回率 47.6%→97.4%；相较“精排 30→规划 20”方案，规划模型输入 Token/重排中位延迟降低 36.8%/33.7%。</li>
+          <li><strong>多步工具规划（端到端准确率 92.6%）：</strong>构建 7.8 万条多风格工具调用轨迹，基于 MS-SWIFT 使用 LoRA 微调 Qwen3-8B，在固定 Top-10 候选中输出有序工具链；基于父模型真实错误构建 4,000 组偏好对，采用 RPO 主训练、DPO 低学习率收敛，规划模型工具链完全匹配率 85.7%→88.9%；在 9,000 条静态测试上，端到端准确率达 92.6%。</li>
+          <li><strong>多轮 Agent 框架（上下文依赖请求准确率 92.8%）：</strong>设计模型外上下文编排器，以规则状态机调度近期状态、规则摘要与会话内 BM25，将必要历史压缩并补全为可独立规划的当前请求，再接入原规划模型，通过请求边界与整轮恢复抑制历史污染；基于近 2,000 段 2–7 轮自然短会话完成 12 阶段消融，独立测试整体准确率较直接拼接基线 50.5%→94.6%，上下文依赖/无关请求准确率达 92.8%/97.4%，版本校验缓存使规划模型调用减少 60.3%。</li>
+        </ul>
+        <p class="project-card__metrics"><strong>核心成果：</strong>9,000 条隔离测试意图准确率 100.0%；Top-10 工具全召回率 97.4%（基线 47.6%）；端到端准确率 92.6%；上下文依赖请求准确率 92.8%，规划模型调用减少 60.3%。</p>
+      </div>
+    </details>
   </article>
 
   <article class="project-card">
-    <h3 class="project-card__title">昇腾算子优化与 Kernel Agent</h3>
-    <p class="project-card__meta">2026 年 3 月 – 6 月 · 深圳市大数据研究院</p>
-    <p>面向昇腾 910B/910C 适配“检索—生成—编译—验证”的自动优化闭环，建设硬件感知知识库、性能诊断工具及安全的保留/回退评测流程，形成 Kernel-Agent-Ascend 系统。</p>
-    <p class="project-card__metrics">将融合反向算子耗时从 <strong>22.603 ms 降至 17.88 ms</strong>（降低 <strong>20.9%</strong>），四路输出余弦相似度均保持 1.0。</p>
+    <header class="project-card__header">
+      <h3 class="project-card__title">项目一｜DeepSeek-V4 国产算力适配与昇腾算子优化</h3>
+      <p class="project-card__meta">2026 年 3 月 – 6 月 · 深圳市大数据研究院</p>
+    </header>
+    <figure class="project-media project-media--wide">
+      <a href="{{ '/assets/Kernel_Agent.png' | relative_url }}">
+        <img src="{{ '/assets/Kernel_Agent.png' | relative_url }}" width="1718" height="916" loading="lazy" decoding="async" alt="昇腾算子优化 Agent 架构，包括规划、编码、验证、知识检索、性能画像、诊断、优化与测试">
+      </a>
+      <figcaption>昇腾算子优化 Agent 架构</figcaption>
+    </figure>
+    <details class="project-details">
+      <summary>展开项目详情</summary>
+      <div class="project-details__content">
+        <p><strong>项目背景：</strong>作为核心研发，参与深圳河套学院联合华为、智子芯元开展的 DeepSeek-V4-Pro 国产算力全参数后训练。围绕 DeepSeek-V4 在国产算力上的推理与后训练落地，负责昇腾 910C 部署测评、算子优化 Agent 研发及融合反向算子优化。</p>
+        <ul>
+          <li><strong>910C 推理适配与测评（DeepSeek V4 Flash/Pro）：</strong>参与在昇腾 910C 集群部署与测评 DeepSeek V4 Flash/Pro，基于 ShareGPT 等数据对比 vLLM Ascend 与 SGLang 的 Prefill/Decode 性能，为推理框架选型与部署配置提供依据。</li>
+          <li><strong>算子优化 Agent（昇腾迁移与开源）：</strong>针对昇腾算子依赖人工分析与反复试错的问题，基于 MIT Kernel Design Agents 重构适配 910B/910C 的算子知识库、优化规则与性能诊断工具，打通检索→生成→编译→精度/性能验证→保留/回退闭环，开源 Kernel-Agent-Ascend。</li>
+          <li><strong>融合反向算子优化（耗时降低 20.9%）：</strong>基于 msprof 定位 AIV 侧标量地址计算、稀疏访存、同步等待与负载不均；通过地址计算化简、低命中搬运分支裁剪、冗余同步删除、分块/片上缓存优化及向量任务重分配，同时修复缓存扩容引发的尾块越界，算子耗时 22.603→17.88 ms（1.26×），四路输出余弦相似度均为 1.0。</li>
+        </ul>
+        <p class="project-card__metrics"><strong>核心成果：</strong>目标配置（BSND/BF16，B=1、S=4096、K=1024）下，融合反向算子耗时 22.603→17.88 ms，降低 20.9%（1.26×）；四路输出余弦相似度均为 1.0，最大相对误差 8.39e-4。</p>
+      </div>
+    </details>
   </article>
 
   <article class="project-card">
-    <h3 class="project-card__title">大语言模型语义路由与 AI 教育 Agent</h3>
-    <p class="project-card__meta">2026 年 3 月 – 5 月 · 深圳市大数据研究院</p>
-    <p>结合领域原型向量与模型内部表示完成多模型请求路由，在准确率损失低于 10% 的前提下降低推理成本 <strong>62%</strong>；并使用 FastAPI、SQLite、Docker、SSE 流式传输、多轮会话与文件处理能力搭建 AI 教育平台后端及移动端支持。</p>
+    <header class="project-card__header">
+      <h3 class="project-card__title">项目二｜LLM 语义路由与 AI Agent 应用</h3>
+      <p class="project-card__meta">2026 年 3 月 – 5 月 · 深圳市大数据研究院</p>
+    </header>
+    <details class="project-details">
+      <summary>展开项目详情</summary>
+      <div class="project-details__content">
+        <p><strong>项目背景：</strong>面向多模型服务成本控制与 AI 教育业务落地，负责轻量语义路由及 AI 教育平台后端开发。</p>
+        <ul>
+          <li><strong>轻量语义路由（成本降低 62%）：</strong>参与设计基于 Query 与领域原型向量的 Domain 划分，并结合模型内部表示判断问题难度、分配不同规模模型；在准确率损失控制于 10% 内将推理成本降低 62%。</li>
+          <li><strong>AI Agent 应用（后端开发）：</strong>基于 Vue3/Vite/Vue Router + FastAPI/SQLite/Docker 从 0 搭建 Web AI 教育平台及 Android 端；封装 SSE 流式生成与多轮会话，完成用户/会话/Token 监控、附件上传、Markdown/代码/网页预览及移动端适配，支撑新闻筛选、学习与 Coding Agent 工坊。</li>
+        </ul>
+      </div>
+    </details>
   </article>
 </div>
 
@@ -195,7 +247,7 @@ author_profile: true
 - **AI 基础设施：**CUDA、昇腾 910B/910C、msprof 性能分析、推理基准测试与算子优化
 - **工程开发：**Python、C/C++、PyTorch、Hugging Face、MS-SWIFT、FastAPI、SQLite、Docker、Git、Vue 3 与 Linux
 - **机器人与嵌入式：**ROS、STM32、Keil、Webots、MATLAB，以及双目视觉/微型机器人平台
-- **AI 辅助开发：**Codex 与 Claude Code
+- **AI 辅助开发：**每日高强度使用 Codex 与 Claude Code，月消耗 Token 百亿量级
 - **语言：** **IELTS 6.5**（阅读 8.0、听力 6.5、写作 6.0、口语 5.5）；**CET-6 564**（阅读 242/248.5）
 - **文档与媒体：**LaTeX、Markdown、MS Office/Visio、Adobe Photoshop 与 Premiere Pro
 - *<font color = '#000066'>学习是世界上最幸福的事情之一。</font>*

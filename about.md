@@ -14,8 +14,6 @@ redirect_from:
   - /about.html
 ---  
 
-{% include language-switch.html %}
-
 <!--
 <p align="center">
   <img src="/images/CUHK-SAI-Logo-01_1.png" width="800">
@@ -32,19 +30,16 @@ My current work spans **AI infrastructure**, **AI agents**, and **LLM post-train
 
 During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
 
-I welcome collaborations across computer science. In June 2026, I founded [**TEAM NEXUS**](https://ryannnice.github.io/nexus/), an AI learning and research community connecting students interested in agents, AI infrastructure, ubiquitous systems, and large-scale model development.
+I welcome collaborations across computer science.
 
-<div class="profile-actions">
-  <a class="btn btn--primary" href="{{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}">Curriculum Vitae</a>
-  <a class="btn btn--inverse" href="https://ryannnice.github.io/nexus/">Explore TEAM NEXUS</a>
-</div>
+[**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 {% include github-activity.html %}
 
 
 ## News {#news}
 
-* [Jun. 2026] Founded [*TEAM NEXUS*](https://ryannnice.github.io/nexus/), an AI learning and research community spanning AI infrastructure, agents, ubiquitous systems, and LLM post-training.
+* [Jun. 2026] Founded [*TEAM NEXUS*](https://ryannnice.github.io/nexus/), a learning group.
 
 * [Jun. 2026] My undergraduate thesis received an *Innovation Award* and ranked 3rd university-wide at *Guangzhou University*.
 
@@ -80,7 +75,7 @@ I am interested in the full path from model behavior to efficient deployment:
 * **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
 * **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, evaluation, and embodied decision-making;
 * **LLM Post-Training:** supervised fine-tuning, preference optimization, parameter-efficient fine-tuning, and data-centric evaluation;
-* **Bio-inspired Perception:** neural models of insect vision for real-time collision detection and robotic navigation.
+* **Machine Vision (Undergraduate):** neural models of insect vision for real-time collision detection and robotic navigation.
 
 My undergraduate research focused on **brain-inspired neural networks** and **machine vision**. I modeled insect visual circuits for robust motion perception and translated them into collision-detection systems for robots. I enjoy hands-on coding, debugging, profiling, and end-to-end system implementation. My experimental platforms include *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.
 
@@ -99,8 +94,8 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
   
 
-- **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China (On-Site)<br>
-  Jul. 2026 - Aug. 2026<br>
+- **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
+  Jul. 2026<br>
   **Summer School Student**
 
 
@@ -128,25 +123,82 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Selected AI Systems Projects {#projects-renyuan}
 
-<div class="project-grid">
-  <article class="project-card project-card--featured">
-    <h3 class="project-card__title">100-Tool E-Commerce Recommendation and Multi-Turn Planning Agent</h3>
-    <p class="project-card__meta">Jul. 2026 – Present · Core developer</p>
-    <p>Built an agent system spanning 100 tools and eight business domains. The pipeline combines a LoRA-tuned Qwen3 intent router, hybrid BM25/vector retrieval with cross-encoder reranking, a preference-optimized tool planner, and an external context orchestrator for multi-turn requests.</p>
-    <p class="project-card__metrics"><strong>100.0%</strong> intent accuracy · <strong>97.4%</strong> Top-10 full tool recall · <strong>92.6%</strong> end-to-end accuracy · <strong>60.3%</strong> fewer planner calls through version-aware caching</p>
+<div class="project-list">
+  <article class="project-card">
+    <header class="project-card__header">
+      <h3 class="project-card__title">100-Tool E-Commerce Shopping Assistant and Multi-Turn Tool Planning Agent System</h3>
+      <p class="project-card__meta">Jul. 2026 – Present</p>
+    </header>
+    <div class="project-media-grid">
+      <figure class="project-media">
+        <a href="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" width="2200" height="1320" loading="lazy" decoding="async" alt="Line chart showing the full tool-planning pipeline improving from 19.29% to 92.62% on 9,000 requests">
+        </a>
+        <figcaption>Full-pipeline gains on the frozen 9K test set</figcaption>
+      </figure>
+      <figure class="project-media">
+        <a href="{{ '/assets/projects/ecommerce-agent/agent-multiturn-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ '/assets/projects/ecommerce-agent/agent-multiturn-trace-progress.svg' | relative_url }}" width="2200" height="1360" loading="lazy" decoding="async" alt="Line chart showing multi-turn Agent accuracy improving to 94.56% on the independent test set">
+        </a>
+        <figcaption>Multi-turn Agent ablation on the independent test set</figcaption>
+      </figure>
+    </div>
+    <p class="project-card__source"><a href="https://ryannnice.github.io/nexus/ecommerce-agent/">View the complete project page</a></p>
+    <details class="project-details">
+      <summary>View project details</summary>
+      <div class="project-details__content">
+        <p><strong>Project Background:</strong> As a core developer, I worked on an e-commerce shopping Agent spanning 100 tools and eight business domains, addressing full-tool overhead, confusion among similar tools, incorrect ordering of multi-intent requests, and cross-turn history contamination.</p>
+        <ul>
+          <li><strong>Intent Routing (100.0% Classification Accuracy):</strong> Built 48K e-commerce and casual-conversation samples and LoRA-tuned Qwen3-0.6B, raising accuracy on 9,000 isolated test cases from 84.8% to 100.0%. Compared with Qwen3-1.7B, median inference latency fell by 34.3% and throughput rose by 52.0%.</li>
+          <li><strong>Efficient Tool Retrieval (97.4% Top-10 Full Tool Recall):</strong> Built 70K positive pairs and 96K typed negatives, fine-tuned bge-large with multi-negative contrastive learning, and trained bge-reranker-v2-m3 with 1:7 positive-to-hard-negative groups. Implemented dual BM25/vector recall, two-stage RRF fusion, and Cross-Encoder reranking with a “recall 40 → rerank 20 → plan 10” funnel. Top-10 full recall rose from 47.6% to 97.4%; compared with “rerank 30 → plan 20,” planner input tokens and median reranking latency fell by 36.8% and 33.7%.</li>
+          <li><strong>Multi-Step Tool Planning (92.6% End-to-End Accuracy):</strong> Built 78K multi-style tool-call trajectories and LoRA-tuned Qwen3-8B with MS-SWIFT to output ordered tool chains from a fixed Top-10 candidate set. Constructed 4,000 preference pairs from real parent-model errors, using RPO for main training and low-learning-rate DPO for convergence. Exact tool-chain match improved from 85.7% to 88.9%, with 92.6% end-to-end accuracy on 9,000 static tests.</li>
+          <li><strong>Multi-Turn Agent Framework (92.8% Context-Dependent Request Accuracy):</strong> Designed an external context orchestrator whose rule-based state machine schedules recent state, rule summaries, and in-session BM25 retrieval. It compresses necessary history into a standalone current request before invoking the original planner, while request boundaries and full-turn recovery suppress history contamination. A 12-stage ablation on nearly 2,000 natural conversations of 2–7 turns raised independent-test overall accuracy from a 50.5% direct-concatenation baseline to 94.6%; context-dependent and context-independent request accuracy reached 92.8% and 97.4%, while version-validation caching reduced planner calls by 60.3%.</li>
+        </ul>
+        <p class="project-card__metrics"><strong>Core Results:</strong> 100.0% intent accuracy on 9,000 isolated tests; 97.4% Top-10 full tool recall (47.6% baseline); 92.6% end-to-end accuracy; 92.8% context-dependent request accuracy; and 60.3% fewer planner calls.</p>
+      </div>
+    </details>
   </article>
 
   <article class="project-card">
-    <h3 class="project-card__title">Ascend Kernel Optimization and Kernel Agent</h3>
-    <p class="project-card__meta">Mar. – Jun. 2026 · SRIBD</p>
-    <p>Adapted an automated retrieve–generate–compile–validate optimization loop for Ascend 910B/910C, including a hardware-aware knowledge base, diagnostic tools, and safe retain/rollback evaluation. Developed the resulting Kernel-Agent-Ascend system.</p>
-    <p class="project-card__metrics">Reduced a fused backward kernel from <strong>22.603 ms to 17.88 ms</strong> (<strong>20.9%</strong>) while retaining 1.0 cosine similarity across all four outputs.</p>
+    <header class="project-card__header">
+      <h3 class="project-card__title">Project 1 | DeepSeek-V4 Domestic-Accelerator Adaptation and Ascend Kernel Optimization</h3>
+      <p class="project-card__meta">Mar. – Jun. 2026 · Shenzhen Research Institute of Big Data</p>
+    </header>
+    <figure class="project-media project-media--wide">
+      <a href="{{ '/assets/Kernel_Agent.png' | relative_url }}">
+        <img src="{{ '/assets/Kernel_Agent.png' | relative_url }}" width="1718" height="916" loading="lazy" decoding="async" alt="Architecture of the Ascend kernel optimization Agent, including planning, coding, verification, knowledge retrieval, profiling, diagnosis, optimization, and testing">
+      </a>
+      <figcaption>Ascend kernel optimization Agent architecture</figcaption>
+    </figure>
+    <details class="project-details">
+      <summary>View project details</summary>
+      <div class="project-details__content">
+        <p><strong>Project Background:</strong> As a core developer, I participated in the full-parameter post-training of DeepSeek-V4-Pro on domestic accelerators, jointly conducted by Shenzhen Hetao College, Huawei, and 智子芯元. For DeepSeek-V4 inference and post-training on domestic hardware, I worked on Ascend 910C deployment evaluation, kernel-optimization Agent development, and fused backward-kernel optimization.</p>
+        <ul>
+          <li><strong>910C Inference Adaptation and Evaluation (DeepSeek V4 Flash/Pro):</strong> Participated in deploying and evaluating DeepSeek V4 Flash/Pro on an Ascend 910C cluster. Compared Prefill/Decode performance between vLLM Ascend and SGLang on ShareGPT and other datasets to support inference-framework selection and deployment configuration.</li>
+          <li><strong>Kernel Optimization Agent (Ascend Migration and Open Source):</strong> Addressed the manual analysis and repeated trial-and-error required by Ascend kernels by rebuilding MIT Kernel Design Agents for 910B/910C with a kernel knowledge base, optimization rules, and performance-diagnostic tools. Connected retrieval → generation → compilation → accuracy/performance verification → retain/rollback into a closed loop and open-sourced Kernel-Agent-Ascend.</li>
+          <li><strong>Fused Backward-Kernel Optimization (20.9% Lower Latency):</strong> Used msprof to locate scalar address calculation on AIV, sparse memory access, synchronization waits, and load imbalance. Simplified address calculation, pruned low-hit data-movement branches, removed redundant synchronization, optimized tiling/on-chip caching, redistributed vector tasks, and fixed tail-block out-of-bounds access introduced by cache expansion. Kernel latency fell from 22.603 ms to 17.88 ms (1.26×), while cosine similarity remained 1.0 for all four outputs.</li>
+        </ul>
+        <p class="project-card__metrics"><strong>Core Results:</strong> Under the target configuration (BSND/BF16, B=1, S=4096, K=1024), fused backward-kernel latency fell from 22.603 ms to 17.88 ms, a 20.9% reduction (1.26×). All four output cosine similarities were 1.0, with a maximum relative error of 8.39e-4.</p>
+      </div>
+    </details>
   </article>
 
   <article class="project-card">
-    <h3 class="project-card__title">LLM Semantic Routing and AI Education Agents</h3>
-    <p class="project-card__meta">Mar. – May 2026 · SRIBD</p>
-    <p>Combined domain-prototype embeddings with model representations to route requests across models, reducing inference cost by <strong>62%</strong> while keeping accuracy loss below 10%. Built an education-agent backend with FastAPI, SQLite, Docker, SSE streaming, multi-turn sessions, file handling, and mobile support.</p>
+    <header class="project-card__header">
+      <h3 class="project-card__title">Project 2 | LLM Semantic Routing and AI Agent Applications</h3>
+      <p class="project-card__meta">Mar. – May 2026 · Shenzhen Research Institute of Big Data</p>
+    </header>
+    <details class="project-details">
+      <summary>View project details</summary>
+      <div class="project-details__content">
+        <p><strong>Project Background:</strong> To control multi-model serving costs and deliver an AI education product, I developed a lightweight semantic router and the backend of an AI education platform.</p>
+        <ul>
+          <li><strong>Lightweight Semantic Routing (62% Cost Reduction):</strong> Helped design domain partitioning from queries and domain-prototype embeddings, then combined model-internal representations to estimate question difficulty and assign models of different sizes. Reduced inference cost by 62% while keeping accuracy loss within 10%.</li>
+          <li><strong>AI Agent Application (Backend Development):</strong> Built a Web AI education platform and Android client from scratch with Vue 3/Vite/Vue Router + FastAPI/SQLite/Docker. Implemented SSE streaming and multi-turn sessions, user/session/token monitoring, attachment upload, Markdown/code/web preview, and mobile adaptation, supporting news filtering, learning, and a Coding Agent workshop.</li>
+        </ul>
+      </div>
+    </details>
   </article>
 </div>
   
@@ -216,7 +268,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **AI Infrastructure:** CUDA, Ascend 910B/910C, profiling with msprof, inference benchmarking, and kernel optimization
 - **Engineering:** Python, C/C++, PyTorch, Hugging Face, MS-SWIFT, FastAPI, SQLite, Docker, Git, Vue 3, and Linux
 - **Robotics & Embedded Systems:** ROS, STM32, Keil, Webots, MATLAB, and binocular/micro-robot platforms
-- **AI-Assisted Development:** Codex and Claude Code
+- **AI-Assisted Development:** intensive daily use of Codex and Claude Code, with monthly usage on the order of 10 billion tokens
 - **Languages:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5) and **CET-6 564** (242/248.5 in reading)
 - **Documentation & Media:** LaTeX, Markdown, MS Office/Visio, Adobe Photoshop, and Premiere Pro
 - *<font color = '#000066'>Learning is one of the happiest things in the world.</font>*

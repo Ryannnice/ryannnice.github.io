@@ -180,7 +180,7 @@
 
       {% if author.wechat %}
       <li>
-        <a href="#wechat-modal" aria-controls="wechat-modal" onclick="document.getElementById('wechat-modal').style.display='block'; return false;">
+        <a href="#wechat-modal" aria-controls="wechat-modal" onclick="var modal = document.getElementById('wechat-modal'); document.body.appendChild(modal); modal.style.display='flex'; modal.querySelector('.wechat-modal__close').focus(); return false;">
           <i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>{{ profile_wechat_label }}
         </a>
       </li>
@@ -191,9 +191,9 @@
 </div>
 
 
-<div id="wechat-modal" role="dialog" aria-modal="true" aria-label="{{ profile_wechat_label }}" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); text-align:center;">
-  <div style="margin-top:5%; display:inline-block; background:white; padding:20px; border-radius:8px;">
-    <button type="button" aria-label="{{ profile_close_label }}" style="float:right; cursor:pointer; font-size:24px; border:0; background:transparent; color:#222;" onclick="document.getElementById('wechat-modal').style.display='none'">&times;</button>
-    <img src="{{ '/images/WeChat.png' | prepend: base_path }}" alt="{{ profile_wechat_alt }}" style="max-width:300px; width:90%;">
+<div id="wechat-modal" class="wechat-modal" role="dialog" aria-modal="true" aria-label="{{ profile_wechat_label }}" style="display:none;" onclick="if (event.target === this) this.style.display='none';" onkeydown="if (event.key === 'Escape') this.style.display='none';">
+  <div class="wechat-modal__dialog">
+    <button class="wechat-modal__close" type="button" aria-label="{{ profile_close_label }}" onclick="document.getElementById('wechat-modal').style.display='none'">&times;</button>
+    <img class="wechat-modal__image" src="{{ '/images/WeChat.png' | prepend: base_path }}" alt="{{ profile_wechat_alt }}">
   </div>
 </div>
