@@ -12,23 +12,38 @@ site_theme               : "default"
 title                    : "HOME"
 title_separator          : "-"
 name                     : &name "Renyuan LIU"
-description              : &description "personal description"
-url                      : https://ryannnice.github.io/ # 站点主域名与协议，例如 "https://[你的 GitHub 用户名].github.io"
+description              : &description "Renyuan Liu's personal site: AI systems, agents, LLM post-training, AI infrastructure, and bio-inspired machine vision."
+url                      : https://ryannnice.github.io # 站点主域名与协议，例如 "https://[你的 GitHub 用户名].github.io"
 baseurl                  : "" # 站点子路径，例如 "/blog"
 repository               : "Ryannnice/ryannnice.github.io"
 
 navigation:
   main:
     - title: "Experience"
-      url: "#experience-renyuan"
+      url: "/#experience-renyuan"
+    - title: "Projects"
+      url: "/#projects-renyuan"
     - title: "Publications"
-      url: "#publications-renyuan"
+      url: "/#publications-renyuan"
     - title: "Awards"
-      url: "#awards-renyuan"
-    # - title: "Conference"
-    #   url "#conference-renyuan"
+      url: "/#awards-renyuan"
     - title: "Misc."
-      url: "#misc-renyuan"
+      url: "/#misc-renyuan"
+    - title: "NEXUS"
+      url: "https://ryannnice.github.io/nexus/"
+  zh:
+    - title: "经历"
+      url: "/zh/#experience-renyuan"
+    - title: "项目"
+      url: "/zh/#projects-renyuan"
+    - title: "论文"
+      url: "/zh/#publications-renyuan"
+    - title: "荣誉"
+      url: "/zh/#awards-renyuan"
+    - title: "其他"
+      url: "/zh/#misc-renyuan"
+    - title: "NEXUS"
+      url: "https://ryannnice.github.io/nexus/"
 
 # 站点作者信息：以下字段控制侧边栏作者区域显示的内容。
 # 如果某个字段留空，对应图标和链接就不会显示。
@@ -38,11 +53,15 @@ author:
   avatar           : "me11.png"
   name             : "Renyuan LIU"
   pronouns         : # 示例："she/her"
-  bio              : "Incoming MPhil student at CUHK(SZ)"
+  bio              : "Research Master's (MPhil) student in AI at CUHK-Shenzhen"
+  bio_zh           : "香港中文大学（深圳）人工智能研究型硕士生"
   location         : "Zhengzhou, China"
+  location_zh      : "中国·郑州"
   employer         : "CUHK(Shenzhen)"
+  employer_zh      : "香港中文大学（深圳）"
   uri              : # 网址
-  email            :
+  email            : "renyvannnn@gmail.com"
+  nexus            : "https://ryannnice.github.io/nexus/"
 
   # 学术网站
   arxiv            : # 网址，更新为你自己的主页链接

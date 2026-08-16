@@ -1,0 +1,13 @@
+{% if page.alternate_url and page.language_switch_label %}
+<nav class="language-switcher" aria-label="{{ page.language_switch_aria_label | default: 'Language switcher' }}">
+  <a
+    class="language-switcher__link"
+    href="{{ page.alternate_url | relative_url }}"
+    hreflang="{{ page.alternate_lang }}"
+    lang="{{ page.alternate_lang }}"
+  >
+    <i class="fas fa-language" aria-hidden="true"></i>
+    <span>{{ page.language_switch_label }}</span>
+  </a>
+</nav>
+{% endif %}

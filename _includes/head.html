@@ -4,6 +4,10 @@
 
 {% include seo.html %}
 
+{% if page.alternate_url and page.alternate_lang %}
+<link rel="alternate" hreflang="{{ page.alternate_lang }}" href="{{ page.alternate_url | absolute_url }}">
+{% endif %}
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -22,4 +26,3 @@
 
 
 <script defer src="https://cloud.umami.is/script.js" data-website-id="c1a727a5-1a5d-43e1-ba7f-aff66efe4999"></script>
-

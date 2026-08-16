@@ -1,6 +1,26 @@
 {% include base_path %}
 
 {% assign author = site.author %}
+{% assign profile_bio = author.bio %}
+{% assign profile_location = author.location %}
+{% assign profile_employer = author.employer %}
+{% assign profile_contact_label = "Contact" %}
+{% assign profile_website_label = "Website" %}
+{% assign profile_email_label = "Email" %}
+{% assign profile_wechat_label = "WeChat" %}
+{% assign profile_close_label = "Close WeChat QR code" %}
+{% assign profile_wechat_alt = "WeChat QR code" %}
+{% if page.lang == "zh-CN" %}
+  {% assign profile_bio = author.bio_zh | default: author.bio %}
+  {% assign profile_location = author.location_zh | default: author.location %}
+  {% assign profile_employer = author.employer_zh | default: author.employer %}
+  {% assign profile_contact_label = "联系方式" %}
+  {% assign profile_website_label = "个人主页" %}
+  {% assign profile_email_label = "邮箱" %}
+  {% assign profile_wechat_label = "微信" %}
+  {% assign profile_close_label = "关闭微信二维码" %}
+  {% assign profile_wechat_alt = "微信二维码" %}
+{% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
 
@@ -15,24 +35,24 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if profile_bio %}<p class="author__bio">{{ profile_bio }}</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse" type="button">{{ profile_contact_label }}</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
-      {% if author.location %}
-        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+      {% if profile_location %}
+        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ profile_location }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+      {% if profile_employer %}
+        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ profile_employer }}</li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>Website</a></li>
+        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ profile_website_label }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ profile_email_label }}</a></li>
       {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
@@ -73,6 +93,9 @@
       {% endif %}      
       {% if author.github %}
         <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+      {% endif %}
+      {% if author.nexus %}
+        <li><a href="{{ author.nexus }}"><i class="fas fa-fw fa-users icon-pad-right" aria-hidden="true"></i>TEAM NEXUS</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
@@ -157,8 +180,8 @@
 
       {% if author.wechat %}
       <li>
-        <a href="#" onclick="document.getElementById('wechat-modal').style.display='block'">
-          <i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat
+        <a href="#wechat-modal" aria-controls="wechat-modal" onclick="document.getElementById('wechat-modal').style.display='block'; return false;">
+          <i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>{{ profile_wechat_label }}
         </a>
       </li>
       {% endif %}
@@ -168,9 +191,9 @@
 </div>
 
 
-<div id="wechat-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); text-align:center;">
+<div id="wechat-modal" role="dialog" aria-modal="true" aria-label="{{ profile_wechat_label }}" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.5); text-align:center;">
   <div style="margin-top:5%; display:inline-block; background:white; padding:20px; border-radius:8px;">
-    <span style="float:right; cursor:pointer; font-size:24px;" onclick="document.getElementById('wechat-modal').style.display='none'">&times;</span>
-    <img src="{{ '/images/WeChat.png' | prepend: base_path }}" alt="WeChat QR" style="max-width:300px; width:90%;">
+    <button type="button" aria-label="{{ profile_close_label }}" style="float:right; cursor:pointer; font-size:24px; border:0; background:transparent; color:#222;" onclick="document.getElementById('wechat-modal').style.display='none'">&times;</button>
+    <img src="{{ '/images/WeChat.png' | prepend: base_path }}" alt="{{ profile_wechat_alt }}" style="max-width:300px; width:90%;">
   </div>
 </div>

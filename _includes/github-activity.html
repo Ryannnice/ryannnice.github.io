@@ -1,15 +1,31 @@
 {% assign github_username = site.author.github | default: "Ryannnice" %}
 {% assign github_activity = site.data.github_contributions %}
+{% assign github_eyebrow = "Open source" %}
+{% assign github_title = "GitHub Activity" %}
+{% assign github_subtitle = "Contribution calendar · last 8 months" %}
+{% assign github_profile_label = "View " | append: github_username | append: " on GitHub" %}
+{% assign github_less_label = "Less" %}
+{% assign github_more_label = "More" %}
+{% assign github_legend_label = "Contribution intensity from less to more" %}
+{% if page.lang == "zh-CN" %}
+  {% assign github_eyebrow = "开源贡献" %}
+  {% assign github_title = "GitHub 动态" %}
+  {% assign github_subtitle = "贡献日历 · 近 8 个月" %}
+  {% assign github_profile_label = "在 GitHub 上查看 " | append: github_username %}
+  {% assign github_less_label = "少" %}
+  {% assign github_more_label = "多" %}
+  {% assign github_legend_label = "贡献强度由少到多" %}
+{% endif %}
 <section class="github-activity" aria-labelledby="github-activity-title">
   <header class="github-activity__header">
     <div>
-      <span class="github-activity__eyebrow">Open source</span>
+      <span class="github-activity__eyebrow">{{ github_eyebrow }}</span>
       <h2 class="github-activity__title" id="github-activity-title">
-        <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer">GitHub Activity</a>
+        <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer">{{ github_title }}</a>
       </h2>
-      <p class="github-activity__subtitle">Contribution calendar · last 8 months</p>
+      <p class="github-activity__subtitle">{{ github_subtitle }}</p>
     </div>
-    <a class="github-activity__mark" href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ github_username }} on GitHub">
+    <a class="github-activity__mark" href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ github_profile_label }}">
       <i class="fab fa-github" aria-hidden="true"></i>
     </a>
   </header>
@@ -17,22 +33,26 @@
   <div class="github-activity__chart">
     <img
       src="{{ '/images/github-contributions.svg' | relative_url }}"
-      alt="GitHub contribution calendar for {{ github_username }} from {{ github_activity.period_start }} to {{ github_activity.period_end }}"
+      alt="{% if page.lang == 'zh-CN' %}{{ github_username }} 从 {{ github_activity.period_start }} 至 {{ github_activity.period_end }} 的 GitHub 贡献日历{% else %}GitHub contribution calendar for {{ github_username }} from {{ github_activity.period_start }} to {{ github_activity.period_end }}{% endif %}"
       width="{{ github_activity.chart_width }}"
       height="{{ github_activity.chart_height }}"
       decoding="async">
   </div>
 
   <footer class="github-activity__footer">
-    <span><strong>{{ github_activity.year_total }}</strong> contributions in the last year · Updated {{ github_activity.updated_label }}</span>
-    <span class="github-activity__legend" aria-label="Contribution intensity from less to more">
-      <span>Less</span>
+    {% if page.lang == "zh-CN" %}
+      <span>过去一年共 <strong>{{ github_activity.year_total }}</strong> 次贡献 · 更新于 {{ github_activity.updated_at }}</span>
+    {% else %}
+      <span><strong>{{ github_activity.year_total }}</strong> contributions in the last year · Updated {{ github_activity.updated_label }}</span>
+    {% endif %}
+    <span class="github-activity__legend" aria-label="{{ github_legend_label }}">
+      <span>{{ github_less_label }}</span>
       <i class="github-activity__level github-activity__level--0" aria-hidden="true"></i>
       <i class="github-activity__level github-activity__level--1" aria-hidden="true"></i>
       <i class="github-activity__level github-activity__level--2" aria-hidden="true"></i>
       <i class="github-activity__level github-activity__level--3" aria-hidden="true"></i>
       <i class="github-activity__level github-activity__level--4" aria-hidden="true"></i>
-      <span>More</span>
+      <span>{{ github_more_label }}</span>
     </span>
   </footer>
 </section>

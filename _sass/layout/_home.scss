@@ -1,5 +1,113 @@
 /* Homepage-specific cards and embeds. */
 
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.5rem;
+}
+
+.page__content .language-switcher__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  color: var(--global-link-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  background: var(--global-bg-color);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--global-link-color-hover);
+    text-decoration: none;
+    border-color: var(--global-link-color-hover);
+  }
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.25rem 0 1.75rem;
+}
+
+.page__content .profile-actions .btn {
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+  }
+}
+
+.page__content .profile-actions .btn--inverse {
+  color: var(--global-text-color) !important;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff !important;
+    background-color: mix(white, #000, 20%);
+    border-color: var(--global-text-color-light) !important;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project-card {
+  min-width: 0;
+  padding: 1.1rem 1.2rem;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(31, 35, 40, 0.06);
+
+  &--featured {
+    @include breakpoint($medium) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page__content .project-card__title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  border: 0;
+}
+
+.page__content .project-card__meta {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--global-text-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.page__content .project-card__metrics {
+  margin-top: 0.8rem;
+  padding-top: 0.75rem;
+  color: var(--global-text-color);
+  font-size: 0.78rem;
+  border-top: 1px solid var(--global-border-color);
+}
+
 .github-activity {
   margin: 1.75rem 0 2rem;
   padding: 1.1rem 1.2rem 0.9rem;
@@ -135,6 +243,10 @@
 }
 
 html[data-theme="dark"] {
+  .project-card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
   .github-activity {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   }

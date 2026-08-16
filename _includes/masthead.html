@@ -1,4 +1,12 @@
 {% include base_path %}
+{% assign masthead_navigation = site.navigation.main %}
+{% assign masthead_home_label = site.title %}
+{% assign masthead_home_url = "/" %}
+{% if page.lang == "zh-CN" %}
+  {% assign masthead_navigation = site.navigation.zh %}
+  {% assign masthead_home_label = "主页" %}
+  {% assign masthead_home_url = "/zh/" %}
+{% endif %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -16,8 +24,8 @@
               >
             </a>
           </li>
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.navigation.main %}
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ masthead_home_url | prepend: base_path }}">{{ masthead_home_label }}</a></li>
+          {% for link in masthead_navigation %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
