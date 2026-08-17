@@ -23,9 +23,7 @@ hide_title: true
 
 本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
 
-欢迎计算机科学各方向的交流与合作。
-
-[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
+欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 ## 精选 AI 系统项目 {#projects-renyuan}
 

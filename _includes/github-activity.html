@@ -23,15 +23,17 @@
 <section class="github-activity{% if include.compact %} github-activity--compact{% endif %}" aria-labelledby="{{ github_activity_title_id }}">
   <header class="github-activity__header">
     <div>
-      <span class="github-activity__eyebrow">{{ github_eyebrow }}</span>
+      {% unless include.compact %}<span class="github-activity__eyebrow">{{ github_eyebrow }}</span>{% endunless %}
       <h2 class="github-activity__title" id="{{ github_activity_title_id }}">
         <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer">{{ github_title }}</a>
       </h2>
-      <p class="github-activity__subtitle">{{ github_subtitle }}</p>
+      {% unless include.compact %}<p class="github-activity__subtitle">{{ github_subtitle }}</p>{% endunless %}
     </div>
-    <a class="github-activity__mark" href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ github_profile_label }}">
-      <i class="fab fa-github" aria-hidden="true"></i>
-    </a>
+    {% unless include.compact %}
+      <a class="github-activity__mark" href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer" aria-label="{{ github_profile_label }}">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+    {% endunless %}
   </header>
 
   <div class="github-activity__chart">
@@ -43,20 +45,22 @@
       decoding="async">
   </div>
 
-  <footer class="github-activity__footer">
-    {% if page.lang == "zh-CN" %}
-      <span>过去一年共 <strong>{{ github_activity.year_total }}</strong> 次贡献 · 更新于 {{ github_activity.updated_at }}</span>
-    {% else %}
-      <span><strong>{{ github_activity.year_total }}</strong> contributions in the last year · Updated {{ github_activity.updated_label }}</span>
-    {% endif %}
-    <span class="github-activity__legend" aria-label="{{ github_legend_label }}">
-      <span>{{ github_less_label }}</span>
-      <i class="github-activity__level github-activity__level--0" aria-hidden="true"></i>
-      <i class="github-activity__level github-activity__level--1" aria-hidden="true"></i>
-      <i class="github-activity__level github-activity__level--2" aria-hidden="true"></i>
-      <i class="github-activity__level github-activity__level--3" aria-hidden="true"></i>
-      <i class="github-activity__level github-activity__level--4" aria-hidden="true"></i>
-      <span>{{ github_more_label }}</span>
-    </span>
-  </footer>
+  {% unless include.compact %}
+    <footer class="github-activity__footer">
+      {% if page.lang == "zh-CN" %}
+        <span>过去一年共 <strong>{{ github_activity.year_total }}</strong> 次贡献 · 更新于 {{ github_activity.updated_at }}</span>
+      {% else %}
+        <span><strong>{{ github_activity.year_total }}</strong> contributions in the last year · Updated {{ github_activity.updated_label }}</span>
+      {% endif %}
+      <span class="github-activity__legend" aria-label="{{ github_legend_label }}">
+        <span>{{ github_less_label }}</span>
+        <i class="github-activity__level github-activity__level--0" aria-hidden="true"></i>
+        <i class="github-activity__level github-activity__level--1" aria-hidden="true"></i>
+        <i class="github-activity__level github-activity__level--2" aria-hidden="true"></i>
+        <i class="github-activity__level github-activity__level--3" aria-hidden="true"></i>
+        <i class="github-activity__level github-activity__level--4" aria-hidden="true"></i>
+        <span>{{ github_more_label }}</span>
+      </span>
+    </footer>
+  {% endunless %}
 </section>

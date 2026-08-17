@@ -32,9 +32,7 @@ My current work spans **AI infrastructure**, **AI agents**, and **LLM post-train
 
 During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
 
-I welcome collaborations across computer science.
-
-[**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
+I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 ## Selected AI Systems Projects {#projects-renyuan}
 
