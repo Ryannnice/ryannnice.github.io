@@ -9,6 +9,7 @@ alternate_lang: en
 language_switch_label: EN
 language_switch_aria_label: Switch to English
 author_profile: true
+hide_title: true
 ---
 
 # Renyuan LIU（刘<ruby>稔<rt>rěn</rt></ruby>远）
@@ -26,85 +27,6 @@ author_profile: true
 [**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 {% include github-activity.html %}
-
-
-## 最新动态 {#news}
-
-* [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)，一个学习小组。
-
-* [2026 年 6 月] 本科毕业设计获广州大学*创新奖*，排名全校第 3。
-
-* [2026 年 3 月 19 日] 加入[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)担任算法实习生，从事 AI Agent 与大语言模型算法研发。
-
-* [2026 年 2 月 27 日] 获[香港科技大学（广州）数据科学与分析学域“以数据为中心的人工智能”硕士项目录取](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf)。
-
-* [2026 年 2 月 26 日] 在约克大学评选中排名第一，获[约克大学与国家留学基金管理委员会联合资助博士奖学金提名](/assets/York_CSC.png)。
-
-* [2026 年 1 月 19 日] 获[香港中文大学（深圳）人工智能学院人工智能研究型硕士（MPhil）项目录取](/assets/Offer_CUHKSZ_MPhil_AI.pdf)。
-
-* [2025 年 12 月 17 日] 获广州大学二等奖学金（前 8%）。
-
-* [2025 年 11 月 27 日] 获[英国约克大学计算机科学博士项目录取](/assets/Offer_UoY_PhD_CS.pdf)。
-
-* [2025 年 7 月 28 日] 论文被《电子学报》录用（CCF 中文 A 类）。
-
-* [2025 年 7 月 22 日] 论文被 *Neurocomputing* 录用（JCR Q1、SCI 二区、IF = 6.5）。
-
-* [2025 年 7 月 18 日] 在谢菲尔德大学举行的 Living Machines 2025 会议上完成 30 分钟口头报告。
-
-* [2025 年 7 月 11 日] 海报被 TAROS 2025 接收。
-
-* [2025 年 6 月 9 日] 论文被 Living Machines 2025 接收。
-
-* [2025 年 4 月 1 日] 论文被 IJCNN 2025 接收（CCF-C，录用率 38%）。
-
-
-## 研究兴趣 {#research-interest}
-
-我关注从模型行为到高效部署的完整链路：
-
-* **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
-* **AI Agent：**工具检索与规划、多轮上下文编排、记忆、评测和具身决策；
-* **大语言模型后训练：**监督微调、偏好优化、参数高效微调和以数据为中心的评测；
-* **机器视觉（本科阶段）：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
-
-我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
-
-面向神经具身微型机器人 [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) 的部分代码：
-
-* [果蝇视觉运动启发的 Attention-LPLC2 模型](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c)（独立完成，约 2,000 行 C 代码）；
-* [多注意力 LPLC2（mLPLC2）神经网络模型](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)（独立完成，约 3,000 行 C/C++ 代码）；
-* [蝗虫视觉启发的 Optimized-LGMD 模型](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c)（独立完成，约 1,000 行 C 代码）。
-
-
-## 经历 {#experience-renyuan}
-
-- **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
-  2026 年 9 月 – 2028 年 6 月（预计）<br>
-  **人工智能研究型硕士生（MPhil）**<br>
-  导师：[胡君杰教授](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
-
-- **[香港大学](https://www.hku.hk/)**，中国香港<br>
-  2026 年 7 月<br>
-  **暑期学校学员**
-
-- **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
-  2026 年 3 月 – 2026 年 6 月<br>
-  **算法实习生**<br>
-  从事 AI 基础设施、加速器算子优化、大语言模型语义路由与 AI Agent 应用研发。
-
-- **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
-  2025 年 6 月 – 2025 年 9 月<br>
-  **访问学生**<br>
-  **实验室：**计算自主学习系统实验室，实时与分布式系统研究组，计算机科学系<br>
-  导师：[刘鹏程教授](https://sites.google.com/view/pliu)<br>
-  [\[证明材料\]](/assets/Evidence_York.pdf)
-
-- **[香港大学](https://www.hku.hk/)/[澳门大学](https://www.um.edu.mo/)**，中国香港/澳门<br>
-  2023 年 11 月<br>
-  **跨学科项目组长**<br>
-  **GPA：97.50/100.00；荣誉：**获胜团队杰出表现嘉奖信<br>
-  [\[证明材料\]](/assets/Evidence_HKU.pdf)
 
 
 ## 精选 AI 系统项目 {#projects-renyuan}
@@ -187,6 +109,85 @@ author_profile: true
     </details>
   </article>
 </div>
+
+
+## 最新动态 {#news}
+
+* [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)，一个学习小组。
+
+* [2026 年 6 月] 本科毕业设计获广州大学*创新奖*，排名全校第 3。
+
+* [2026 年 3 月 19 日] 加入[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)担任算法实习生，从事 AI Agent 与大语言模型算法研发。
+
+* [2026 年 2 月 27 日] 获[香港科技大学（广州）数据科学与分析学域“以数据为中心的人工智能”硕士项目录取](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf)。
+
+* [2026 年 2 月 26 日] 在约克大学评选中排名第一，获[约克大学与国家留学基金管理委员会联合资助博士奖学金提名](/assets/York_CSC.png)。
+
+* [2026 年 1 月 19 日] 获[香港中文大学（深圳）人工智能学院人工智能研究型硕士（MPhil）项目录取](/assets/Offer_CUHKSZ_MPhil_AI.pdf)。
+
+* [2025 年 12 月 17 日] 获广州大学二等奖学金（前 8%）。
+
+* [2025 年 11 月 27 日] 获[英国约克大学计算机科学博士项目录取](/assets/Offer_UoY_PhD_CS.pdf)。
+
+* [2025 年 7 月 28 日] 论文被《电子学报》录用（CCF 中文 A 类）。
+
+* [2025 年 7 月 22 日] 论文被 *Neurocomputing* 录用（JCR Q1、SCI 二区、IF = 6.5）。
+
+* [2025 年 7 月 18 日] 在谢菲尔德大学举行的 Living Machines 2025 会议上完成 30 分钟口头报告。
+
+* [2025 年 7 月 11 日] 海报被 TAROS 2025 接收。
+
+* [2025 年 6 月 9 日] 论文被 Living Machines 2025 接收。
+
+* [2025 年 4 月 1 日] 论文被 IJCNN 2025 接收（CCF-C，录用率 38%）。
+
+
+## 研究兴趣 {#research-interest}
+
+我关注从模型行为到高效部署的完整链路：
+
+* **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
+* **AI Agent：**工具检索与规划、多轮上下文编排、记忆、评测和具身决策；
+* **大语言模型后训练：**监督微调、偏好优化、参数高效微调和以数据为中心的评测；
+* **机器视觉（本科阶段）：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
+
+我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
+
+面向神经具身微型机器人 [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) 的部分代码：
+
+* [果蝇视觉运动启发的 Attention-LPLC2 模型](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c)（独立完成，约 2,000 行 C 代码）；
+* [多注意力 LPLC2（mLPLC2）神经网络模型](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)（独立完成，约 3,000 行 C/C++ 代码）；
+* [蝗虫视觉启发的 Optimized-LGMD 模型](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c)（独立完成，约 1,000 行 C 代码）。
+
+
+## 经历 {#experience-renyuan}
+
+- **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
+  2026 年 9 月 – 2028 年 6 月（预计）<br>
+  **人工智能研究型硕士生（MPhil）**<br>
+  导师：[胡君杰教授](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
+
+- **[香港大学](https://www.hku.hk/)**，中国香港<br>
+  2026 年 7 月<br>
+  **暑期学校学员**
+
+- **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
+  2026 年 3 月 – 2026 年 6 月<br>
+  **算法实习生**<br>
+  从事 AI 基础设施、加速器算子优化、大语言模型语义路由与 AI Agent 应用研发。
+
+- **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
+  2025 年 6 月 – 2025 年 9 月<br>
+  **访问学生**<br>
+  **实验室：**计算自主学习系统实验室，实时与分布式系统研究组，计算机科学系<br>
+  导师：[刘鹏程教授](https://sites.google.com/view/pliu)<br>
+  [\[证明材料\]](/assets/Evidence_York.pdf)
+
+- **[香港大学](https://www.hku.hk/)/[澳门大学](https://www.um.edu.mo/)**，中国香港/澳门<br>
+  2023 年 11 月<br>
+  **跨学科项目组长**<br>
+  **GPA：97.50/100.00；荣誉：**获胜团队杰出表现嘉奖信<br>
+  [\[证明材料\]](/assets/Evidence_HKU.pdf)
 
 
 ## 在审稿件 {#publications-renyuan}

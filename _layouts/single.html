@@ -15,9 +15,11 @@ layout: default
 
     <div class="page__inner-wrap">
       {% if page.title %}
-        <header>
-          <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
-        </header>
+        {% unless page.hide_title %}
+          <header>
+            <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+          </header>
+        {% endunless %}
       {% endif %}
 
       <section class="page__content" itemprop="text">
