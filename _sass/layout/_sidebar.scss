@@ -157,6 +157,67 @@
   }
 }
 
+.author__github-activity {
+  display: none;
+
+  @include breakpoint($large) {
+    display: block;
+    margin-top: -10px;
+  }
+}
+
+.sidebar .github-activity--compact {
+  margin: 0 0 1rem;
+  padding: 0.65rem;
+  border-radius: 8px;
+  box-shadow: none;
+
+  .github-activity__header {
+    gap: 0.45rem;
+  }
+
+  .github-activity__eyebrow,
+  .github-activity__subtitle,
+  .github-activity__legend {
+    display: none;
+  }
+
+  .github-activity__title {
+    margin: 0;
+    font-family: $sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+
+  .github-activity__mark {
+    width: 1.65rem;
+    height: 1.65rem;
+
+    i {
+      font-size: 0.9rem;
+    }
+  }
+
+  .github-activity__chart {
+    margin: 0.55rem 0 0.45rem;
+    padding: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .github-activity__footer {
+    display: block;
+    padding-top: 0.45rem;
+    font-size: 0.57rem;
+    line-height: 1.35;
+  }
+}
+
 .author__urls-wrapper {
   position: relative;
   display: table-cell;

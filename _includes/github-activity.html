@@ -7,6 +7,10 @@
 {% assign github_less_label = "Less" %}
 {% assign github_more_label = "More" %}
 {% assign github_legend_label = "Contribution intensity from less to more" %}
+{% assign github_activity_title_id = "github-activity-title" %}
+{% if include.compact %}
+  {% assign github_activity_title_id = "github-activity-title-compact" %}
+{% endif %}
 {% if page.lang == "zh-CN" %}
   {% assign github_eyebrow = "开源贡献" %}
   {% assign github_title = "GitHub 动态" %}
@@ -16,11 +20,11 @@
   {% assign github_more_label = "多" %}
   {% assign github_legend_label = "贡献强度由少到多" %}
 {% endif %}
-<section class="github-activity" aria-labelledby="github-activity-title">
+<section class="github-activity{% if include.compact %} github-activity--compact{% endif %}" aria-labelledby="{{ github_activity_title_id }}">
   <header class="github-activity__header">
     <div>
       <span class="github-activity__eyebrow">{{ github_eyebrow }}</span>
-      <h2 class="github-activity__title" id="github-activity-title">
+      <h2 class="github-activity__title" id="{{ github_activity_title_id }}">
         <a href="https://github.com/{{ github_username }}" target="_blank" rel="noopener noreferrer">{{ github_title }}</a>
       </h2>
       <p class="github-activity__subtitle">{{ github_subtitle }}</p>

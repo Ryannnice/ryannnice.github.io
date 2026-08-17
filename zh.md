@@ -9,6 +9,7 @@ alternate_lang: en
 language_switch_label: EN
 language_switch_aria_label: Switch to English
 author_profile: true
+github_activity_sidebar: true
 hide_title: true
 ---
 
@@ -25,9 +26,6 @@ hide_title: true
 欢迎计算机科学各方向的交流与合作。
 
 [**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
-
-{% include github-activity.html %}
-
 
 ## 精选 AI 系统项目 {#projects-renyuan}
 

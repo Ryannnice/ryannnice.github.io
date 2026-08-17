@@ -9,6 +9,7 @@ alternate_lang: zh-CN
 language_switch_label: 中文
 language_switch_aria_label: Switch to Chinese
 author_profile: true
+github_activity_sidebar: true
 hide_title: true
 redirect_from: 
   - /about/
@@ -34,9 +35,6 @@ During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing
 I welcome collaborations across computer science.
 
 [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
-
-{% include github-activity.html %}
-
 
 ## Selected AI Systems Projects {#projects-renyuan}
 

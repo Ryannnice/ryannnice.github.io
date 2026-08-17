@@ -189,7 +189,7 @@
   text-transform: uppercase;
 }
 
-.page__content .github-activity__title {
+.github-activity__title {
   margin: 0;
   padding: 0;
   border: 0;
@@ -203,13 +203,13 @@
   }
 }
 
-.page__content .github-activity__subtitle {
+.github-activity__subtitle {
   margin: 0.2rem 0 0;
   color: var(--global-text-color-light);
   font-size: 0.75rem;
 }
 
-.page__content .github-activity__mark {
+.github-activity__mark {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -301,11 +301,11 @@ html[data-theme="dark"] {
   }
 
   .github-activity__eyebrow,
-  .page__content .github-activity__mark {
+  .github-activity__mark {
     color: #9fc5f1;
   }
 
-  .page__content .github-activity__mark {
+  .github-activity__mark {
     background: #30363d;
 
     &:hover {
