@@ -36,11 +36,6 @@
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if profile_bio %}<p class="author__bio">{{ profile_bio }}</p>{% endif %}
-    {% if page.github_activity_sidebar %}
-      <div class="author__github-activity">
-        {% include github-activity.html compact=true %}
-      </div>
-    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
@@ -193,6 +188,12 @@
       
     </ul>
   </div>
+
+  {% if page.github_activity_sidebar %}
+    <div class="author__github-activity">
+      {% include github-activity.html compact=true %}
+    </div>
+  {% endif %}
 </div>
 
 

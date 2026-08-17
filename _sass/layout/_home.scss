@@ -12,7 +12,7 @@
   line-height: 1.2;
   text-decoration: none;
   border: 1px solid var(--global-border-color);
-  border-radius: 999px;
+  border-radius: 0;
   background: var(--global-bg-color);
 
   &::before {
@@ -40,7 +40,7 @@
   overflow: hidden;
   background: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 10px;
+  border-radius: 0;
   box-shadow: 0 8px 24px rgba(31, 35, 40, 0.06);
 
   p:last-child {
