@@ -86,7 +86,7 @@
     overflow: hidden;
     background: #fff;
     border: 1px solid var(--global-border-color);
-    border-radius: 8px;
+    border-radius: 0;
   }
 
   img {
@@ -95,6 +95,7 @@
     height: auto;
     margin: 0;
     border: 0;
+    border-radius: 0;
   }
 
   figcaption {

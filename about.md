@@ -26,11 +26,7 @@ redirect_from:
 ---
 
 Nice to meet you here!
-I am a **Research Master's (MPhil) student in Artificial Intelligence** at the School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, under the supervision of [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153).
-
-My current work spans **AI infrastructure**, **AI agents**, and **LLM post-training**, with a continuing interest in embodied intelligence and machine vision. I care about building efficient, reliable systems and turning research ideas into working implementations.
-
-During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
+I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (**School of Artificial Intelligence**) and [Prof. Akang Wang](https://github.com/akangw) (**School of Data Science**).
 
 I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
@@ -119,7 +115,7 @@ I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/as
 
 * [Jun. 2026] Founded [*TEAM NEXUS*](https://ryannnice.github.io/nexus/), a learning group.
 
-* [Jun. 2026] My undergraduate thesis received an *Innovation Award* and ranked 3rd university-wide at *Guangzhou University*.
+* [Jun. 2026] My undergraduate thesis received an *Innovation Award* and ranked 3rd university-wide.
 
 * [Mar 19th, 2026] Joined [*Shenzhen Research Institute of Big Data (SRIBD)*](https://www.sribd.cn/en) as an *Intern*, working on AI agent development and large language model algorithms.
 
@@ -148,12 +144,14 @@ I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/as
 
 ## Research Interest {#research-interest}
 
-I am interested in the full path from model behavior to efficient deployment:
+My research interests follow the full path from model behavior to efficient deployment. My current work focuses on **AI infrastructure**, **AI agents**, and **LLM post-training**, while I continue to explore embodied intelligence and machine vision. I care about building efficient, reliable systems and turning research ideas into working implementations.
 
 * **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
 * **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, evaluation, and embodied decision-making;
 * **LLM Post-Training:** supervised fine-tuning, preference optimization, parameter-efficient fine-tuning, and data-centric evaluation;
 * **Machine Vision (Undergraduate):** neural models of insect vision for real-time collision detection and robotic navigation.
+
+During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
 
 My undergraduate research focused on **brain-inspired neural networks** and **machine vision**. I modeled insect visual circuits for robust motion perception and translated them into collision-detection systems for robots. I enjoy hands-on coding, debugging, profiling, and end-to-end system implementation. My experimental platforms include *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.
 
@@ -169,7 +167,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
   Sept. 2026 - Jun. 2028 (Expected)  
   **Research Master's (MPhil) Student in Artificial Intelligence**<br>
-  Supervisor: [Prof. Junjie Hu](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
+  Supervisors: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Prof. Akang Wang](https://github.com/akangw) (School of Data Science)
   
 
 - **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>

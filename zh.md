@@ -17,11 +17,7 @@ hide_title: true
 ---
 
 你好，很高兴在这里认识你！
-我是香港中文大学（深圳）人工智能学院的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)。
-
-我目前的工作涵盖 **AI 基础设施（AI Infrastructure）**、**AI Agent** 与**大语言模型后训练（LLM Post-Training）**，同时持续关注具身智能与机器视觉。我希望构建高效、可靠的 AI 系统，并把研究想法落实为真正可运行的系统。
-
-本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
+我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（**人工智能学院**）与[王阿康老师](https://github.com/akangw)（**数据科学学院**）。
 
 欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
@@ -111,7 +107,7 @@ hide_title: true
 
 * [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)，一个学习小组。
 
-* [2026 年 6 月] 本科毕业设计获广州大学*创新奖*，排名全校第 3。
+* [2026 年 6 月] 本科毕业设计获*创新奖*，排名全校第 3。
 
 * [2026 年 3 月 19 日] 加入[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)担任算法实习生，从事 AI Agent 与大语言模型算法研发。
 
@@ -140,12 +136,14 @@ hide_title: true
 
 ## 研究兴趣 {#research-interest}
 
-我关注从模型行为到高效部署的完整链路：
+我的研究兴趣贯穿从模型行为到高效部署的完整链路。当前工作聚焦 **AI 基础设施（AI Infrastructure）**、**AI Agent** 与**大语言模型后训练（LLM Post-Training）**，同时持续探索具身智能与机器视觉。我关注高效、可靠的 AI 系统，也希望将研究想法落实为真正可运行的系统。
 
 * **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
 * **AI Agent：**工具检索与规划、多轮上下文编排、记忆、评测和具身决策；
 * **大语言模型后训练：**监督微调、偏好优化、参数高效微调和以数据为中心的评测；
 * **机器视觉（本科阶段）：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
+
+本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
 
 我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
 
@@ -161,7 +159,7 @@ hide_title: true
 - **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 9 月 – 2028 年 6 月（预计）<br>
   **人工智能研究型硕士生（MPhil）**<br>
-  导师：[胡君杰教授](https://sse.cuhk.edu.cn/en/faculty/hujunjie)
+  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）、[王阿康老师](https://github.com/akangw)（数据科学学院）
 
 - **[香港大学](https://www.hku.hk/)**，中国香港<br>
   2026 年 7 月<br>
