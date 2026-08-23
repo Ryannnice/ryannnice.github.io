@@ -17,7 +17,7 @@ hide_title: true
 ---
 
 你好，很高兴在这里认识你！
-我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（**人工智能学院**）与[王阿康老师](https://github.com/akangw)（**数据科学学院**）。
+我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）与[王阿康博士](https://github.com/akangw)（数据科学学院）。
 
 欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
@@ -159,7 +159,7 @@ hide_title: true
 - **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 9 月 – 2028 年 6 月（预计）<br>
   **人工智能研究型硕士生（MPhil）**<br>
-  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）、[王阿康老师](https://github.com/akangw)（数据科学学院）
+  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）、[王阿康博士](https://github.com/akangw)（数据科学学院）
 
 - **[香港大学](https://www.hku.hk/)**，中国香港<br>
   2026 年 7 月<br>

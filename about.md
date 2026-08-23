@@ -26,7 +26,7 @@ redirect_from:
 ---
 
 Nice to meet you here!
-I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (**School of Artificial Intelligence**) and [Prof. Akang Wang](https://github.com/akangw) (**School of Data Science**).
+I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Dr. Akang Wang](https://github.com/akangw) (School of Data Science).
 
 I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
@@ -167,7 +167,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
   Sept. 2026 - Jun. 2028 (Expected)  
   **Research Master's (MPhil) Student in Artificial Intelligence**<br>
-  Supervisors: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Prof. Akang Wang](https://github.com/akangw) (School of Data Science)
+  Supervisors: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Dr. Akang Wang](https://github.com/akangw) (School of Data Science)
   
 
 - **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
