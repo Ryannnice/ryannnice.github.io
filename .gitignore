@@ -2,8 +2,11 @@
 _site/
 .sass-cache/
 
-# Ignore the directory for local files during development
+# Local development files and private profile materials
 local/
+
+# Private source image used in local profile materials
+/images/截屏2026-10-09 20.53.52.png
 
 # Ignore the Gemfile that is generated
 Gemfile.lock
