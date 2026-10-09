@@ -192,6 +192,13 @@
       margin: 0;
     }
   }
+
+  .github-activity__updated {
+    margin: 0.3rem 0 0;
+    color: var(--global-text-color-light);
+    font-size: 0.6rem;
+    line-height: 1.4;
+  }
 }
 
 html[data-theme="dark"] .sidebar .github-activity--compact .github-activity__chart img {

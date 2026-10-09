@@ -38,12 +38,19 @@
 
   <div class="github-activity__chart">
     <img
-      src="{{ '/images/github-contributions.svg' | relative_url }}"
+      src="{{ '/images/github-contributions.svg' | relative_url }}?v={{ github_activity.chart_version | default: github_activity.updated_at }}"
       alt="{% if page.lang == 'zh-CN' %}{{ github_username }} 从 {{ github_activity.period_start }} 至 {{ github_activity.period_end }} 的 GitHub 贡献日历{% else %}GitHub contribution calendar for {{ github_username }} from {{ github_activity.period_start }} to {{ github_activity.period_end }}{% endif %}"
       width="{{ github_activity.chart_width }}"
       height="{{ github_activity.chart_height }}"
       decoding="async">
   </div>
+
+  {% if include.compact %}
+    <p class="github-activity__updated">
+      {% if page.lang == "zh-CN" %}更新于{% else %}Updated{% endif %}
+      <time datetime="{{ github_activity.updated_at }}">{% if page.lang == "zh-CN" %}{{ github_activity.updated_at }}{% else %}{{ github_activity.updated_label }}{% endif %}</time>
+    </p>
+  {% endif %}
 
   {% unless include.compact %}
     <footer class="github-activity__footer">

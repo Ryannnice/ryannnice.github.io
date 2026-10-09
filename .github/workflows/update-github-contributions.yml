@@ -2,7 +2,7 @@ name: Update GitHub contribution chart
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,9 +15,13 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out site
         uses: actions/checkout@v4
+
+      - name: Verify contribution parser
+        run: python3 -m unittest discover -s scripts -p 'test_github_contributions.py'
 
       - name: Generate contribution chart
         run: python3 scripts/update_github_contributions.py --username Ryannnice

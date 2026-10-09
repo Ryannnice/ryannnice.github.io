@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate a self-hosted GitHub contribution chart from GitHub's public page."""
+"""Generate a chart from GitHub's public calendar, including opted-in private counts."""
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -24,6 +25,7 @@ TOP_MARGIN = 20
 CHART_HEIGHT = 104
 COLORS = ("#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329")
 COUNT_PATTERN = re.compile(r"([\d,]+)\s+contributions?", re.IGNORECASE)
+ZERO_COUNT_PATTERN = re.compile(r"^\s*No contributions?\b", re.IGNORECASE)
 
 
 @dataclass
@@ -65,9 +67,10 @@ class ContributionHTMLParser(HTMLParser):
             return
         tooltip = "".join(self._tooltip_text)
         match = COUNT_PATTERN.search(tooltip)
-        self._days_by_id[self._tooltip_target].count = (
-            int(match.group(1).replace(",", "")) if match else 0
-        )
+        if match:
+            self._days_by_id[self._tooltip_target].count = int(match.group(1).replace(",", ""))
+        elif ZERO_COUNT_PATTERN.search(tooltip):
+            self._days_by_id[self._tooltip_target].count = 0
         self._tooltip_target = None
         self._tooltip_text = []
 
@@ -93,7 +96,7 @@ def fetch_contributions(username: str) -> str:
     raise AssertionError("unreachable")
 
 
-def parse_contributions(source: str) -> list[ContributionDay]:
+def parse_contributions(source: str, *, today: date | None = None) -> list[ContributionDay]:
     parser = ContributionHTMLParser()
     parser.feed(source)
     days = sorted(parser.days, key=lambda item: item.day)
@@ -103,6 +106,13 @@ def parse_contributions(source: str) -> list[ContributionDay]:
         raise ValueError("GitHub returned duplicate contribution dates")
     if any(item.level not in range(5) or item.count is None for item in days):
         raise ValueError("GitHub returned an incomplete contribution calendar")
+    if any((item.level == 0) != (item.count == 0) for item in days):
+        raise ValueError("GitHub contribution counts disagree with their activity levels")
+    if any((current.day - previous.day).days != 1 for previous, current in zip(days, days[1:])):
+        raise ValueError("GitHub returned a contribution calendar with missing dates")
+    today = today or datetime.now(timezone.utc).date()
+    if not today - timedelta(days=1) <= days[-1].day <= today:
+        raise ValueError(f"GitHub returned an outdated or future calendar ending on {days[-1].day}")
     return days
 
 
@@ -154,6 +164,7 @@ def build_svg(days: list[ContributionDay], username: str, months: int) -> tuple[
             f'data-count="{item.count}" data-level="{item.level}" />'
         )
     lines.extend(("  </g>", "</svg>", ""))
+    svg = "\n".join(lines)
 
     display_total = sum(item.count or 0 for item in days if period_start <= item.day <= last_day)
     metadata: dict[str, object] = {
@@ -167,8 +178,9 @@ def build_svg(days: list[ContributionDay], username: str, months: int) -> tuple[
         "period_end": last_day.isoformat(),
         "chart_width": chart_width,
         "chart_height": CHART_HEIGHT,
+        "chart_version": hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12],
     }
-    return "\n".join(lines), metadata
+    return svg, metadata
 
 
 def write_if_changed(path: Path, content: str) -> bool:

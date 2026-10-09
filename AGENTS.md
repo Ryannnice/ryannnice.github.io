@@ -23,7 +23,9 @@ This repository is a Jekyll/GitHub Pages personal academic site. Keep changes sm
 
 ## Generated GitHub activity
 
-`scripts/update_github_contributions.py` fetches the public contribution calendar for the configured GitHub user and regenerates `images/github-contributions.svg` plus `_data/github_contributions.json`. The daily `.github/workflows/update-github-contributions.yml` workflow commits these two outputs when they change. Do not hand-edit either generated file.
+`scripts/update_github_contributions.py` fetches the public contribution calendar for the configured GitHub user and regenerates `images/github-contributions.svg` plus `_data/github_contributions.json`. The `.github/workflows/update-github-contributions.yml` workflow runs every six hours and commits these two outputs when they change. Do not hand-edit either generated file.
+
+Private activity is included only when the GitHub profile's **Contribution settings → Private contributions** option is enabled. This exposes anonymous counts, not repository details. If the public calendar differs from the signed-in profile, check that setting before changing the parser or adding credentials. The metadata's `chart_version` hashes the SVG so browsers refresh the image when its contents change. Run `python3 -m unittest discover -s scripts -p 'test_github_contributions.py'` when changing the generator.
 
 When the learning log or its mappings change, run the generators in this order:
 
