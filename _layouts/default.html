@@ -14,10 +14,13 @@ layout: compress
 
   <body>
 
+    <a class="skip-to-content" href="#main">{% if page.lang == "zh-CN" %}跳到正文{% else %}Skip to content{% endif %}</a>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     {{ content }}
+
+    {% include media-preview.html %}
 
     <div class="page__footer">
       <footer>

@@ -24,7 +24,7 @@ $success-color              : #62c462;
 $warning-color              : #f89406;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
+$border-radius              : 0;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
@@ -35,20 +35,31 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
 html[data-theme="dark"] {
+    color-scheme: dark;
     --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$dark-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$background-lighter};
+    --global-bg-color                   : #111827;
+    --global-surface-color              : #1b2433;
+    --global-surface-muted-color        : #242f40;
+    --global-footer-bg-color            : #1b2433;
+    --global-border-color               : #364152;
+    --global-dark-border-color          : #738297;
+    --global-code-background-color      : #1b2433;
+    --global-code-text-color            : #dbe6f3;
+    --global-fig-caption-color          : #aab6c5;
+    --global-link-color                 : #80caff;
+    --global-link-color-hover           : #b7e3ff;
+    --global-link-color-visited         : #c4b5fd;
+    --global-focus-color                : #80caff;
+    --global-masthead-link-color        : #dbe6f3;
+    --global-masthead-link-color-hover  : #80caff;
+    --global-text-color                 : #e5edf5;
+    --global-text-color-light           : #aab6c5;
+    --global-thead-color                : #242f40;
+    --syntax-comment                   : #aab6c5;
+    --syntax-keyword                   : #a9ce78;
+    --syntax-constant                  : #f0b27a;
+    --syntax-error                     : #ff959c;
+    --syntax-function                  : #80caff;
+    --syntax-string                    : #89d8c6;
+    --syntax-builtin                   : #ebcc83;
 }

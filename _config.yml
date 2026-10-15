@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "HOME"
 title_separator          : "-"
 name                     : &name "Renyuan LIU"
-description              : &description "Renyuan Liu's personal site: AI systems, agents, LLM post-training, AI infrastructure, and bio-inspired machine vision."
+description              : &description "Renyuan Liu's personal site: AI infrastructure and AI agents."
 url                      : https://ryannnice.github.io # 站点主域名与协议，例如 "https://[你的 GitHub 用户名].github.io"
 baseurl                  : "" # 站点子路径，例如 "/blog"
 repository               : "Ryannnice/ryannnice.github.io"
@@ -166,10 +166,12 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
+  - AGENTS.md
   - CHANGELOG
   - Capfile
   - config
   - Dockerfile
+  - docs
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
@@ -179,6 +181,7 @@ exclude:
   - node_modules
   - Rakefile
   - README
+  - scripts
   - tmp
   - vendor
 keep_files:

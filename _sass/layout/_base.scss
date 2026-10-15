@@ -5,6 +5,8 @@ html {
   /* sticky footer fix */
   position: relative;
   min-height: 100%;
+  scroll-padding-top: calc(var(--masthead-height) + 1rem);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,14 +15,37 @@ body {
   background-color: var(--global-bg-color);
 
   margin: 0;
-  padding: $masthead-height 0 0;
-  padding-bottom: 9em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 0;
   font-family: $global-font-family;
-  line-height: 1.5;
+  line-height: 1.65;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.skip-to-content {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.65rem 1rem;
+  color: var(--global-text-color);
+  background: var(--global-surface-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+
+  &:focus {
+    top: 0.75rem;
   }
 }
 
@@ -123,6 +148,23 @@ a {
   &:active {
     outline: 0;
   }
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--global-focus-color);
+  outline-offset: 3px;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--global-link-color-hover);
+}
+
+button {
+  font-family: inherit;
 }
 
 /* code */
@@ -339,10 +381,19 @@ nav {
     }
   }
 
-/* Global animation transition */
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
-  -webkit-transition: $global-transition;
-  transition: $global-transition;
+/* Keep transitions on interactive properties to avoid layout shifts. */
+a, button, summary {
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ==========================================================================

@@ -22,7 +22,7 @@
   {% assign profile_wechat_alt = "微信二维码" %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
+<div class="author-profile" itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
@@ -39,8 +39,8 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse" type="button">{{ profile_contact_label }}</button>
-    <ul class="author__urls social-icons">
+    <button class="author__contact-toggle" type="button" aria-expanded="false" aria-controls="author-contact-links" hidden>{{ profile_contact_label }}</button>
+    <ul id="author-contact-links" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if profile_location %}
         <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ profile_location }}</li>
@@ -180,7 +180,7 @@
 
       {% if author.wechat %}
       <li>
-        <a href="#wechat-modal" aria-controls="wechat-modal" onclick="var modal = document.getElementById('wechat-modal'); document.body.appendChild(modal); modal.style.display='flex'; modal.querySelector('.wechat-modal__close').focus(); return false;">
+        <a href="{{ '/images/WeChat.png' | relative_url }}" data-dialog-open="wechat-modal" aria-controls="wechat-modal" aria-haspopup="dialog">
           <i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>{{ profile_wechat_label }}
         </a>
       </li>
@@ -197,9 +197,9 @@
 </div>
 
 
-<div id="wechat-modal" class="wechat-modal" role="dialog" aria-modal="true" aria-label="{{ profile_wechat_label }}" style="display:none;" onclick="if (event.target === this) this.style.display='none';" onkeydown="if (event.key === 'Escape') this.style.display='none';">
-  <div class="wechat-modal__dialog">
-    <button class="wechat-modal__close" type="button" aria-label="{{ profile_close_label }}" onclick="document.getElementById('wechat-modal').style.display='none'">&times;</button>
+{% if author.wechat %}
+<dialog id="wechat-modal" class="wechat-modal" aria-label="{{ profile_wechat_label }}">
+    <button class="wechat-modal__close dialog-close" type="button" aria-label="{{ profile_close_label }}" data-dialog-close autofocus>&times;</button>
     <img class="wechat-modal__image" src="{{ '/images/WeChat.png' | prepend: base_path }}" alt="{{ profile_wechat_alt }}">
-  </div>
-</div>
+</dialog>
+{% endif %}

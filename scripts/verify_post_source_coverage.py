@@ -48,7 +48,10 @@ def collect_post_source_lines(source_lines: list[str]) -> tuple[dict[int, Counte
 
 def parse_artifacts() -> list[dict[str, object]]:
     if not ARTIFACTS.exists():
-        return []
+        raise FileNotFoundError(
+            f"Missing generated manifest: {ARTIFACTS}. "
+            "Run python3 scripts/generate_tech_log_archive.py first."
+        )
     items: list[dict[str, object]] = []
     item: dict[str, object] = {}
     for line in ARTIFACTS.read_text(encoding="utf-8").splitlines():

@@ -2,6 +2,26 @@
 _site/
 .sass-cache/
 
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# OS metadata and shortcuts
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+*:Zone.Identifier
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
 # Local development files and private profile materials
 local/
 
@@ -11,6 +31,6 @@ local/
 # Ignore the Gemfile that is generated
 Gemfile.lock
 
-# Ingore files created by npm
+# Ignore files created by npm
 node_modules
 package-lock.json

@@ -4,7 +4,7 @@ layout: default
 
 {% include base_path %}
 
-<div id="main" role="main">
+<div id="main" class="site-main{% if page.author_profile or layout.author_profile %} site-main--with-sidebar{% endif %}" role="main" tabindex="-1">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">

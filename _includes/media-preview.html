@@ -1,0 +1,27 @@
+{% assign preview_title = "Image preview" %}
+{% assign preview_close = "Close image preview" %}
+{% assign preview_original = "Open original" %}
+{% assign preview_zoom = "Actual size" %}
+{% assign preview_fit = "Fit to window" %}
+{% assign preview_region = "Image preview; use arrow keys to scroll when enlarged" %}
+{% if page.lang == "zh-CN" %}
+  {% assign preview_title = "图片预览" %}
+  {% assign preview_close = "关闭图片预览" %}
+  {% assign preview_original = "打开原图" %}
+  {% assign preview_zoom = "原始尺寸" %}
+  {% assign preview_fit = "适应窗口" %}
+  {% assign preview_region = "图片预览；放大后可使用方向键滚动" %}
+{% endif %}
+<dialog id="media-preview" class="media-preview" aria-labelledby="media-preview-title" data-preview-label="{{ preview_title }}">
+  <header class="media-preview__header">
+    <h2 id="media-preview-title">{{ preview_title }}</h2>
+    <div class="media-preview__actions">
+      <button class="media-preview__zoom" type="button" aria-pressed="false" data-zoom-label="{{ preview_zoom }}" data-fit-label="{{ preview_fit }}">{{ preview_zoom }}</button>
+      <a class="media-preview__original" href="#" target="_blank" rel="noopener noreferrer">{{ preview_original }}</a>
+      <button class="dialog-close" type="button" aria-label="{{ preview_close }}" data-dialog-close autofocus>&times;</button>
+    </div>
+  </header>
+  <div class="media-preview__viewport" tabindex="0" role="region" aria-label="{{ preview_region }}">
+    <img class="media-preview__image" alt="">
+  </div>
+</dialog>

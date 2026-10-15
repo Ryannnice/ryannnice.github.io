@@ -1,7 +1,7 @@
 ---
 permalink: /zh/
 seo_title: "刘稔远"
-description: "刘稔远，香港中文大学（深圳）人工智能研究型硕士生，研究方向包括 AI 基础设施、AI Agent、大语言模型后训练、具身智能与机器视觉。"
+description: "刘稔远，香港中文大学（深圳）人工智能研究型硕士生，研究方向为 AI 基础设施与 AI Agent。"
 lang: zh-CN
 locale: zh_CN
 alternate_url: /
@@ -17,11 +17,18 @@ hide_title: true
 ---
 
 你好，很高兴在这里认识你！
-我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）与[王阿康博士](https://github.com/akangw)（数据科学学院）。
+我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）。
+
+目前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
 
 欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
-## 精选 AI 系统项目 {#projects-renyuan}
+## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
+
+当前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**，重点关注大模型系统的效率与可靠性。
+
+* **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
+* **AI Agent：**工具检索与规划、多轮上下文编排、记忆与评测。
 
 <div class="project-list">
   <article class="project-card">
@@ -84,22 +91,6 @@ hide_title: true
     </details>
   </article>
 
-  <article class="project-card">
-    <header class="project-card__header">
-      <h3 class="project-card__title">项目二｜LLM 语义路由与 AI Agent 应用</h3>
-      <p class="project-card__meta">2026 年 3 月 – 5 月 · 深圳市大数据研究院</p>
-    </header>
-    <details class="project-details">
-      <summary>展开项目详情</summary>
-      <div class="project-details__content">
-        <p><strong>项目背景：</strong>面向多模型服务成本控制与 AI 教育业务落地，负责轻量语义路由及 AI 教育平台后端开发。</p>
-        <ul>
-          <li><strong>轻量语义路由（成本降低 62%）：</strong>参与设计基于 Query 与领域原型向量的 Domain 划分，并结合模型内部表示判断问题难度、分配不同规模模型；在准确率损失控制于 10% 内将推理成本降低 62%。</li>
-          <li><strong>AI Agent 应用（后端开发）：</strong>基于 Vue3/Vite/Vue Router + FastAPI/SQLite/Docker 从 0 搭建 Web AI 教育平台及 Android 端；封装 SSE 流式生成与多轮会话，完成用户/会话/Token 监控、附件上传、Markdown/代码/网页预览及移动端适配，支撑新闻筛选、学习与 Coding Agent 工坊。</li>
-        </ul>
-      </div>
-    </details>
-  </article>
 </div>
 
 
@@ -134,32 +125,12 @@ hide_title: true
 * [2025 年 4 月 1 日] 论文被 IJCNN 2025 接收（CCF-C，录用率 38%）。
 
 
-## 研究兴趣 {#research-interest}
-
-我的研究兴趣贯穿从模型行为到高效部署的完整链路。当前工作聚焦 **AI 基础设施（AI Infrastructure）**、**AI Agent** 与**大语言模型后训练（LLM Post-Training）**，同时持续探索具身智能与机器视觉。我关注高效、可靠的 AI 系统，也希望将研究想法落实为真正可运行的系统。
-
-* **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
-* **AI Agent：**工具检索与规划、多轮上下文编排、记忆、评测和具身决策；
-* **大语言模型后训练：**监督微调、偏好优化、参数高效微调和以数据为中心的评测；
-* **机器视觉（本科阶段）：**面向实时碰撞检测与机器人导航的昆虫视觉神经模型。
-
-本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
-
-我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
-
-面向神经具身微型机器人 [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) 的部分代码：
-
-* [果蝇视觉运动启发的 Attention-LPLC2 模型](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c)（独立完成，约 2,000 行 C 代码）；
-* [多注意力 LPLC2（mLPLC2）神经网络模型](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)（独立完成，约 3,000 行 C/C++ 代码）；
-* [蝗虫视觉启发的 Optimized-LGMD 模型](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c)（独立完成，约 1,000 行 C 代码）。
-
-
 ## 经历 {#experience-renyuan}
 
 - **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 9 月 – 2028 年 6 月（预计）<br>
   **人工智能研究型硕士生（MPhil）**<br>
-  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）、[王阿康博士](https://github.com/akangw)（数据科学学院）
+  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）
 
 - **[香港大学](https://www.hku.hk/)**，中国香港<br>
   2026 年 7 月<br>
@@ -168,6 +139,7 @@ hide_title: true
 - **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
   2026 年 3 月 – 2026 年 6 月<br>
   **算法实习生**<br>
+  导师：[王阿康博士](https://github.com/akangw)（数据科学学院）<br>
   从事 AI 基础设施、加速器算子优化、大语言模型语义路由与 AI Agent 应用研发。
 
 - **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
@@ -186,7 +158,9 @@ hide_title: true
 
 ## 在审稿件 {#publications-renyuan}
 
-- **R. Liu**、H. Zhou、C. Fang、Q. Fu，\[稿件双盲评审中。\] *投稿至 2026 IEEE International Conference on Robotics and Automation（ICRA，CCF-B）。*
+<sup>*</sup> 表示共同第一作者。
+
+- **R. Liu**、H. Zhou、C. Fang、Q. Fu，[How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827)。*arXiv 预印本，arXiv:2509.13827，2025。*
 
 - M. Wang<sup>\*</sup>、**R. Liu**<sup>\*</sup>、Q. Fu，\[稿件双盲评审中。\] *投稿至 IEEE Transactions on Cognitive and Developmental Systems（JCR Q1，IF = 4.9）。*
 
@@ -205,6 +179,24 @@ hide_title: true
 
 - J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A%20biomimetic%20collision%20detection%20visual%20neural%20model%20coordinating%20self-and-lateral%20inhibitions.pdf). *第 14 届仿生与生物混合系统国际会议（Living Machines 2025，口头报告）。*
 
+
+<details class="project-details research-background" markdown="1">
+<summary>研究领域介绍</summary>
+
+<div class="project-details__content" markdown="1">
+
+本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
+
+我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
+
+面向神经具身微型机器人 [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) 的部分代码：
+
+* [果蝇视觉运动启发的 Attention-LPLC2 模型](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c)（独立完成，约 2,000 行 C 代码）；
+* [多注意力 LPLC2（mLPLC2）神经网络模型](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp)（独立完成，约 3,000 行 C/C++ 代码）；
+* [蝗虫视觉启发的 Optimized-LGMD 模型](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c)（独立完成，约 1,000 行 C 代码）。
+
+</div>
+</details>
 
 ## 荣誉与奖励 {#awards-renyuan}
 

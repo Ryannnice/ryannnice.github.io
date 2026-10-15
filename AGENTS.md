@@ -9,8 +9,9 @@ This repository is a Jekyll/GitHub Pages personal academic site. Keep changes sm
 - `_posts/` contains archived long-form tech posts; the site currently has no public tech-blog index or navigation entry.
 - `_layouts/` and `_includes/` contain Liquid templates. Shared styling enters through `assets/css/main.scss`; local overrides live in `_sass/layout/` and theme variables in `_sass/theme/`.
 - `_data/tech_log.yml` and `_data/tech_concepts.yml` retain curated tech-log data.
-- `images/` contains site images. `assets/` contains public PDFs, video, fonts, and the published CV. `CV_Latex/` contains CV source and build artifacts.
-- `blog.md` is a planning document without Jekyll front matter; it is not the published blog index.
+- `images/` contains site images. `assets/` contains public PDFs, video, fonts, and the published CV.
+- `docs/tech-blog-plan.md` is a planning document without Jekyll front matter; it is not the published blog index. `docs/archive/` retains historical source material. The entire `docs/` directory is excluded from the site build.
+- `local/` contains private profile-material scripts, reference images, final exports, and archived drafts. It is ignored by Git and excluded from the site build; temporary renders and caches should not be retained there after verification.
 
 ## Generated learning-log content
 
@@ -51,5 +52,7 @@ The repository currently has no `Gemfile` and does not pin a Jekyll toolchain. D
 - Preserve front matter, permalinks, heading anchors, and source-coverage markers unless the requested change explicitly migrates them.
 - Use Liquid URL filters such as `relative_url` or the existing `base_path` pattern for internal links and assets.
 - Reuse the existing Sass variables, theme custom properties, and breakpoints so light/dark and responsive behavior remain consistent.
+- Preserve the masthead logo's `clamp(20rem, 30vw, 28rem)` sizing and the original author-name typography. Use square corners for UI surfaces and controls; preserve the existing circular profile images.
 - Keep accessible labels, alt text, keyboard interaction, and reduced-motion behavior in mind when changing navigation, modals, or media.
 - Avoid unrelated formatting churn and do not rewrite binary assets unless the task requires it.
+- Keep caches, OS metadata, shortcuts, and obsolete local tooling out of version control. Public assets may be used through direct links; an absent in-repository reference alone does not make an asset safe to delete.

@@ -1,7 +1,7 @@
 ---
 permalink: /
 seo_title: "Renyuan Liu"
-description: "Renyuan Liu is a Research Master's (MPhil) student working on AI infrastructure, AI agents, LLM post-training, embodied AI, and machine vision."
+description: "Renyuan Liu is a Research Master's (MPhil) student working on AI infrastructure and AI agents."
 lang: en
 locale: en_US
 alternate_url: /zh/
@@ -26,11 +26,18 @@ redirect_from:
 ---
 
 Nice to meet you here!
-I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Dr. Akang Wang](https://github.com/akangw) (School of Data Science).
+I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence).
+
+My current research focuses on **AI infrastructure** and **AI agents**.
 
 I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
-## Selected AI Systems Projects {#projects-renyuan}
+## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
+
+My current research focuses on **AI infrastructure** and **AI agents**, with an emphasis on the efficiency and reliability of LLM systems.
+
+* **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
+* **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, and evaluation.
 
 <div class="project-list">
   <article class="project-card">
@@ -93,22 +100,6 @@ I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/as
     </details>
   </article>
 
-  <article class="project-card">
-    <header class="project-card__header">
-      <h3 class="project-card__title">Project 2 | LLM Semantic Routing and AI Agent Applications</h3>
-      <p class="project-card__meta">Mar. – May 2026 · Shenzhen Research Institute of Big Data</p>
-    </header>
-    <details class="project-details">
-      <summary>View project details</summary>
-      <div class="project-details__content">
-        <p><strong>Project Background:</strong> To control multi-model serving costs and deliver an AI education product, I developed a lightweight semantic router and the backend of an AI education platform.</p>
-        <ul>
-          <li><strong>Lightweight Semantic Routing (62% Cost Reduction):</strong> Helped design domain partitioning from queries and domain-prototype embeddings, then combined model-internal representations to estimate question difficulty and assign models of different sizes. Reduced inference cost by 62% while keeping accuracy loss within 10%.</li>
-          <li><strong>AI Agent Application (Backend Development):</strong> Built a Web AI education platform and Android client from scratch with Vue 3/Vite/Vue Router + FastAPI/SQLite/Docker. Implemented SSE streaming and multi-turn sessions, user/session/token monitoring, attachment upload, Markdown/code/web preview, and mobile adaptation, supporting news filtering, learning, and a Coding Agent workshop.</li>
-        </ul>
-      </div>
-    </details>
-  </article>
 </div>
 
 ## News {#news}
@@ -142,32 +133,13 @@ I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/as
 * [Apr 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
 
-## Research Interest {#research-interest}
-
-My research interests follow the full path from model behavior to efficient deployment. My current work focuses on **AI infrastructure**, **AI agents**, and **LLM post-training**, while I continue to explore embodied intelligence and machine vision. I care about building efficient, reliable systems and turning research ideas into working implementations.
-
-* **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
-* **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, evaluation, and embodied decision-making;
-* **LLM Post-Training:** supervised fine-tuning, preference optimization, parameter-efficient fine-tuning, and data-centric evaluation;
-* **Machine Vision (Undergraduate):** neural models of insect vision for real-time collision detection and robotic navigation.
-
-During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
-
-My undergraduate research focused on **brain-inspired neural networks** and **machine vision**. I modeled insect visual circuits for robust motion perception and translated them into collision-detection systems for robots. I enjoy hands-on coding, debugging, profiling, and end-to-end system implementation. My experimental platforms include *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.
-
-Selected code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is available at:  
-* [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);  
-* [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);  
-* [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) (independently, 1k lines of code in C).  
-
-
 ## Experience {#experience-renyuan}
 
 
 - **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
   Sept. 2026 - Jun. 2028 (Expected)  
   **Research Master's (MPhil) Student in Artificial Intelligence**<br>
-  Supervisors: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence) and [Dr. Akang Wang](https://github.com/akangw) (School of Data Science)
+  Supervisor: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence)
   
 
 - **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
@@ -179,6 +151,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China  
   Mar. 2026 - Jun. 2026<br>
   **Algorithm Intern**<br>
+  Supervisor: [Dr. Akang Wang](https://github.com/akangw) (School of Data Science)<br>
   Worked on AI infrastructure, accelerator kernel optimization, LLM semantic routing, and AI agent applications.
   
 
@@ -199,7 +172,9 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Manuscripts Under Review {#publications-renyuan}
 
-- **R. Liu**, H. Zhou, C. Fang and Q. Fu, \[Manuscript under double-blind review.\] *Under review in The 2026 International Conference on Robotics and Automation (ICRA)(CCF-B).*
+<sup>*</sup> denotes equal contribution (co-first authors).
+
+- **R. Liu**, H. Zhou, C. Fang and Q. Fu, [How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827). *arXiv preprint, arXiv:2509.13827, 2025.*
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, \[Manuscript under double-blind review.\] *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
 
@@ -220,6 +195,24 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *The 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)(Oral)*.
 
 
+
+<details class="project-details research-background" markdown="1">
+<summary>Research Background</summary>
+
+<div class="project-details__content" markdown="1">
+
+During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
+
+My undergraduate research focused on **brain-inspired neural networks** and **machine vision**. I modeled insect visual circuits for robust motion perception and translated them into collision-detection systems for robots. I enjoy hands-on coding, debugging, profiling, and end-to-end system implementation. My experimental platforms include *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.
+
+Selected code for neuro-embodied micro-robot [***Colias***](https://link.springer.com/chapter/10.1007/978-3-319-96728-8_17) is available at:
+
+* [Fly Visuomotor-Inspired Attention-LPLC2 Model](https://github.com/Ryannnice/neuro-life-project/blob/main/micro_embodied/colias_core/coliasSense_LPLC2.c) (independently, 2k lines of code in C);
+* [Multi-Attention LPLC2 (mLPLC2) Neural Network Model](https://github.com/Ryannnice/Offline_Multi-Attention_LPLC2_Model/blob/main/LPLC2.cpp) (independently, 3k lines of code in C/C++);
+* [Locust Vision-Inspired Optimized-LGMD Model](https://github.com/Ryannnice/Optimized-LGMD/blob/main/coliasSense_LGMD.c) (independently, 1k lines of code in C).
+
+</div>
+</details>
 
 ## Honors and Awards {#awards-renyuan}
 
