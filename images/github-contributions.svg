@@ -119,7 +119,7 @@
     <rect x="196" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-09" data-count="1" data-level="1" />
     <rect x="196" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-10" data-count="4" data-level="1" />
     <rect x="196" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-11" data-count="3" data-level="1" />
-    <rect x="196" y="80" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-06-12" data-count="22" data-level="2" />
+    <rect x="196" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-12" data-count="22" data-level="1" />
     <rect x="196" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-13" data-count="4" data-level="1" />
     <rect x="208" y="20" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-14" data-count="8" data-level="1" />
     <rect x="208" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-06-15" data-count="7" data-level="1" />
@@ -154,7 +154,7 @@
     <rect x="256" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-14" data-count="3" data-level="1" />
     <rect x="256" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-15" data-count="8" data-level="1" />
     <rect x="256" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-16" data-count="1" data-level="1" />
-    <rect x="256" y="80" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-07-17" data-count="23" data-level="2" />
+    <rect x="256" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-17" data-count="23" data-level="1" />
     <rect x="256" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-18" data-count="1" data-level="1" />
     <rect x="268" y="20" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-19" data-count="3" data-level="1" />
     <rect x="268" y="32" width="10" height="10" rx="2" fill="#eff2f5" data-date="2026-07-20" data-count="0" data-level="0" />
@@ -169,7 +169,7 @@
     <rect x="280" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-29" data-count="5" data-level="1" />
     <rect x="280" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-30" data-count="10" data-level="1" />
     <rect x="280" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-07-31" data-count="10" data-level="1" />
-    <rect x="280" y="92" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-08-01" data-count="22" data-level="2" />
+    <rect x="280" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-01" data-count="22" data-level="1" />
     <rect x="292" y="20" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-02" data-count="11" data-level="1" />
     <rect x="292" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-03" data-count="4" data-level="1" />
     <rect x="292" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-04" data-count="4" data-level="1" />
@@ -184,11 +184,11 @@
     <rect x="304" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-13" data-count="2" data-level="1" />
     <rect x="304" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-14" data-count="5" data-level="1" />
     <rect x="304" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-15" data-count="2" data-level="1" />
-    <rect x="316" y="20" width="10" height="10" rx="2" fill="#116329" data-date="2026-08-16" data-count="69" data-level="4" />
+    <rect x="316" y="20" width="10" height="10" rx="2" fill="#2da44e" data-date="2026-08-16" data-count="69" data-level="3" />
     <rect x="316" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-17" data-count="13" data-level="1" />
     <rect x="316" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-18" data-count="1" data-level="1" />
     <rect x="316" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-19" data-count="8" data-level="1" />
-    <rect x="316" y="68" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-08-20" data-count="21" data-level="2" />
+    <rect x="316" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-20" data-count="21" data-level="1" />
     <rect x="316" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-21" data-count="1" data-level="1" />
     <rect x="316" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-22" data-count="5" data-level="1" />
     <rect x="328" y="20" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-23" data-count="2" data-level="1" />
@@ -197,7 +197,7 @@
     <rect x="328" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-26" data-count="9" data-level="1" />
     <rect x="328" y="68" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-08-27" data-count="36" data-level="2" />
     <rect x="328" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-08-28" data-count="17" data-level="1" />
-    <rect x="328" y="92" width="10" height="10" rx="2" fill="#2da44e" data-date="2026-08-29" data-count="44" data-level="3" />
+    <rect x="328" y="92" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-08-29" data-count="44" data-level="2" />
     <rect x="340" y="20" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-08-30" data-count="41" data-level="2" />
     <rect x="340" y="32" width="10" height="10" rx="2" fill="#eff2f5" data-date="2026-08-31" data-count="0" data-level="0" />
     <rect x="340" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-09-01" data-count="4" data-level="1" />
@@ -219,7 +219,7 @@
     <rect x="364" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-09-17" data-count="3" data-level="1" />
     <rect x="364" y="80" width="10" height="10" rx="2" fill="#eff2f5" data-date="2026-09-18" data-count="0" data-level="0" />
     <rect x="364" y="92" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-09-19" data-count="36" data-level="2" />
-    <rect x="376" y="20" width="10" height="10" rx="2" fill="#116329" data-date="2026-09-20" data-count="65" data-level="4" />
+    <rect x="376" y="20" width="10" height="10" rx="2" fill="#2da44e" data-date="2026-09-20" data-count="65" data-level="3" />
     <rect x="376" y="32" width="10" height="10" rx="2" fill="#116329" data-date="2026-09-21" data-count="83" data-level="4" />
     <rect x="376" y="44" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-09-22" data-count="32" data-level="2" />
     <rect x="376" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-09-23" data-count="13" data-level="1" />
@@ -234,12 +234,12 @@
     <rect x="388" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-02" data-count="12" data-level="1" />
     <rect x="388" y="92" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-03" data-count="33" data-level="2" />
     <rect x="400" y="20" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-04" data-count="40" data-level="2" />
-    <rect x="400" y="32" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-05" data-count="22" data-level="2" />
+    <rect x="400" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-05" data-count="22" data-level="1" />
     <rect x="400" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-06" data-count="1" data-level="1" />
     <rect x="400" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-07" data-count="5" data-level="1" />
     <rect x="400" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-08" data-count="3" data-level="1" />
     <rect x="400" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-09" data-count="18" data-level="1" />
-    <rect x="400" y="92" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-10" data-count="22" data-level="2" />
+    <rect x="400" y="92" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-10" data-count="22" data-level="1" />
     <rect x="412" y="20" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-11" data-count="25" data-level="2" />
     <rect x="412" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-12" data-count="14" data-level="1" />
     <rect x="412" y="44" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-13" data-count="9" data-level="1" />
@@ -252,6 +252,6 @@
     <rect x="424" y="44" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-10-20" data-count="25" data-level="2" />
     <rect x="424" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-10-21" data-count="15" data-level="1" />
     <rect x="424" y="68" width="10" height="10" rx="2" fill="#2da44e" data-date="2026-10-22" data-count="50" data-level="3" />
-    <rect x="424" y="80" width="10" height="10" rx="2" fill="#116329" data-date="2026-10-23" data-count="76" data-level="4" />
+    <rect x="424" y="80" width="10" height="10" rx="2" fill="#116329" data-date="2026-10-23" data-count="94" data-level="4" />
   </g>
 </svg>
