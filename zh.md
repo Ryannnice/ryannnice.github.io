@@ -20,11 +20,11 @@ homepage: true
 你好，很高兴在这里认识你！
 我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）。
 
-目前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
+目前，我的工作聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
 
 ## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
 
-当前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
+当前，我的工作聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
 
 * **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
 * **AI Agent：**工具检索与规划、多轮上下文编排、记忆与评测。
@@ -176,7 +176,9 @@ homepage: true
 
 </div>
 
-## 在审稿件 {#publications-renyuan}
+## 论文 {#publications-section}
+
+### 在审稿件 {#publications-renyuan}
 
 <sup>*</sup> 表示共同第一作者。
 
@@ -187,7 +189,7 @@ homepage: true
 - \[稿件双盲评审中。\] *投稿至 IEEE Robotics and Automation Letters（RA-L），研究方向为具身智能与语义导航。*
 
 
-## 已发表论文 {#publications}
+### 已发表论文 {#publications}
 
 - **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *2025 International Joint Conference on Neural Networks（IJCNN，CCF-C，录用率约 38%）。*
 

@@ -29,11 +29,11 @@ redirect_from:
 Nice to meet you here!
 I am an **MPhil student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence).
 
-My current research focuses on **AI infrastructure** and **AI agents**.
+My current work focuses on **AI infrastructure** and **AI agents**.
 
 ## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
 
-My current research focuses on **AI infrastructure** and **AI agents**.
+My current work focuses on **AI infrastructure** and **AI agents**.
 
 * **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
 * **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, and evaluation.
@@ -191,7 +191,9 @@ My current research focuses on **AI infrastructure** and **AI agents**.
 
 </div>
 
-## Manuscripts Under Review {#publications-renyuan}
+## Publications {#publications-section}
+
+### Manuscripts Under Review {#publications-renyuan}
 
 <sup>*</sup> denotes equal contribution (co-first authors).
 
@@ -203,7 +205,7 @@ My current research focuses on **AI infrastructure** and **AI agents**.
 
 
 
-## Publications {#publications}
+### Published Papers {#publications}
 
 - **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%).*
 
