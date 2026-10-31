@@ -24,7 +24,7 @@ homepage: true
 
 ## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
 
-当前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**，重点关注大模型系统的效率与可靠性。
+当前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
 
 * **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
 * **AI Agent：**工具检索与规划、多轮上下文编排、记忆与评测。

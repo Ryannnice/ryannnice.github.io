@@ -33,7 +33,7 @@ My current research focuses on **AI infrastructure** and **AI agents**.
 
 ## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
 
-My current research focuses on **AI infrastructure** and **AI agents**, with an emphasis on the efficiency and reliability of LLM systems.
+My current research focuses on **AI infrastructure** and **AI agents**.
 
 * **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
 * **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, and evaluation.

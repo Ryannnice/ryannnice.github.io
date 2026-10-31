@@ -5,8 +5,10 @@
       <ul class="learning-resource-list">
         {% for resource in group.items %}
           <li class="learning-resource">
-            <a href="{{ resource.url | escape }}" target="_blank" rel="noopener noreferrer">{{ resource.title | escape }}</a>
-            {% if resource.type or resource.source %}<span class="learning-resource__meta">{{ resource.type | escape }}{% if resource.type and resource.source %} · {% endif %}{{ resource.source | escape }}</span>{% endif %}
+            <a class="learning-resource__link" href="{{ resource.url | escape }}" target="_blank" rel="noopener noreferrer">
+              <span class="learning-resource__title">{{ resource.title | escape }}</span>
+              {% if resource.type or resource.source %}<span class="learning-resource__meta">{{ resource.type | escape }}{% if resource.type and resource.source %} · {% endif %}{{ resource.source | escape }}</span>{% endif %}
+            </a>
           </li>
         {% endfor %}
       </ul>

@@ -369,25 +369,59 @@
 }
 
 .page__content .learning-resource-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.8rem;
   margin: 0 0 0.75rem;
   padding: 0;
   list-style: none;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include breakpoint($x-large) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .page__content .learning-resource {
+  min-width: 0;
   margin: 0;
-  padding: 0.7rem 0;
+  padding: 0;
   line-height: 1.55;
-  border-bottom: 1px solid var(--global-border-color);
+  background: var(--global-surface-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
 
-  &:last-child {
-    border-bottom: 0;
+  &:hover,
+  &:focus-within {
+    border-color: var(--global-link-color);
   }
+}
+
+.page__content .learning-resource__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 0.9rem;
+  text-decoration: none;
+
+  &:hover .learning-resource__title,
+  &:focus-visible .learning-resource__title {
+    text-decoration: underline;
+  }
+}
+
+.learning-resource__title {
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .learning-resource__meta {
   display: block;
-  margin-top: 0.15rem;
+  margin-top: auto;
 }
 
 .visitor-map {
