@@ -1,14 +1,3 @@
-{% assign learning_resource_count = 0 %}
-{% for group in site.data.learning_resources.groups %}
-  {% assign learning_resource_count = learning_resource_count | plus: group.items.size %}
-{% endfor %}
-<p class="learning-resources__intro">
-  {% if page.lang == "zh-CN" %}
-    共 {{ learning_resource_count }} 项课程、论文、工具与阅读资料，按主题展开浏览。学习资料整理自 <a href="{{ site.data.learning_resources.source | escape }}">TEAM NEXUS</a>。
-  {% else %}
-    {{ learning_resource_count }} courses, papers, tools, and readings, grouped by topic. Learning materials are collected from <a href="{{ site.data.learning_resources.source | escape }}">TEAM NEXUS</a>.
-  {% endif %}
-</p>
 <div class="learning-resources">
   {% for group in site.data.learning_resources.groups %}
     <details class="project-details learning-resource-group">
