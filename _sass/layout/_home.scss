@@ -1,5 +1,91 @@
 /* Homepage-specific cards and embeds. */
 
+.page__content--home > h2 {
+  margin-top: clamp(3rem, 5vw, 4rem);
+}
+
+.page__content .experience-list > ul {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    position: relative;
+    min-height: 4.5rem;
+    margin: 0 0 1.35rem;
+    padding: 0 0 1.35rem 5.75rem;
+    border-bottom: 1px solid var(--global-border-color);
+
+    > p {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+.experience-logos {
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding: 0.45rem;
+  background: #fff;
+  color-scheme: light;
+}
+
+.page__content .experience-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  color-scheme: light;
+
+}
+
+.experience-logos--dual {
+  height: auto;
+  gap: 0.5rem;
+
+  .experience-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@include breakpoint(max-width $small) {
+  .page__content .experience-list > ul > li {
+    min-height: 3rem;
+    padding-left: 4rem;
+  }
+
+  .experience-logos {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.3rem;
+  }
+
+  .experience-logos--dual {
+    height: auto;
+
+    .experience-logo {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+  }
+}
+
 .project-list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -193,10 +279,14 @@
   font-size: 1.25rem;
   line-height: 1.25;
 
-  a,
-  a:hover {
-    color: var(--global-text-color);
+  a {
+    color: var(--global-link-color);
     text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-link-color-hover);
+    }
   }
 }
 
@@ -271,8 +361,37 @@
 .github-activity__level--3 { background: #2da44e; }
 .github-activity__level--4 { background: #116329; }
 
-.visitor-map {
+.learning-resource-group__count,
+.learning-resource__meta {
+  color: var(--global-text-color-light);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.page__content .learning-resource-list {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.page__content .learning-resource {
   margin: 0;
+  padding: 0.7rem 0;
+  line-height: 1.55;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.learning-resource__meta {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.visitor-map {
+  margin: 0 0 1.5rem;
 
   a:hover img {
     box-shadow: none;

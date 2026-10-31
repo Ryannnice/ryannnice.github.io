@@ -29,6 +29,10 @@ layout: compress
       </footer>
     </div>
 
+    <button id="back-to-top" class="back-to-top site-nav__control" type="button" aria-label="{% if page.lang == 'zh-CN' %}回到顶部{% else %}Back to top{% endif %}" title="{% if page.lang == 'zh-CN' %}回到顶部{% else %}Back to top{% endif %}" hidden>
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     {% include scripts.html %}
 
   </body>

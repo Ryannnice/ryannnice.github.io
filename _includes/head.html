@@ -21,8 +21,7 @@
     var theme;
     try { theme = localStorage.getItem('theme'); } catch (error) {}
     if (theme !== 'light' && theme !== 'dark') {
-      theme = document.documentElement.getAttribute('data-theme') === 'dark' ||
-        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      theme = 'light';
     }
     document.documentElement.setAttribute('data-theme', theme);
   }());

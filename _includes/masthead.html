@@ -1,7 +1,5 @@
 {% include base_path %}
 {% assign masthead_navigation = site.navigation.main %}
-{% assign masthead_home_label = site.title %}
-{% assign masthead_home_url = "/" %}
 {% assign navigation_label = "Primary navigation" %}
 {% assign menu_open_label = "Open navigation" %}
 {% assign menu_close_label = "Close navigation" %}
@@ -9,8 +7,6 @@
 {% assign theme_light_label = "Switch to light theme" %}
 {% if page.lang == "zh-CN" %}
   {% assign masthead_navigation = site.navigation.zh %}
-  {% assign masthead_home_label = "主页" %}
-  {% assign masthead_home_url = "/zh/" %}
   {% assign navigation_label = "主导航" %}
   {% assign menu_open_label = "展开导航" %}
   {% assign menu_close_label = "收起导航" %}
@@ -24,7 +20,6 @@
       <a class="masthead__logo-link" href="https://sai.cuhk.edu.cn/teacher-search" aria-label="CUHK SAI" target="_blank" rel="noopener noreferrer">
         <img class="masthead__logo" src="{{ '/images/CUHK-SAI-Logo-01_1.png' | relative_url }}" alt="CUHK SAI logo" width="1803" height="176" style="width: clamp(20rem, 30vw, 28rem); height: auto;">
       </a>
-      <a class="site-nav__home" href="{{ masthead_home_url | relative_url }}">{{ masthead_home_label }}</a>
       <ul id="site-nav-links" class="site-nav__links">
         {% for link in masthead_navigation %}
           {% if link.url contains 'http' %}

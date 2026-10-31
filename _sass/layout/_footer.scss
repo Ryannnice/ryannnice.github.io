@@ -34,10 +34,12 @@
   }
 
   a {
-    color: inherit;
+    color: var(--global-link-color);
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
+      color: var(--global-link-color-hover);
       text-decoration: underline;
     }
   }

@@ -1,0 +1,715 @@
+# Learning resources imported from TEAM NEXUS, with the original personal reading list retained.
+source: https://ryannnice.github.io/nexus/#resources
+groups:
+- id: foundations
+  title_en: Foundations
+  title_zh: 基础必修
+  items:
+  - title: CS336：从零构建大语言模型
+    url: https://www.bilibili.com/video/BV1APuUz7Erx/
+    type: Course
+    source: 斯坦福 · 哔哩哔哩
+  - title: CS336 学习笔记
+    url: https://www.zhihu.com/column/c_1944054467675817567
+    type: Notes
+    source: 知乎专栏
+  - title: 动手学深度学习 Dive into Deep Learning
+    url: https://zh.d2l.ai/
+    type: Book
+    source: 李沐 · 在线书 + 代码
+  - title: 图解 Transformer
+    url: https://jalammar.github.io/illustrated-transformer/
+    type: Article
+    source: Jay Alammar
+  - title: 图解注意力机制与 Seq2Seq
+    url: https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/
+    type: Article
+    source: Jay Alammar
+  - title: The Annotated Transformer
+    url: https://nlp.seas.harvard.edu/2018/04/03/attention.html
+    type: Code
+    source: Harvard NLP · 逐行代码注解
+  - title: DDA5001 机器学习课程笔记
+    url: https://heycys.github.io/cuhksz-ml-notes/
+    type: Notes
+    source: 香港中文大学（深圳）
+  - title: 图解量化 A Visual Guide to Quantization
+    url: https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization
+    type: Article
+    source: Maarten Grootendorst
+  - title: MoE 综述：混合专家与大模型扩展
+    url: https://mp.weixin.qq.com/s/K5TGQysyXGFcqzxY66IY2A?scene=1
+    type: Survey
+    source: IEEE TKDE · 微信公众号
+  - title: Qwen 技术报告解读
+    url: https://zhuanlan.zhihu.com/p/671110914
+    type: Report
+    source: 知乎
+  - title: LeetCode 热题 100
+    url: https://leetcode.cn/studyplan/top-100-liked/
+    type: Practice
+    source: 算法基础训练
+  - title: ARIS-in-AI-Offer：AI Offer 教程清单
+    url: https://github.com/wanshuiyin/ARIS-in-AI-Offer/blob/main/README_CN.md#-%E6%95%99%E7%A8%8B%E6%B8%85%E5%8D%95
+    type: Guide
+    source: GitHub · wanshuiyin
+  - title: Kimi K3：Open Frontier Intelligence
+    url: https://www.kimi.com/blog/kimi-k3
+    type: Report
+    source: Moonshot AI · 官方技术博客
+  - title: Linux Commands Cheat Sheet
+    url: https://developers.redhat.com/cheat-sheets/linux-commands-cheat-sheet
+    type: Cheat Sheet
+    source: Red Hat Developer · 命令行速查
+  - title: ICLR 2027 Conference
+    url: https://iclr.cc/
+    type: Conference
+    source: ICLR · 官方网站
+  - title: ICLR 2027 投稿指南
+    url: https://zhuanlan.zhihu.com/p/2073117052592828952
+    type: Guide
+    source: 知乎 · 截稿日期与投稿新规
+  - title: ELF：嵌入式语言流
+    url: https://zhuanlan.zhihu.com/p/2038272517492695911
+    type: Article
+    source: 知乎 · 模型架构解读
+  - title: Kimi K3 技术报告详解
+    url: https://zhuanlan.zhihu.com/p/2065723673437267072
+    type: Article
+    source: 知乎 · 技术报告解读
+  - title: T5：Text-to-Text Transformer 模型详解
+    url: https://blog.csdn.net/hy592070616/article/details/131362321
+    type: Article
+    source: CSDN · hy592070616
+  - title: 基础算法精讲
+    url: https://www.bilibili.com/video/BV1KG4y1G7cu/
+    type: Course
+    source: 哔哩哔哩 · 算法课程
+  - title: LeetCode 探险：数据结构与算法
+    url: https://leetcode.cn/quest/data-structures-and-algorithms-quest/
+    type: Practice
+    source: 力扣 · 学习路径
+  - title: 如何科学刷题
+    url: https://leetcode.cn/discuss/post/3141566/ru-he-ke-xue-shua-ti-by-endlesscheng-q3yd/
+    type: Guide
+    source: 灵茶山艾府 · 力扣
+  - title: 算法题单：滑动窗口与双指针
+    url: https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-bu-rzz7/
+    type: Practice
+    source: 灵茶山艾府 · 力扣
+  - title: Stable-DiffCoder：开源代码扩散语言模型
+    url: https://github.com/ByteDance-Seed/Stable-DiffCoder
+    type: Code
+    source: ByteDance Seed · GitHub
+  - title: Stable-DiffCoder：代码扩散语言模型论文
+    url: https://arxiv.org/abs/2601.15892
+    type: Paper
+    source: ByteDance Seed · arXiv
+  - title: LiveBench：大语言模型评测
+    url: https://livebench.ai/
+    type: Benchmark
+    source: LiveBench · 官方榜单
+  - title: CodeTop：算法面试题目整理
+    url: https://codetop.cc/home
+    type: Practice
+    source: CodeTop · 题库
+- id: infra
+  title_en: AI Infrastructure
+  title_zh: 基础设施
+  items:
+  - title: LeetGPU：GPU 编程挑战
+    url: https://leetgpu.com/challenges
+    type: Tool
+    source: 在线 CUDA / 算力练习平台
+  - title: How to Scale Your Model：如何扩展你的模型
+    url: https://lqhl.github.io/scaling-book/
+    type: Book
+    source: 中文版 · GPU / 并行 / Roofline
+  - title: CUDA C++ 编程指南
+    url: https://docs.nvidia.com/cuda/cuda-programming-guide/
+    type: Docs
+    source: NVIDIA 官方文档
+  - title: vLLM 中文站
+    url: https://vllm.hyper.ai/docs/
+    type: Docs
+    source: 高吞吐 LLM 推理引擎
+  - title: MiniMind：从零理解 LLM 训练
+    url: https://www.minimind.wiki/docs/
+    type: Course
+    source: minimind.wiki · 完整训练链路
+  - title: KernelBench：LLM 能写 GPU Kernel 吗
+    url: https://github.com/ScalingIntelligence/KernelBench
+    type: Repo
+    source: GitHub · Scaling Intelligence
+  - title: 矩阵乘法：从手搓到 CUTLASS 实现
+    url: https://dingfen.github.io/2021/10/20/2021-10-20-cuda-with-matmul/
+    type: Article
+    source: 峰子的乐园
+  - title: 从 305GB 到 7.4GB：KVCache 架构演进全景
+    url: https://www.cnblogs.com/cswuyg/p/19981922
+    type: Article
+    source: 博客园 · 银光
+  - title: GPU Glossary：GPU 术语表
+    url: https://gpu-glossary-zh.readthedocs.io/en/latest/
+    type: Reference
+    source: 中文版 · 硬件 / 架构速查
+  - title: How to Scale Your Model：并行计算与分片
+    url: https://lqhl.github.io/scaling-book/sharding/
+    type: Book
+    source: 中文版 · Parallelism / Sharding
+  - title: How to Scale Your Model：Roofline 模型
+    url: https://lqhl.github.io/scaling-book/roofline/
+    type: Book
+    source: 中文版 · 性能上限分析
+  - title: CUDA C++ 最佳实践指南
+    url: https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html
+    type: Docs
+    source: NVIDIA 官方文档
+  - title: Modern GPU Programming for MLSys：GPU 执行模型
+    url: https://mlc.ai/modern-gpu-programming-for-mlsys/chapter_background/index.html
+    type: Course
+    source: MLC.ai
+  - title: Prefix Caching 详解
+    url: https://zhuanlan.zhihu.com/p/1915173348436054604
+    type: Article
+    source: 知乎
+  - title: vLLM 推理全流程图解
+    url: https://mp.weixin.qq.com/s/t2tg278ntVTJGz1IsM2g0A
+    type: Article
+    source: 微信公众号
+  - title: vLLM Ascend 官方文档
+    url: https://docs.vllm.ai/projects/ascend/en/latest/
+    type: Docs
+    source: vLLM · Ascend
+  - title: MinivLLM：极简 vLLM 实现
+    url: https://github.com/Wenyueh/MinivLLM/blob/main/README_zh.md
+    type: Repo
+    source: GitHub · Wenyueh
+  - title: 昇腾开源文档中心
+    url: https://ascend.github.io/docs/
+    type: Docs
+    source: Ascend Open Source
+  - title: CUDA-Agent：高性能 CUDA Kernel 生成强化学习
+    url: https://github.com/BytedTsinghua-SIA/CUDA-Agent
+    type: Repo
+    source: GitHub · BytedTsinghua-SIA
+  - title: CANN-Bench：CANN 算子任务评测
+    url: https://gitcode.com/cann/cann-bench
+    type: Benchmark
+    source: AtomGit · GitCode
+  - title: DFlash：Block Diffusion for Flash Speculative Decoding
+    url: https://github.com/z-lab/dflash
+    type: Repo
+    source: GitHub · z-lab
+  - title: KernelHive AI Systems Daily
+    url: https://daily-reports.kernelhive.ai/
+    type: Digest
+    source: KernelHive · AI 系统论文日报
+  - title: DeepSeek-V4-Pro：国产算力集群全参数后训练
+    url: https://www.slai.edu.cn/zh-hans/article/495
+    type: Case Study
+    source: 深圳河套学院 · 昇腾训练实践
+  - title: ConvRot：扩散 Transformer 的即插即用 4-bit 量化
+    url: https://openreview.net/forum?id=SCC11m676G
+    type: Paper
+    source: OpenReview · 旋转量化
+  - title: CUDA Kernel：如何设置 grid_size 与 block_size
+    url: https://zhuanlan.zhihu.com/p/442304996
+    type: Article
+    source: 知乎 · CUDA 编程
+  - title: Kubernetes 一小时入门
+    url: https://www.bilibili.com/video/BV1Se411r7vY/
+    type: Course
+    source: 哔哩哔哩 · 容器编排基础
+  - title: How to Scale Your Model：理解 GPU
+    url: https://lqhl.github.io/scaling-book/gpus/
+    type: Book
+    source: How to Scale Your Model 中文版
+  - title: 深入理解 AI Infra：量化分析与系统设计
+    url: https://github.com/bojieli/ai-infra-book
+    type: Book
+    source: 李博杰 · 开源书稿与实验
+  - title: CUDA 编程模型
+    url: https://docs.nvidia.com/cuda/cuda-programming-guide/01-introduction/programming-model.html
+    type: Docs
+    source: NVIDIA · 官方编程指南
+  - title: GPU Glossary：CUDA 设备架构
+    url: https://gpu-glossary-zh.readthedocs.io/en/latest/gpu-glossary/device-hardware/cuda-device-architecture.html
+    type: Docs
+    source: GPU 术语表中文版
+  - title: CUDA 教学视频合集
+    url: https://space.bilibili.com/218427631/lists/4695308
+    type: Course
+    source: 哔哩哔哩 · GPU 编程
+  - title: PTX ISA 9.2 指令集参考
+    url: https://docs.nvidia.com/cuda/pdf/ptx_isa_9.2.pdf
+    type: Docs
+    source: NVIDIA · 官方文档
+  - title: vLLM 调度机制
+    url: https://mp.weixin.qq.com/s/3CN06JBXF2LjnUzPkKuPQg
+    type: Article
+    source: 微信公众号 · 推理系统
+  - title: LuoSS：镜像存储指南
+    url: https://luoss.nilpo.app/guide/image-storage
+    type: Docs
+    source: 络书算衡 · 官方文档
+  - title: SGLang：Ascend NPU 与 DeepSeek-V4-Flash 支持实现
+    url: https://github.com/sgl-project/sglang/pull/25144
+    type: Code
+    source: 'SGLang · Pull Request #25144'
+  - title: LLM Torch Profiler 性能分析技能
+    url: https://github.com/BBuf/AI-Infra-Auto-Driven-SKILLS/tree/main/skills/llm-torch-profiler-analysis
+    type: Code
+    source: BBuf · AI Infra Skills
+  - title: ops-fft：基于 CANN 的 FFT 算子库
+    url: https://gitcode.com/cann/ops-fft
+    type: Code
+    source: CANN · GitCode
+  - title: DeepSeek-V4-Flash：昇腾部署入门
+    url: https://www.hiascend.com/developer/techArticles/20260425-1
+    type: Guide
+    source: 昇腾社区 · 技术实践
+  - title: DeepSeek-V4-Flash：昇腾 910B 单机部署
+    url: https://blog.csdn.net/jyfcloud/article/details/160569019
+    type: Guide
+    source: CSDN · jyfcloud
+  - title: GPUStack：Qwen3-30B-A3B 昇腾 910B 性能参考
+    url: https://docs.gpustack.ai/2.0/performance-lab/qwen3-30b-a3b/910b/
+    type: Docs
+    source: GPUStack · Performance Lab
+  - title: SOL-ExecBench：Agent 时代的算子开发实践
+    url: https://zhuanlan.zhihu.com/p/2018061075799646493
+    type: Article
+    source: 知乎 · 算子开发
+  - title: Agent 自动优化 CUDA Kernel 实践
+    url: https://mp.weixin.qq.com/s/xIOIr4y60dzyeOn_3toipA
+    type: Article
+    source: 微信公众号 · FlashInfer 竞赛实践
+  - title: AI-Infra-Auto-Driven-SKILLS：基础设施技能库
+    url: https://github.com/BBuf/AI-Infra-Auto-Driven-SKILLS
+    type: Code
+    source: BBuf · GitHub
+  - title: KDA-Pilot：Agent 驱动的 Kernel 优化
+    url: https://github.com/BBuf/KDA-Pilot
+    type: Code
+    source: BBuf · GitHub
+  - title: InfraTech：Kimi K3 模型架构
+    url: https://github.com/CalvinXKY/InfraTech/tree/main/models/kimi_k_3
+    type: Notes
+    source: CalvinXKY · 架构与代码笔记
+  - title: InfraTech：DeepSeek V4 模型架构
+    url: https://github.com/CalvinXKY/InfraTech/tree/main/models/deepseek_v4
+    type: Notes
+    source: CalvinXKY · 架构与代码笔记
+  - title: InfraTech：AI Infra 知识与代码练习
+    url: https://github.com/CalvinXKY/InfraTech
+    type: Code
+    source: CalvinXKY · PyTorch / vLLM / SGLang
+  - title: 图解 MLA 计算流与吸收矩阵
+    url: https://zhuanlan.zhihu.com/p/1948769945132470860
+    type: Article
+    source: 知乎 · 注意力计算分析
+  - title: vLLM 显存管理详解
+    url: https://zhuanlan.zhihu.com/p/1916529253169734444
+    type: Article
+    source: 知乎 · 推理系统
+  - title: 大模型推理并行策略：DP / TP / PP / SP / EP
+    url: https://zhuanlan.zhihu.com/p/2003423046342554380
+    type: Article
+    source: 知乎 · 并行推理
+  - title: 大模型架构 3D 可视化
+    url: https://calvinxky.github.io/InfraTech/3d_models/
+    type: Interactive
+    source: CalvinXKY · InfraTech
+- id: agent
+  title_en: AI Agents
+  title_zh: 智能体
+  items:
+  - title: Learn Harness Engineering
+    url: https://walkinglabs.github.io/learn-harness-engineering/zh/
+    type: Course
+    source: walkinglabs · AI 编程智能体工程化
+  - title: 18 种 RAG 技术实测对比
+    url: https://levelup.gitconnected.com/testing-18-rag-techniques-to-find-the-best-094d166af27f
+    type: Article
+    source: Level Up Coding · Fareed Khan
+  - title: TypeScript 基础语法
+    url: https://www.runoob.com/typescript/ts-basic-syntax.html
+    type: Tutorial
+    source: 菜鸟教程 · Agent 工程语言基础
+  - title: Hello-Agents：动手学智能体
+    url: https://datawhalechina.github.io/hello-agents/
+    type: Course
+    source: Datawhale · 开源教程
+  - title: The 2025 AI Agent Index
+    url: https://aiagentindex.mit.edu/
+    type: Index
+    source: MIT · 智能体全景索引
+  - title: Awesome AI Model Routing
+    url: https://github.com/Not-Diamond/awesome-ai-model-routing
+    type: Repo
+    source: GitHub · LLM 路由方案合集
+  - title: 大模型 RAG 基础：信息检索、文本向量化及 BGE-M3 实践
+    url: https://arthurchiao.art/blog/rag-basis-bge-zh/
+    type: Article
+    source: Arthur Chiao
+  - title: Coordinator 编排：Claude Code 并行工作线程解析
+    url: https://claudecn.com/docs/source-analysis/coordinator/
+    type: Article
+    source: Claude 中文社区
+  - title: 多智能体协调器：Claude Code 如何编排并行工作线程
+    url: https://openedclaude.github.io/claude-reviews-claude/zh-CN/chapters/03-coordinator
+    type: Article
+    source: Claude Reviews Claude
+  - title: Agent Skills：技能生态入口
+    url: https://agentskills.io/home
+    type: Index
+    source: agentskills.io
+  - title: opencode：开源 AI 编程 Agent
+    url: https://github.com/anomalyco/opencode/blob/dev/README.zh.md
+    type: Repo
+    source: GitHub · anomalyco
+  - title: Agent Foundations 面试 Cheat Sheet
+    url: https://wanshuiyin.github.io/ARIS-in-AI-Offer/tutorials/agent_foundations_tutorial.html#0-tldr-cheat-sheet
+    type: Guide
+    source: ARIS-in-AI-Offer
+  - title: Terminal-Bench：终端智能体能力评测
+    url: https://www.tbench.ai/
+    type: Benchmark
+    source: Stanford × Laude
+  - title: CoEvoSkills：共进化验证的自进化 Agent Skills
+    url: https://zhang-henry.github.io/CoEvoSkills/
+    type: Paper
+    source: 项目主页 · arXiv 2026
+  - title: Elasticsearch：从入门到进阶
+    url: https://blog.csdn.net/sniper_fandc/article/details/153691789
+    type: Guide
+    source: CSDN · 检索基础设施
+  - title: MTEB：文本嵌入模型评测榜单
+    url: https://huggingface.co/spaces/mteb/leaderboard
+    type: Benchmark
+    source: Hugging Face · mteb
+  - title: STALE：LLM Agent 记忆何时失效
+    url: https://github.com/shibing624/ai-paper-analysis/blob/main/202605/20260522_STALE_%E8%AE%BA%E6%96%87%E8%A7%A3%E8%AF%BB_LLM%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E8%AE%B0%E5%BF%86%E4%BD%95%E6%97%B6%E6%82%84%E6%82%84%E8%BF%87%E6%9C%9F.md
+    type: Paper Notes
+    source: GitHub · shibing624
+  - title: Evo-Memory：智能体测试时学习与自进化记忆
+    url: https://zhuanlan.zhihu.com/p/2045487432850728375
+    type: Paper Notes
+    source: 知乎 · 论文阅读笔记
+  - title: AI-Research-SKILLs：AI 研究与工程技能库
+    url: https://github.com/Orchestra-Research/AI-Research-SKILLs
+    type: Repo
+    source: GitHub · Orchestra Research
+  - title: MemEvolve：智能体记忆系统的元进化
+    url: https://openreview.net/forum?id=qpkG0eKx4v
+    type: Paper
+    source: ICML 2026 · OpenReview
+  - title: Agent Pulse：AI 行业关键变化与证据
+    url: https://barretlee.github.io/agent-pulse/
+    type: Index
+    source: GitHub · Barret Lee
+  - title: RLMOpt：递归语言模型驱动的自适应 Prompt 优化
+    url: https://arxiv.org/html/2608.10471
+    type: Paper
+    source: arXiv · Autonomize AI × CMU
+  - title: 华为云 AI 办公实践中心
+    url: https://hands-on-agent.developer.huaweicloud.com/
+    type: Practice
+    source: 华为云 · AI Agent 实战
+  - title: AgentGuide：智能体研究前沿
+    url: https://github.com/adongwanai/AgentGuide/blob/main/docs/06-research-frontiers/README.md
+    type: Guide
+    source: adongwanai · 开源学习指南
+  - title: ToolGym：工具调用评测与数据集
+    url: https://huggingface.co/ToolGym
+    type: Benchmark
+    source: ToolGym · Hugging Face
+  - title: Continual Learning Bench：真实有状态环境中的持续学习评测
+    url: https://arxiv.org/abs/2606.05661
+    type: Paper
+    source: arXiv · 智能体评测
+  - title: Codex：MCP 接入指南
+    url: https://developers.openai.com/codex/mcp
+    type: Docs
+    source: OpenAI · 官方文档
+  - title: Agent-World：真实环境合成与通用智能体
+    url: https://agent-tars-world.github.io/-/
+    type: Project
+    source: Agent-World · 项目主页
+  - title: OpenShell：自主智能体运行时
+    url: https://github.com/NVIDIA/OpenShell
+    type: Code
+    source: NVIDIA · GitHub
+  - title: Claude Code 源码精读
+    url: https://www.bilibili.com/video/BV1v9DBBtEym/
+    type: Course
+    source: 哔哩哔哩 · 源码课程
+  - title: 深入理解 AI Agent：设计原理与工程实践
+    url: https://github.com/bojieli/ai-agent-book
+    type: Book
+    source: 李博杰 · 开源书稿与配套代码
+  - title: OpenViking：智能体上下文与记忆
+    url: https://github.com/volcengine/OpenViking/blob/main/docs/repository/README_CN.md
+    type: Code
+    source: OpenViking · 中文项目文档
+  - title: OpenViking：检索机制
+    url: https://docs.openviking.ai/zh/concepts/07-retrieval
+    type: Docs
+    source: OpenViking · 官方文档
+  - title: ReasoningBank：智能体记忆与测试时扩展
+    url: https://github.com/google-research/reasoning-bank
+    type: Code
+    source: Google Research · GitHub
+  - title: ASI-Bench：自主科研能力评测
+    url: https://github.com/apexin-ai/ASI-Bench
+    type: Benchmark
+    source: apexin-ai · GitHub
+  - title: QUIT：人在回路的 AI 科研自动化平台
+    url: https://github.com/Mr-XcHan/QUIT
+    type: Code
+    source: Mr-XcHan · GitHub
+- id: humanoid
+  title_en: Embodied AI
+  title_zh: 具身智能
+  items:
+  - title: Danfei Xu 访谈：人类数据、行为克隆、机器人 GPT-3
+    url: https://www.bilibili.com/video/BV1usRgBEESe
+    type: Podcast
+    source: WhynotTV Podcast · 哔哩哔哩
+  - title: UC Berkeley Ember Seminar：SONIC + BFM zero
+    url: https://www.xiaohongshu.com/user/profile/587bc19882ec39097318c045
+    type: Talk
+    source: 小红书 · B 站同步
+  - title: Robotic Manipulation
+    url: https://manipulation.csail.mit.edu/index.html
+    type: Course
+    source: MIT CSAIL
+  - title: MoveIt Tutorials
+    url: https://moveit.github.io/moveit_tutorials/
+    type: Docs
+    source: MoveIt · ROS 机械臂规划
+  - title: MuJoCo：Advanced Physics Simulation
+    url: https://mujoco.org/
+    type: Simulator
+    source: DeepMind
+  - title: LIBERO：Lifelong Learning Algorithms
+    url: https://lifelong-robot-learning.github.io/LIBERO/html/algo_data/lifelong_learning_algorithms.html
+    type: Docs
+    source: Lifelong Robot Learning
+  - title: LEGION：机器人终身强化学习
+    url: https://github.com/Ghiara/LEGION
+    type: Repo
+    source: GitHub · Ghiara
+  - title: Open X-Embodiment：机器人学习数据集与 RT-X 模型
+    url: https://robotics-transformer-x.github.io/
+    type: Dataset
+    source: Google DeepMind
+  - title: Awesome World Models for Embodied AI
+    url: https://github.com/Li-Zn-H/AwesomeWorldModels
+    type: Survey
+    source: GitHub · Li-Zn-H
+  - title: X-VLA：跨具身视觉-语言-动作模型
+    url: https://github.com/2toinf/X-VLA
+    type: Repo
+    source: GitHub · 2toinf
+  - title: Data Pyramid & Data Flywheel for Robotic Foundation Models
+    url: https://rpl.cs.utexas.edu/talks/2024_11_04_data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf
+    type: Talk
+    source: UT Austin RPL · PDF
+  - title: Whole-Body Coordination for Legged Manipulators
+    url: https://github.com/YoungYNG/DQ_WBC/tree/main
+    type: Repo
+    source: GitHub · YoungYNG
+  - title: TransCG：透明物体深度补全和抓取数据集
+    url: https://graspnet.net/transcg
+    type: Dataset
+    source: GraspNet
+  - title: Depth Anything V2：单目深度估计
+    url: https://arxiv.org/html/2406.09414
+    type: Paper
+    source: arXiv
+  - title: Marigold：Diffusion-Based Monocular Depth Estimation
+    url: https://marigoldmonodepth.github.io/
+    type: Project
+    source: Project Page
+  - title: VLA-Handbook：视觉-语言-动作学习与面试手册
+    url: https://github.com/sou350121/VLA-Handbook
+    type: Handbook
+    source: GitHub · sou350121
+  - title: ASGrasp：透明物体重建与 6-DoF 抓取
+    url: https://pku-epic.github.io/ASGrasp/
+    type: Project
+    source: ICRA 2024 · PKU EPIC
+  - title: Reflective Planning：VLM 长程机器人操作规划
+    url: https://reflect-vlm.github.io/
+    type: Project
+    source: Cornell · CUHK · Yale · UC Berkeley
+  - title: MiDaS v3.1：单目相对深度估计
+    url: https://ar5iv.labs.arxiv.org/html/2307.14460
+    type: Paper
+    source: arXiv · 视觉感知
+  - title: Depth Anything：单目深度估计
+    url: https://depth-anything.github.io/
+    type: Project
+    source: Depth Anything · 项目主页
+  - title: VGGT：前馈 Transformer 与 3D 几何感知
+    url: https://zhuanlan.zhihu.com/p/1917903984951267474
+    type: Article
+    source: 知乎 · CVPR 2025 论文解读
+- id: posttraining
+  title_en: LLM Post-Training
+  title_zh: 大模型后训练
+  items:
+  - title: 强化学习 · 大模型后训练版
+    url: https://walkinglabs.github.io/hands-on-modern-rl/preface/intro
+    type: Course
+    source: walkinglabs · 含具身 RL 路线规划
+  - title: 强化学习入门：从马尔可夫到 PPO / DPPO
+    url: https://zhuanlan.zhihu.com/p/111869532
+    type: Article
+    source: 知乎
+  - title: 用 LLaMA 训练你自己的大语言模型
+    url: https://zhuanlan.zhihu.com/p/630335027
+    type: Article
+    source: 知乎
+  - title: 从零「手搓」一个大模型
+    url: https://mp.weixin.qq.com/s/wcjYPzPq-lADvz-TeKZ7VQ
+    type: Article
+    source: 微信公众号
+  - title: 大模型 LLM 面经（实时更新）
+    url: https://ocnk15rrs0pu.feishu.cn/wiki/XSb5w9SQoiUBWzkOqcSced7pnZe
+    type: Interview
+    source: 飞书云文档
+  - title: Modern LLM Notebook
+    url: https://walkinglabs.github.io/modern-llm-notebook/
+    type: Book
+    source: walkinglabs · 现代 LLM 笔记
+  - title: Tianshou 天授：强化学习库
+    url: https://tianshou.org/en/stable/
+    type: Tool
+    source: 清华 · 模块化 RL 框架
+  - title: 为什么 base model 还不是 assistant
+    url: https://walkinglabs.github.io/hands-on-modern-rl/chapter08_rlhf/base-model-to-assistant
+    type: Chapter
+    source: Hands-on Modern RL
+  - title: 后训练介绍
+    url: https://www.streamlake.com/document/WANQING/mf6l5idt0lisgftxb5n
+    type: Guide
+    source: StreamLake 文档
+  - title: DAPO：大规模开源 LLM 强化学习系统
+    url: https://ar5iv.labs.arxiv.org/html/2503.14476v2
+    type: Paper
+    source: arXiv · 论文 HTML
+  - title: PPO：有了奖励模型，为什么还需要价值模型
+    url: https://mp.weixin.qq.com/s/Zr16QrWCSmzENgpbn0WT3Q
+    type: Article
+    source: 微信公众号
+  - title: On-Policy Distillation：Policy Gradient 视角
+    url: https://zhuanlan.zhihu.com/p/2058368749707776341
+    type: Article
+    source: 知乎
+  - title: On-Policy Distillation：2026 上半年综述
+    url: https://zhuanlan.zhihu.com/p/2047255993000759999
+    type: Survey
+    source: 知乎 · 三万字长文
+  - title: OPD-Evolver：基于在策略蒸馏的智能体进化
+    url: https://arxiv.org/pdf/2606.17628
+    type: Paper
+    source: arXiv · LV-NUS Lab
+  - title: Off-Policy + On-Policy 两段式蒸馏
+    url: https://zhuanlan.zhihu.com/p/2041180570701587116
+    type: Article
+    source: 知乎 · 大模型蒸馏
+  - title: REOPOLD：将 On-Policy Distillation 作为 RL 调优
+    url: https://zhuanlan.zhihu.com/p/2042996386673715116
+    type: Paper Notes
+    source: 知乎 · 训练稳定性解读
+  - title: On-Policy Distillation：三万字综述
+    url: https://zhuanlan.zhihu.com/p/2045918254108095918
+    type: Article
+    source: 知乎 · 在策略蒸馏
+  - title: Sentence Transformers：损失函数参考
+    url: https://sbert.net/docs/package_reference/sentence_transformer/losses.html
+    type: Docs
+    source: Sentence Transformers · 官方文档
+  - title: PRISM：中期训练的知识保留与交互
+    url: https://bharat-runwal.github.io/PRISM/
+    type: Paper
+    source: IBM Research · MIT-IBM Watson AI Lab
+  - title: ARPO：Agentic Reinforced Policy Optimization
+    url: https://github.com/RUC-NLPIR/ARPO
+    type: Code
+    source: RUC-NLPIR · ICLR 2026
+  - title: Agent Lightning v1.0：Harnessed Agentic RL
+    url: https://arxiv.org/abs/2608.17528
+    type: Paper
+    source: Microsoft Research · arXiv
+  - title: Agentic ESOpt：低 GPU 需求的长程智能体微调
+    url: https://arxiv.org/abs/2608.17310
+    type: Paper
+    source: arXiv · 智能体训练
+- id: recsys
+  title_en: Recommender Systems
+  title_zh: 推荐算法
+  items:
+  - title: 推荐系统简介
+    url: https://dingfen.github.io/2023/02/06/2023-2-6-recommender_systems/
+    type: Article
+    source: 峰子的乐园
+  - title: 推荐系统：机器学习模型完整指南
+    url: https://towardsdatascience.com/recommender-systems-a-complete-guide-to-machine-learning-models-96d3f94ea748/
+    type: Guide
+    source: Towards Data Science
+  - title: 工业界算法实践 Algorithm-Practice-in-Industry
+    url: https://github.com/Doragd/Algorithm-Practice-in-Industry
+    type: Repo
+    source: GitHub · Doragd
+  - title: Avazu CTR 点击率预测
+    url: https://www.kaggle.com/competitions/avazu-ctr-prediction
+    type: Dataset
+    source: Kaggle · 经典实战竞赛
+  - title: 快手 LLM-Rec 挑战赛 2026
+    url: https://ks-llmrec.streamlake.com/
+    type: Challenge
+    source: Kuaishou · StreamLake
+  - title: 快手 OpenOneRec 技术报告
+    url: https://zhuanlan.zhihu.com/p/2000832958668497198
+    type: Report
+    source: 知乎
+  - title: 腾讯广告算法大赛
+    url: https://algo.qq.com/
+    type: Competition
+    source: Tencent Ads
+  - title: 推荐系统公开课：8 小时工业实践完整版
+    url: https://www.bilibili.com/video/BV1HZ421U77y/
+    type: Course
+    source: ShusenWang · 哔哩哔哩
+  - title: LLM-Rec 挑战赛：训练与提交流程
+    url: https://www.streamlake.com/document/WANQING/mq57afym1d7p20atnau
+    type: Guide
+    source: 快手万擎 · 官方文档
+  - title: OneReason-0.8B：推荐竞赛预训练模型
+    url: https://huggingface.co/OpenOneRec/OneReason-0.8B-pretrain-competition
+    type: Model
+    source: OpenOneRec · Hugging Face
+  - title: Explorer LLM Rec Competition：推荐竞赛数据集
+    url: https://huggingface.co/datasets/OpenOneRec/Explorer_LLM_Rec_Competition
+    type: Dataset
+    source: OpenOneRec · Hugging Face
+- id: inspiration
+  title_en: Research & Inspiration
+  title_zh: 研究与启发
+  items:
+  - title: How to Have a Bad Career in Research/Academia
+    url: https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf
+  - title: How to Do Great Work
+    url: https://www.paulgraham.com/greatwork.html
+  - title: How to Read a Paper
+    url: https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf
+  - title: NG Gladiator
+    url: https://www.nationalgeographic.com/magazine/issue/august-2021
+  - title: NG Everest
+    url: https://www.nationalgeographic.com/magazine/issue/july-2020
+  - title: NG Anthropocene
+    url: https://education.nationalgeographic.org/resource/anthropocene/

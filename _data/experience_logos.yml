@@ -1,0 +1,19 @@
+# Original institutional artwork; sources retained for future updates.
+bytedance:
+  image: /images/experience/bytedance.png
+  source: https://lf3-static.bytednsdoc.com/obj/eden-cn/shjpmmv_ljuhklafi/ljhwZthlaukjlkulzlp/images/Pn04bTfD5oKbB3x1NFLcQ3Bxn1b-20261029135132-20261029150506.png
+cuhksz:
+  image: /images/experience/cuhksz.png
+  source: https://se-research.bytedance.com/logos/cuhksz.png
+hku:
+  image: /images/experience/hku.png
+  source: https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png
+sribd:
+  image: /images/experience/sribd.png
+  source: https://www.sribd.cn/sites/default/files/logo%2B_0.png
+york:
+  image: /images/experience/york.svg
+  source: https://www.york.ac.uk/static/2/images/favicons/favicon.svg
+macau:
+  image: /images/experience/macau.png
+  source: https://www.um.edu.mo/wp-content/uploads/2020/09/cropped-512-192x192.png

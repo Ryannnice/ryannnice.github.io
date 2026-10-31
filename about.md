@@ -1,7 +1,7 @@
 ---
 permalink: /
 seo_title: "Renyuan Liu"
-description: "Renyuan Liu is a Research Master's (MPhil) student working on AI infrastructure and AI agents."
+description: "Renyuan Liu is an MPhil student working on AI infrastructure and AI agents."
 lang: en
 locale: en_US
 alternate_url: /zh/
@@ -11,6 +11,7 @@ language_switch_aria_label: Switch to Chinese
 author_profile: true
 github_activity_sidebar: true
 hide_title: true
+homepage: true
 redirect_from: 
   - /about/
   - /about.html
@@ -26,11 +27,9 @@ redirect_from:
 ---
 
 Nice to meet you here!
-I am a **Research Master's (MPhil) student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence).
+I am an **MPhil student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence).
 
 My current research focuses on **AI infrastructure** and **AI agents**.
-
-I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 ## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
 
@@ -89,7 +88,7 @@ My current research focuses on **AI infrastructure** and **AI agents**, with an 
     <details class="project-details">
       <summary>View project details</summary>
       <div class="project-details__content">
-        <p><strong>Project Background:</strong> As a core developer, I participated in the full-parameter post-training of DeepSeek-V4-Pro on domestic accelerators, jointly conducted by Shenzhen Hetao College, Huawei, and 智子芯元. For DeepSeek-V4 inference and post-training on domestic hardware, I worked on Ascend 910C deployment evaluation, kernel-optimization Agent development, and fused backward-kernel optimization.</p>
+        <p><strong>Project Background:</strong> As a core developer, I participated in the full-parameter post-training of DeepSeek-V4-Pro on domestic accelerators, jointly conducted by Shenzhen Loop Area Institute, Huawei, and 智子芯元. For DeepSeek-V4 inference and post-training on domestic hardware, I worked on Ascend 910C deployment evaluation, kernel-optimization Agent development, and fused backward-kernel optimization.</p>
         <ul>
           <li><strong>910C Inference Adaptation and Evaluation (DeepSeek V4 Flash/Pro):</strong> Participated in deploying and evaluating DeepSeek V4 Flash/Pro on an Ascend 910C cluster. Compared Prefill/Decode performance between vLLM Ascend and SGLang on ShareGPT and other datasets to support inference-framework selection and deployment configuration.</li>
           <li><strong>Kernel Optimization Agent (Ascend Migration and Open Source):</strong> Addressed the manual analysis and repeated trial-and-error required by Ascend kernels by rebuilding MIT Kernel Design Agents for 910B/910C with a kernel knowledge base, optimization rules, and performance-diagnostic tools. Connected retrieval → generation → compilation → accuracy/performance verification → retain/rollback into a closed loop and open-sourced Kernel-Agent-Ascend.</li>
@@ -114,9 +113,9 @@ My current research focuses on **AI infrastructure** and **AI agents**, with an 
 
 * [Feb 26th, 2026] [Scored the highest and nominated for the *CSC Joint Funded PhD Scholarship by the University of York*](/assets/York_CSC.png), in collaboration with the *China Scholarship Council*! 
   
-* [Jan 19th, 2026] [Admitted to the *Research Master's (MPhil) program in Artificial Intelligence*](/assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong Kong, Shenzhen, School of Artificial Intelligence*!
+* [Jan 19th, 2026] [Admitted to the *Master of Philosophy (MPhil) program in Artificial Intelligence*](/assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong Kong, Shenzhen, School of Artificial Intelligence*!
 
-* [Dec 17th, 2025] Second-Class Scholarship Awarded by *Guangzhou University* [Top 8%].
+* [Dec 17th, 2025] Awarded a Second-Class Scholarship [Top 8%].
 
 * [Nov 27th, 2025] [Admitted to the *PhD program in Computer Science*](/assets/Offer_UoY_PhD_CS.pdf) at *the University of York, Department of Computer Science*.
 
@@ -135,40 +134,62 @@ My current research focuses on **AI infrastructure** and **AI agents**, with an 
 
 ## Experience {#experience-renyuan}
 
+<div class="experience-list" markdown="1">
 
-- **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
-  Sept. 2026 - Jun. 2028 (Expected)  
-  **Research Master's (MPhil) Student in Artificial Intelligence**<br>
-  Supervisor: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence)
+- {% include experience-logos.html organizations="bytedance" %} **[ByteDance](https://www.bytedance.com/)**, Shenzhen, China<br>
+  Sept. 2026 - Present<br>
+  **Intern**<br>
+  [Volcengine (Doubao / Volcengine Ark)](https://www.volcengine.com/product/ark)<br>
+  Research focus: Enterprise AI Agents (B2B)
+
+
+- {% include experience-logos.html organizations="cuhksz" %} **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
+  Sept. 2026 - Jun. 2028 (Expected)<br>
+  **Master of Philosophy (MPhil) in Artificial Intelligence**<br>
+  [Duan Family College](https://duanfamily.cuhk.edu.cn/)<br>
+  Supervisor: [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence)<br>
+  Research focus: Large Language Models / AI Agents
   
 
-- **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
+- {% include experience-logos.html organizations="cuhksz" %} **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
+  Jul. 2026 - Aug. 2026<br>
+  **Research Assistant (RA)**<br>
+  Supervisor: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence)<br>
+  Lab: [Embodied AI & Robotics Lab (EAR Lab)](https://earlab-cuhksz.github.io/)<br>
+  Research focus: Embodied AI
+
+
+- {% include experience-logos.html organizations="hku" %} **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
   Jul. 2026<br>
-  **Summer School Student**
+  **Summer School Student**<br>
+  Programme theme: Artificial Intelligence and Robotics
 
 
 
-- **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China  
+- {% include experience-logos.html organizations="sribd" %} **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China<br>
   Mar. 2026 - Jun. 2026<br>
   **Algorithm Intern**<br>
-  Supervisor: [Dr. Akang Wang](https://github.com/akangw) (School of Data Science)<br>
-  Worked on AI infrastructure, accelerator kernel optimization, LLM semantic routing, and AI agent applications.
+  Supervisor: [Dr. Akang Wang](https://github.com/akangw) ([Shenzhen Research Institute of Big Data](https://www.sribd.cn/en); [Shenzhen Loop Area Institute](https://www.slai.edu.cn/en); [School of Data Science, CUHK-Shenzhen](https://sds.cuhk.edu.cn/en))<br>
+  Research focus: AI Infrastructure
   
 
-- **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)  
-  Jun. 2025 - Sept. 2025  
-  **Visiting Student**  
-  **Lab:** Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, Department of Computer Science  
-  Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)  
+- {% include experience-logos.html organizations="york" %} **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)<br>
+  Jun. 2025 - Sept. 2025<br>
+  **Research Assistant (RA)**<br>
+  Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)<br>
+  Lab: Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, [Department of Computer Science](https://www.york.ac.uk/computer-science/)<br>
+  Research focus: Motion Planning<br>
   [\[Evidence\]](/assets/Evidence_York.pdf)
 
 
-- **[The University of Hong Kong](https://www.hku.hk/)/[University of Macau](https://www.um.edu.mo/)**, Hong Kong/Macao, China  
-  Nov. 2023  
-  **Interdisciplinary Programme Leader**  
-  **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team  
+- {% include experience-logos.html organizations="macau" %} **[University of Macau](https://www.um.edu.mo/)**, Macao, China<br>
+  Nov. 2023<br>
+  **Interdisciplinary Programme**<br>
+  **GPA: 97.50/100.00**; **Honor:** Commendation Letter for Outstanding Performance in the Winning Team<br>
   [\[Evidence\]](/assets/Evidence_HKU.pdf)
 
+
+</div>
 
 ## Manuscripts Under Review {#publications-renyuan}
 
@@ -197,11 +218,11 @@ My current research focuses on **AI infrastructure** and **AI agents**, with an 
 
 
 <details class="project-details research-background" markdown="1">
-<summary>Research Background</summary>
+<summary>Undergraduate Research Background</summary>
 
 <div class="project-details__content" markdown="1">
 
-During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre, Guangzhou University, and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
+During my undergraduate studies, I was fortunate to be advised by [Prof. Qinbing Fu](https://www.researchgate.net/profile/Qinbing-Fu-2) at the Machine Life and Intelligence Research Centre and [Prof. Pengcheng Liu](https://sites.google.com/view/pliu) at the Department of Computer Science, University of York, UK.
 
 My undergraduate research focused on **brain-inspired neural networks** and **machine vision**. I modeled insect visual circuits for robust motion perception and translated them into collision-detection systems for robots. I enjoy hands-on coding, debugging, profiling, and end-to-end system implementation. My experimental platforms include *TurtleBot*s equipped with a binocular camera and the micro ground robot *Colias*.
 
@@ -215,6 +236,9 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 </details>
 
 ## Honors and Awards {#awards-renyuan}
+
+- **Undergraduate Thesis Innovation Award (Ranked 3rd University-Wide)**<br>
+  Jun. 2026
 
 
 - **First Prize (Provincial; Top 3%)**, Chinese Collegiate Computing Competition (4C)  
@@ -230,20 +254,20 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   "Greater Bay Area Cup" Guangdong-Hong Kong-Macao Financial Mathematics Modeling Competition  
   Nov. 2024  [\[Evidence\]](/assets/Evidence_GBA_Cup.pdf)  
   
-- **Second-Class Scholarship (Top 8%)**, *Guangzhou University*  
+- **Second-Class Scholarship (Top 8%)**<br>
   Dec. 2025  [\[Evidence\]](/assets/Evidence_Scholarship_2025.pdf)  
 
-- **Third-Class Scholarship (Top 12%)**, *Guangzhou University*  
+- **Third-Class Scholarship (Top 12%)**<br>
   Nov. 2024  [\[Evidence\]](/assets/Evidence_Scholarship_2024.pdf)  
 
-- **First-Class Scholarship (Top 5%)**, *Guangzhou University*  
+- **First-Class Scholarship (Top 5%)**<br>
   Dec. 2023  [\[Evidence\]](/assets/Evidence_Scholarship_2023.pdf)  
 
 - **Commendation Letter for Outstanding Performance in the Winning Team**,  
-  Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at University of Hong Kong and The University of Macao  
+  Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at the University of Macau<br>
   Nov. 2023  [\[Evidence\]](/assets/Evidence_Macao.pdf)  
 
-- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*  [\[Evidence\]](/assets/Evidence_College_Student_Training.pdf)  
+- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*
 
 
 
@@ -258,15 +282,15 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 - **AI-Assisted Development:** intensive daily use of Codex and Claude Code, with monthly usage on the order of 10 billion tokens
 - **Languages:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5) and **CET-6 564** (242/248.5 in reading)
 - **Documentation & Media:** LaTeX, Markdown, MS Office/Visio, Adobe Photoshop, and Premiere Pro
-- *<font color = '#000066'>Learning is one of the happiest things in the world.</font>*
 
-  *I enjoy movies, music, photography, basketball, jogging, badminton, hiking, and cooking.*
+*I enjoy rock climbing, cooking, basketball, and console gaming.*
   
 
 
 
 
 
+{% comment %}
 ## Conference {#misc-renyuan}
 
 ***<font color = '#000066'>TAROS 2025</font>***, *York, United Kingdom*
@@ -287,17 +311,11 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 
 
-## Inspiring Articles {#inspiring-articles}
+{% endcomment %}
 
-- [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
-- [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
-- [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
-- [NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)
-- [NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)
-- [NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)  
-<br>
-<br>
-<br>
+## Learning Resources & Inspiring Articles {#inspiring-articles}
+
+{% include learning-resources.html %}
 
 
 
@@ -313,3 +331,5 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
       decoding="async">
   </a>
 </figure>
+
+I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)

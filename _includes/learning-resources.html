@@ -1,0 +1,26 @@
+{% assign learning_resource_count = 0 %}
+{% for group in site.data.learning_resources.groups %}
+  {% assign learning_resource_count = learning_resource_count | plus: group.items.size %}
+{% endfor %}
+<p class="learning-resources__intro">
+  {% if page.lang == "zh-CN" %}
+    共 {{ learning_resource_count }} 项课程、论文、工具与阅读资料，按主题展开浏览。学习资料整理自 <a href="{{ site.data.learning_resources.source | escape }}">TEAM NEXUS</a>。
+  {% else %}
+    {{ learning_resource_count }} courses, papers, tools, and readings, grouped by topic. Learning materials are collected from <a href="{{ site.data.learning_resources.source | escape }}">TEAM NEXUS</a>.
+  {% endif %}
+</p>
+<div class="learning-resources">
+  {% for group in site.data.learning_resources.groups %}
+    <details class="project-details learning-resource-group">
+      <summary>{% if page.lang == "zh-CN" %}{{ group.title_zh | escape }}{% else %}{{ group.title_en | escape }}{% endif %} <span class="learning-resource-group__count">({{ group.items.size }})</span></summary>
+      <ul class="learning-resource-list">
+        {% for resource in group.items %}
+          <li class="learning-resource">
+            <a href="{{ resource.url | escape }}" target="_blank" rel="noopener noreferrer">{{ resource.title | escape }}</a>
+            {% if resource.type or resource.source %}<span class="learning-resource__meta">{{ resource.type | escape }}{% if resource.type and resource.source %} · {% endif %}{{ resource.source | escape }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  {% endfor %}
+</div>

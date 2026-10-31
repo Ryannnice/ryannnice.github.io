@@ -79,12 +79,6 @@
 
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
-  const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function savedTheme() {
-    try { return localStorage.getItem('theme'); } catch (error) { return null; }
-  }
-
   function applyTheme(theme) {
     const dark = theme === 'dark';
     root.setAttribute('data-theme', dark ? 'dark' : 'light');
@@ -107,10 +101,6 @@
     try { localStorage.setItem('theme', theme); } catch (error) {}
     applyTheme(theme);
     disclosures.forEach(control => control.setOpen(false));
-  });
-  listenToMedia(preferredTheme, function () {
-    const saved = savedTheme();
-    if (saved !== 'light' && saved !== 'dark') applyTheme(preferredTheme.matches ? 'dark' : 'light');
   });
 
   function markCurrentLink() {
@@ -135,6 +125,20 @@
       requestAnimationFrame(() => target.focus({ preventScroll: true }));
     }
   });
+
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function updateBackToTop() {
+      backToTop.hidden = window.scrollY <= 300;
+    }
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    updateBackToTop();
+    backToTop.addEventListener('click', function () {
+      document.getElementById('main')?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+    });
+  }
 
   const returnFocus = new WeakMap();
   function openDialog(dialog, trigger) {

@@ -11,17 +11,16 @@ language_switch_aria_label: Switch to English
 author_profile: true
 github_activity_sidebar: true
 hide_title: true
+homepage: true
 ---
 
 # Renyuan LIU（刘<ruby>稔<rt>rěn</rt></ruby>远）
 ---
 
 你好，很高兴在这里认识你！
-我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）。
+我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）。
 
 目前，我的研究聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
-
-欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
 
 ## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
 
@@ -108,7 +107,7 @@ hide_title: true
 
 * [2026 年 1 月 19 日] 获[香港中文大学（深圳）人工智能学院人工智能研究型硕士（MPhil）项目录取](/assets/Offer_CUHKSZ_MPhil_AI.pdf)。
 
-* [2025 年 12 月 17 日] 获广州大学二等奖学金（前 8%）。
+* [2025 年 12 月 17 日] 获二等奖学金（前 8%）。
 
 * [2025 年 11 月 27 日] 获[英国约克大学计算机科学博士项目录取](/assets/Offer_UoY_PhD_CS.pdf)。
 
@@ -127,34 +126,55 @@ hide_title: true
 
 ## 经历 {#experience-renyuan}
 
-- **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
+<div class="experience-list" markdown="1">
+
+- {% include experience-logos.html organizations="bytedance" %} **[字节跳动](https://www.bytedance.com/)**，中国深圳<br>
+  2026 年 9 月 – 至今<br>
+  **实习生**<br>
+  [火山引擎（豆包／火山方舟）](https://www.volcengine.com/product/ark)<br>
+  研究方向：企业级 AI 智能体（ToB Agent）
+
+- {% include experience-logos.html organizations="cuhksz" %} **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 9 月 – 2028 年 6 月（预计）<br>
-  **人工智能研究型硕士生（MPhil）**<br>
-  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）
+  **人工智能研究型硕士（MPhil）**<br>
+  [永平书院](https://duanfamily.cuhk.edu.cn/)<br>
+  导师：[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）<br>
+  研究方向：大语言模型 / 智能体
 
-- **[香港大学](https://www.hku.hk/)**，中国香港<br>
+- {% include experience-logos.html organizations="cuhksz" %} **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
+  2026 年 7 月 – 2026 年 8 月<br>
+  **研究助理（RA）**<br>
+  导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）<br>
+  实验室：[Embodied AI & Robotics Lab（EAR Lab）](https://earlab-cuhksz.github.io/)<br>
+  研究方向：具身智能
+
+- {% include experience-logos.html organizations="hku" %} **[香港大学](https://www.hku.hk/)**，中国香港<br>
   2026 年 7 月<br>
-  **暑期学校学员**
+  **暑期学校学员**<br>
+  项目主题：人工智能与机器人
 
-- **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
+- {% include experience-logos.html organizations="sribd" %} **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
   2026 年 3 月 – 2026 年 6 月<br>
   **算法实习生**<br>
-  导师：[王阿康博士](https://github.com/akangw)（数据科学学院）<br>
-  从事 AI 基础设施、加速器算子优化、大语言模型语义路由与 AI Agent 应用研发。
+  导师：[王阿康博士](https://github.com/akangw)（[深圳市大数据研究院](https://www.sribd.cn/)、[深圳河套学院](https://www.slai.edu.cn/)、[香港中文大学（深圳）数据科学学院](https://sds.cuhk.edu.cn/)）<br>
+  研究方向：AI Infrastructure
 
-- **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
+- {% include experience-logos.html organizations="york" %} **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
   2025 年 6 月 – 2025 年 9 月<br>
-  **访问学生**<br>
-  **实验室：**计算自主学习系统实验室，实时与分布式系统研究组，计算机科学系<br>
+  **研究助理（RA）**<br>
   导师：[刘鹏程教授](https://sites.google.com/view/pliu)<br>
+  实验室：计算自主学习系统实验室，实时与分布式系统研究组，[计算机科学系](https://www.york.ac.uk/computer-science/)<br>
+  研究方向：运动规划<br>
   [\[证明材料\]](/assets/Evidence_York.pdf)
 
-- **[香港大学](https://www.hku.hk/)/[澳门大学](https://www.um.edu.mo/)**，中国香港/澳门<br>
+- {% include experience-logos.html organizations="macau" %} **[澳门大学](https://www.um.edu.mo/)**，中国澳门<br>
   2023 年 11 月<br>
-  **跨学科项目组长**<br>
+  **跨学科项目**<br>
   **GPA：97.50/100.00；荣誉：**获胜团队杰出表现嘉奖信<br>
   [\[证明材料\]](/assets/Evidence_HKU.pdf)
 
+
+</div>
 
 ## 在审稿件 {#publications-renyuan}
 
@@ -181,11 +201,11 @@ hide_title: true
 
 
 <details class="project-details research-background" markdown="1">
-<summary>研究领域介绍</summary>
+<summary>本科阶段研究背景</summary>
 
 <div class="project-details__content" markdown="1">
 
-本科期间，我有幸在广州大学机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
+本科期间，我有幸在机器生命与智能研究中心接受[傅沁冰教授](https://www.researchgate.net/profile/Qinbing-Fu-2)指导，并在英国约克大学计算机科学系接受[刘鹏程教授](https://sites.google.com/view/pliu)指导。
 
 我的本科研究主要聚焦**类脑神经网络**与**机器视觉**：通过建模昆虫视觉回路实现鲁棒的实时运动感知，并将这些机制转化为机器人碰撞检测系统。我喜欢亲手完成编码、调试、性能分析和端到端系统实现。实验平台包括配备双目相机的 *TurtleBot* 与微型地面机器人 *Colias*。
 
@@ -200,6 +220,9 @@ hide_title: true
 
 ## 荣誉与奖励 {#awards-renyuan}
 
+- **本科毕业设计创新奖（全校第 3 名）**<br>
+  2026 年 6 月
+
 - **省级一等奖（前 3%）**，中国大学生计算机设计大赛<br>
   2025 年 5 月 [\[证明材料\]](/assets/Evidence_Computer_Design.pdf)
 
@@ -212,19 +235,19 @@ hide_title: true
 - **省级一等奖、创新银奖（1,167 支队伍中第 2 名）**，“大湾区杯”粤港澳金融数学建模竞赛<br>
   2024 年 11 月 [\[证明材料\]](/assets/Evidence_GBA_Cup.pdf)
 
-- **二等奖学金（前 8%）**，广州大学<br>
+- **二等奖学金（前 8%）**<br>
   2025 年 12 月 [\[证明材料\]](/assets/Evidence_Scholarship_2025.pdf)
 
-- **三等奖学金（前 12%）**，广州大学<br>
+- **三等奖学金（前 12%）**<br>
   2024 年 11 月 [\[证明材料\]](/assets/Evidence_Scholarship_2024.pdf)
 
-- **一等奖学金（前 5%）**，广州大学<br>
+- **一等奖学金（前 5%）**<br>
   2023 年 12 月 [\[证明材料\]](/assets/Evidence_Scholarship_2023.pdf)
 
-- **获胜团队杰出表现嘉奖信**，香港大学与澳门大学跨学科项目——新媒体、科技创新、艺术与数据挖掘<br>
+- **获胜团队杰出表现嘉奖信**，澳门大学跨学科项目——新媒体、科技创新、艺术与数据挖掘<br>
   2023 年 11 月 [\[证明材料\]](/assets/Evidence_Macao.pdf)
 
-- **省级重点大学生创新创业训练计划项目：**基于光流与学习优化的仿生 LGMD 碰撞检测模型（S202411078014） [\[证明材料\]](/assets/Evidence_College_Student_Training.pdf)
+- **省级重点大学生创新创业训练计划项目：**基于光流与学习优化的仿生 LGMD 碰撞检测模型（S202411078014）
 
 
 ## 技术能力 {#skills}
@@ -237,11 +260,11 @@ hide_title: true
 - **AI 辅助开发：**每日高强度使用 Codex 与 Claude Code，月消耗 Token 百亿量级
 - **语言：** **IELTS 6.5**（阅读 8.0、听力 6.5、写作 6.0、口语 5.5）；**CET-6 564**（阅读 242/248.5）
 - **文档与媒体：**LaTeX、Markdown、MS Office/Visio、Adobe Photoshop 与 Premiere Pro
-- *<font color = '#000066'>学习是世界上最幸福的事情之一。</font>*
 
-  *喜欢电影、音乐、摄影、篮球、跑步、羽毛球、徒步与烹饪……*
+*喜欢攀岩、烹饪、篮球和主机游戏*
 
 
+{% comment %}
 ## 学术会议 {#misc-renyuan}
 
 ***<font color = '#000066'>TAROS 2025</font>***，英国约克
@@ -261,14 +284,11 @@ hide_title: true
 - *走向更广阔的学术世界。*
 
 
-## 启发我的文章 {#inspiring-articles}
+{% endcomment %}
 
-- [How to Have a Bad Career in Research/Academia](https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf)
-- [How to Do Great Work](https://www.paulgraham.com/greatwork.html)
-- [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
-- [NG Gladiator](https://www.nationalgeographic.com/magazine/issue/august-2021)
-- [NG Everest](https://www.nationalgeographic.com/magazine/issue/july-2020)
-- [NG Anthropocene](https://education.nationalgeographic.org/resource/anthropocene/)
+## 学习资料与启发文章 {#inspiring-articles}
+
+{% include learning-resources.html %}
 
 
 ## 访客地图 {#visitor-map}
@@ -283,3 +303,5 @@ hide_title: true
       decoding="async">
   </a>
 </figure>
+
+欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)

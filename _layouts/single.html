@@ -22,7 +22,7 @@ layout: default
         {% endunless %}
       {% endif %}
 
-      <section class="page__content" itemprop="text">
+      <section class="page__content{% if page.homepage %} page__content--home{% endif %}" itemprop="text">
         {{ content }}
       </section>
     </div>

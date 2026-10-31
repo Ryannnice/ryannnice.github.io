@@ -46,12 +46,12 @@ html[data-theme="dark"] {
     --global-code-background-color      : #1b2433;
     --global-code-text-color            : #dbe6f3;
     --global-fig-caption-color          : #aab6c5;
-    --global-link-color                 : #80caff;
-    --global-link-color-hover           : #b7e3ff;
-    --global-link-color-visited         : #c4b5fd;
-    --global-focus-color                : #80caff;
-    --global-masthead-link-color        : #dbe6f3;
-    --global-masthead-link-color-hover  : #80caff;
+    --global-link-color                 : #c4b5fd;
+    --global-link-color-hover           : #ddd6fe;
+    --global-link-color-visited         : var(--global-link-color);
+    --global-focus-color                : var(--global-link-color);
+    --global-masthead-link-color        : var(--global-link-color);
+    --global-masthead-link-color-hover  : var(--global-link-color-hover);
     --global-text-color                 : #e5edf5;
     --global-text-color-light           : #aab6c5;
     --global-thead-color                : #242f40;

@@ -38,6 +38,12 @@
     {% if profile_bio %}<p class="author__bio">{{ profile_bio }}</p>{% endif %}
   </div>
 
+  {% if page.github_activity_sidebar %}
+    <div class="author__github-activity">
+      {% include github-activity.html compact=true %}
+    </div>
+  {% endif %}
+
   <div class="author__urls-wrapper">
     <button class="author__contact-toggle" type="button" aria-expanded="false" aria-controls="author-contact-links" hidden>{{ profile_contact_label }}</button>
     <ul id="author-contact-links" class="author__urls social-icons">
@@ -189,11 +195,6 @@
     </ul>
   </div>
 
-  {% if page.github_activity_sidebar %}
-    <div class="author__github-activity">
-      {% include github-activity.html compact=true %}
-    </div>
-  {% endif %}
 </div>
 
 

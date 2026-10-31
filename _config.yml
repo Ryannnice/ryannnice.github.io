@@ -27,8 +27,8 @@ navigation:
       url: "/#publications-renyuan"
     - title: "Awards"
       url: "/#awards-renyuan"
-    - title: "Misc."
-      url: "/#misc-renyuan"
+    # - title: "Misc."
+    #   url: "/#misc-renyuan"
   zh:
     - title: "经历"
       url: "/zh/#experience-renyuan"
@@ -38,8 +38,8 @@ navigation:
       url: "/zh/#publications-renyuan"
     - title: "荣誉"
       url: "/zh/#awards-renyuan"
-    - title: "其他"
-      url: "/zh/#misc-renyuan"
+    # - title: "其他"
+    #   url: "/zh/#misc-renyuan"
 
 # 站点作者信息：以下字段控制侧边栏作者区域显示的内容。
 # 如果某个字段留空，对应图标和链接就不会显示。
@@ -51,8 +51,8 @@ author:
   pronouns         : # 示例："she/her"
   bio              : "MPhil student in AI at CUHK-Shenzhen"
   bio_zh           : "香港中文大学（深圳）人工智能研究型硕士生"
-  location         : "Zhengzhou, China"
-  location_zh      : "中国·郑州"
+  location         : "Shenzhen, China"
+  location_zh      : "中国·深圳"
   employer         : "CUHK(Shenzhen)"
   employer_zh      : "香港中文大学（深圳）"
   uri              : # 网址

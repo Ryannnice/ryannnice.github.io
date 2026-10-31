@@ -1,0 +1,7 @@
+{%- assign experience_organizations = include.organizations | split: "," -%}
+<span class="experience-logos{% if experience_organizations.size > 1 %} experience-logos--dual{% endif %}" aria-hidden="true">
+  {%- for organization in experience_organizations -%}
+    {%- assign experience_logo = site.data.experience_logos[organization] -%}
+    <img class="experience-logo" src="{{ experience_logo.image | relative_url }}" alt="" width="64" height="64" loading="lazy" decoding="async">
+  {%- endfor -%}
+</span>

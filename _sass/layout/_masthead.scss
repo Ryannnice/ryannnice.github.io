@@ -20,19 +20,19 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "logo logo" "home actions";
+  grid-template-areas: "logo logo" ". actions";
   align-items: center;
   gap: 0.4rem 0.75rem;
   min-width: 0;
 
   @include breakpoint($medium) {
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    grid-template-areas: "logo home actions";
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "logo actions";
   }
 
   @include breakpoint($x-large) {
-    grid-template-columns: auto auto minmax(0, 1fr) auto;
-    grid-template-areas: "logo home links actions";
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "logo links actions";
     column-gap: 0.6rem;
   }
 
@@ -56,18 +56,6 @@
   display: block;
   width: 100%;
   height: auto;
-}
-
-.site-nav__home {
-  grid-area: home;
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0.45rem 0.5rem;
-  border-radius: $border-radius;
-  font-size: 0.85rem;
-  font-weight: 700;
 }
 
 .site-nav__links {
@@ -103,7 +91,6 @@
   }
 }
 
-.site-nav__home,
 .site-nav__links a {
   &:hover,
   &:focus-visible,
@@ -151,6 +138,14 @@
   padding-left: 0.65rem;
   font-size: 0.78rem;
   font-weight: 600;
+}
+
+.back-to-top {
+  position: fixed;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 15;
+  box-shadow: 0 3px 12px rgba(31, 35, 40, 0.12);
 }
 
 .navicon {
