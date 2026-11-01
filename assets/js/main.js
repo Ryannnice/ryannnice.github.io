@@ -103,17 +103,54 @@
     disclosures.forEach(control => control.setOpen(false));
   });
 
+  const navigationLinks = Array.from(document.querySelectorAll('#site-nav-links a[href]'));
+  const navigationSections = navigationLinks.flatMap(link => {
+    const url = new URL(link.href);
+    if (url.origin !== location.origin || url.pathname !== location.pathname || !url.hash) return [];
+    const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!target) return [];
+    let section = target;
+    // A link can land on a subsection while highlighting the whole section.
+    if (target.matches('h3')) {
+      let heading = target.previousElementSibling;
+      while (heading && !heading.matches('h2')) heading = heading.previousElementSibling;
+      if (heading) section = heading;
+    }
+    return [{ link, section }];
+  });
+
   function markCurrentLink() {
-    document.querySelectorAll('#site-nav a[href]').forEach(link => {
-      const url = new URL(link.href);
-      link.removeAttribute('aria-current');
-      if (url.origin !== location.origin || url.pathname !== location.pathname) return;
-      if (url.hash && url.hash === location.hash) link.setAttribute('aria-current', 'location');
-      else if (!url.hash && !location.hash) link.setAttribute('aria-current', 'page');
+    let current = null;
+    const readingLine = (masthead?.getBoundingClientRect().bottom || 0) + 24;
+    if (window.scrollY > 0) {
+      navigationSections.forEach(entry => {
+        if (entry.section.getBoundingClientRect().top <= readingLine) current = entry.link;
+      });
+      if (Math.ceil(window.scrollY + window.innerHeight) >= root.scrollHeight - 2) {
+        current = navigationSections[navigationSections.length - 1]?.link || current;
+      }
+    }
+    navigationLinks.forEach(link => {
+      if (link === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
+  let currentLinkFrame = null;
+  function scheduleCurrentLink() {
+    if (currentLinkFrame !== null) return;
+    currentLinkFrame = requestAnimationFrame(() => {
+      currentLinkFrame = null;
+      markCurrentLink();
     });
   }
   markCurrentLink();
-  window.addEventListener('hashchange', markCurrentLink);
+  window.addEventListener('hashchange', scheduleCurrentLink);
+  window.addEventListener('scroll', scheduleCurrentLink, { passive: true });
+  window.addEventListener('resize', scheduleCurrentLink);
+  window.addEventListener('load', scheduleCurrentLink);
+  const pageContent = document.querySelector('.page__content');
+  if (window.ResizeObserver && pageContent) new ResizeObserver(scheduleCurrentLink).observe(pageContent);
   navigation?.container.addEventListener('click', function (event) {
     const link = event.target.closest('a[href]');
     if (!link) return;

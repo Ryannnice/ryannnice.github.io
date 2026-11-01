@@ -33,8 +33,6 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 ## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
 
-My current work focuses on **AI infrastructure** and **AI agents**.
-
 * **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
 * **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, and evaluation.
 
@@ -44,6 +42,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
       <h3 class="project-card__title">100-Tool E-Commerce Shopping Assistant and Multi-Turn Tool Planning Agent System</h3>
       <p class="project-card__meta">Jul. 2026 – Present</p>
     </header>
+    <p class="project-card__summary">Built an e-commerce agent spanning 100 tools and eight business domains, achieving <strong>92.6% end-to-end accuracy</strong> on 9,000 static test requests.</p>
     <div class="project-media-grid">
       <figure class="project-media">
         <a href="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
@@ -76,9 +75,10 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">Project 1 | DeepSeek-V4 Domestic-Accelerator Adaptation and Ascend Kernel Optimization</h3>
-      <p class="project-card__meta">Mar. – Jun. 2026 · Shenzhen Research Institute of Big Data</p>
+      <h3 class="project-card__title">DeepSeek-V4 Domestic-Accelerator Adaptation and Ascend Kernel Optimization</h3>
+      <p class="project-card__meta">Mar. 2026 – Jun. 2026 · Shenzhen Research Institute of Big Data</p>
     </header>
+    <p class="project-card__summary">Worked on DeepSeek-V4 deployment evaluation and Ascend kernel optimization, reducing fused backward-kernel latency by <strong>20.9%</strong> under the target configuration.</p>
     <figure class="project-media project-media--wide">
       <a href="{{ '/assets/Kernel_Agent.png' | relative_url }}">
         <img src="{{ '/assets/Kernel_Agent.png' | relative_url }}" width="1718" height="916" loading="lazy" decoding="async" alt="Architecture of the Ascend kernel optimization Agent, including planning, coding, verification, knowledge retrieval, profiling, diagnosis, optimization, and testing">
@@ -103,48 +103,58 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 ## News {#news}
 
+* [Sept. 2026] Joined [ByteDance](https://www.bytedance.com/) in Shenzhen as an intern at [Volcengine (Doubao / Volcengine Ark)](https://www.volcengine.com/product/ark), working on enterprise AI agents.
+
+* [Sept. 2026] Started the MPhil program in Artificial Intelligence at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence).
+
+* [Jul. 2026] Started a July–August research assistantship with [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) at [EAR Lab](https://earlab-cuhksz.github.io/), School of Artificial Intelligence, CUHK-Shenzhen, working on Embodied AI.
+
 * [Jun. 2026] Founded [*TEAM NEXUS*](https://ryannnice.github.io/nexus/), a learning group.
 
 * [Jun. 2026] My undergraduate thesis received an *Innovation Award* and ranked 3rd university-wide.
 
-* [Mar 19th, 2026] Joined [*Shenzhen Research Institute of Big Data (SRIBD)*](https://www.sribd.cn/en) as an *Intern*, working on AI agent development and large language model algorithms.
+* [Mar. 19, 2026] Joined [*Shenzhen Research Institute of Big Data (SRIBD)*](https://www.sribd.cn/en) as an *Intern*, working on AI agent development and large language model algorithms.
 
-* [Feb 27th, 2026] [Admitted to the *MSc program in Data-Centric Artificial Intelligence*](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf) at *The Hong Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*!
+* [Feb. 27, 2026] [Admitted to the *MSc program in Data-Centric Artificial Intelligence*](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf) at *The Hong Kong University of Science and Technology (Guangzhou), Data Science and Analytics Thrust*.
 
-* [Feb 26th, 2026] [Scored the highest and nominated for the *CSC Joint Funded PhD Scholarship by the University of York*](/assets/York_CSC.png), in collaboration with the *China Scholarship Council*! 
+* [Feb. 26, 2026] [Ranked first in the University of York's selection for nomination to the *CSC Joint Funded PhD Scholarship*](/assets/York_CSC.png) and received the university's nomination.
   
-* [Jan 19th, 2026] [Admitted to the *Master of Philosophy (MPhil) program in Artificial Intelligence*](/assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong Kong, Shenzhen, School of Artificial Intelligence*!
+* [Jan. 19, 2026] [Admitted to the *Master of Philosophy (MPhil) program in Artificial Intelligence*](/assets/Offer_CUHKSZ_MPhil_AI.pdf) at *The Chinese University of Hong Kong, Shenzhen, School of Artificial Intelligence*.
 
-* [Dec 17th, 2025] Awarded a Second-Class Scholarship [Top 8%].
+<details class="project-details news-archive" markdown="1">
+<summary>Earlier News (2025)</summary>
 
-* [Nov 27th, 2025] [Admitted to the *PhD program in Computer Science*](/assets/Offer_UoY_PhD_CS.pdf) at *the University of York, Department of Computer Science*.
+* [Dec. 17, 2025] Awarded a Second-Class Scholarship [Top 8%].
 
-* [Jul 28th, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in the Chinese category].
+* [Nov. 27, 2025] [Admitted to the *PhD program in Computer Science*](/assets/Offer_UoY_PhD_CS.pdf) at *the University of York, Department of Computer Science*.
 
-* [Jul 22nd, 2025] Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5]!
+* [Jul. 28, 2025] Paper accepted at *Acta Electronica Sinica* [CCF-A in the Chinese category].
+
+* [Jul. 22, 2025] Paper accepted at *Neurocomputing* [JCR Q1, SCI-2, IF = 6.5].
   
-* [July 18th, 2025] 30‑min oral presentation at *Living Machines 2025*, University of Sheffield.
+* [Jul. 18, 2025] 30-min oral presentation at *Living Machines 2025*, University of Sheffield.
 
-* [Jul 11th, 2025] Poster accepted at *TAROS 2025*.
+* [Jul. 11, 2025] Poster accepted at *TAROS 2025*.
 
-* [Jun 9th, 2025] Paper accepted at *Living Machines 2025*.
+* [Jun. 9, 2025] Paper accepted at *Living Machines 2025*.
   
-* [Apr 1st, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
+* [Apr. 1, 2025] Paper accepted at *IJCNN 2025* [CCF-C, AR = 38%].
 
+</details>
 
 ## Experience {#experience-renyuan}
 
 <div class="experience-list" markdown="1">
 
 - {% include experience-logos.html organizations="bytedance" %} **[ByteDance](https://www.bytedance.com/)**, Shenzhen, China<br>
-  Sept. 2026 - Present<br>
+  Sept. 2026 – Present<br>
   **Intern**<br>
   [Volcengine (Doubao / Volcengine Ark)](https://www.volcengine.com/product/ark)<br>
-  Research focus: Enterprise AI Agents (B2B)
+  Focus: Enterprise AI Agents (B2B)
 
 
 - {% include experience-logos.html organizations="cuhksz" %} **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
-  Sept. 2026 - Jun. 2028 (Expected)<br>
+  Sept. 2026 – Jun. 2028 (Expected)<br>
   **Master of Philosophy (MPhil) in Artificial Intelligence**<br>
   [Duan Family College](https://duanfamily.cuhk.edu.cn/)<br>
   Supervisor: [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence)<br>
@@ -152,7 +162,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
   
 
 - {% include experience-logos.html organizations="cuhksz" %} **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
-  Jul. 2026 - Aug. 2026<br>
+  Jul. 2026 – Aug. 2026<br>
   **Research Assistant (RA)**<br>
   Supervisor: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence)<br>
   Lab: [Embodied AI & Robotics Lab (EAR Lab)](https://earlab-cuhksz.github.io/)<br>
@@ -167,14 +177,14 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 
 - {% include experience-logos.html organizations="sribd" %} **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China<br>
-  Mar. 2026 - Jun. 2026<br>
+  Mar. 2026 – Jun. 2026<br>
   **Algorithm Intern**<br>
   Supervisor: [Dr. Akang Wang](https://github.com/akangw) ([Shenzhen Research Institute of Big Data](https://www.sribd.cn/en); [Shenzhen Loop Area Institute](https://www.slai.edu.cn/en); [School of Data Science, CUHK-Shenzhen](https://sds.cuhk.edu.cn/en))<br>
-  Research focus: AI Infrastructure
+  Focus: AI Infrastructure
   
 
 - {% include experience-logos.html organizations="york" %} **[The University of York](https://www.york.ac.uk/computer-science/research/)**, York, UK (On-Site)<br>
-  Jun. 2025 - Sept. 2025<br>
+  Jun. 2025 – Sept. 2025<br>
   **Research Assistant (RA)**<br>
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)<br>
   Lab: Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, [Department of Computer Science](https://www.york.ac.uk/computer-science/)<br>
@@ -195,8 +205,6 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 ### Manuscripts Under Review {#publications-renyuan}
 
-<sup>*</sup> denotes equal contribution (co-first authors).
-
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, [How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827). *arXiv preprint, arXiv:2509.13827, 2025.*
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, \[Manuscript under double-blind review.\] *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
@@ -207,16 +215,17 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 ### Published Papers {#publications}
 
-- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *The 2025 International Joint Conference on Neural Networks (CCF-C, acceptance rate ≈ 38%).*
+- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *2025 International Joint Conference on Neural Networks (IJCNN), pp. 1–8, 2025 (CCF-C, acceptance rate ≈ 38%).*
 
-- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024 (JCR Q1, IF = 3.9).*
+- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, Art. 650, 2024 (JCR Q1, IF = 3.9).*
 
-- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://www.sciencedirect.com/science/article/pii/S092523122502332X). *Neurocomputing, 131660 (JCR Q1, IF = 6.5).*
+- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://www.sciencedirect.com/science/article/pii/S092523122502332X). *Neurocomputing, vol. 657, Art. 131660, 2025 (JCR Q1, IF = 6.5).*
 
-- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20250337&lang=en). *Acta Electronica Sinica, p.1-16, 2025 (CCF-A in Chinese Category).*
+- H. Zhou, C. Fang, **R. Liu**, J. Peng, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20250337/). *Acta Electronica Sinica, vol. 53, no. 8, pp. 2899–2914, 2025 (CCF-A in Chinese Category).*
 
-- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *The 14th International Conference on Biomimetic and Biohybrid Systems (Living Machines 2025)(Oral)*.
+- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A biomimetic collision detection visual neural model coordinating self-and-lateral inhibitions.pdf). *Biomimetic and Biohybrid Systems (Living Machines 2025), LNAI, vol. 15582, pp. 334–346, 2026 (Oral).* [DOI](https://doi.org/10.1007/978-3-032-07448-5_28)
 
+<p class="publication-note"><sup>*</sup> denotes equal contribution (co-first authors).</p>
 
 
 <details class="project-details research-background" markdown="1">
@@ -276,7 +285,7 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Skills {#skills}
 
-- **LLM Post-Training & Agents:** Qwen3, Transformers, SFT, DPO/RPO, LoRA, tool calling, external memory, multi-turn orchestration, and agent evaluation
+- **LLM Post-Training & Agents:** Qwen3, Transformer, SFT, DPO/RPO, LoRA, tool calling, external memory, multi-turn orchestration, and agent evaluation
 - **Retrieval & Model Serving:** embeddings, rerankers, BM25/vector hybrid retrieval, RRF, cross-encoders, vLLM, and SGLang
 - **AI Infrastructure:** CUDA, Ascend 910B/910C, profiling with msprof, inference benchmarking, and kernel optimization
 - **Engineering:** Python, C/C++, PyTorch, Hugging Face, MS-SWIFT, FastAPI, SQLite, Docker, Git, Vue 3, and Linux

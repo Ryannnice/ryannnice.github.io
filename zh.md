@@ -24,8 +24,6 @@ homepage: true
 
 ## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
 
-当前，我的工作聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
-
 * **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
 * **AI Agent：**工具检索与规划、多轮上下文编排、记忆与评测。
 
@@ -35,6 +33,7 @@ homepage: true
       <h3 class="project-card__title">100 工具电商智能导购与多轮工具规划 Agent 系统</h3>
       <p class="project-card__meta">2026 年 7 月 – 至今</p>
     </header>
+    <p class="project-card__summary">负责覆盖 100 个工具、8 大业务域的电商导购 Agent 研发，在 9,000 条静态测试请求上实现 <strong>92.6% 的端到端准确率</strong>。</p>
     <div class="project-media-grid">
       <figure class="project-media">
         <a href="{{ '/assets/projects/ecommerce-agent/agent-full-trace-progress.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">
@@ -67,9 +66,10 @@ homepage: true
 
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">项目一｜DeepSeek-V4 国产算力适配与昇腾算子优化</h3>
-      <p class="project-card__meta">2026 年 3 月 – 6 月 · 深圳市大数据研究院</p>
+      <h3 class="project-card__title">DeepSeek-V4 国产算力适配与昇腾算子优化</h3>
+      <p class="project-card__meta">2026 年 3 月 – 2026 年 6 月 · 深圳市大数据研究院</p>
     </header>
+    <p class="project-card__summary">负责 DeepSeek-V4 部署测评与昇腾算子优化，在目标配置下将融合反向算子耗时<strong>降低 20.9%</strong>。</p>
     <figure class="project-media project-media--wide">
       <a href="{{ '/assets/Kernel_Agent.png' | relative_url }}">
         <img src="{{ '/assets/Kernel_Agent.png' | relative_url }}" width="1718" height="916" loading="lazy" decoding="async" alt="昇腾算子优化 Agent 架构，包括规划、编码、验证、知识检索、性能画像、诊断、优化与测试">
@@ -95,6 +95,12 @@ homepage: true
 
 ## 最新动态 {#news}
 
+* [2026 年 9 月] 加入[字节跳动](https://www.bytedance.com/)深圳团队，在[火山引擎（豆包／火山方舟）](https://www.volcengine.com/product/ark)担任实习生，工作方向为企业级 AI 智能体。
+
+* [2026 年 9 月] 入读香港中文大学（深圳）人工智能研究型硕士（MPhil）项目，导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）。
+
+* [2026 年 7 月] 开始在香港中文大学（深圳）人工智能学院担任研究助理（7–8 月），导师为[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)，所在实验室为 [EAR Lab](https://earlab-cuhksz.github.io/)，研究方向为具身智能。
+
 * [2026 年 6 月] 创立 [*TEAM NEXUS*](https://ryannnice.github.io/nexus/)，一个学习小组。
 
 * [2026 年 6 月] 本科毕业设计获*创新奖*，排名全校第 3。
@@ -103,9 +109,12 @@ homepage: true
 
 * [2026 年 2 月 27 日] 获[香港科技大学（广州）数据科学与分析学域“以数据为中心的人工智能”硕士项目录取](/assets/Offer_HKUSTGZ_MSc_DCAI.pdf)。
 
-* [2026 年 2 月 26 日] 在约克大学评选中排名第一，获[约克大学与国家留学基金管理委员会联合资助博士奖学金提名](/assets/York_CSC.png)。
+* [2026 年 2 月 26 日] 在约克大学的 CSC 联合资助博士奖学金提名评选中排名第一，获[校方提名](/assets/York_CSC.png)。
 
 * [2026 年 1 月 19 日] 获[香港中文大学（深圳）人工智能学院人工智能研究型硕士（MPhil）项目录取](/assets/Offer_CUHKSZ_MPhil_AI.pdf)。
+
+<details class="project-details news-archive" markdown="1">
+<summary>往期动态（2025）</summary>
 
 * [2025 年 12 月 17 日] 获二等奖学金（前 8%）。
 
@@ -123,6 +132,7 @@ homepage: true
 
 * [2025 年 4 月 1 日] 论文被 IJCNN 2025 接收（CCF-C，录用率 38%）。
 
+</details>
 
 ## 经历 {#experience-renyuan}
 
@@ -132,7 +142,7 @@ homepage: true
   2026 年 9 月 – 至今<br>
   **实习生**<br>
   [火山引擎（豆包／火山方舟）](https://www.volcengine.com/product/ark)<br>
-  研究方向：企业级 AI 智能体（ToB Agent）
+  工作方向：企业级 AI 智能体（ToB Agent）
 
 - {% include experience-logos.html organizations="cuhksz" %} **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 9 月 – 2028 年 6 月（预计）<br>
@@ -157,7 +167,7 @@ homepage: true
   2026 年 3 月 – 2026 年 6 月<br>
   **算法实习生**<br>
   导师：[王阿康博士](https://github.com/akangw)（[深圳市大数据研究院](https://www.sribd.cn/)、[深圳河套学院](https://www.slai.edu.cn/)、[香港中文大学（深圳）数据科学学院](https://sds.cuhk.edu.cn/)）<br>
-  研究方向：AI Infrastructure
+  工作方向：AI Infrastructure
 
 - {% include experience-logos.html organizations="york" %} **[英国约克大学](https://www.york.ac.uk/computer-science/research/)**，英国约克（线下）<br>
   2025 年 6 月 – 2025 年 9 月<br>
@@ -180,8 +190,6 @@ homepage: true
 
 ### 在审稿件 {#publications-renyuan}
 
-<sup>*</sup> 表示共同第一作者。
-
 - **R. Liu**、H. Zhou、C. Fang、Q. Fu，[How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827)。*arXiv 预印本，arXiv:2509.13827，2025。*
 
 - M. Wang<sup>\*</sup>、**R. Liu**<sup>\*</sup>、Q. Fu，\[稿件双盲评审中。\] *投稿至 IEEE Transactions on Cognitive and Developmental Systems（JCR Q1，IF = 4.9）。*
@@ -191,16 +199,17 @@ homepage: true
 
 ### 已发表论文 {#publications}
 
-- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *2025 International Joint Conference on Neural Networks（IJCNN，CCF-C，录用率约 38%）。*
+- **R. Liu** and Q. Fu, [Attention-Driven LPLC2 Neural Ensemble Model for Multi-Target Looming Detection and Localization](https://ieeexplore.ieee.org/document/11227781). *2025 International Joint Conference on Neural Networks（IJCNN），pp. 1–8, 2025（CCF-C，录用率约 38%）。*
 
-- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, p. 650, 2024（JCR Q1，IF = 3.9）。*
+- G. Gao<sup>\*</sup>, **R. Liu**, M. Wang and Q. Fu<sup>\*</sup>, [A Computationally Efficient Neuronal Model for Collision Detection With Contrast Polarity-Specific Feed-Forward Inhibition](https://www.mdpi.com/2313-7673/9/11/650). *Biomimetics, vol. 9, no. 11, Art. 650, 2024（JCR Q1，IF = 3.9）。*
 
-- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://www.sciencedirect.com/science/article/pii/S092523122502332X). *Neurocomputing, 131660（JCR Q1，IF = 6.5）。*
+- C. Fang<sup>\*</sup>, H. Zhou, **R. Liu**, and Q. Fu<sup>\*</sup>, [A neuromorphic binocular framework fusing directional and depth motion cues towards precise collision prediction](https://www.sciencedirect.com/science/article/pii/S092523122502332X). *Neurocomputing, vol. 657, Art. 131660, 2025（JCR Q1，IF = 6.5）。*
 
-- H. Zhou, C. Fang, **R. Liu**, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20250337&lang=en). *《电子学报》，p.1–16, 2025（CCF 中文 A 类）。*
+- H. Zhou, C. Fang, **R. Liu**, J. Peng, and Q. Fu, [A Bio-Plausible Neural Network Integrating Motion and Disparity Pathways for Looming Perception](https://www.ejournal.org.cn/zh/article/doi/10.12263/DZXB.20250337/). *《电子学报》，第 53 卷第 8 期，pp. 2899–2914, 2025（CCF 中文 A 类）。*
 
-- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A%20biomimetic%20collision%20detection%20visual%20neural%20model%20coordinating%20self-and-lateral%20inhibitions.pdf). *第 14 届仿生与生物混合系统国际会议（Living Machines 2025，口头报告）。*
+- J. Huang<sup>\*</sup>, Z. Qin, M. Wang, **R. Liu**, and Q. Fu<sup>\*</sup>, [A Biomimetic Collision Detection Visual Neural Model Coordinating Self-and-Lateral Inhibitions](https://ryannnice.github.io/assets/A%20biomimetic%20collision%20detection%20visual%20neural%20model%20coordinating%20self-and-lateral%20inhibitions.pdf). *Biomimetic and Biohybrid Systems（Living Machines 2025），LNAI, vol. 15582, pp. 334–346, 2026（口头报告）。* [DOI](https://doi.org/10.1007/978-3-032-07448-5_28)
 
+<p class="publication-note"><sup>*</sup> 表示共同第一作者。</p>
 
 <details class="project-details research-background" markdown="1">
 <summary>本科阶段研究背景</summary>

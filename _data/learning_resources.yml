@@ -562,7 +562,7 @@ groups:
   title_zh: 大模型后训练
   items:
   - title: 强化学习 · 大模型后训练版
-    url: https://walkinglabs.github.io/hands-on-modern-rl/preface/intro
+    url: https://walkinglabs.github.io/hands-on-modern-rl/preface/introduction
     type: Course
     source: walkinglabs · 含具身 RL 路线规划
   - title: 强化学习入门：从马尔可夫到 PPO / DPPO
@@ -590,7 +590,7 @@ groups:
     type: Tool
     source: 清华 · 模块化 RL 框架
   - title: 为什么 base model 还不是 assistant
-    url: https://walkinglabs.github.io/hands-on-modern-rl/chapter08_rlhf/base-model-to-assistant
+    url: https://walkinglabs.github.io/hands-on-modern-rl/chapter15_rlhf/base-model-to-assistant
     type: Chapter
     source: Hands-on Modern RL
   - title: 后训练介绍
