@@ -235,6 +235,6 @@
     <rect x="388" y="92" width="10" height="10" rx="2" fill="#eff2f5" data-date="2026-10-31" data-count="0" data-level="0" />
     <rect x="400" y="20" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-11-01" data-count="31" data-level="2" />
     <rect x="400" y="32" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-11-02" data-count="15" data-level="1" />
-    <rect x="400" y="44" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-11-03" data-count="25" data-level="2" />
+    <rect x="400" y="44" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-11-03" data-count="35" data-level="2" />
   </g>
 </svg>
