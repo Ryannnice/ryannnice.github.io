@@ -238,6 +238,6 @@
     <rect x="400" y="44" width="10" height="10" rx="2" fill="#4ac26b" data-date="2026-11-03" data-count="35" data-level="2" />
     <rect x="400" y="56" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-11-04" data-count="16" data-level="1" />
     <rect x="400" y="68" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-11-05" data-count="4" data-level="1" />
-    <rect x="400" y="80" width="10" height="10" rx="2" fill="#eff2f5" data-date="2026-11-06" data-count="0" data-level="0" />
+    <rect x="400" y="80" width="10" height="10" rx="2" fill="#aceebb" data-date="2026-11-06" data-count="2" data-level="1" />
   </g>
 </svg>
