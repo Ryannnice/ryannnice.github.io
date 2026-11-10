@@ -30,14 +30,13 @@ redirect_from:
 Nice to meet you here!<br>
 I am an **MPhil** student in **Artificial Intelligence** at [The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en), supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277).
 
+I use AI coding tools extensively in daily development, with monthly usage on the order of **10 billion tokens**.<br>
 My current work focuses on **AI agents** and **AI infrastructure**.
-
-I use AI coding tools extensively in daily development, with monthly usage on the order of 10 billion tokens.
 
 ## Research Interests {#research-interest}
 
-* **AI Agents:** tool calling and memory systems;
-* **AI Infrastructure:** domestic accelerator adaptation, large model architectures, and kernel optimization.
+**AI Agents:** tool calling and memory systems;<br>
+**AI Infrastructure:** domestic accelerator adaptation, large model architectures, and kernel optimization.
 
 ## Selected AI Projects {#projects-renyuan}
 

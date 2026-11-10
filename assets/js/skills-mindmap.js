@@ -14,20 +14,27 @@ async function renderMap(container) {
 
   const lines = ['mindmap'];
   const nodes = [];
-  function addNode(node, depth) {
+  const edges = new Map();
+  function addNode(node, depth, branch = 'root', parentIndex) {
+    const index = nodes.length;
     const label = node[language].replace(/&/g, '&amp;').replace(/"/g, '&quot;');
     lines.push(`${'  '.repeat(depth)}${node.id}["${label}"]`);
-    nodes.push({ id: node.id, depth: depth - 1 });
-    node.children?.forEach(child => addNode(child, depth + 1));
+    const metadata = { id: node.id, depth: depth - 1, branch, leaf: !node.children };
+    nodes.push(metadata);
+    if (parentIndex !== undefined) edges.set(`edge_${parentIndex}_${index}`, metadata);
+    node.children?.forEach(child => addNode(child, depth + 1, depth === 1 ? child.id : branch, index));
   }
   addNode(data, 1);
 
-  const [{ default: mermaid }] = await Promise.all([
+  const [{ default: mermaid }, { default: tidyTreeLayouts }] = await Promise.all([
     import('https://cdn.jsdelivr.net/npm/mermaid@12.3.0/dist/mermaid.esm.min.mjs'),
+    import('https://cdn.jsdelivr.net/npm/@mermaid-js/layout-tidy-tree@1.0.1/dist/mermaid-layout-tidy-tree.esm.min.mjs'),
     document.fonts.ready
   ]);
+  mermaid.registerLayoutLoaders(tidyTreeLayouts);
   mermaid.initialize({
     startOnLoad: false,
+    layout: 'tidy-tree',
     securityLevel: 'strict',
     theme: 'base',
     htmlLabels: false,
@@ -35,7 +42,9 @@ async function renderMap(container) {
       fontFamily: getComputedStyle(container).fontFamily,
       fontSize: '18px'
     },
-    mindmap: { useMaxWidth: false, padding: 16 }
+    // Mindmap labels use the shared Markdown renderer's wrapping width.
+    flowchart: { wrappingWidth: 200 },
+    mindmap: { useMaxWidth: false, padding: 20, maxNodeWidth: 280 }
   });
   const diagramId = `skills-map-${language}`;
   const { svg } = await mermaid.render(diagramId, lines.join('\n'));
@@ -44,10 +53,21 @@ async function renderMap(container) {
   diagram.querySelectorAll('.mindmap-node').forEach((node, index) => {
     node.dataset.skill = nodes[index].id;
     node.dataset.depth = nodes[index].depth;
+    node.dataset.branch = nodes[index].branch;
+  });
+  diagram.querySelectorAll('.edgePaths path').forEach(path => {
+    const target = edges.get(path.dataset.id);
+    if (!target) return;
+    path.dataset.branch = target.branch;
+    path.dataset.depth = target.depth;
+    const thickness = target.leaf ? 1.4 : Math.max(2.25, 6.5 - target.depth * 1.5);
+    path.style.setProperty('--skills-branch-width', `${thickness}px`);
   });
   const bounds = diagram.viewBox.baseVal;
-  const width = bounds.width;
-  const height = bounds.height;
+  const padding = 24;
+  const width = bounds.width + padding * 2;
+  const height = bounds.height + padding * 2;
+  diagram.setAttribute('viewBox', `${bounds.x - padding} ${bounds.y - padding} ${width} ${height}`);
   diagram.removeAttribute('width');
   diagram.removeAttribute('height');
   diagram.removeAttribute('style');
@@ -99,6 +119,17 @@ async function renderMap(container) {
   }
 
   toolbar.addEventListener('click', event => {
+    const branch = event.target.closest('[data-focus-branch]')?.dataset.focusBranch;
+    if (branch) {
+      setZoom(0.85);
+      const boxes = Array.from(diagram.querySelectorAll(`.mindmap-node[data-branch="${branch}"]`), node => node.getBoundingClientRect());
+      const viewportBox = viewport.getBoundingClientRect();
+      const centerX = (Math.min(...boxes.map(box => box.left)) + Math.max(...boxes.map(box => box.right))) / 2;
+      const centerY = (Math.min(...boxes.map(box => box.top)) + Math.max(...boxes.map(box => box.bottom))) / 2;
+      viewport.scrollLeft += centerX - viewportBox.left - viewport.clientWidth / 2;
+      viewport.scrollTop += centerY - viewportBox.top - viewport.clientHeight / 2;
+      return;
+    }
     const action = event.target.closest('[data-map-action]')?.dataset.mapAction;
     if (action === 'out') setZoom(zoom - 0.15);
     if (action === 'in') setZoom(zoom + 0.15);

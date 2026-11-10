@@ -21,14 +21,13 @@ skills_mindmap: true
 你好，很高兴在这里认识你！<br>
 我是[香港中文大学（深圳）](https://cuhk.edu.cn/)的**人工智能**研究型硕士生（**MPhil**），导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)。
 
+我每天高强度使用 AI 编程工具，月消耗 **百亿量级 Token**。<br>
 目前，我的工作聚焦 **AI Agent** 与 **AI 基础设施（AI Infra）**。
-
-我每天高强度使用 AI 编程工具，月消耗 Token 百亿量级。
 
 ## 研究兴趣 {#research-interest}
 
-* **AI Agents：**智能体工具调用、记忆系统；
-* **AI Infrastructure：**国产算力适配、大模型架构、算子优化。
+**AI Agents：**智能体工具调用、记忆系统；<br>
+**AI Infrastructure：**国产算力适配、大模型架构、算子优化。
 
 ## 精选 AI 项目 {#projects-renyuan}
 

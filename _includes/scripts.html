@@ -1,5 +1,5 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 {% if page.skills_mindmap %}
-<script type="module" src="{{ '/assets/js/skills-mindmap.js' | relative_url }}"></script>
+<script type="module" src="{{ '/assets/js/skills-mindmap.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 {% endif %}
