@@ -58,7 +58,7 @@ homepage: true
         <ul>
           <li><strong>意图分流（分类准确率 100.0%）：</strong>构建 4.8 万条电商/闲聊数据，LoRA 微调 Qwen3-0.6B，9,000 条隔离测试准确率 84.8%→100.0%；较 Qwen3-1.7B，推理中位延迟降低 34.3%、吞吐提升 52.0%。</li>
           <li><strong>高效工具检索（Top-10 工具全召回率 97.4%）：</strong>构建 7 万正对与 9.6 万类型化负例，采用多负例对比学习微调 bge-large，并以 1:7 正负难例组训练 bge-reranker-v2-m3；实现 BM25/向量双路召回、两级 RRF 融合与 Cross-Encoder 精排，采用“召回 40→精排 20→规划 10”的分层筛选，Top-10 全召回率 47.6%→97.4%；相较“精排 30→规划 20”方案，规划模型输入 Token/重排中位延迟降低 36.8%/33.7%。</li>
-          <li><strong>多步工具规划（端到端准确率 92.6%）：</strong>构建 7.8 万条多风格工具调用轨迹，基于 MS-SWIFT 使用 LoRA 微调 Qwen3-8B，在固定 Top-10 候选中输出有序工具链；基于父模型真实错误构建 4,000 组偏好对，采用 RPO 主训练、DPO 低学习率收敛，规划模型工具链完全匹配率 85.7%→88.9%；在 9,000 条静态测试上，端到端准确率达 92.6%。</li>
+          <li><strong>多步工具规划（端到端准确率 92.6%）：</strong>构建 7.8 万条多风格工具调用轨迹，基于 MS-SWIFT 使用 LoRA 微调 Qwen3-8B，在固定 Top-10 候选中输出有序工具链；基于父模型真实错误构建 4,000 组偏好对，通过偏好优化训练及低学习率 DPO 收敛，规划模型工具链完全匹配率 85.7%→88.9%；在 9,000 条静态测试上，端到端准确率达 92.6%。</li>
           <li><strong>多轮 Agent 框架（上下文依赖请求准确率 92.8%）：</strong>设计模型外上下文编排器，以规则状态机调度近期状态、规则摘要与会话内 BM25，将必要历史压缩并补全为可独立规划的当前请求，再接入原规划模型，通过请求边界与整轮恢复抑制历史污染；基于近 2,000 段 2–7 轮自然短会话完成 12 阶段消融，独立测试整体准确率较直接拼接基线 50.5%→94.6%，上下文依赖/无关请求准确率达 92.8%/97.4%，版本校验缓存使规划模型调用减少 60.3%。</li>
         </ul>
         <p class="project-card__metrics"><strong>核心成果：</strong>9,000 条隔离测试意图准确率 100.0%；Top-10 工具全召回率 97.4%（基线 47.6%）；端到端准确率 92.6%；上下文依赖请求准确率 92.8%，规划模型调用减少 60.3%。</p>
@@ -269,33 +269,252 @@ homepage: true
 
 ## 技术能力 {#skills}
 
-<div class="skills-tree" markdown="1">
-
-- **学术技能**
-    - **大模型**
-        - **AI Agents**
-            - 智能体工具调用、记忆系统、多轮上下文编排与 Agent 评测
-            - 检索与排序：Embedding、Reranker、BM25/向量混合检索、RRF、Cross-Encoder
-        - **AI Infrastructure**
-            - 国产算力适配、大模型架构、算子优化
-            - 性能分析与推理基准测试
-        - **模型后训练：**SFT、LoRA、DPO/RPO
-    - **非大模型**
-        - **仿生视觉：**类脑神经网络、运动感知与碰撞检测
-        - **机器人：**双目视觉与微型机器人平台
-    - **学术交流**
-        - **IELTS 6.5：**阅读 8.0、听力 6.5、写作 6.0、口语 5.5
-        - **CET-6 564：**阅读 242/248.5
-- **工具技能**
-    - **编程语言：**Python、C/C++、MATLAB
-    - **模型与训练框架：**Qwen3、Transformer、PyTorch、Hugging Face、MS-SWIFT
-    - **模型服务与算力工具：**vLLM、SGLang、CUDA、昇腾 910B/910C、msprof
-    - **应用开发与系统：**FastAPI、SQLite、Docker、Git、Vue 3、Linux
-    - **机器人与嵌入式工具：**ROS、STM32、Keil、Webots
-    - **AI 辅助开发：**每日高强度使用 Codex 与 Claude Code，月消耗 Token 百亿量级
-    - **文档与媒体：**LaTeX、Markdown、MS Office/Visio、Adobe Photoshop、Premiere Pro
-
+<div class="skills-tree">
+  <ul>
+    <li>
+      <strong>学术技能</strong>
+      <ul>
+        <li>
+          <details open>
+            <summary>大模型</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>AI Agents</summary>
+                  <ul>
+                    <li>工具调用</li>
+                    <li>记忆系统</li>
+                    <li>多轮上下文编排</li>
+                    <li>Agent 评测</li>
+                    <li>
+                      <details>
+                        <summary>检索</summary>
+                        <ul>
+                          <li>Embedding</li>
+                          <li>Reranker</li>
+                          <li>BM25</li>
+                          <li>向量检索</li>
+                          <li>RRF</li>
+                          <li>Cross-Encoder</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>AI Infrastructure</summary>
+                  <ul>
+                    <li>国产算力适配</li>
+                    <li>大模型架构</li>
+                    <li>算子优化</li>
+                    <li>性能分析</li>
+                    <li>推理基准测试</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>模型后训练</summary>
+                  <ul>
+                    <li>SFT</li>
+                    <li>LoRA</li>
+                    <li>DPO</li>
+                    <li>RL</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>非大模型</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>仿生视觉</summary>
+                  <ul>
+                    <li>类脑神经网络</li>
+                    <li>运动感知</li>
+                    <li>碰撞检测</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>机器人</summary>
+                  <ul>
+                    <li>双目视觉</li>
+                    <li>微型机器人平台</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>学术交流</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>IELTS 6.5</summary>
+                  <ul>
+                    <li>阅读 8.0</li>
+                    <li>听力 6.5</li>
+                    <li>写作 6.0</li>
+                    <li>口语 5.5</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>CET-6 564</summary>
+                  <ul>
+                    <li>阅读 242/248.5</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>工具技能</strong>
+      <ul>
+        <li>
+          <details open>
+            <summary>编程语言</summary>
+            <ul>
+              <li>Python</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>MATLAB</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>大模型工具</summary>
+            <ul>
+              <li>
+                <details>
+                  <summary>模型</summary>
+                  <ul>
+                    <li>Qwen3</li>
+                    <li>Transformer</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>训练框架</summary>
+                  <ul>
+                    <li>PyTorch</li>
+                    <li>Hugging Face</li>
+                    <li>MS-SWIFT</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>模型服务</summary>
+                  <ul>
+                    <li>vLLM</li>
+                    <li>SGLang</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>算力平台</summary>
+                  <ul>
+                    <li>CUDA</li>
+                    <li>昇腾 910B</li>
+                    <li>昇腾 910C</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>性能分析工具</summary>
+                  <ul>
+                    <li>msprof</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>工程开发</summary>
+            <ul>
+              <li>FastAPI</li>
+              <li>SQLite</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Vue 3</li>
+              <li>Linux</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>机器人开发工具</summary>
+            <ul>
+              <li>ROS</li>
+              <li>STM32</li>
+              <li>Keil</li>
+              <li>Webots</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>AI 编程工具</summary>
+            <ul>
+              <li>Codex</li>
+              <li>Claude Code</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>创作工具</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>文档</summary>
+                  <ul>
+                    <li>LaTeX</li>
+                    <li>Markdown</li>
+                    <li>Microsoft Office</li>
+                    <li>Visio</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>媒体</summary>
+                  <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Premiere Pro</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
+
+<p class="skills-usage-note">每日高强度使用 AI 辅助开发工具，月消耗 Token 百亿量级。</p>
 
 *喜欢攀岩、烹饪、篮球和主机游戏*
 

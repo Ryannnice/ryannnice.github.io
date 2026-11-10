@@ -67,7 +67,7 @@ My current work focuses on **AI agents** and **AI infrastructure**.
         <ul>
           <li><strong>Intent Routing (100.0% Classification Accuracy):</strong> Built 48K e-commerce and casual-conversation samples and LoRA-tuned Qwen3-0.6B, raising accuracy on 9,000 isolated test cases from 84.8% to 100.0%. Compared with Qwen3-1.7B, median inference latency fell by 34.3% and throughput rose by 52.0%.</li>
           <li><strong>Efficient Tool Retrieval (97.4% Top-10 Full Tool Recall):</strong> Built 70K positive pairs and 96K typed negatives, fine-tuned bge-large with multi-negative contrastive learning, and trained bge-reranker-v2-m3 with 1:7 positive-to-hard-negative groups. Implemented dual BM25/vector recall, two-stage RRF fusion, and Cross-Encoder reranking with a “recall 40 → rerank 20 → plan 10” funnel. Top-10 full recall rose from 47.6% to 97.4%; compared with “rerank 30 → plan 20,” planner input tokens and median reranking latency fell by 36.8% and 33.7%.</li>
-          <li><strong>Multi-Step Tool Planning (92.6% End-to-End Accuracy):</strong> Built 78K multi-style tool-call trajectories and LoRA-tuned Qwen3-8B with MS-SWIFT to output ordered tool chains from a fixed Top-10 candidate set. Constructed 4,000 preference pairs from real parent-model errors, using RPO for main training and low-learning-rate DPO for convergence. Exact tool-chain match improved from 85.7% to 88.9%, with 92.6% end-to-end accuracy on 9,000 static tests.</li>
+          <li><strong>Multi-Step Tool Planning (92.6% End-to-End Accuracy):</strong> Built 78K multi-style tool-call trajectories and LoRA-tuned Qwen3-8B with MS-SWIFT to output ordered tool chains from a fixed Top-10 candidate set. Constructed 4,000 preference pairs from real parent-model errors, using preference optimization followed by low-learning-rate DPO for convergence. Exact tool-chain match improved from 85.7% to 88.9%, with 92.6% end-to-end accuracy on 9,000 static tests.</li>
           <li><strong>Multi-Turn Agent Framework (92.8% Context-Dependent Request Accuracy):</strong> Designed an external context orchestrator whose rule-based state machine schedules recent state, rule summaries, and in-session BM25 retrieval. It compresses necessary history into a standalone current request before invoking the original planner, while request boundaries and full-turn recovery suppress history contamination. A 12-stage ablation on nearly 2,000 natural conversations of 2–7 turns raised independent-test overall accuracy from a 50.5% direct-concatenation baseline to 94.6%; context-dependent and context-independent request accuracy reached 92.8% and 97.4%, while version-validation caching reduced planner calls by 60.3%.</li>
         </ul>
         <p class="project-card__metrics"><strong>Core Results:</strong> 100.0% intent accuracy on 9,000 isolated tests; 97.4% Top-10 full tool recall (47.6% baseline); 92.6% end-to-end accuracy; 92.8% context-dependent request accuracy; and 60.3% fewer planner calls.</p>
@@ -290,33 +290,252 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
 
 ## Skills {#skills}
 
-<div class="skills-tree" markdown="1">
-
-- **Academic Skills**
-    - **Large Language Models**
-        - **AI Agents**
-            - Tool calling, memory systems, multi-turn context orchestration, and agent evaluation
-            - Retrieval: embeddings, rerankers, BM25/vector hybrid retrieval, RRF, and cross-encoders
-        - **AI Infrastructure**
-            - Domestic accelerator adaptation, large model architectures, and kernel optimization
-            - Profiling and inference benchmarking
-        - **Post-Training:** SFT, LoRA, and DPO/RPO
-    - **Non-LLM Research**
-        - **Bio-Inspired Vision:** brain-inspired neural networks, motion perception, and collision detection
-        - **Robotics:** binocular vision and micro-robot platforms
-    - **Academic Communication**
-        - **IELTS 6.5:** reading 8.0, listening 6.5, writing 6.0, speaking 5.5
-        - **CET-6 564:** reading 242/248.5
-- **Tools & Engineering**
-    - **Programming:** Python, C/C++, and MATLAB
-    - **Models & Training Frameworks:** Qwen3, Transformer, PyTorch, Hugging Face, and MS-SWIFT
-    - **Serving & Accelerators:** vLLM, SGLang, CUDA, Ascend 910B/910C, and msprof
-    - **Application Development & Systems:** FastAPI, SQLite, Docker, Git, Vue 3, and Linux
-    - **Robotics & Embedded Tools:** ROS, STM32, Keil, and Webots
-    - **AI-Assisted Development:** intensive daily use of Codex and Claude Code, with monthly usage on the order of 10 billion tokens
-    - **Documentation & Media:** LaTeX, Markdown, MS Office/Visio, Adobe Photoshop, and Premiere Pro
-
+<div class="skills-tree">
+  <ul>
+    <li>
+      <strong>Academic Skills</strong>
+      <ul>
+        <li>
+          <details open>
+            <summary>Large Language Models</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>AI Agents</summary>
+                  <ul>
+                    <li>Tool Calling</li>
+                    <li>Memory Systems</li>
+                    <li>Multi-Turn Context Orchestration</li>
+                    <li>Agent Evaluation</li>
+                    <li>
+                      <details>
+                        <summary>Retrieval</summary>
+                        <ul>
+                          <li>Embeddings</li>
+                          <li>Reranking</li>
+                          <li>BM25</li>
+                          <li>Vector Retrieval</li>
+                          <li>RRF</li>
+                          <li>Cross-Encoders</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>AI Infrastructure</summary>
+                  <ul>
+                    <li>Domestic Accelerator Adaptation</li>
+                    <li>Large Model Architectures</li>
+                    <li>Kernel Optimization</li>
+                    <li>Performance Profiling</li>
+                    <li>Inference Benchmarking</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>Post-Training</summary>
+                  <ul>
+                    <li>SFT</li>
+                    <li>LoRA</li>
+                    <li>DPO</li>
+                    <li>RL</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Non-LLM Research</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>Bio-Inspired Vision</summary>
+                  <ul>
+                    <li>Brain-Inspired Neural Networks</li>
+                    <li>Motion Perception</li>
+                    <li>Collision Detection</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>Robotics</summary>
+                  <ul>
+                    <li>Binocular Vision</li>
+                    <li>Micro-Robot Platforms</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Academic Communication</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>IELTS 6.5</summary>
+                  <ul>
+                    <li>Reading 8.0</li>
+                    <li>Listening 6.5</li>
+                    <li>Writing 6.0</li>
+                    <li>Speaking 5.5</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>CET-6 564</summary>
+                  <ul>
+                    <li>Reading 242/248.5</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Tool Skills</strong>
+      <ul>
+        <li>
+          <details open>
+            <summary>Programming</summary>
+            <ul>
+              <li>Python</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>MATLAB</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Machine Learning Tools</summary>
+            <ul>
+              <li>
+                <details>
+                  <summary>Models</summary>
+                  <ul>
+                    <li>Qwen3</li>
+                    <li>Transformer</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>Training Frameworks</summary>
+                  <ul>
+                    <li>PyTorch</li>
+                    <li>Hugging Face</li>
+                    <li>MS-SWIFT</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>Model Serving</summary>
+                  <ul>
+                    <li>vLLM</li>
+                    <li>SGLang</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Accelerators</summary>
+                  <ul>
+                    <li>CUDA</li>
+                    <li>Ascend 910B</li>
+                    <li>Ascend 910C</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Profiling Tools</summary>
+                  <ul>
+                    <li>msprof</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Engineering</summary>
+            <ul>
+              <li>FastAPI</li>
+              <li>SQLite</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Vue 3</li>
+              <li>Linux</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Robotics Tools</summary>
+            <ul>
+              <li>ROS</li>
+              <li>STM32</li>
+              <li>Keil</li>
+              <li>Webots</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>AI Coding Tools</summary>
+            <ul>
+              <li>Codex</li>
+              <li>Claude Code</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Authoring Tools</summary>
+            <ul>
+              <li>
+                <details open>
+                  <summary>Documents</summary>
+                  <ul>
+                    <li>LaTeX</li>
+                    <li>Markdown</li>
+                    <li>Microsoft Office</li>
+                    <li>Visio</li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary>Media</summary>
+                  <ul>
+                    <li>Adobe Photoshop</li>
+                    <li>Premiere Pro</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
+
+<p class="skills-usage-note">Intensive daily use of AI-assisted development tools with monthly usage on the order of 10 billion tokens.</p>
 
 *I enjoy rock climbing, cooking, basketball, and console gaming.*
   

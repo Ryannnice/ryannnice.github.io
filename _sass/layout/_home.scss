@@ -1,6 +1,7 @@
 /* Homepage-specific cards and embeds. */
 
 .page__content .publication-note,
+.page__content .skills-usage-note,
 .page__content .research-background > summary {
   font-family: inherit;
   font-size: 0.85rem;
@@ -12,7 +13,8 @@
   margin-top: clamp(3rem, 5vw, 4rem);
 }
 
-.page__content .publication-note {
+.page__content .publication-note,
+.page__content .skills-usage-note {
   margin: 0.75rem 0 1rem;
   color: var(--global-text-color-light);
 }
@@ -83,6 +85,24 @@
     font-size: 1em;
     line-height: 1.6;
     overflow-wrap: anywhere;
+  }
+
+  summary {
+    width: fit-content;
+    min-height: 32px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-link-color-hover);
+    }
+  }
+
+  @media (pointer: coarse) {
+    summary {
+      min-height: 44px;
+    }
   }
 
   @include breakpoint($x-large) {
