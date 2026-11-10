@@ -101,6 +101,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 </div>
 
+{% comment %}
 ## News {#news}
 
 * [Sept. 2026] Joined [ByteDance](https://www.bytedance.com/) in Shenzhen as an intern at [Volcengine (Doubao / Volcengine Ark)](https://www.volcengine.com/product/ark), working on enterprise AI agents.
@@ -142,6 +143,8 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 </details>
 
+{% endcomment %}
+
 ## Experience {#experience-renyuan}
 
 <div class="experience-list" markdown="1">
@@ -161,19 +164,19 @@ My current work focuses on **AI infrastructure** and **AI agents**.
   Research focus: Large Language Models / AI Agents
   
 
+- {% include experience-logos.html organizations="hku" %} **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
+  Jul. 2026<br>
+  **Summer School Student**<br>
+  Programme theme: Artificial Intelligence and Robotics
+
+
+
 - {% include experience-logos.html organizations="cuhksz" %} **[The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en)**, Shenzhen, China<br>
   Jul. 2026 – Aug. 2026<br>
   **Research Assistant (RA)**<br>
   Supervisor: [Prof. Junjie Hu](https://sai.cuhk.edu.cn/en/teacher/153) (School of Artificial Intelligence)<br>
   Lab: [Embodied AI & Robotics Lab (EAR Lab)](https://earlab-cuhksz.github.io/)<br>
   Research focus: Embodied AI
-
-
-- {% include experience-logos.html organizations="hku" %} **[The University of Hong Kong](https://www.hku.hk/)**, Hong Kong, China<br>
-  Jul. 2026<br>
-  **Summer School Student**<br>
-  Programme theme: Artificial Intelligence and Robotics
-
 
 
 - {% include experience-logos.html organizations="sribd" %} **[Shenzhen Research Institute of Big Data (SRIBD)](https://www.sribd.cn/en)**, Shenzhen, China<br>
@@ -189,7 +192,8 @@ My current work focuses on **AI infrastructure** and **AI agents**.
   Supervisor: [Prof. Pengcheng Liu](https://sites.google.com/view/pliu)<br>
   Lab: Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, [Department of Computer Science](https://www.york.ac.uk/computer-science/)<br>
   Research focus: Motion Planning<br>
-  [\[Evidence\]](/assets/Evidence_York.pdf)
+  [\[Evidence\]](/assets/Evidence_York.pdf)<br>
+  Subsequently received a [fully funded PhD offer from the University of York]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }}).
 
 
 - {% include experience-logos.html organizations="macau" %} **[University of Macau](https://www.um.edu.mo/)**, Macao, China<br>

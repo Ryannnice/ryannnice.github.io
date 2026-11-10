@@ -93,6 +93,7 @@ homepage: true
 </div>
 
 
+{% comment %}
 ## 最新动态 {#news}
 
 * [2026 年 9 月] 加入[字节跳动](https://www.bytedance.com/)深圳团队，在[火山引擎（豆包／火山方舟）](https://www.volcengine.com/product/ark)担任实习生，工作方向为企业级 AI 智能体。
@@ -134,6 +135,8 @@ homepage: true
 
 </details>
 
+{% endcomment %}
+
 ## 经历 {#experience-renyuan}
 
 <div class="experience-list" markdown="1">
@@ -151,17 +154,17 @@ homepage: true
   导师：[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）<br>
   研究方向：大语言模型 / 智能体
 
+- {% include experience-logos.html organizations="hku" %} **[香港大学](https://www.hku.hk/)**，中国香港<br>
+  2026 年 7 月<br>
+  **暑期学校学员**<br>
+  项目主题：人工智能与机器人
+
 - {% include experience-logos.html organizations="cuhksz" %} **[香港中文大学（深圳）](https://cuhk.edu.cn/)**，中国深圳<br>
   2026 年 7 月 – 2026 年 8 月<br>
   **研究助理（RA）**<br>
   导师：[胡君杰教授](https://sai.cuhk.edu.cn/en/teacher/153)（人工智能学院）<br>
   实验室：[Embodied AI & Robotics Lab（EAR Lab）](https://earlab-cuhksz.github.io/)<br>
   研究方向：具身智能
-
-- {% include experience-logos.html organizations="hku" %} **[香港大学](https://www.hku.hk/)**，中国香港<br>
-  2026 年 7 月<br>
-  **暑期学校学员**<br>
-  项目主题：人工智能与机器人
 
 - {% include experience-logos.html organizations="sribd" %} **[深圳市大数据研究院（SRIBD）](https://www.sribd.cn/)**，中国深圳<br>
   2026 年 3 月 – 2026 年 6 月<br>
@@ -175,7 +178,8 @@ homepage: true
   导师：[刘鹏程教授](https://sites.google.com/view/pliu)<br>
   实验室：计算自主学习系统实验室，实时与分布式系统研究组，[计算机科学系](https://www.york.ac.uk/computer-science/)<br>
   研究方向：运动规划<br>
-  [\[证明材料\]](/assets/Evidence_York.pdf)
+  [\[证明材料\]](/assets/Evidence_York.pdf)<br>
+  后获[约克大学全奖博士录取]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }})。
 
 - {% include experience-logos.html organizations="macau" %} **[澳门大学](https://www.um.edu.mo/)**，中国澳门<br>
   2023 年 11 月<br>

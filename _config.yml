@@ -21,8 +21,8 @@ navigation:
   main:
     - title: "Projects"
       url: "/#projects-renyuan"
-    - title: "News"
-      url: "/#news"
+    # - title: "News"
+    #   url: "/#news"
     - title: "Experience"
       url: "/#experience-renyuan"
     - title: "Publications"
@@ -40,8 +40,8 @@ navigation:
   zh:
     - title: "项目"
       url: "/zh/#projects-renyuan"
-    - title: "动态"
-      url: "/zh/#news"
+    # - title: "动态"
+    #   url: "/zh/#news"
     - title: "经历"
       url: "/zh/#experience-renyuan"
     - title: "论文"
