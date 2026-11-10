@@ -1,7 +1,7 @@
 ---
 permalink: /zh/
 seo_title: "刘稔远"
-description: "刘稔远，香港中文大学（深圳）人工智能研究型硕士生，研究方向为 AI 基础设施与 AI Agent。"
+description: "刘稔远，香港中文大学（深圳）人工智能研究型硕士生，研究方向为 AI Agent 与 AI 基础设施。"
 lang: zh-CN
 locale: zh_CN
 alternate_url: /
@@ -17,20 +17,22 @@ homepage: true
 # Renyuan LIU（刘<ruby>稔<rt>rěn</rt></ruby>远）
 ---
 
-你好，很高兴在这里认识你！
-我是香港中文大学（深圳）的**人工智能研究型硕士生（MPhil）**，导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）。
+你好，很高兴在这里认识你！<br>
+我是[香港中文大学（深圳）](https://cuhk.edu.cn/)的**人工智能**研究型硕士生（**MPhil**），导师为[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)。
 
-目前，我的工作聚焦 **AI 基础设施（AI Infra）**与 **AI Agent**。
+目前，我的工作聚焦 **AI Agent** 与 **AI 基础设施（AI Infra）**。
 
-## <span id="research-interest"></span>研究兴趣与精选 AI 项目 {#projects-renyuan}
+## 研究兴趣 {#research-interest}
 
-* **AI 基础设施：**高效推理与训练、加速器适配、性能分析及算子优化；
-* **AI Agent：**工具检索与规划、多轮上下文编排、记忆与评测。
+* **AI Agents：**智能体工具调用、记忆系统；
+* **AI Infrastructure：**国产算力适配、大模型架构、算子优化。
+
+## 精选 AI 项目 {#projects-renyuan}
 
 <div class="project-list">
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">100 工具电商智能导购与多轮工具规划 Agent 系统</h3>
+      <h3 class="project-card__title">百工具电商规划系统</h3>
       <p class="project-card__meta">2026 年 7 月 – 至今</p>
     </header>
     <p class="project-card__summary">负责覆盖 100 个工具、8 大业务域的电商导购 Agent 研发，在 9,000 条静态测试请求上实现 <strong>92.6% 的端到端准确率</strong>。</p>
@@ -66,7 +68,7 @@ homepage: true
 
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">DeepSeek-V4 国产算力适配与昇腾算子优化</h3>
+      <h3 class="project-card__title">国产算力适配和昇腾算子agent</h3>
       <p class="project-card__meta">2026 年 3 月 – 2026 年 6 月 · 深圳市大数据研究院</p>
     </header>
     <p class="project-card__summary">负责 DeepSeek-V4 部署测评与昇腾算子优化，在目标配置下将融合反向算子耗时<strong>降低 20.9%</strong>。</p>
@@ -151,7 +153,7 @@ homepage: true
   2026 年 9 月 – 2028 年 6 月（预计）<br>
   **人工智能研究型硕士（MPhil）**<br>
   [永平书院](https://duanfamily.cuhk.edu.cn/)<br>
-  导师：[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)（人工智能学院）<br>
+  导师：[李明教授](https://sai.cuhk.edu.cn/zh-hans/teacher/277)<br>
   研究方向：大语言模型 / 智能体
 
 - {% include experience-logos.html organizations="hku" %} **[香港大学](https://www.hku.hk/)**，中国香港<br>
@@ -179,7 +181,7 @@ homepage: true
   实验室：计算自主学习系统实验室，实时与分布式系统研究组，[计算机科学系](https://www.york.ac.uk/computer-science/)<br>
   研究方向：运动规划<br>
   [\[证明材料\]](/assets/Evidence_York.pdf)<br>
-  后获[约克大学全奖博士录取]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }})。
+  获得[直博录取]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }})和[CSC 全奖提名]({{ '/assets/York_CSC.png' | relative_url }})。
 
 - {% include experience-logos.html organizations="macau" %} **[澳门大学](https://www.um.edu.mo/)**，中国澳门<br>
   2023 年 11 月<br>
@@ -194,11 +196,11 @@ homepage: true
 
 ### 在审稿件 {#publications-renyuan}
 
+- \[稿件双盲评审中。\] *投稿至 IEEE Robotics and Automation Letters（RA-L），研究方向为具身智能与语义导航。*
+
 - **R. Liu**、H. Zhou、C. Fang、Q. Fu，[How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827)。*arXiv 预印本，arXiv:2509.13827，2025。*
 
 - M. Wang<sup>\*</sup>、**R. Liu**<sup>\*</sup>、Q. Fu，\[稿件双盲评审中。\] *投稿至 IEEE Transactions on Cognitive and Developmental Systems（JCR Q1，IF = 4.9）。*
-
-- \[稿件双盲评审中。\] *投稿至 IEEE Robotics and Automation Letters（RA-L），研究方向为具身智能与语义导航。*
 
 
 ### 已发表论文 {#publications}
@@ -267,14 +269,33 @@ homepage: true
 
 ## 技术能力 {#skills}
 
-- **大语言模型后训练与 Agent：**Qwen3、Transformer、SFT、DPO/RPO、LoRA、Tool Calling、模型外记忆、多轮上下文编排与 Agent 评测
-- **检索与模型服务：**Embedding、Reranker、BM25/向量混合检索、RRF、Cross-Encoder、vLLM 与 SGLang
-- **AI 基础设施：**CUDA、昇腾 910B/910C、msprof 性能分析、推理基准测试与算子优化
-- **工程开发：**Python、C/C++、PyTorch、Hugging Face、MS-SWIFT、FastAPI、SQLite、Docker、Git、Vue 3 与 Linux
-- **机器人与嵌入式：**ROS、STM32、Keil、Webots、MATLAB，以及双目视觉/微型机器人平台
-- **AI 辅助开发：**每日高强度使用 Codex 与 Claude Code，月消耗 Token 百亿量级
-- **语言：** **IELTS 6.5**（阅读 8.0、听力 6.5、写作 6.0、口语 5.5）；**CET-6 564**（阅读 242/248.5）
-- **文档与媒体：**LaTeX、Markdown、MS Office/Visio、Adobe Photoshop 与 Premiere Pro
+<div class="skills-tree" markdown="1">
+
+- **学术技能**
+    - **大模型**
+        - **AI Agents**
+            - 智能体工具调用、记忆系统、多轮上下文编排与 Agent 评测
+            - 检索与排序：Embedding、Reranker、BM25/向量混合检索、RRF、Cross-Encoder
+        - **AI Infrastructure**
+            - 国产算力适配、大模型架构、算子优化
+            - 性能分析与推理基准测试
+        - **模型后训练：**SFT、LoRA、DPO/RPO
+    - **非大模型**
+        - **仿生视觉：**类脑神经网络、运动感知与碰撞检测
+        - **机器人：**双目视觉与微型机器人平台
+    - **学术交流**
+        - **IELTS 6.5：**阅读 8.0、听力 6.5、写作 6.0、口语 5.5
+        - **CET-6 564：**阅读 242/248.5
+- **工具技能**
+    - **编程语言：**Python、C/C++、MATLAB
+    - **模型与训练框架：**Qwen3、Transformer、PyTorch、Hugging Face、MS-SWIFT
+    - **模型服务与算力工具：**vLLM、SGLang、CUDA、昇腾 910B/910C、msprof
+    - **应用开发与系统：**FastAPI、SQLite、Docker、Git、Vue 3、Linux
+    - **机器人与嵌入式工具：**ROS、STM32、Keil、Webots
+    - **AI 辅助开发：**每日高强度使用 Codex 与 Claude Code，月消耗 Token 百亿量级
+    - **文档与媒体：**LaTeX、Markdown、MS Office/Visio、Adobe Photoshop、Premiere Pro
+
+</div>
 
 *喜欢攀岩、烹饪、篮球和主机游戏*
 
@@ -319,4 +340,4 @@ homepage: true
   </a>
 </figure>
 
-欢迎计算机科学各方向的交流与合作。[**查看个人简历**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)
+欢迎计算机科学各方向的交流与合作。[**访问 TEAM NEXUS**](https://ryannnice.github.io/nexus/)

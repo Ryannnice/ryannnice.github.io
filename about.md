@@ -1,7 +1,7 @@
 ---
 permalink: /
 seo_title: "Renyuan Liu"
-description: "Renyuan Liu is an MPhil student working on AI infrastructure and AI agents."
+description: "Renyuan Liu is an MPhil student working on AI agents and AI infrastructure."
 lang: en
 locale: en_US
 alternate_url: /zh/
@@ -26,20 +26,22 @@ redirect_from:
 # Renyuan LIU (刘<ruby>稔<rt>rěn</rt></ruby>远)
 ---
 
-Nice to meet you here!
-I am an **MPhil student in Artificial Intelligence** at The Chinese University of Hong Kong, Shenzhen, supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence).
+Nice to meet you here!<br>
+I am an **MPhil** student in **Artificial Intelligence** at [The Chinese University of Hong Kong, Shenzhen](https://cuhk.edu.cn/en), supervised by [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277).
 
-My current work focuses on **AI infrastructure** and **AI agents**.
+My current work focuses on **AI agents** and **AI infrastructure**.
 
-## <span id="research-interest"></span>Research Interests & Selected AI Projects {#projects-renyuan}
+## Research Interests {#research-interest}
 
-* **AI Infrastructure:** efficient inference and training, accelerator adaptation, profiling, and kernel optimization;
-* **AI Agents:** tool retrieval and planning, multi-turn context orchestration, memory, and evaluation.
+* **AI Agents:** tool calling and memory systems;
+* **AI Infrastructure:** domestic accelerator adaptation, large model architectures, and kernel optimization.
+
+## Selected AI Projects {#projects-renyuan}
 
 <div class="project-list">
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">100-Tool E-Commerce Shopping Assistant and Multi-Turn Tool Planning Agent System</h3>
+      <h3 class="project-card__title">Hundred-Tool Planning System for E-Commerce</h3>
       <p class="project-card__meta">Jul. 2026 – Present</p>
     </header>
     <p class="project-card__summary">Built an e-commerce agent spanning 100 tools and eight business domains, achieving <strong>92.6% end-to-end accuracy</strong> on 9,000 static test requests.</p>
@@ -75,7 +77,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
   <article class="project-card">
     <header class="project-card__header">
-      <h3 class="project-card__title">DeepSeek-V4 Domestic-Accelerator Adaptation and Ascend Kernel Optimization</h3>
+      <h3 class="project-card__title">Domestic Accelerator Adaptation and Ascend Kernel Agent</h3>
       <p class="project-card__meta">Mar. 2026 – Jun. 2026 · Shenzhen Research Institute of Big Data</p>
     </header>
     <p class="project-card__summary">Worked on DeepSeek-V4 deployment evaluation and Ascend kernel optimization, reducing fused backward-kernel latency by <strong>20.9%</strong> under the target configuration.</p>
@@ -160,7 +162,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
   Sept. 2026 – Jun. 2028 (Expected)<br>
   **Master of Philosophy (MPhil) in Artificial Intelligence**<br>
   [Duan Family College](https://duanfamily.cuhk.edu.cn/)<br>
-  Supervisor: [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277) (School of Artificial Intelligence)<br>
+  Supervisor: [Prof. Ming Li](https://sai.cuhk.edu.cn/en/teacher/277)<br>
   Research focus: Large Language Models / AI Agents
   
 
@@ -193,7 +195,7 @@ My current work focuses on **AI infrastructure** and **AI agents**.
   Lab: Computational Autonomous Learning Systems Lab, Real-Time and Distributed Systems Research Group, [Department of Computer Science](https://www.york.ac.uk/computer-science/)<br>
   Research focus: Motion Planning<br>
   [\[Evidence\]](/assets/Evidence_York.pdf)<br>
-  Subsequently received a [fully funded PhD offer from the University of York]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }}).
+  Received a [direct-entry PhD offer]({{ '/assets/Offer_UoY_PhD_CS.pdf' | relative_url }}) and a [nomination for the CSC full scholarship]({{ '/assets/York_CSC.png' | relative_url }}).
 
 
 - {% include experience-logos.html organizations="macau" %} **[University of Macau](https://www.um.edu.mo/)**, Macao, China<br>
@@ -209,12 +211,11 @@ My current work focuses on **AI infrastructure** and **AI agents**.
 
 ### Manuscripts Under Review {#publications-renyuan}
 
+- \[Manuscript under double-blind review.\] *Under review in IEEE Robotics and Automation Letters (RA-L), in the area of embodied AI and semantic navigation.*
+
 - **R. Liu**, H. Zhou, C. Fang and Q. Fu, [How Fly Neural Perception Mechanisms Enhance Visuomotor Control of Micro Robots](https://arxiv.org/pdf/2509.13827). *arXiv preprint, arXiv:2509.13827, 2025.*
 
 - M. Wang<sup>\*</sup>, **R. Liu**<sup>\*</sup>, and Q. Fu, \[Manuscript under double-blind review.\] *Under review in IEEE Transactions on Cognitive and Developmental Systems (JCR Q1, IF = 4.9).*
-
-- \[Manuscript under double-blind review.\] *Under review in IEEE Robotics and Automation Letters (RA-L), in the area of embodied AI and semantic navigation.*
-
 
 
 ### Published Papers {#publications}
@@ -282,21 +283,40 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   Interdisciplinary Programme - New Media, Technological Innovation, Art and Data Mining at the University of Macau<br>
   Nov. 2023  [\[Evidence\]](/assets/Evidence_Macao.pdf)  
 
-- ***Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program*: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization *(S202411078014)*
+- **Provincial Key** College Students' Innovative Entrepreneurial Training Plan Program: Bio-Inspired LGMD Collision Detection Model Leveraging Optical Flow and Learning-Based Optimization (S202411078014)
 
 
 
 
 ## Skills {#skills}
 
-- **LLM Post-Training & Agents:** Qwen3, Transformer, SFT, DPO/RPO, LoRA, tool calling, external memory, multi-turn orchestration, and agent evaluation
-- **Retrieval & Model Serving:** embeddings, rerankers, BM25/vector hybrid retrieval, RRF, cross-encoders, vLLM, and SGLang
-- **AI Infrastructure:** CUDA, Ascend 910B/910C, profiling with msprof, inference benchmarking, and kernel optimization
-- **Engineering:** Python, C/C++, PyTorch, Hugging Face, MS-SWIFT, FastAPI, SQLite, Docker, Git, Vue 3, and Linux
-- **Robotics & Embedded Systems:** ROS, STM32, Keil, Webots, MATLAB, and binocular/micro-robot platforms
-- **AI-Assisted Development:** intensive daily use of Codex and Claude Code, with monthly usage on the order of 10 billion tokens
-- **Languages:** **IELTS 6.5** (R8.0, L6.5, W6.0, S5.5) and **CET-6 564** (242/248.5 in reading)
-- **Documentation & Media:** LaTeX, Markdown, MS Office/Visio, Adobe Photoshop, and Premiere Pro
+<div class="skills-tree" markdown="1">
+
+- **Academic Skills**
+    - **Large Language Models**
+        - **AI Agents**
+            - Tool calling, memory systems, multi-turn context orchestration, and agent evaluation
+            - Retrieval: embeddings, rerankers, BM25/vector hybrid retrieval, RRF, and cross-encoders
+        - **AI Infrastructure**
+            - Domestic accelerator adaptation, large model architectures, and kernel optimization
+            - Profiling and inference benchmarking
+        - **Post-Training:** SFT, LoRA, and DPO/RPO
+    - **Non-LLM Research**
+        - **Bio-Inspired Vision:** brain-inspired neural networks, motion perception, and collision detection
+        - **Robotics:** binocular vision and micro-robot platforms
+    - **Academic Communication**
+        - **IELTS 6.5:** reading 8.0, listening 6.5, writing 6.0, speaking 5.5
+        - **CET-6 564:** reading 242/248.5
+- **Tools & Engineering**
+    - **Programming:** Python, C/C++, and MATLAB
+    - **Models & Training Frameworks:** Qwen3, Transformer, PyTorch, Hugging Face, and MS-SWIFT
+    - **Serving & Accelerators:** vLLM, SGLang, CUDA, Ascend 910B/910C, and msprof
+    - **Application Development & Systems:** FastAPI, SQLite, Docker, Git, Vue 3, and Linux
+    - **Robotics & Embedded Tools:** ROS, STM32, Keil, and Webots
+    - **AI-Assisted Development:** intensive daily use of Codex and Claude Code, with monthly usage on the order of 10 billion tokens
+    - **Documentation & Media:** LaTeX, Markdown, MS Office/Visio, Adobe Photoshop, and Premiere Pro
+
+</div>
 
 *I enjoy rock climbing, cooking, basketball, and console gaming.*
   
@@ -347,4 +367,4 @@ Selected code for neuro-embodied micro-robot [***Colias***](https://link.springe
   </a>
 </figure>
 
-I welcome collaborations across computer science. [**Curriculum Vitae**]({{ '/assets/CV_RenyuanLiu.pdf' | relative_url }}) · [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)
+I welcome collaborations across computer science. [**TEAM NEXUS**](https://ryannnice.github.io/nexus/)

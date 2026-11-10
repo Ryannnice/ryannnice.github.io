@@ -1,5 +1,13 @@
 /* Homepage-specific cards and embeds. */
 
+.page__content .publication-note,
+.page__content .research-background > summary {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
 .page__content--home > h2 {
   margin-top: clamp(3rem, 5vw, 4rem);
 }
@@ -7,7 +15,81 @@
 .page__content .publication-note {
   margin: 0.75rem 0 1rem;
   color: var(--global-text-color-light);
-  font-size: 0.8rem;
+}
+
+.page__content .skills-tree {
+  margin: 1.25rem 0 2rem;
+  font-size: 0.9rem;
+
+  > ul {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+
+      > strong {
+        display: block;
+        padding-bottom: 0.65rem;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--global-border-color);
+      }
+    }
+  }
+
+  ul ul {
+    margin: 0.75rem 0 0;
+    padding-left: 0.75rem;
+    list-style: none;
+
+    > li {
+      position: relative;
+      margin: 0;
+      padding: 0 0 0.75rem 0.75rem;
+      border-left: 1px solid var(--global-border-color);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.8em;
+        left: 0;
+        width: 0.5rem;
+        border-top: 1px solid var(--global-border-color);
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-left-color: transparent;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -1px;
+          height: 0.8em;
+          border-left: 1px solid var(--global-border-color);
+        }
+      }
+    }
+  }
+
+  li {
+    font-size: 1em;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  @include breakpoint($x-large) {
+    > ul {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 }
 
 .page__content .experience-list > ul {
