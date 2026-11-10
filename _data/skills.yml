@@ -1,0 +1,247 @@
+# Shared skills taxonomy. Each leaf is one capability, tool, or language score.
+id: skills
+en: "Skills"
+zh: "技能"
+children:
+  - id: research
+    en: "Research and Engineering"
+    zh: "研究与工程能力"
+    children:
+      - id: llm
+        en: "Large Language Models"
+        zh: "大模型"
+        children:
+          - id: agents
+            en: "AI Agents"
+            zh: "AI Agents"
+            children:
+              - id: tool_calling
+                en: "Tool-Calling Integration"
+                zh: "工具调用集成"
+              - id: rag
+                en: "RAG"
+                zh: "RAG"
+              - id: context
+                en: "Context Orchestration"
+                zh: "上下文编排"
+              - id: memory
+                en: "Memory System Development"
+                zh: "记忆系统开发"
+              - id: agent_eval
+                en: "Agent Evaluation"
+                zh: "Agent 评测"
+          - id: post_training
+            en: "Post-Training"
+            zh: "模型后训练"
+            children:
+              - id: sft
+                en: "SFT"
+                zh: "SFT"
+              - id: rl
+                en: "RL"
+                zh: "RL"
+          - id: infra
+            en: "AI Infrastructure"
+            zh: "AI Infrastructure"
+            children:
+              - id: deployment
+                en: "Agent-Driven Deployment Automation"
+                zh: "Agent 自动化部署"
+              - id: kernel_optimization
+                en: "Kernel Optimization"
+                zh: "算子优化"
+              - id: kernel_profiling
+                en: "Kernel Profiling"
+                zh: "算子性能分析"
+              - id: inference_benchmarking
+                en: "Inference Benchmarking"
+                zh: "推理基准测试"
+      - id: non_llm
+        en: "Non-LLM Research"
+        zh: "非大模型"
+        children:
+          - id: bio_vision
+            en: "Bio-Inspired Visual Modeling"
+            zh: "仿生视觉建模"
+          - id: robot_vision
+            en: "Robotic Vision System Development"
+            zh: "机器人视觉系统开发"
+          - id: embedded_robotics
+            en: "Embedded Robotics Development"
+            zh: "嵌入式机器人开发"
+          - id: motion_control
+            en: "Motion Control"
+            zh: "运动控制"
+          - id: navigation
+            en: "Autonomous Navigation"
+            zh: "自主导航"
+  - id: tools
+    en: "Tools and Software"
+    zh: "工具与软件"
+    children:
+      - id: programming
+        en: "Programming Languages"
+        zh: "编程语言"
+        children:
+          - id: python
+            en: "Python"
+            zh: "Python"
+          - id: c
+            en: "C"
+            zh: "C"
+          - id: cpp
+            en: "C++"
+            zh: "C++"
+          - id: matlab
+            en: "MATLAB"
+            zh: "MATLAB"
+      - id: model_training
+        en: "Model Training"
+        zh: "模型训练"
+        children:
+          - id: pytorch
+            en: "PyTorch"
+            zh: "PyTorch"
+          - id: hugging_face
+            en: "Hugging Face"
+            zh: "Hugging Face"
+          - id: ms_swift
+            en: "MS-SWIFT"
+            zh: "MS-SWIFT"
+      - id: serving
+        en: "Model Serving"
+        zh: "推理服务"
+        children:
+          - id: vllm
+            en: "vLLM"
+            zh: "vLLM"
+          - id: sglang
+            en: "SGLang"
+            zh: "SGLang"
+      - id: accelerators
+        en: "Accelerator Platforms"
+        zh: "算力平台"
+        children:
+          - id: cuda
+            en: "CUDA"
+            zh: "CUDA"
+          - id: ascend
+            en: "Ascend"
+            zh: "Ascend"
+      - id: profiling_tools
+        en: "Kernel Profiling Tools"
+        zh: "算子分析工具"
+        children:
+          - id: msprof
+            en: "msprof"
+            zh: "msprof"
+      - id: engineering
+        en: "Application Development"
+        zh: "应用开发"
+        children:
+          - id: fastapi
+            en: "FastAPI"
+            zh: "FastAPI"
+          - id: sqlite
+            en: "SQLite"
+            zh: "SQLite"
+          - id: docker
+            en: "Docker"
+            zh: "Docker"
+          - id: git
+            en: "Git"
+            zh: "Git"
+          - id: linux
+            en: "Linux"
+            zh: "Linux"
+          - id: vue
+            en: "Vue 3"
+            zh: "Vue 3"
+      - id: robotics_tools
+        en: "Robotics Development"
+        zh: "机器人开发"
+        children:
+          - id: ros
+            en: "ROS"
+            zh: "ROS"
+          - id: stm32
+            en: "STM32"
+            zh: "STM32"
+          - id: webots
+            en: "Webots"
+            zh: "Webots"
+          - id: keil
+            en: "Keil"
+            zh: "Keil"
+      - id: ai_coding
+        en: "AI Coding Tools"
+        zh: "AI 编程工具"
+        children:
+          - id: codex
+            en: "Codex"
+            zh: "Codex"
+          - id: claude_code
+            en: "Claude Code"
+            zh: "Claude Code"
+          - id: open_code
+            en: "Open Code"
+            zh: "Open Code"
+          - id: trae
+            en: "TRAE"
+            zh: "TRAE"
+          - id: bit_flux
+            en: "Bit Flux"
+            zh: "Bit Flux"
+      - id: documents
+        en: "Writing and Diagramming"
+        zh: "写作与绘图"
+        children:
+          - id: latex
+            en: "LaTeX"
+            zh: "LaTeX"
+          - id: markdown
+            en: "Markdown"
+            zh: "Markdown"
+          - id: office
+            en: "Microsoft Office"
+            zh: "Microsoft Office"
+          - id: visio
+            en: "Visio"
+            zh: "Visio"
+      - id: media
+        en: "Media Production"
+        zh: "媒体创作"
+        children:
+          - id: photoshop
+            en: "Adobe Photoshop"
+            zh: "Adobe Photoshop"
+          - id: premiere
+            en: "Premiere Pro"
+            zh: "Premiere Pro"
+  - id: english
+    en: "English"
+    zh: "英语"
+    children:
+      - id: ielts
+        en: "IELTS 6.5"
+        zh: "IELTS 6.5"
+        children:
+          - id: ielts_reading
+            en: "Reading 8.0"
+            zh: "阅读 8.0"
+          - id: ielts_listening
+            en: "Listening 6.5"
+            zh: "听力 6.5"
+          - id: ielts_writing
+            en: "Writing 6.0"
+            zh: "写作 6.0"
+          - id: ielts_speaking
+            en: "Speaking 5.5"
+            zh: "口语 5.5"
+      - id: cet6
+        en: "CET-6 564"
+        zh: "CET-6 564"
+        children:
+          - id: cet6_reading
+            en: "Reading 242/248.5"
+            zh: "阅读 242/248.5"

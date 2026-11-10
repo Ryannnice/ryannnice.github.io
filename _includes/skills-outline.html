@@ -1,0 +1,10 @@
+<ul>
+  {% for skill in include.nodes %}
+  <li>
+    {% if skill.children %}<strong>{{ skill[include.label_key] | escape }}</strong>{% else %}<span>{{ skill[include.label_key] | escape }}</span>{% endif %}
+    {% if skill.children %}
+      {% include skills-outline.html nodes=skill.children label_key=include.label_key %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

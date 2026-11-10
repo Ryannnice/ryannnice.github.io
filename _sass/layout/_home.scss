@@ -1,7 +1,6 @@
 /* Homepage-specific cards and embeds. */
 
 .page__content .publication-note,
-.page__content .skills-usage-note,
 .page__content .research-background > summary {
   font-family: inherit;
   font-size: 0.85rem;
@@ -13,8 +12,7 @@
   margin-top: clamp(3rem, 5vw, 4rem);
 }
 
-.page__content .publication-note,
-.page__content .skills-usage-note {
+.page__content .publication-note {
   margin: 0.75rem 0 1rem;
   color: var(--global-text-color-light);
 }
@@ -87,29 +85,152 @@
     overflow-wrap: anywhere;
   }
 
-  summary {
-    width: fit-content;
-    min-height: 32px;
-    font-weight: 600;
-    cursor: pointer;
-
-    &:hover,
-    &:focus-visible {
-      color: var(--global-link-color-hover);
-    }
-  }
-
-  @media (pointer: coarse) {
-    summary {
-      min-height: 44px;
-    }
-  }
-
   @include breakpoint($x-large) {
     > ul {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+}
+
+.page__content .skills-mindmap {
+  margin: 1.25rem 0 2rem;
+
+  &__toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &__hint {
+    margin: 0;
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    button {
+      min-width: 44px;
+      min-height: 44px;
+      margin: 0;
+      padding: 0.3rem 0.55rem;
+      border: 1px solid var(--global-border-color);
+      border-radius: 0;
+      background: var(--global-surface-color);
+      color: var(--global-link-color);
+      font: inherit;
+      font-size: 0.8rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--global-link-color);
+        background: var(--global-surface-muted-color);
+      }
+
+      &:disabled {
+        opacity: 0.45;
+        cursor: default;
+      }
+    }
+  }
+
+  &__zoom {
+    min-width: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__viewport {
+    height: clamp(26rem, 65vh, 38rem);
+    overflow: auto;
+    border: 1px solid var(--global-border-color);
+    background: var(--global-surface-color);
+    scrollbar-gutter: stable;
+    cursor: grab;
+
+    &.is-dragging { cursor: grabbing; }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-focus-color);
+      outline-offset: 2px;
+    }
+  }
+
+  &__stage {
+    display: grid;
+    place-items: center;
+    width: max-content;
+    min-width: 100%;
+    min-height: 100%;
+    user-select: none;
+  }
+
+  &__canvas {
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      font-size: 18px;
+    }
+
+    .mindmap-node > rect {
+      fill: var(--global-surface-muted-color) !important;
+      stroke: var(--global-border-color) !important;
+      stroke-width: 1px !important;
+      rx: 0;
+      ry: 0;
+    }
+
+    .section-root > rect {
+      fill: var(--global-link-color) !important;
+      stroke: var(--global-link-color) !important;
+    }
+
+    .mindmap-node[data-depth="1"] > rect {
+      stroke: var(--global-link-color) !important;
+      stroke-width: 1.5px !important;
+    }
+
+    .mindmap-node text,
+    .mindmap-node tspan {
+      color: var(--global-text-color) !important;
+      fill: var(--global-text-color) !important;
+    }
+
+    .section-root text,
+    .section-root tspan {
+      color: var(--global-bg-color) !important;
+      fill: var(--global-bg-color) !important;
+    }
+
+    .edgePaths path {
+      stroke: var(--global-dark-border-color) !important;
+      stroke-width: 1.5px !important;
+    }
+  }
+
+  &__outline {
+    margin-top: 0.75rem;
+
+    > summary {
+      width: fit-content;
+      min-height: 44px;
+      color: var(--global-link-color);
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+  }
+
+  [hidden] { display: none; }
 }
 
 .page__content .experience-list > ul {
