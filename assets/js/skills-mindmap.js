@@ -15,14 +15,21 @@ async function renderMap(container) {
   const lines = ['mindmap'];
   const nodes = [];
   const edges = new Map();
-  function addNode(node, depth, branch = 'root', parentIndex) {
+  // Alternate the larger domains across the two sides of the tidy tree.
+  const branchOrder = ['engineering', 'llm', 'languages', 'research', 'other'];
+  function addNode(node, depth, branch = 'root', parentIndex, inheritedKind = 'capability', inheritedTopic = branch) {
     const index = nodes.length;
     const label = node[language].replace(/&/g, '&amp;').replace(/"/g, '&quot;');
     lines.push(`${'  '.repeat(depth)}${node.id}["${label}"]`);
-    const metadata = { id: node.id, depth: depth - 1, branch, leaf: !node.children };
+    const kind = node.kind || inheritedKind;
+    const topic = depth <= 3 ? node.id : inheritedTopic;
+    const metadata = { id: node.id, depth: depth - 1, branch, topic, kind, leaf: !node.children };
     nodes.push(metadata);
     if (parentIndex !== undefined) edges.set(`edge_${parentIndex}_${index}`, metadata);
-    node.children?.forEach(child => addNode(child, depth + 1, depth === 1 ? child.id : branch, index));
+    const children = depth === 1
+      ? [...node.children].sort((a, b) => branchOrder.indexOf(a.id) - branchOrder.indexOf(b.id))
+      : node.children;
+    children?.forEach(child => addNode(child, depth + 1, depth === 1 ? child.id : branch, index, kind, topic));
   }
   addNode(data, 1);
 
@@ -54,12 +61,16 @@ async function renderMap(container) {
     node.dataset.skill = nodes[index].id;
     node.dataset.depth = nodes[index].depth;
     node.dataset.branch = nodes[index].branch;
+    node.dataset.topic = nodes[index].topic;
+    node.dataset.kind = nodes[index].kind;
   });
   diagram.querySelectorAll('.edgePaths path').forEach(path => {
     const target = edges.get(path.dataset.id);
     if (!target) return;
     path.dataset.branch = target.branch;
+    path.dataset.topic = target.topic;
     path.dataset.depth = target.depth;
+    path.dataset.kind = target.kind;
     const thickness = target.leaf ? 1.4 : Math.max(2.25, 6.5 - target.depth * 1.5);
     path.style.setProperty('--skills-branch-width', `${thickness}px`);
   });
@@ -78,9 +89,10 @@ async function renderMap(container) {
   title.textContent = data[language];
   const description = document.createElementNS('http://www.w3.org/2000/svg', 'desc');
   description.id = `${diagramId}-description`;
-  description.textContent = language === 'zh'
-    ? '研究与工程能力、工具与软件、英语。完整文字清单位于图下方。'
-    : 'Research and engineering, tools and software, and English proficiency. A complete text outline follows the map.';
+  description.textContent = data.children.map(node => node[language]).join(language === 'zh' ? '、' : ', ')
+    + (language === 'zh'
+      ? '。实线表示方向与能力，虚线表示工具与技术。完整文字清单位于图下方。'
+      : '. Solid lines indicate capabilities; dashed lines indicate tools and technologies. A complete text outline follows the map.');
   diagram.prepend(title, description);
   diagram.setAttribute('aria-labelledby', title.id);
   diagram.setAttribute('aria-describedby', description.id);

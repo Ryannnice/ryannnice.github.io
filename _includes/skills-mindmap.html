@@ -12,11 +12,15 @@
     </div>
     <div class="skills-mindmap__branches" role="group" aria-label="{% if skills_label_key == 'zh' %}定位技能分支{% else %}Locate a skills branch{% endif %}">
       {% for branch in site.data.skills.children %}
-      <button type="button" data-focus-branch="{{ branch.id }}" data-branch="{{ branch.id }}" aria-label="{% if skills_label_key == 'zh' %}定位{{ branch.zh }}分支{% else %}Locate {{ branch.en }}{% endif %}">{% if skills_label_key == 'zh' %}{{ branch.zh }}{% elsif branch.id == 'research' %}Research{% elsif branch.id == 'tools' %}Tools{% else %}{{ branch.en }}{% endif %}</button>
+      <button type="button" data-focus-branch="{{ branch.id }}" data-branch="{{ branch.id }}" aria-label="{% if skills_label_key == 'zh' %}定位{{ branch.zh }}分支{% else %}Locate {{ branch.en }}{% endif %}">{% if skills_label_key == 'zh' %}{{ branch.zh }}{% elsif branch.id == 'llm' %}LLMs{% else %}{{ branch.en }}{% endif %}</button>
       {% endfor %}
     </div>
   </div>
-  <div class="skills-mindmap__viewport" tabindex="0" role="region" aria-label="{% if skills_label_key == 'zh' %}技能思维导图{% else %}Skills mind map{% endif %}" aria-describedby="skills-mindmap-help" hidden>
+  <div id="skills-mindmap-key" class="skills-mindmap__key">
+    <span>{% if skills_label_key == 'zh' %}实线：方向与能力{% else %}Solid: capabilities{% endif %}</span>
+    <span class="skills-mindmap__key-tool">{% if skills_label_key == 'zh' %}虚线：工具与技术{% else %}Dashed: tools and technologies{% endif %}</span>
+  </div>
+  <div class="skills-mindmap__viewport" tabindex="0" role="region" aria-label="{% if skills_label_key == 'zh' %}技能思维导图{% else %}Skills mind map{% endif %}" aria-describedby="skills-mindmap-help skills-mindmap-key" hidden>
     <div class="skills-mindmap__stage">
       <div class="skills-mindmap__canvas"></div>
     </div>

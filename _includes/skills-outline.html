@@ -1,9 +1,10 @@
 <ul>
   {% for skill in include.nodes %}
-  <li>
+  {% assign skill_kind = skill.kind | default: include.kind | default: 'capability' %}
+  <li data-kind="{{ skill_kind }}">
     {% if skill.children %}<strong>{{ skill[include.label_key] | escape }}</strong>{% else %}<span>{{ skill[include.label_key] | escape }}</span>{% endif %}
     {% if skill.children %}
-      {% include skills-outline.html nodes=skill.children label_key=include.label_key %}
+      {% include skills-outline.html nodes=skill.children label_key=include.label_key kind=skill_kind %}
     {% endif %}
   </li>
   {% endfor %}
