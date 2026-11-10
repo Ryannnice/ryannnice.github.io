@@ -698,8 +698,8 @@ groups:
     type: Dataset
     source: OpenOneRec · Hugging Face
 - id: inspiration
-  title_en: Research & Inspiration
-  title_zh: 研究与启发
+  title_en: Inspiring Articles
+  title_zh: 启发性文章
   items:
   - title: How to Have a Bad Career in Research/Academia
     url: https://people.eecs.berkeley.edu/~pattrsn/talks/BadCareer.pdf
