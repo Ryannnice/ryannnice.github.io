@@ -2,7 +2,6 @@
 {% if page.lang == 'zh-CN' %}{% assign skills_label_key = 'zh' %}{% endif %}
 <div class="skills-mindmap" data-language="{{ skills_label_key }}">
   <div class="skills-mindmap__toolbar" hidden>
-    <p id="skills-mindmap-help" class="skills-mindmap__hint">{% if skills_label_key == 'zh' %}拖动或滚动浏览，使用按钮缩放。{% else %}Drag or scroll to explore. Use the buttons to zoom.{% endif %}</p>
     <div class="skills-mindmap__actions" role="group" aria-label="{% if skills_label_key == 'zh' %}技能树视图控制{% else %}Skills map view controls{% endif %}">
       <button type="button" data-map-action="out" aria-label="{% if skills_label_key == 'zh' %}缩小技能树{% else %}Zoom out{% endif %}">−</button>
       <output class="skills-mindmap__zoom" aria-live="polite" aria-label="{% if skills_label_key == 'zh' %}缩放比例{% else %}Zoom level{% endif %}">100%</output>
@@ -20,16 +19,10 @@
     <span>{% if skills_label_key == 'zh' %}实线：方向与能力{% else %}Solid: capabilities{% endif %}</span>
     <span class="skills-mindmap__key-tool">{% if skills_label_key == 'zh' %}虚线：工具与技术{% else %}Dashed: tools and technologies{% endif %}</span>
   </div>
-  <div class="skills-mindmap__viewport" tabindex="0" role="region" aria-label="{% if skills_label_key == 'zh' %}技能思维导图{% else %}Skills mind map{% endif %}" aria-describedby="skills-mindmap-help skills-mindmap-key" hidden>
+  <div class="skills-mindmap__viewport" tabindex="0" role="region" aria-label="{% if skills_label_key == 'zh' %}技能思维导图{% else %}Skills mind map{% endif %}" aria-describedby="skills-mindmap-key" aria-busy="true">
     <div class="skills-mindmap__stage">
       <div class="skills-mindmap__canvas"></div>
     </div>
   </div>
-  <details class="skills-mindmap__outline" open>
-    <summary>{% if skills_label_key == 'zh' %}文字清单{% else %}Text outline{% endif %}</summary>
-    <div class="skills-tree">
-      {% include skills-outline.html nodes=site.data.skills.children label_key=skills_label_key %}
-    </div>
-  </details>
   <script type="application/json" class="skills-mindmap__data">{{ site.data.skills | jsonify }}</script>
 </div>

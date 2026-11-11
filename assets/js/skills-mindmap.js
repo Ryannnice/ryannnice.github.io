@@ -1,13 +1,12 @@
 const maps = document.querySelectorAll('.skills-mindmap');
 
-// Keep the complete HTML outline available until the diagram is ready.
 async function renderMap(container) {
   const data = JSON.parse(container.querySelector('.skills-mindmap__data').textContent);
   const language = container.dataset.language;
   const viewport = container.querySelector('.skills-mindmap__viewport');
+  const stage = container.querySelector('.skills-mindmap__stage');
   const canvas = container.querySelector('.skills-mindmap__canvas');
   const toolbar = container.querySelector('.skills-mindmap__toolbar');
-  const outline = container.querySelector('.skills-mindmap__outline');
   const zoomLabel = container.querySelector('.skills-mindmap__zoom');
   const zoomOut = container.querySelector('[data-map-action="out"]');
   const zoomIn = container.querySelector('[data-map-action="in"]');
@@ -89,17 +88,18 @@ async function renderMap(container) {
   title.textContent = data[language];
   const description = document.createElementNS('http://www.w3.org/2000/svg', 'desc');
   description.id = `${diagramId}-description`;
-  description.textContent = data.children.map(node => node[language]).join(language === 'zh' ? '、' : ', ')
-    + (language === 'zh'
-      ? '。实线表示方向与能力，虚线表示工具与技术。完整文字清单位于图下方。'
-      : '. Solid lines indicate capabilities; dashed lines indicate tools and technologies. A complete text outline follows the map.');
+  function describeSkills(node) {
+    return node[language] + (node.children ? `: ${node.children.map(describeSkills).join('; ')}` : '');
+  }
+  description.textContent = describeSkills(data) + (language === 'zh'
+    ? '。实线表示方向与能力，虚线表示工具与技术。'
+    : '. Solid lines indicate capabilities; dashed lines indicate tools and technologies.');
   diagram.prepend(title, description);
   diagram.setAttribute('aria-labelledby', title.id);
   diagram.setAttribute('aria-describedby', description.id);
 
   toolbar.hidden = false;
-  viewport.hidden = false;
-  outline.open = false;
+  viewport.setAttribute('aria-busy', 'false');
   let zoom = 1;
   const minZoom = 0.2;
   const maxZoom = 1.5;
@@ -109,6 +109,7 @@ async function renderMap(container) {
     const oldBox = canvas.getBoundingClientRect();
     const centerX = (viewportBox.left + viewport.clientWidth / 2 - oldBox.left) / zoom;
     const centerY = (viewportBox.top + viewport.clientHeight / 2 - oldBox.top) / zoom;
+    stage.style.padding = `${viewport.clientHeight / 2}px ${viewport.clientWidth / 2}px`;
     zoom = Math.max(minZoom, Math.min(maxZoom, value));
     canvas.style.width = `${width * zoom}px`;
     canvas.style.height = `${height * zoom}px`;
@@ -116,11 +117,7 @@ async function renderMap(container) {
     zoomOut.disabled = zoom <= minZoom;
     zoomIn.disabled = zoom >= maxZoom;
 
-    if (focus === 'root') {
-      const rootBox = diagram.querySelector('.section-root').getBoundingClientRect();
-      viewport.scrollLeft += rootBox.left + rootBox.width / 2 - viewportBox.left - viewport.clientWidth / 2;
-      viewport.scrollTop += rootBox.top + rootBox.height / 2 - viewportBox.top - viewport.clientHeight / 2;
-    } else if (focus === 'fit') {
+    if (focus === 'fit') {
       viewport.scrollLeft = (viewport.scrollWidth - viewport.clientWidth) / 2;
       viewport.scrollTop = (viewport.scrollHeight - viewport.clientHeight) / 2;
     } else {
@@ -130,22 +127,29 @@ async function renderMap(container) {
     }
   }
 
+  function focusBranch(branch) {
+    setZoom(0.85);
+    const boxes = Array.from(diagram.querySelectorAll(`.mindmap-node[data-branch="${branch}"]`), node => node.getBoundingClientRect());
+    const viewportBox = viewport.getBoundingClientRect();
+    let centerX = (Math.min(...boxes.map(box => box.left)) + Math.max(...boxes.map(box => box.right))) / 2;
+    const centerY = (Math.min(...boxes.map(box => box.top)) + Math.max(...boxes.map(box => box.bottom))) / 2;
+    const heading = diagram.querySelector(`[data-skill="${branch}"]`).getBoundingClientRect();
+    centerX = Math.max(heading.right + 24 - viewport.clientWidth / 2,
+      Math.min(heading.left - 24 + viewport.clientWidth / 2, centerX));
+    viewport.scrollLeft += centerX - viewportBox.left - viewport.clientWidth / 2;
+    viewport.scrollTop += centerY - viewportBox.top - viewport.clientHeight / 2;
+  }
+
   toolbar.addEventListener('click', event => {
     const branch = event.target.closest('[data-focus-branch]')?.dataset.focusBranch;
     if (branch) {
-      setZoom(0.85);
-      const boxes = Array.from(diagram.querySelectorAll(`.mindmap-node[data-branch="${branch}"]`), node => node.getBoundingClientRect());
-      const viewportBox = viewport.getBoundingClientRect();
-      const centerX = (Math.min(...boxes.map(box => box.left)) + Math.max(...boxes.map(box => box.right))) / 2;
-      const centerY = (Math.min(...boxes.map(box => box.top)) + Math.max(...boxes.map(box => box.bottom))) / 2;
-      viewport.scrollLeft += centerX - viewportBox.left - viewport.clientWidth / 2;
-      viewport.scrollTop += centerY - viewportBox.top - viewport.clientHeight / 2;
+      focusBranch(branch);
       return;
     }
     const action = event.target.closest('[data-map-action]')?.dataset.mapAction;
     if (action === 'out') setZoom(zoom - 0.15);
     if (action === 'in') setZoom(zoom + 0.15);
-    if (action === 'reset') setZoom(1, 'root');
+    if (action === 'reset') setZoom(1);
     if (action === 'fit') {
       setZoom(Math.min((viewport.clientWidth - 24) / width, (viewport.clientHeight - 24) / height), 'fit');
     }
@@ -174,13 +178,18 @@ async function renderMap(container) {
   viewport.addEventListener('pointercancel', endDrag);
   viewport.addEventListener('lostpointercapture', endDrag);
 
-  setZoom(0.85, 'root');
+  focusBranch('llm');
   container.dataset.ready = 'true';
 }
 
 function loadMap(container) {
   renderMap(container).catch(error => {
     console.error('Could not render the skills map.', error);
+    const viewport = container.querySelector('.skills-mindmap__viewport');
+    viewport.setAttribute('aria-busy', 'false');
+    viewport.textContent = container.dataset.language === 'zh'
+      ? '技能图暂时无法加载，请刷新重试。'
+      : 'The skills map could not load. Please refresh to retry.';
   });
 }
 

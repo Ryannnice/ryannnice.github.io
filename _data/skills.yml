@@ -126,8 +126,8 @@ children:
             en: "Autonomous Navigation"
             zh: "自主导航"
   - id: engineering
-    en: "Engineering"
-    zh: "工程"
+    en: "Engineering Skills"
+    zh: "工程能力"
     children:
       - id: robotic_systems
         en: "Robotic Systems"
@@ -171,6 +171,37 @@ children:
             en: "Vue 3"
             zh: "Vue 3"
             kind: "tool"
+      - id: programming
+        en: "Programming Languages"
+        zh: "编程语言"
+        kind: "tool"
+        children:
+          - id: python
+            en: "Python"
+            zh: "Python"
+          - id: c
+            en: "C"
+            zh: "C"
+          - id: cpp
+            en: "C++"
+            zh: "C++"
+          - id: matlab
+            en: "MATLAB"
+            zh: "MATLAB"
+      - id: development_basics
+        en: "Development Basics"
+        zh: "开发基础"
+        kind: "tool"
+        children:
+          - id: git
+            en: "Git"
+            zh: "Git"
+          - id: linux
+            en: "Linux"
+            zh: "Linux"
+          - id: docker
+            en: "Docker"
+            zh: "Docker"
   - id: languages
     en: "Languages"
     zh: "语言"
@@ -206,37 +237,6 @@ children:
     en: "Other"
     zh: "其他"
     children:
-      - id: programming
-        en: "Programming Languages"
-        zh: "编程语言"
-        kind: "tool"
-        children:
-          - id: python
-            en: "Python"
-            zh: "Python"
-          - id: c
-            en: "C"
-            zh: "C"
-          - id: cpp
-            en: "C++"
-            zh: "C++"
-          - id: matlab
-            en: "MATLAB"
-            zh: "MATLAB"
-      - id: development_basics
-        en: "Development Basics"
-        zh: "开发基础"
-        kind: "tool"
-        children:
-          - id: git
-            en: "Git"
-            zh: "Git"
-          - id: linux
-            en: "Linux"
-            zh: "Linux"
-          - id: docker
-            en: "Docker"
-            zh: "Docker"
       - id: documents
         en: "Writing and Diagramming"
         zh: "写作与绘图"
@@ -257,11 +257,14 @@ children:
       - id: media
         en: "Media Production"
         zh: "媒体创作"
-        kind: "tool"
         children:
           - id: photoshop
             en: "Adobe Photoshop"
             zh: "Adobe Photoshop"
-          - id: premiere
-            en: "Premiere Pro"
-            zh: "Premiere Pro"
+            kind: "tool"
+          - id: video_editing
+            en: "Video Production and Editing"
+            zh: "视频制作/剪辑"
+          - id: website_creation
+            en: "Website Creation"
+            zh: "网站制作"
